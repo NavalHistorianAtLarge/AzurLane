@@ -1,0 +1,119 @@
+html {
+    height: 100%;
+    width: auto;
+}
+.door {
+    background-image: url(https://cdn.nagami.moe/bg/star_level_bg_505.png);
+    /*background-size: 30%;*/
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+.memory {
+    background-image: url(https://cdn.nagami.moe/bg/bg_memory_.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+body {
+    margin-left: 100px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: "Rougue Script", cursive;
+    overflow-y: hidden;
+}
+.bruh a {
+    display: block;
+    height: 380px;
+}
+.bottom {
+    padding-bottom: 100px;
+}
+h1 {
+    padding-top: 1em;
+}
+.gallery {
+   display:inline-flex;
+   flex-wrap: wrap;
+   z-index:auto;
+}
+.gallery img {
+    border-radius: 40px;
+    max-width: 300px;
+    position: relative;
+    box-shadow: rgba(157, 157, 157, 0.55) 0px 54px 55px, rgba(107, 105, 105, 0.52) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    margin-top: 10px;
+    z-index: auto;
+}
+.bg {
+    display: table;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+.eventName {
+    display: table-caption;
+    background: linear-gradient(0.25turn, rgba(88, 20, 215, 0.736), rgb(114, 120, 141));
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: (157, 157, 157, 0.55) 0px 54px 55px, rgba(107, 105, 105, 0.52) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;}
+
+.nodisplay {
+    display: none;
+}
+.panel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: linear-gradient(0.25turn, rgb(88, 20, 215), rgb(114, 120, 141));
+  overflow-x: hidden;
+  overflow-y: hidden;
+  padding: 0;
+  color: black;
+  font-style: italic;
+}
+.panel.open {
+    width: clamp(200px, 60%, 400px);
+    display: block;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 25px;
+    overflow-y: scroll;
+    visibility: visible;
+    z-index: 1;
+    position: fixed;
+}
+.panelsforall {
+    display: flex;
+}
+.panelsforall p {
+    text-align: left;
+    padding: 10px;
+}
+.panelsforall h2 {
+    padding: 20px;
+    margin-bottom: 10px;
+    font-style: normal;
+}
+.panelsforall img {
+    border-radius: 40px;
+    max-width: 300px;
+    position: relative;
+    box-shadow: rgba(157, 157, 157, 0.55) 0px 54px 55px, rgba(107, 105, 105, 0.52) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+    margin-top: 10px;
+    z-index: auto;
+}
+.panelsforall hr {
+    height: 5px;
+    color: rgb(109, 52, 201);
+    background-color: rgb(109, 52, 201);
+    border: 0;
+}
+h2 {
+    display: block;
+}
+.menu a {
+    display: block;
+}
