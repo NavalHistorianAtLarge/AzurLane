@@ -20,7 +20,7 @@ body {
     margin-left: 100px;
     margin-top: 50px;
     text-align: center;
-    font-family: "Rougue Script", cursive;
+    font-family: "Rougue Script";
     
 }
 .bruh a {
@@ -119,3 +119,4 @@ h2 {
     display: block;
 
 }
+
