@@ -20,7 +20,9 @@ body {
     margin-left: 100px;
     margin-top: 50px;
     text-align: center;
-    font-family: "Rougue Script";
+    font-family: "Comic Relief", system-ui;
+    font-style: normal;
+    font-weight: 400;
     
 }
 .bruh a {
@@ -119,4 +121,5 @@ h2 {
     display: block;
 
 }
+
 
