@@ -8,19 +8,20 @@ html {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    overflow-y: hidden;
     
 }
 .memory {
     background-image: url(https://cdn.nagami.moe/bg/bg_memory_.png);
     background-attachment: fixed;
     background-size: cover;
+    
 }
 body {
     margin-left: 100px;
     margin-top: 50px;
     text-align: center;
     font-family: "Comic Relief", cursive;
-    overflow-y: hidden;
 }
 .bruh a {
     display: block;
@@ -116,4 +117,5 @@ h2 {
 }
 .menu a {
     display: block;
+
 }
