@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events in Release Order</title>
+        <link rel="stylesheet" type="text/css" href="starBeastDomain.css">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <audio src="https://cdn.nagami.moe/bgm/bgm-theme-starbeast.ogg" id="starBeast" loop="loop"></audio>
+       <div class="pageNotFound">404.<br> 
+        You have entered the Star Beast's Domain.</div>
+        <div class="beastBox glitch-pulse ">
+        <p class="main echoText">INSOLENT INSECT<br>
+        <br>
+        <img src="https://i.ibb.co/20D6MrCw/Star-Beast-Chibi.png" alt="Star-Beast-Chibi">
+        GO BACK.<br>
+        <br>
+        THIS WEBSITE IS CORRUPTED.<br>
+        DECOMPILE IT I SHALL.<br>
+        <img src="https://i.ibb.co/20D6MrCw/Star-Beast-Chibi.png" alt="Star-Beast-Chibi" id="first">
+        <img src="https://i.ibb.co/20D6MrCw/Star-Beast-Chibi.png" alt="Star-Beast-Chibi" id="second">
+        <br>
+        AND IT SHALL BE REBORN.<br>
+        PER USUAL. PERISH. PER USUAL.</p>
+        </div>
+      <script>
+                window.onload = function () {
+            const bgMusic = document.getElementById("starBeast");
+            if (bgMusic) {
+        bgMusic.play().catch(err => {
+            console.warn("Autoplay blocked:", err);
+        });
+       bgMusic.preload = "true"
+    }
+}
+        </script>
+    </body>
+</html>

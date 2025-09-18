@@ -1,0 +1,113 @@
+body {
+    background-image: url(https://cdn.nagami.moe/bg/bg_yuhui_cg_3.png);
+    background-attachment: fixed;
+    text-align: center;
+    align-items: center;
+    font-family: 'Orbitron';
+}
+.beastBox {
+    font-size: 40px;
+    font-weight: 900;
+    background: linear-gradient(0.25turn, rgb(74, 96, 181), rgb(56, 61, 79));
+    display: inline-block;
+    padding: 2rem;
+    position: relative;
+    border-radius: 100px;
+    margin-top: 10px;
+    animation: pulse 2s infinite ease-in-out, glitch 0.2s infinite steps(2);
+
+}
+.pageNotFound {
+    background-color: white;
+    font-size: 3rem;
+    display: block;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 100px;
+    font-weight: 900;
+}
+.echoText {
+    animation: blinker 1s linear infinite;
+    position: relative;
+    color: #e0e0e0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0 0 5px #383944;
+}
+
+@keyframes blinker {
+  10% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+    from {
+    color: #ffffff;
+  }
+  10% {
+    color: #0099ff;
+  }
+  50% {
+    color: #00ff00;
+  }
+  75% {
+    color: #ff3399;
+  }
+  100% {
+    color: #6666ff;
+  }
+  0% { transform: translateX(0); }
+  25% { transform: translateY(5px); }
+  50% { transform: translateX(-5px); }
+  75% { transform: translateY(5px); }
+  100% { transform: translateZ(0); }
+}
+
+.pageNotFound::before {
+  content: "YOU WERE WARNED";
+  animation: fadeEcho 3s ease-in-out infinite;
+  position: relative;
+  display: block;
+  width: 100%;
+  color: #ff0303;
+  opacity: 0.2;
+  pointer-events: none;
+
+
+}
+@keyframes fadeEcho {
+  0%   { transform: translate(2px, 2px) scale(1); opacity: 0.6; }
+  50%  { transform: translate(-2px, -2px) scale(1.05); opacity: 0.9; }
+  100% { transform: translate(2px, 2px) scale(1); opacity: 0.6; }
+
+}
+img {
+  max-width: 80px;
+}
+img:first-of-type {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+#first {
+  float: left;
+} 
+#second {
+  float: right;
+}
