@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events in Release Order</title>
+        <link rel="stylesheet" type="text/css" href="helMethatesthissite.css">
+        <link rel="script" href="sidebar.js">
+        </head>
+    <body class="memory">
+        <audio id="thoughts" src="https://cdn.nagami.moe/bgm/bgm-story-2.ogg" loop="loop"></audio>
+        <div id="trackTitle" class="trackLabel">Now Playing: <span id="trackName">Thoughts</span></div> 
+        <div id="topBox" onclick="hideTop()">
+        <h2 class="topTitle">Events in Release Order</h2>
+        <p>Click the image to hear OST and see lore summary. Click the event name to read my retranslations or essays.</p>
+        <p>Click anywhere on this box to hide it.</p>
+      
+        </div>
+        <div class="container">
+        <div class="gallery"> 
+
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_tiancheng7.png" onclick="togglePanel('vdir'), playSong('redDyedVisitor')">
+                <div class="eventName">Visitors Dyed in Red</div>
+            </div>
+            <div class="bg">
+                <img src="https://i.ibb.co/dwGPTbsk/450px-Memory-Fallen-Wings-Background-1.png" onclick="togglePanel('fw'), playSong('eagleUnionDiscovery')">
+                <div class="eventName">Fallen Wings</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_hms_0.png" onclick="togglePanel('wc'), playSong('enterpriseMETA')">
+                <div class="eventName">Winter's Crown</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_nagato3.png" onclick="togglePanel('isss'), playSong('inkDyedSteelFlower')">
+                <div class="eventName">Ink-Stained Steel Sakura</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_faxi1.png" onclick="togglePanel('ild'), playSong('royalNavy')">
+                <div class="eventName">Iris of Light and Dark</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_tiancheng5.png" onclick="togglePanel('ce'), playSong('crimsonEchoes')">
+                <div class="eventName">Crimson Echoes</div>
+            </div>
+             <div class="bg">
+                <img src="https://i.ibb.co/chRg9Dyz/bg-bsm-6overlays.png" onclick="togglePanel('osp'), playSong('crisis')">
+                <div class="eventName">"One Small Promise"</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_bsm_3.png" onclick="togglePanel('sib'), playSong('lastStand')">
+                <div class="eventName">Scherzo of Iron and Blood</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_newyork.png" onclick="togglePanel('ap'), playSong('weighAnchor')">
+                <div class="eventName">Approaching Storm</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_xiangting_cg1.png" onclick="togglePanel('as'), playSong('disposePawns')">
+                <div class="eventName">Ashen Simulacrum</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_italy_cg1.png" onclick="togglePanel('et'), playSong('vanityGlory')">
+                <div class="eventName">Empyreal Tragicomedy</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_xinnong_cg6.png" onclick="togglePanel('scb'), playSong('steelJudgement')">
+                <div class="eventName">Swirling Cherry Blossoms</div>
+            </div>
+                <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_cccp_4.png" onclick="togglePanel('no'), playSong('cccp')">
+                <div class="eventName">Northern Overature</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_battle_night.png" onclick="togglePanel('um'), playSong('crossWave')">
+                <div class="eventName">Under the Mist</div>
+            </div>
+             <div class="bg">
+                <img src="https://i.ibb.co/zhmr6Pwg/bg-banama-5fixed.png" onclick="togglePanel('mm'), playSong('fogBridge')">
+                <div class="eventName">Microlayer Medley</div>
+            </div>       
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_qiongding_6.png" onclick="togglePanel('so'), playSong('brokenLight')">
+                <div class="eventName">Skybound Oratorio</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_hms_2.png" onclick="togglePanel('an'), playSong('royalNavyNoctis')">
+                <div class="eventName">Aurora Noctis</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_xinnong2_5.png" onclick="togglePanel('db'), playSong('butterflyDream')">
+                <div class="eventName">Dreamwaker's Butterfly</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_fuxiangxian_3.png" onclick="togglePanel('io'), playSong('sirenTheme')">
+                <div class="eventName">Inverted Orthant</div>
+            </div>
+
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_cccpv2_6.png" onclick="togglePanel('kdr'), playSong('cccp3')">
+                <div class="eventName">Khorovod of Dawn's Rime</div>
+            </div>
+
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_italyv2_3.png" onclick="togglePanel('dh'), playSong('italyBoss')">
+                <div class="eventName">Daedalian Hymn</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_luoxuan_6.png">
+                <div class="eventName">Silver Archives</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_luoxuan_8.png" onclick="togglePanel('mi'), playSong('suspiciousThingsAreHappening')">
+                <div class="eventName">Mirror Involution</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_daofeng_4.png" onclick="togglePanel('usb'), playSong('windThunderShadow')">
+                <div class="eventName">Upon the Shimmering Blue</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_renaya.png" onclick="togglePanel('ftd'), playSong('sacredLily')">
+                <div class="eventName">The Flame-Touched Dagger</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_midgard_1.png" onclick="togglePanel('tot'), playSong('rainbowTowerLastBattle')">
+                <div class="eventName">Tower of Transcendance</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_deepecho_12.png">
+                <div class="eventName">Darkness Within Dawn</div> 
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_deepecho_11.png" onclick="togglePanel('ar'), playSong('absoluteZero')">
+                <div class="eventName">Abyssal Refrain</div>
+            </div>
+             <div class="bg">
+                <img src="https://i.ibb.co/Qv0PkKfs/bg-endingsong-13.png" onclick="togglePanel('rare'), playSong('RainbowFinale')">
+                <div class="eventName">Rondo at Rainbow's End</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_zhedie_14.png" onclick="togglePanel('lat'), playSong('royalDinner')">
+                <div class="eventName">Letters and Travels</div>
+            </div>
+             <div class="bg">
+                <img src="https://i.ibb.co/vvfyfsBH/bg-camelot-5.png" onclick="togglePanel('prc'), playSong('camelotTheme')">
+                <div class="eventName">Pledge of the Radiant Court</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_iris_night.png" onclick="togglePanel('aoi')">
+                <div class="eventName">Angel of the Iris</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_116.png" onclick="togglePanel('warl')">
+                <div class="eventName">Where All Roads Lead</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_roma_11.png" onclick="togglePanel('ab'), playSong('grandOpening')">
+                <div class="eventName">Aquilifer's Ballade</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_yuanhuidian.png" onclick="togglePanel('oc'), playSong('athensRuin')">
+                <div class="eventName">Operation Convergence</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_port_chuanwu2.png" onclick="togglePanel('tsdt'), playSong('cwLevel')">
+                <div class="eventName">Tranquil Sea, Distant Thunder</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_wuzang_bg16.png" onclick="togglePanel('vtbl'), playSong('musashiMarching')">
+                <div class="eventName">Violet Tempest, Blooming Lycoris</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_starsea_core_1.png" onclick="togglePanel('ct'), playSong('exploFuture')">
+                <div class="eventName">Causality Transposition</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_zhedie_8.png" onclick="togglePanel('ps'), playSong('aosteTheme')">
+                <div class="eventName">Parallel Superimposition</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_115.png" onclick="togglePanel('qod'), playSong('richang8')">
+                <div class="eventName">The Queen's Ordinary Day</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_firedust_7.png" onclick="togglePanel('rd'), playSong('vichyChurch')">
+                <div class="eventName">Revelations of Dust</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_jidifengbao_map.png" onclick="togglePanel('ff'), playSong('cccp3')">
+                <div class="eventName">Frostfall</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_guild_red_n.png" onclick="togglePanel('wo'), playSong('observersPast')">
+                <div class="eventName">The Weaver's Omen</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_bsmre_cg11.png" onclick="togglePanel('con'), playSong('walkFire')">
+                <div class="eventName">Confluence of Nothingness</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_alexandria_2.png" onclick="togglePanel('ro'), playSong('italyBoss')">
+                <div class="eventName">Reflections of the Oasis</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_sainthelena2.png" onclick="togglePanel('athr'), playSong('richelieuTheme')">
+                <div class="eventName">Anthem of Remembrance</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_roma_8.png" onclick="togglePanel('ee'), playSong('expoWelcome')">
+                <div class="eventName">Eventide's Eve</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_underheaven_cg2.png" onclick="togglePanel('fs'), playSong('arbiterHeirophant')">
+                <div class="eventName">Fool's Scales</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_508.png" onclick="togglePanel('wm'), playSong('peacefulJourney')">
+                <div class="eventName">Waxing Moonlight</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_yunxian_5.png" onclick="togglePanel('ebe'), playSong('xApproach')">
+                <div class="eventName">Effulgence Before Eclipse</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_zhuguang_cg5.png" onclick="togglePanel('bcss'), playSong('projectAntiX')">
+                <div class="eventName">Beneath Clear, Starry Skies</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_zhuguang_4.png" onclick="togglePanel('lcsos'), playSong('starrySea')">
+                <div class="eventName">Light-Chasing Sea of Stars</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_xuejing_3.png" onclick="togglePanel('muss'), playSong('Conspiracy')">
+                <div class="eventName">Mist Upon Silver Summits</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_xuejing_cg10.png" onclick="togglePanel('sp'), playSong('merkuria')">
+                <div class="eventName">Snowrealm Perigrination</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_157.png" onclick="togglePanel('slr'), playSong('chinaParty')">
+                <div class="eventName">Spider Lily's Redolence</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_camelot_4.png" onclick="togglePanel('efa'), playSong('shallowOfTheWorld')">
+                <div class="eventName">Echoes From Afar</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_huiguangzhicheng_cg12.png" onclick="togglePanel('lotm'), playSong('speedingBetweenStars')">
+                <div class="eventName">Light of the Martyrium</div>
+            </div>
+             <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_story_shengmixieer_1.png" onclick="togglePanel('ii'), playSong('richangLight')">
+                <div class="eventName">Interlude of Illusions</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_600.png" onclick="togglePanel('cp'), playSong('musicAnniversery')">
+                <div class="eventName">Crimson Prelusion</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_tieyiqingfeng_5.png" onclick="togglePanel('wsw'), playSong('eagleUnionTheme')">
+                <div class="eventName">Windborne Steel Wings</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_bianzhihua_cg5.png" onclick="togglePanel('wfbnf'), playSong('memoryGreif')">
+                <div class="eventName">Whence Flowers Bear No Fruit</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_177.png" onclick="togglePanel('wds'), playSong('sorrowSacredTree')">
+                <div class="eventName">Whence the Dust Settles</div>
+            </div>
+            <div class="bg">
+                <img src="https://i.ibb.co/ycjX5qbN/bg-canghongzhiyan-cg6.png" onclick="togglePanel('oec'), playSong('awakeningCrimsonFlame')">
+                <div class="eventName">Ode of Everblooming Crimson</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_canghongzhiyan_1.png" onclick="togglePanel('rftb'), playSong('Anti-XPast')">
+                <div class="eventName">Return from the Beyond</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_yuhui_3.png" onclick="togglePanel('sc'), playSong('starBeast')">
+                <div class="eventName">Substellar Crepuscle</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_305.png" onclick="togglePanel('potc'), playSong('sardiniaDivineLight')">
+                <div class="eventName">Path of the Chosen</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_shenguang_cg_10.png" onclick="togglePanel('psl'), playSong('reshapingCanon')">
+                <div class="eventName">Paradiso of Shackled Light</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_yujin_2.png" onclick="togglePanel('tts'), playSong('newSprouts')">
+                <div class="eventName">Towards Tulipa's Seas</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_306.png" onclick="togglePanel('mns'), playSong('rosePrisoner')">
+                <div class="eventName">March of the Neversetting Sun</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/bg_gaotaqiangwei_3.png" onclick="togglePanel('arht'), playSong('shiningWingsAweWorld')">
+                <div class="eventName">A Rose on the High Tower</div>
+            </div>
+            <div class="bg">
+                <img src="https://cdn.nagami.moe/bg/star_level_bg_514.png" onclick="togglePanel('sse'), playSong('windNewLife')">
+                <div class="eventName">Summons from the Sakura Empire</div>
+            </div>
+            <div class="bg">
+                <img src="">
+                <div class="eventName">A Dance for Amahara Above</div>
+            </div>
+        </div>
+        <div class="panelsforall"> 
+            <div id="vdir" class="panel" onclick="togglePanel('vdir')">
+                <h2>Visitors Dyed in Red</h2>
+                <img src="https://cdn.nagami.moe/bg/bg_story_tiancheng7.png">
+                <p>In an infinite cycle of rebirth, time itself loses significance.<br> 
+                    Where certainty approaches probability,<br>
+                    The intangible inherits the tangible.<br>
+                    <br>
+                    If not for that first choice<br>
+                    Might there be another conclusion?<br>
+                    Once reflected in your eyes,<br>
+                    What kind of scenery is it, again?<br>
+                    O, Creator?</p>           
+                    <hr>
+                    <p>For some time now, Akagi and Kaga have been acting suspiciosly,
+                        but Zuikaku and Shoukaku have been unable to pinpoint what exactly they are doing.
+                        Now, a shinobi in their service, Akatsuki, has discovered
+                        vital intel -- a key -- to the "Sanctuary", a place never seen by 
+                        outsiders, the root of myths and legends. They quickly head for their 
+                        target.</p>
+                        <p>As they approach the Mirror Sea, they become engulfed in a storm
+                        and separated. After nearly drowning, Zuikaku finds herself within the 
+                        "Sanctuary", though alone and unable to contact Shoukaku.</p>
+                        <p>What began as an investigation becomes a search-and-rescue mission as Zuikaku looks
+                        for her sister Shoukaku, opposed along the way by counterfeit copies of
+                        her friends, begining with Akatsuki. </p>
+                        
+                        <p>In the darkness of the Shrine, 
+                        Akagi and Kaga resent what they percieve as Zuikaku's attempt to hinder
+                        their reuninon with "That Person", Amagi. They are not very surprised 
+                        to see her here, though, noting that "the bait [the key] really attracked that pest". 
+                        To stall her they send out Ise and Hyuuga with several MPS. </p>
+                        
+                        <p>After defeating the forces sent against her, Zuikaku recalls
+                        how she broke the news of finding the "Sanctuary" key and figures that 
+                        the key was just a trap. </p>
+                        
+                        <p>She next meets with the shrine maiden Yamashiro,
+                        who does her duty of gaurding the shrine with cheerful clumsiness. Zuikaku
+                        asks her where Shoukaku is; Yamashiro replies that she will tell Zuikaku if the 
+                        latter can defeat her in combat. Zuikaku easily does so. Yamashiro tells her, 
+                        and Zuikaku heads into the Shrine.</p>
+
+                    </p>
+                </div>
+                
+            <div id="fw" class="panel" onclick="togglePanel('fw')">
+                <h2>Side Panel 2</h2>
+                <p>Wings fall off.</p>
+                </div>
+        </div>
+        <div class="audioList">
+            <audio id="redDyedVisitor" src="https://cdn.nagami.moe/bgm/bgm-story-4.ogg" data-title="Visitors Dyed in Red"></audio>
+            <audio id="eagleUnionDiscovery" src="https://cdn.nagami.moe/bgm/bgm-story-6.ogg"></audio>            
+            <audio id="enterpriseMETA" src="https://cdn.nagami.moe/bgm/bgm-story-8.ogg"></audio>
+            <audio id="inkDyedSteelFlower" src="https://cdn.nagami.moe/bgm/bgm-nagato-map.ogg" data-title="Ink-Dyed Steel Flower"></audio>
+            <audio id="royalNavy" src="https://cdn.nagami.moe/bgm/bgm-level03.ogg" data-title="Royal Navy"></audio>
+            <audio id="crimsonEchoes" src="https://cdn.nagami.moe/bgm/bgm-main-newyear.ogg" data-title="Crimson Echoes"></audio>
+            <audio id="crisis" src="https://cdn.nagami.moe/bgm/bgm-story-5.ogg" data-title="Crisis"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-italy.ogg" id="vanityGlory" data-title="Vanity and Glory"></audio>
+            <audio id="lastStand" src="https://cdn.nagami.moe/bgm/bgm-bsm-3.ogg" data-title="Last Stand"></audio>
+            <audio id="weighAnchor" src="https://cdn.nagami.moe/bgm/bgm-level02.ogg" data-title="Weigh Anchor"></audio>
+            <audio id="disposePawns" src="https://cdn.nagami.moe/bgm/bgm-battle-boss-4.ogg" data-title="DISPOSE THE PAWNS"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-xinnong-2.ogg" id="steelJudgement" data-title="Steel Judgement"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bgm-cccp.ogg" id="cccp"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-hunhe-story.ogg" id="crossWave" data-title="Setting off For New Places"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-hunhe-level.ogg" id="fogBridge" data-title="Fog Bridge"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-level-french2.ogg" id="brokenLight" data-title="Broken Light"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bgm-royalnavy.ogg" id="royalNavyNoctis"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-xinnong-image.ogg" id="butterflyDream" data-title="Butterfly Sea Dream Flower"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-seiren-theme.ogg" id="sirenTheme"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bgm-cccp2.ogg" id="cccp2"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-italy.ogg" id="divineTragiComedy" data-title="Divine Comedy and Tragedy"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-xinnong-3.ogg" id="suspiciousThingsAreHappening"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-map-longgong.ogg" id="windThunderShadow" data-title="Wind and Thunder Shadow"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-french1.ogg" id="sacredLily" data-title="Like the Sacred White Lily"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-midgard-hunting.ogg" id="rainbowTowerLastBattle" data-title="Final Battle at the Rainbow Tower"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-boss-deepecho.ogg" id="absoluteZero" data-title="Absolute Zero"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-highseasfleet-reborn.ogg" id="RainbowFinale" data-title="Rainbow Finale"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-partydress.ogg" id="royalDinner" data-title="Royal Dinner"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-camelot.ogg" id="camelotTheme"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-roma-image.ogg" id="grandOpening" data-title="Grand Opening Day"></audio> 
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bsm-7.ogg" id="athensRuin" data-title="Ruin of Athens"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-cw-level.ogg" id="cwLevel"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-musashi-marching.ogg" id="musashiMarching" data-title="The Tree Standing in the Forest Will Be Destroyed By the Wind"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-starsea-explo.ogg" id="exploFuture" data-title="Exploring the Future"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-aostelab.ogg" id="aosteTheme" data-title="The Stars and Sea Beyond (Aoste Theme)"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-richang-8.ogg" id="richang8"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-vichy-church.ogg" id="vichyChurch" data-title="Church"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bgm-cccp3.ogg" id="cccp3"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-bsm-2.ogg" id="observersPast" data-title="Observers of the Past"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-bismark-reborn.ogg" id="walkFire" data-title="Walking Through Fire (Bismarck Zwei theme)"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-boss-italy.ogg" id="italyBoss" data-title="Dusk Prayer"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-richelieu.ogg" id="richelieuTheme" data-title="Lady of the Iris (Richelieu Theme)"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-roma-outside.ogg" id="expoWelcome" data-title="Welcome to the Expo!"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-thehierophantv.ogg" id="arbiterHeirophant" data-title="Arbiter Hierophant (Hierophant Theme)"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-pacific.ogg" id="peacefulJourney" data-title="Peaceful Journey"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-unknown-approaching.ogg" id="xApproach" data-title="SOMETHING IS APPROACHING"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-main-arbitrationsystem-theme.ogg" id="projectAntiX" data-title="Project Anti-X"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-ucnf-image.ogg" id="starrySea" data-title="Starry Sea"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-darkplan.ogg" id="Conspiracy" data-title="Conspiracy"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-merkuriameta.ogg" id="merkuria" data-title="A Tribute to the Past (Pamiat Merkuria Meta Theme)"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-china-party.ogg" id="chinaParty"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-shallowoftheworld.ogg" id="shallowOfTheWorld"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-startravel.ogg" id="speedingBetweenStars" data-title="Speeding Between Stars"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-richang-light.ogg" id="richangLight"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-musicanniversary-gorgeous.ogg" id="musicAnniversery"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-eagleunion.ogg" id="eagleUnionTheme" data-title="Eagle Soars in the Sky"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-memory-grief.ogg" id="memoryGreif" data-title="Faded Glass"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-sakuraholyplace.ogg" id="sorrowSacredTree" data-title="Sorrow of the Sacred Tree"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-amagi-up.ogg" id="awakeningCrimsonFlame" data-title="Awakening Crimson Flame"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-antix-past.ogg" id="Anti-XPast"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-starbeast.ogg" id="starBeast" data-title="Star Beast"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-theme-sardinia.ogg" id="sardiniaDivineLight" data-title="Sardinia Under the Divine Light"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-battle-shenguang-holy.ogg" id="reshapingCanon" data-title="Reshaping the Canon"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-tulipa.ogg" id="newSprouts" data-title="New Sprouts Breaking Ground Day"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-glorious-meta.ogg" id="rosePrisoner" data-title="Prisoner of the Rose"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-theme-lion.ogg" id="shiningWingsAweWorld" data-title="Shining Wings Awe the World"></audio>
+            <audio src="https://cdn.nagami.moe/bgm/bgm-story-newsakura.ogg" id="windNewLife" data-title="Wind of New Life"></audio>
+        </div>
+        <script>
+            window.onload = function () {
+            const bgMusic = document.getElementById("thoughts");
+            if (bgMusic) {
+        bgMusic.play().catch(err => {
+            console.warn("Autoplay blocked:", err);
+        });
+    }
+              window.onload = function () {
+            const allImg = Array.from(document.getElementsByTagName("img"));
+            allImg.forEach(img => {
+               img.loading = "eager";
+            })
+            }
+            };
+
+            function playSong(songID) {
+            const targetSong = document.getElementById(songID);
+            const allSongs = Array.from(document.getElementsByTagName("audio"));
+            const bgMusic = document.getElementById("thoughts");
+
+
+
+        if (targetSong) {
+            allSongs.forEach(song => {
+                    if (song !== targetSong) {
+                    song.pause();
+                    song.currentTime = 0;
+                }
+             });
+            targetSong.play();
+            targetSong.loop = "true";
+            allSongs.forEach(song => {
+                song.preload = "true"
+            })
+        }
+         const trackNameDisplay = document.getElementById("trackName");
+            const title = targetSong.getAttribute("data-title") || targetSong.getAttribute("id");
+        trackNameDisplay.textContent = title;
+        }
+           
+
+
+        </script>
+        <script>
+
+            function togglePanel(panelId) {
+            const targetPanel = document.getElementById(panelId);
+            const allPanels = Array.from(document.getElementsByClassName("panel"))
+           
+            if (targetPanel) {
+                allPanels.forEach(panel => {
+                    if (panel !== targetPanel) {
+                        panel.style.width = "0";
+                        panel.classList.remove("open")
+                    }
+                });
+
+            const isOpen = targetPanel.classList.contains("open");
+            targetPanel.style.width = isOpen ? "0" : "450px";
+            targetPanel.classList.toggle("open");
+                 }
+                }
+
+        </script>
+        <script>
+            document.getElementById('topBox').addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+            
+        </script>
+
+    </body>
+</html>
