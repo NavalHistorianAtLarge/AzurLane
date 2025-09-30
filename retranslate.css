@@ -1,0 +1,523 @@
+html {
+	margin: auto;
+}
+html, body {
+	height: 100%;
+	width: 95%;
+}
+body {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 50px;
+	text-align: center;
+}
+#nodisplay {
+	display: none;
+}
+.storm {
+	background-image: url(https://cdn.nagami.moe/bg/star_level_bg_504.png);
+}
+.temple {
+	background-image: url(https://cdn.nagami.moe/bg/bg_story_tiancheng7.png);
+}
+.midway {
+	background-image: url(https://cdn.nagami.moe/bg/bg_story_8.png);
+}
+.helenaRuins {
+	background-image: url(https://i.ibb.co/nMpKfrWW/bg-story-wing1.png);
+}
+.washington {
+	background-image: url(https://i.ibb.co/dwGPTbsk/450px-Memory-Fallen-Wings-Background-1.png);
+}
+.AnzeelReach {
+	background-image: url(https://cdn.nagami.moe/bg/bg_xiangting_cg3.png);
+}
+.mainframe{
+	background-image: url(https://cdn.nagami.moe/bg/bg_endingsong_14.png);
+}
+*:lang(zh) {
+	font-family: Noto Sans TC;
+
+}
+.containervert *:lang(zh) {
+	font-size: 1rem;
+}
+
+*:lang(ja) {
+	font-family: Simsun;
+}
+.contents {
+	background-color: blue;
+	width: 300px;
+	margin-bottom: 9rem;
+	padding-bottom: 4px;
+	border-radius: 50px;
+	margin-left: 500px;
+}
+
+a {
+	color: black;
+}
+.citelinks {
+	display: flex;
+	text-decoration: none;
+	padding-top: 10px;
+	margin-right: 10px;
+}
+h1 {
+	display: inline-block;
+	padding: 1rem;
+	border-radius: 50px;
+	text-align: center;
+	font-size: 4rem;
+	margin-bottom: 9rem;
+	background: linear-gradient(rgba(11, 95, 214, 0.588), rgb(30, 49, 73))
+}
+.TH {
+	font-size: 28px;
+}
+.lineNumber {
+	float: right;
+	background-color: plum;
+	width: 20px;
+	border-radius: 20px;
+	font-size: 20px;
+	text-decoration: none;
+}
+.line {
+	display: inline-block;
+	width:30%;
+	padding-right: 1rem;
+	background: linear-gradient(#393255, #5b3fa7);
+	box-shadow: 0 0 5px 0 lightblue;
+    border-radius: 5px;
+	text-align: left;
+	padding: 3px;
+	
+}
+.translation {
+	display: inline-flex;
+	width: 30%;
+	margin-top: 3px;
+	float: center;
+	background: linear-gradient(#5b3fa7, #32553c);
+	box-shadow: 0 0 5px 0 lightblue;
+    border-radius: 5px;
+}
+.containervert {
+	display: block;
+	margin: 2px;
+	width: 40%;
+	font-size: 20px;
+	position: relative;
+}
+.containerhoriz {
+	display: block;
+	font-size: 18px;
+	margin: 2px;
+	line-height: 1.2em;
+	padding: 4px;
+}
+.containervert div {
+	position: relative;
+}
+.singchar {
+	width: 2rem;
+	margin: 2px;
+    border-radius: 5px;
+
+}
+.doubchar {
+	width: 3rem;
+	margin: 2px;
+    border-radius: 10px;
+}
+.trichar {
+	width: 4rem;
+	margin: 2px;
+   border-radius: 10px;
+}
+.quadchar {
+	width: 5rem;
+	margin: 2px;
+	border-radius: 10px;
+}
+*:lang(zh) .quintchar {
+	width: 6rem;
+	margin:2px;
+	border-radius: 10px;
+}
+*:lang(ja) .quintchar {
+	width: 7rem;
+	margin: 2px;
+	border-radius: 10px;
+}
+
+*:lang(ja) .sexchar {
+	width: 7em;
+	border-radius: 10px;	
+}
+*:lang(ja) .multchar {
+	width: 8em;
+	padding: 2px;
+	border-radius: 10px;
+}
+.noun {
+	background-color: #ff4000;
+    border-radius: 10px;
+}	
+.adjn {
+	background-color: #ff972f;
+    border-radius: 10px;
+}
+.adj {
+	background-color: #81d41a;
+    border-radius: 10px;
+}
+.containerhoriz > div {
+	margin-bottom: 2px;
+}
+.vb {
+	background-color: #a1467e;
+    border-radius: 10px;
+}
+.mod {
+	background-color: #ffa6a6;
+    border-radius: 10px;
+}
+.prep {
+	background-color: slateblue;
+	border-radius: 10px;
+}
+.conj {
+	background-color: #729fcf;
+    border-radius: 10px;
+}
+.phrase {
+	background-color: #50938a;
+    border-radius: 10px;
+}
+.yoki {
+	background-color: #780373;
+    border-radius: 10px;
+}
+.interj {
+	background-color: salmon;
+	border-radius: 10px;
+}
+.interp {
+	display: inline-flex;
+	width: 30%;
+	margin-top: 3px;
+	float: left;
+	margin-left: 70px;
+	background: linear-gradient(#95745d, #e46d0d);
+	box-shadow: 0 0 5px 0 lightblue;
+  border-radius: 5px;
+}
+.val {
+	display: inline-flex;
+	width: 30%;
+	margin-top: 3px;
+	margin-left: 430px;
+	margin-right: 0px;
+	margin-bottom: 80px;
+	background: linear-gradient(#e47d0d, #cd1b1b);
+	box-shadow: 0 0 5px 0 lightblue;
+  border-radius: 5px;
+}
+
+#VD1 .val {
+	margin-left: 930px;
+}
+.text {
+	max-width: 420px;
+	background: rgba(13,65,77,.3);
+	box-shadow: 0 0 5px;
+}
+.tableblock {
+	margin-bottom: 120px;
+}
+.grammar {
+    display: inline-flex;
+	width: 30%;
+	margin-top: 3px;
+	background: linear-gradient(#32553c, #324855);
+	box-shadow: 0 0 5px 0 lightblue;
+    border-radius: 5px;
+}
+hr {
+	border: none;
+}
+.normal {
+	height: 16px;
+}
+.odd {
+	margin:0;
+	height: 17px;
+}
+.narrow {
+	height: 11px;
+}
+.wide {
+	height: 20px;
+}
+.stent {
+	height: 1px;
+}
+.retranslate {
+  	display: inline-flex;
+	width: 30%;
+	margin-top: 3px;
+	background: linear-gradient(#324855, #95745d);
+	box-shadow: 0 0 5px 0 lightblue;
+    border-radius: 5px;
+}
+ul {
+	display: inline;
+	text-align: left;
+	list-style: none;
+  	padding-left: 10px;
+}
+.retranslate li {
+	margin-left: -5px;
+	max-width: 390px;
+  background: linear-gradient(#324855, #5d8795);
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+.grammar li {
+	margin-left: -5px;
+	max-width: 390px;
+  	background: linear-gradient(#32553c, #324855);
+	border-radius: 5px;
+	margin-bottom: 3px;
+}
+.chibi {
+	display: flex;
+	margin-left: -80px;
+	margin-top: -40px;
+	max-height: 100px;
+	width: auto;
+	float: left;
+	padding-top: 30px;
+}
+.chibiSiren {
+	display: flex;
+	margin-left: -80px;
+	margin-top: -40px;
+	max-width: 100px;
+	float: left;
+	padding-top: 30px;
+}
+.chibi:hover {
+	transform: scale(3) translate(50px, 5px);
+	position: absolute;
+	z-index: 1;
+}
+.chibiSiren:hover {
+	transform: scale(5) translate(50px, 5px);
+	position: absolute;
+	z-index: 1;
+}
+.MutsukiStare {
+	margin-left: 150px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	height: 100px;
+	box-shadow: 0 0 10px 15px rgb(206, 117, 43)}
+.hover:hover .owned {
+	background-color: yellow;
+}
+.hover:hover .owner {
+	background-color: yellow;
+}
+#VD1\:12 .containerhoriz div {
+	height: 23px;
+}
+.line:nth-child(3) {
+	font-size: 18pt;
+}
+.chapterName {
+	font-size: 25pt;
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 100px;}
+.flow {
+	display: flex;
+	height: auto;
+}
+.speaker {
+	display: flex;
+	width: 200px;
+	min-height: 54px;
+	max-height: 70px;
+	border-radius: 100px 0px 0px 100px;
+}
+.friendly {
+	background: linear-gradient(to right, rgb(0, 0, 199),  rgb(225, 223, 184));
+}
+.enemy {
+	background: linear-gradient(to right, rgb(216, 11, 11),rgb(225, 223, 184));
+}
+.banner {
+	height: 54px;
+	max-height: 70px;
+	border-radius: 100px;
+}
+.banner:hover {
+	opacity: 0.3;
+	position: relative;
+}
+.noshiroSmall {
+	height: 10px;
+	border-radius: 100px
+}
+.enemyWord {
+	display: flex;
+	width: 1500px;
+	background:linear-gradient(0.25turn,rgb(225, 223, 184) 85%, rgb(232, 19, 19));
+	border-radius: 0px 100px 100px 0px;
+	border-top: 1px solid rgb(238, 230, 132);
+	border-bottom: 1px solid rgb(238, 230, 132);
+}
+.translatedLine {
+	display: flex;
+	width: 1500px;
+	max-height: 70px;
+	background:linear-gradient(0.25turn,rgb(225, 223, 184) 85%, rgb(0, 0, 199));
+	border-radius: 0px 100px 100px 0px;
+	border-top: 1px solid rgb(238, 230, 132);
+	border-bottom: 1px solid rgb(238, 230, 132);
+}
+
+.poem {
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	width: 100%;
+	border-radius: 100px;;
+}
+.humpty {
+	width: 1000px;
+	transition: font-weight 1s ease-out;
+}
+.poem p {
+	margin: 0;
+}
+.noteshiro {
+	height:30px;
+}
+.moveOn {
+	width: 100%;
+	height: 50px;
+	display: inline;
+}
+.right {
+	float: right;
+	background: linear-gradient(to right,rgb(225, 223, 184), rgb(0, 0, 199));
+	padding: 20px;
+	border-radius: 100px;
+	margin-top: 100px;
+}
+.left {
+	float: left;
+	background: linear-gradient(to right, rgb(0, 0, 199),  rgb(225, 223, 184));
+	padding: 20px;
+	border-radius: 100px;
+	margin-top: 100px;
+}
+.center {
+	background: linear-gradient(to right, rgb(0, 0, 199),  rgb(225, 223, 184));
+	padding: 20px;
+	top: 30;
+	border-radius: 100px;
+	display: inline;
+}
+.note {
+	background-color:rgb(225, 223, 184);
+	border-radius: 5px;
+	margin: 30px;
+	font-size: 30px;
+}
+sup {
+	vertical-align: super;
+	font-size: 12px;
+}
+.ambigVerb:hover {
+	background-color:#a1467e;
+}
+.flow:target .humpty {
+	color: blue;
+	font-weight: bold;
+}
+.copyLinkLink {
+	text-decoration: none;
+	float: right;
+	margin-left: 3px;
+	background-color: rgba(224, 173, 224, 0.832);
+	border-radius: 50%;
+}
+.copyLinkLinkLow {
+	text-decoration: none;
+	background-color: rgba(224, 173, 224, 0.832);
+	height: 20px;
+	border-radius: 50%;
+	margin-top: 10px;
+}
+br:target {
+	color: blue;
+	font-weight: bold;
+}
+.EssexWheeze {
+	height: 15px;
+}
+
+.friendlyName {
+	display: flex;
+	margin-left: -70px;
+	margin-top: -40px;
+	float: left;
+	font-weight: bold;
+	background-color: blue;
+}
+.enemyName {
+	display: flex;
+	margin-left: -70px;
+	margin-top: -40px;
+	float: left;
+	font-weight: bold;
+	background-color: red;
+}
+.shipName {
+	position:relative;
+	visibility: hidden;
+	height: 3px;
+}
+.banner:hover + .shipName {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	padding-left: 20px;
+}
+.robot {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: px;
+	padding-left: 20px;
+}
+.flashback {
+	background-color: grey;
+	padding: 20px;
+	border-radius: 50px;
+}
+.ListList {
+	text-indent: 3rem;
+}
+.overflow {
+	font-size: smaller;
+}
