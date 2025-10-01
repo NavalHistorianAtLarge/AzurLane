@@ -1,21 +1,17 @@
 const app = new PIXI.Application({
-  width: 1, // temporary, will resize later
+  width: 1,
   height: 1,
-  backgroundAlpha: 0, // transparent
+  backgroundAlpha: 0,
   autoDensity: true,
   resolution: window.devicePixelRatio || 1
-
 });
-document.body.appendChild(app.view);
 
 const container = document.createElement('div');
 container.className = 'chibiCanvas';
+document.body.appendChild(container);
 container.appendChild(app.view);
 
 const loader = PIXI.Loader.shared;
-
-document.body.appendChild(app.view);
-
 const loadedCharacters = {};
 
 function loadSpineCharacter(name, options = {}) {
@@ -23,7 +19,6 @@ function loadSpineCharacter(name, options = {}) {
   const resourceKey = `${name}-spine`;
 
   if (loadedCharacters[name]) {
-    // Already loaded — just animate
     loadedCharacters[name].state.setAnimation(0, options.animation || 'idle', false);
     return;
   }
@@ -40,30 +35,21 @@ function loadSpineCharacter(name, options = {}) {
         console.error("Spine runtime not loaded");
         return;
       }
-      
+
       const spineChar = new PIXI.spine.Spine(resources[resourceKey].spineData);
 
-      // Resize canvas to fit character bounds
       const bounds = spineChar.getBounds();
       app.renderer.resize(bounds.width, bounds.height);
 
-      // Position character at origin
       spineChar.x = -bounds.x;
       spineChar.y = -bounds.y;
+      spineChar.scale.set(options.scale || 0.5);
+      spineChar.state.setAnimation(0, options.animation || 'idle', false);
 
-      app.stage.removeChildren(); // clear previous
+      app.stage.removeChildren();
       app.stage.addChild(spineChar);
       loadedCharacters[name] = spineChar;
 
       if (options.onReady) options.onReady(spineChar);
     });
 }
-
-
-
-
-
-
-
-
-
