@@ -51,9 +51,25 @@ function loadSpineCharacter(name, options = {}) {
       app.stage.addChild(spineChar);
       loadedCharacters[name] = spineChar;
 
+        // 🔧 Position canvas near target element
+      if (options.targetId) {
+        const target = document.getElementById(options.targetId);
+        if (target) {
+          target.style.display = 'none'; // hide original image
+          target.parentNode.insertBefore(app.view, target.nextSibling);
+          app.view.style.position = 'absolute';
+          const rect = target.getBoundingClientRect();
+          app.view.style.left = `${rect.left + window.scrollX}px`;
+          app.view.style.top = `${rect.top + window.scrollY}px`;
+          app.view.style.pointerEvents = 'none';
+        }
+      }
+
+
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
