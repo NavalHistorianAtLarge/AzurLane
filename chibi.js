@@ -16,7 +16,6 @@ const loader = PIXI.Loader.shared;
 
 document.body.appendChild(app.view);
 
-const loader = PIXI.Loader.shared;
 const loadedCharacters = {};
 
 function loadSpineCharacter(name, options = {}) {
@@ -65,6 +64,7 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
