@@ -9,7 +9,7 @@ const loader = PIXI.Loader.shared;
 
 if (!loader.resources['zuikaku']) {
   loader
-    .add('zuikaku', '/assets/spine/zuikaku/zuikaku.json')
+    .add('zuikaku', '/assets/spine/zuikaku/ruihe.skel')
     .load((loader, resources) => {
       if (!PIXI.spine) {
         console.error("Spine runtime not loaded");
@@ -28,3 +28,4 @@ if (!loader.resources['zuikaku']) {
       };
     });
 }
+
