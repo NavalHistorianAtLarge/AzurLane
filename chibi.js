@@ -40,13 +40,7 @@ function loadSpineCharacter(name, options = {}) {
         console.error("Spine runtime not loaded");
         return;
       }
-
-      const spineChar = new PIXI.spine.Spine(resources[resourceKey].spineData);
-      spineChar.x = options.x || app.screen.width / 2;
-      spineChar.y = options.y || app.screen.height;
-      spineChar.scale.set(options.scale || 0.5);
-      spineChar.state.setAnimation(0, options.animation || 'idle', false);
-
+      
       const spineChar = new PIXI.spine.Spine(resources[resourceKey].spineData);
 
       // Resize canvas to fit character bounds
@@ -64,6 +58,7 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
