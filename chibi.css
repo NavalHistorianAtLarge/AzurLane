@@ -3,6 +3,7 @@
   background: transparent !important;
   overflow: visible;
   pointer-events: none; /* optional: makes it non-interactive */
+  z-index: 10;
 }
 
 canvas {
