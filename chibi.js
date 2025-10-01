@@ -20,7 +20,7 @@ if (!loader.resources['zuikaku']) {
       spineChar.x = app.screen.width / 2;
       spineChar.y = app.screen.height;
       spineChar.scale.set(0.5);
-      spineChar.state.setAnimation(0, 'idle', true);
+      spineChar.state.setAnimation(0, 'yun', true);
       app.stage.addChild(spineChar);
 
       window.animateZuikaku = function(action) {
@@ -28,4 +28,5 @@ if (!loader.resources['zuikaku']) {
       };
     });
 }
+
 
