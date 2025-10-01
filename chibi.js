@@ -2,6 +2,7 @@ const app = new PIXI.Application({
   width: 1,
   height: 1,
   backgroundAlpha: 0,
+  transparent: true,
   autoDensity: true,
   resolution: window.devicePixelRatio || 1
 });
@@ -53,4 +54,5 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
