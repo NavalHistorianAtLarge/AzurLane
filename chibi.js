@@ -20,7 +20,7 @@ function loadSpineCharacter(name, options = {}) {
   const resourceKey = `${name}-spine`;
 
   if (loadedCharacters[name]) {
-    loadedCharacters[name].state.setAnimation(0, options.animation || 'idle', false);
+    loadedCharacters[name].state.setAnimation(0, options.animation || 'idle', true);
     return;
   }
 
@@ -54,5 +54,6 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
