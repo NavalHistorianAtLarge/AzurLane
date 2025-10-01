@@ -44,7 +44,7 @@ function loadSpineCharacter(name, options = {}) {
 
       spineChar.x = -bounds.x;
       spineChar.y = -bounds.y;
-      spineChar.scale.set(options.scale || 0.2);
+      spineChar.scale.set(options.scale || 0.3);
       spineChar.state.setAnimation(0, options.animation || 'idle', false);
 
       app.stage.removeChildren();
@@ -82,6 +82,7 @@ app.view.onclick = () => {
 
       if (options.onReady) options.onReady(spineChar);
     };
+
 
 
 
