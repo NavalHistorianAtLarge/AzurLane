@@ -51,6 +51,12 @@ function loadSpineCharacter(name, options = {}) {
       app.stage.addChild(spineChar);
       loadedCharacters[name] = spineChar;
 
+      target.style.display = 'none'; // hide image
+      app.view.style.pointerEvents = 'auto'; // allow interaction
+app.view.onclick = () => {
+  app.view.remove(); // remove canvas
+  target.style.display = ''; // show image again
+};
         // 🔧 Position canvas near target element
       if (options.targetId) {
         const target = document.getElementById(options.targetId);
@@ -69,6 +75,7 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
