@@ -72,8 +72,9 @@ app.view.onclick = () => {
 
 
       if (options.onReady) options.onReady(spineChar);
-    });
+    };
 }
+
 
 
 
