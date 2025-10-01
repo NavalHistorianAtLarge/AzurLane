@@ -50,12 +50,6 @@ function loadSpineCharacter(name, options = {}) {
       app.stage.removeChildren();
       app.stage.addChild(spineChar);
       loadedCharacters[name] = spineChar;
-
-      target.style.display = 'none'; // hide image
-      app.view.style.pointerEvents = 'auto'; // allow interaction
-app.view.onclick = () => {
-  app.view.remove(); // remove canvas
-  target.style.display = ''; // show image again
 };
         // 🔧 Position canvas near target element
       if (options.targetId) {
@@ -69,12 +63,18 @@ app.view.onclick = () => {
           app.view.style.top = `${rect.top + window.scrollY}px`;
           app.view.style.pointerEvents = 'none';
         }
+        target.style.display = 'none'; // hide image
+      app.view.style.pointerEvents = 'auto'; // allow interaction
+app.view.onclick = () => {
+  app.view.remove(); // remove canvas
+  target.style.display = ''; // show image again
       }
 
 
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
