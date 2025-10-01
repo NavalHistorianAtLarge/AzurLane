@@ -15,11 +15,6 @@ container.appendChild(app.view);
 
 const loader = PIXI.Loader.shared;
 
-const app = new PIXI.Application({
-  width: 600,
-  height: 600,
-  backgroundAlpha: 0
-});
 document.body.appendChild(app.view);
 
 const loader = PIXI.Loader.shared;
@@ -71,6 +66,7 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
