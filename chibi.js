@@ -29,7 +29,7 @@ function loadSpineCharacter(name, options = {}) {
   }
 
   loader
-    .add(resourceKey, `${basePath}${name}.json`)
+    .add(resourceKey, `${basePath}${name}.skel`)
     .load((_, resources) => {
       if (!PIXI.spine) {
         console.error("Spine runtime not loaded");
@@ -53,3 +53,4 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
