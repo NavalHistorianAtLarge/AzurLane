@@ -1,6 +1,13 @@
 .chibiCanvas {
   display: inline-block;
-  background: transparent;
+  background: transparent !important;
   overflow: visible;
   pointer-events: none; /* optional: makes it non-interactive */
+}
+
+canvas {
+  background: transparent !important;
+}
+.chibiCanvas canvas {
+  background: transparent !important;
 }
