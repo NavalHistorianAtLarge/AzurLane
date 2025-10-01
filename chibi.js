@@ -10,7 +10,6 @@ document.body.appendChild(app.view);
 
 const container = document.createElement('div');
 container.className = 'chibiCanvas';
-document.body.appendChild(container);
 container.appendChild(app.view);
 
 const loader = PIXI.Loader.shared;
@@ -66,6 +65,7 @@ function loadSpineCharacter(name, options = {}) {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
