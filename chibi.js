@@ -50,7 +50,7 @@ function loadSpineCharacter(name, options = {}) {
       app.stage.removeChildren();
       app.stage.addChild(spineChar);
       loadedCharacters[name] = spineChar;
-};
+});
         // 🔧 Position canvas near target element
       if (options.targetId) {
         const target = document.getElementById(options.targetId);
@@ -74,6 +74,7 @@ app.view.onclick = () => {
       if (options.onReady) options.onReady(spineChar);
     });
 }
+
 
 
 
