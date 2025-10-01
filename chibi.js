@@ -26,20 +26,8 @@ function animateZuikaku(action) {
   }
 }
 document.body.appendChild(app.view);
-PIXI.loader
-  .add('zuikaku', '/assets/spine/zuikaku/zuikaku.skel')
-  .load((loader, resources) => {
-    const spineChar = new PIXI.spine.Spine(resources.zuikaku.spineData);
-
-    spineChar.x = app.screen.width / 2;
-    spineChar.y = app.screen.height;
-    spineChar.scale.set(0.5);
-
-    spineChar.state.setAnimation(0, 'idle', true); // loop idle animation
-
-    app.stage.addChild(spineChar);
-});
 function animateZuikaku(action) {
   const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
   spineChar.state.setAnimation(0, action, false);
+
 }
