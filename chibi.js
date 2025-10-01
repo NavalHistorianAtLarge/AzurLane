@@ -1,7 +1,7 @@
 const app = new PIXI.Application({
   width: 600,
   height: 600,
-  backgroundAlpha: 0
+  backgroundAlpha: 1
 });
 document.body.appendChild(app.view);
 
@@ -20,7 +20,7 @@ if (!loader.resources['zuikaku']) {
       spineChar.x = app.screen.width / 2;
       spineChar.y = app.screen.height;
       spineChar.scale.set(0.5);
-      spineChar.state.setAnimation(0, 'yun', true);
+      spineChar.state.setAnimation(0, 'stand2', true);
       app.stage.addChild(spineChar);
 
       window.animateZuikaku = function(action) {
@@ -28,5 +28,6 @@ if (!loader.resources['zuikaku']) {
       };
     });
 }
+
 
 
