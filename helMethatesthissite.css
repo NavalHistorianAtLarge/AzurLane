@@ -9,7 +9,9 @@ html {
     background-position: center center;
     background-repeat: no-repeat;
     overflow-y: hidden;
-
+a {
+    color: black;
+}
     
 }
 .memory {
@@ -187,3 +189,4 @@ kbd {
     position: fixed;
     z-index: 2;
 }
+
