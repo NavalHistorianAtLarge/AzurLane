@@ -2,17 +2,16 @@ html {
     height: 100%;
     width: auto;
 }
+a {
+    color: black;
+}
 .door {
     background-image: url(https://cdn.nagami.moe/bg/star_level_bg_505.png);
     /*background-size: 30%;*/
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    overflow-y: hidden;
-a {
-    color: black;
-}
-    
+    overflow-y: hidden;    
 }
 .memory {
     background-image: url(https://cdn.nagami.moe/bg/bg_memory_.png);
@@ -189,4 +188,5 @@ kbd {
     position: fixed;
     z-index: 2;
 }
+
 
