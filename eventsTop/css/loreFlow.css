@@ -13,6 +13,9 @@ body {
     font-family: "Comic Relief", cursive;
     text-align: center;
 }
+a {
+    color: black;
+}
 h1 {
     padding-top: 1em;
 }
@@ -185,3 +188,4 @@ h2 {
 sup {
     vertical-align: text-top;
 }
+
