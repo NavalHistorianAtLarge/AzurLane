@@ -138,9 +138,6 @@ h2 {
 .text-background div{ 
     padding: 10px;
 }
-.changelog a:link, a:visited {
-    color: blue;
-}
 .topTitle {
     font-size: 32pt;
 }
@@ -188,5 +185,6 @@ kbd {
     position: fixed;
     z-index: 2;
 }
+
 
 
