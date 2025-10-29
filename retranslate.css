@@ -36,6 +36,15 @@ body {
 .mainframe{
 	background-image: url(https://cdn.nagami.moe/bg/bg_endingsong_14.png);
 }
+.metaGoldBG {
+	background-image: url(https://cdn.nagami.moe/bg/bg_burningsea_2.png);
+}
+.aostelab {
+	background-image: url(https://cdn.nagami.moe/bg/bg_aostelab_2.png);
+}
+.enterpriseMETA {
+	background-image: url(https://cdn.nagami.moe/bg/bg_story_wing3.png);
+}
 *:lang(zh) {
 	font-family: Noto Sans TC;
 
@@ -80,8 +89,9 @@ h1 {
 .lineNumber {
 	float: right;
 	background-color: plum;
-	width: 20px;
+	min-width: 20px;
 	border-radius: 20px;
+	padding: 2px;
 	font-size: 20px;
 	text-decoration: none;
 }
@@ -312,11 +322,6 @@ ul {
 	padding-top: 30px;
 }
 
-.chibiSiren:hover {
-	transform: scale(5) translate(50px, 5px);
-	position: absolute;
-	z-index: 1;
-}
 .MutsukiStare {
 	margin-left: 150px;
 	margin-top: 10px;
@@ -343,6 +348,11 @@ ul {
 	display: flex;
 	height: auto;
 }
+.bgm {
+	display: block;
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 40px;
+}
 .speaker {
 	display: flex;
 	width: 200px;
@@ -355,6 +365,9 @@ ul {
 }
 .enemy {
 	background: linear-gradient(to right, rgb(216, 11, 11),rgb(225, 223, 184));
+}
+.narr {
+	background: rgba(225, 223, 184);
 }
 .banner {
 	height: 54px;
@@ -474,6 +487,8 @@ br:target {
 	float: left;
 	font-weight: bold;
 	background-color: blue;
+	padding: 1px;
+	border-radius: 40px;
 }
 .enemyName {
 	display: flex;
@@ -482,6 +497,8 @@ br:target {
 	float: left;
 	font-weight: bold;
 	background-color: red;
+	padding: 1px;
+	border-radius: 40px;
 }
 .shipName {
 	position:relative;
@@ -505,6 +522,7 @@ br:target {
 	font-weight: bold;
 	margin-bottom: px;
 	padding-left: 20px;
+
 }
 .flashback {
 	background-color: grey;
@@ -516,4 +534,7 @@ br:target {
 }
 .overflow {
 	font-size: smaller;
+}
+.codeG {
+	width: 360px;
 }
