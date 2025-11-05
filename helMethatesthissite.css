@@ -28,6 +28,7 @@ body {
     margin-top: 50px;
     text-align: center;
     font-family: "Comic Relief", cursive;
+    font-weight: 400;
 }
 .bruh a {
     display: block;
@@ -185,6 +186,7 @@ kbd {
     position: fixed;
     z-index: 2;
 }
+
 
 
 
