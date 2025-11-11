@@ -121,6 +121,11 @@ h1 {
     background-color: rgb(109, 52, 201);
     border: 0;
 }
+
+.panel p:last-child {
+    padding-bottom: 20px;
+}
+
 h2 {
     display: block;
 }
@@ -205,4 +210,5 @@ kbd {
 }
 sup {
     vertical-align: text-top;
+
 }
