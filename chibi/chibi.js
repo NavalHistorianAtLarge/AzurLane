@@ -1,3 +1,9 @@
+import * as PIXI from 'pixi.js';
+import { Spine } from 'pixi-spine';
+
+PIXI.spine = { Spine }; // Manually attach if needed
+
+
 const app = new PIXI.Application({
   width: 600,
   height: 600,
@@ -28,4 +34,5 @@ document.body.appendChild(app.view);
 function animateZuikaku(action) {
   const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
   spineChar.state.setAnimation(0, action, false);
+
 }
