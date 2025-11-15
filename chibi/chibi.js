@@ -7,7 +7,7 @@ document.body.appendChild(app.view);
 
 let spineChar;
 
-PIXI.loader.shared
+PIXI.Loader.shared
   .add('zuikaku', '/assets/spine/zuikaku.json')
   .load((loader, resources) => {
     spineChar = new PIXI.spine.Spine(resources.zuikaku.spineData);
@@ -24,6 +24,7 @@ function animateZuikaku(action) {
     spineChar.state.setAnimation(0, action, false);
   }
 }
+
 
 
 
