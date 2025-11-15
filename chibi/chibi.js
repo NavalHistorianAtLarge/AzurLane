@@ -1,8 +1,5 @@
 import * as PIXI from './libs/pixi.min.js';
 
-PIXI.spine = { Spine }; // Manually attach if needed
-
-
 const app = new PIXI.Application({
   width: 600,
   height: 600,
@@ -29,6 +26,7 @@ function animateZuikaku(action) {
     spineChar.state.setAnimation(0, action, false);
   }
 }
+
 
 
 
