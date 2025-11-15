@@ -1,5 +1,4 @@
 import * as PIXI from './libs/pixi.min.js';
-import { Spine } from './libs/pixi-spine.umd.js';
 
 PIXI.spine = { Spine }; // Manually attach if needed
 
@@ -30,6 +29,7 @@ function animateZuikaku(action) {
     spineChar.state.setAnimation(0, action, false);
   }
 }
+
 
 
 
