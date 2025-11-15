@@ -31,8 +31,4 @@ function animateZuikaku(action) {
   }
 }
 document.body.appendChild(app.view);
-function animateZuikaku(action) {
-  const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
-  spineChar.state.setAnimation(0, action, false);
 
-}
