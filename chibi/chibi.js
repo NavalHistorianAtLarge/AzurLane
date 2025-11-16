@@ -1,10 +1,4 @@
-const chibiData = {
-  zuikaku: ['default', 'ceremonial_crane', 'summer_dancer'],
-  akagi: ['default', 'dark_fox'],
-  kaga: ['default', 'white_wolf'],
-  shoukaku: ['default', 'phoenix_feathers'],
-  taihou: ['default', 'midnight_empress']
-};
+const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 
 const app = new PIXI.Application({ width: 600, height: 600, backgroundAlpha: 0 });
 document.body.appendChild(app.view);
@@ -76,6 +70,7 @@ function playSelectedAnimation() {
     spineChar.state.setAnimation(0, anim, false);
   }
 }
+
 
 
 
