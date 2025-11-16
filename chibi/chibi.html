@@ -8,22 +8,26 @@
     </head>
     <body>
           <div id="controls">
-            <label for="chibiSelector">Choose Chibi:</label>
-            <select id="chibiSelector"></select>
+            <input list="chibiList" id="chibiSelectorInput" placeholder="Type or select a chibi..." />
+            <datalist id="chibiList">
+                    <option value="zuikaku">
+                    <option value="akagi">
+                    <option value="kaga">
+                    <option value="shoukaku">
+                    <option value="taihou">
+            </datalist>
+
+            <label for="skinSelector">Choose Skin:</label>
+            <select id="skinSelector"></select>
 
             <label for="animationSelector">Choose Animation:</label>
             <select id="animationSelector"></select>
 
+          
+
            <button onclick="playSelectedAnimation()">▶️ Play</button>
 
-            <input list="chibiList" id="chibiSelectorInput" placeholder="Type or select a chibi..." />
-            <datalist id="chibiList">
-              <option value="zuikaku">
-              <option value="akagi">
-              <option value="kaga">
-              <option value="shoukaku">
-              <option value="taihou">
-            </datalist>
+            
   </div>
 
   <div id="chibiCanvas"></div>
@@ -36,6 +40,7 @@
     </body>
 
 </html>
+
 
 
 
