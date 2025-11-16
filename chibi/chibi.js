@@ -1,3 +1,11 @@
+const app = new PIXI.Application({
+  width: 600,
+  height: 600,
+  backgroundAlpha: 0
+});
+document.getElementById('chibiCanvas').appendChild(app.view);
+
+
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
 const skinSelector = document.getElementById('skinSelector');
@@ -51,3 +59,4 @@ function loadChibi(filename) {
       app.stage.addChild(spineChar);
     });
 }
+
