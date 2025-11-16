@@ -15,7 +15,7 @@ PIXI.Loader.shared
     spineChar.y = 600;
     spineChar.scale.set(0.5);
 
-    spineChar.state.setAnimation(0, 'idle', true);
+    spineChar.state.setAnimation(0, 'walk', true);
     app.stage.addChild(spineChar);
   });
 
@@ -24,6 +24,7 @@ function animateZuikaku(action) {
     spineChar.state.setAnimation(0, action, false);
   }
 }
+
 
 
 
