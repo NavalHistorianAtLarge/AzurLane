@@ -23,4 +23,10 @@
 
 .chibi.idle {
   animation: idleBounce 2s infinite ease-in-out;
+
+}
+#chibiCanvas canvas {
+  background: transparent;
+  display: block;
+  margin: 0 auto;
 }
