@@ -39,7 +39,7 @@ function loadChibi(filename) {
   PIXI.loader.reset();
 
   PIXI.loader
-    .add(filename, `/assets/spine/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
+    .add(filename, `/chibi/assets/spine/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
     .load((loader, resources) => {
       const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
       const animationNames = Object.keys(spineChar.spineData.animations);
@@ -59,4 +59,5 @@ function loadChibi(filename) {
       app.stage.addChild(spineChar);
     });
 }
+
 
