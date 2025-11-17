@@ -43,7 +43,7 @@ function loadChibi(filename) {
     .load((loader, resources) => {
       const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
       
-      const animationNames = Object.keys(spineChar.spineData.animations);
+      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
 
       animationSelector.innerHTML = '';
       animationNames.forEach(name => {
@@ -68,6 +68,7 @@ function playSelectedAnimation() {
   }
 }
 document.querySelector('button').addEventListener('click', playSelectedAnimation);
+
 
 
 
