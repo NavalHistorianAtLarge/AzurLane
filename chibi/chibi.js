@@ -52,8 +52,10 @@ function loadChibi(filename) {
         option.textContent = name;
         animationSelector.appendChild(option);
       });
+    });
+}
 
-   function fitAndCenter(spineChar) {
+function fitAndCenter(spineChar) {
   // Ensure it's on stage so bounds can be measured
   if (!app.stage.children.includes(spineChar)) {
     app.stage.addChild(spineChar);
@@ -79,8 +81,8 @@ function loadChibi(filename) {
   spineChar.x = app.renderer.width / 2 - scaledBounds.x - scaledBounds.width / 2;
   spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
 }
-    });
-}
+
+
 function playSelectedAnimation() {
   const anim = animationSelector.value;
   const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
@@ -105,6 +107,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
