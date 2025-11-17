@@ -53,28 +53,32 @@ function loadChibi(filename) {
         animationSelector.appendChild(option);
       });
 
-    // Step 1: Add spineChar to stage temporarily to compute bounds
+   function fitAndCenter(spineChar) {
+  // Ensure it's on stage so bounds can be measured
+  if (!app.stage.children.includes(spineChar)) {
     app.stage.addChild(spineChar);
+  }
 
-// Step 2: Get unscaled bounds
-    const rawBounds = spineChar.getBounds();
+  // Step 1: Get raw bounds before scaling
+  const rawBounds = spineChar.getBounds();
 
-// Step 3: Compute scale to fit within canvas
-const maxWidth = app.renderer.width * 0.8;
-const maxHeight = app.renderer.height * 0.8;
-const scaleX = maxWidth / rawBounds.width;
-const scaleY = maxHeight / rawBounds.height;
-const scale = Math.min(scaleX, scaleY, 1); // Prevent upscaling
+  // Step 2: Compute scale to fit within 80% of canvas
+  const maxWidth = app.renderer.width * 0.8;
+  const maxHeight = app.renderer.height * 0.8;
+  const scaleX = maxWidth / rawBounds.width;
+  const scaleY = maxHeight / rawBounds.height;
+  const scale = Math.min(scaleX, scaleY, 1); // Prevent upscaling
 
-// Step 4: Apply scale
-spineChar.scale.set(scale);
+  // Step 3: Apply scale
+  spineChar.scale.set(scale);
 
-// Step 5: Get scaled bounds
-const scaledBounds = spineChar.getBounds();
+  // Step 4: Get scaled bounds
+  const scaledBounds = spineChar.getBounds();
 
-// Step 6: Center the character
-spineChar.x = app.renderer.width / 2 - scaledBounds.x - scaledBounds.width / 2;
-spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
+  // Step 5: Center the character
+  spineChar.x = app.renderer.width / 2 - scaledBounds.x - scaledBounds.width / 2;
+  spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
+}
     });
 }
 function playSelectedAnimation() {
@@ -101,6 +105,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
