@@ -5,9 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
     width: 600,
     height: 600,
     backgroundAlpha: 0,
-    forceCanvas: false // explicitly prefer WebGL
-
+    forceCanvas: false, // explicitly prefer WebGL
+    preserveDrawingBuffer: true
   });
+  app.view.style.backgroundColor = 'transparent';
   app.renderer.clearBeforeRender = false;
   document.getElementById('chibiCanvas').appendChild(app.view);
   const clearLayer = new PIXI.Graphics();
@@ -15,6 +16,9 @@ clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 console.log('Renderer type:', app.renderer.type); // 1 = WebGL, 2 = Canvas
+  
+  const sprite = PIXI.Sprite.from('https://upload.wikimedia.org/wikipedia/commons/7/75/Transparent.png');
+app.stage.addChild(sprite);
 
 
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
@@ -125,6 +129,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
