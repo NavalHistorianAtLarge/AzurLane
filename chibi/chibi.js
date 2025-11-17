@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = new PIXI.Application({
     width: 600,
     height: 600,
+    backgroundAlpha: 0,
+    forceCanvas: false // explicitly prefer WebGL
+
   });
   app.renderer.clearBeforeRender = false;
   document.getElementById('chibiCanvas').appendChild(app.view);
@@ -12,6 +15,9 @@ clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 app.stage.addChild(clearLayer); 
+  app.renderer.on('contextLost', () => {
+  console.warn('WebGL context lost');
+});
 
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
@@ -121,6 +127,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
