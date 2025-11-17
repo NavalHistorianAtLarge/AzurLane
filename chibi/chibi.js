@@ -7,12 +7,11 @@ app.renderer.clearBeforeRender = false;
 
 document.getElementById('chibiCanvas').appendChild(app.view);
 
-// Draw a test graphic to confirm transparency
-const graphics = new PIXI.Graphics();
-graphics.beginFill(0xff0000);
-graphics.drawCircle(300, 300, 50);
-graphics.endFill();
-app.stage.addChild(graphics);
+const bg = new PIXI.Graphics();
+bg.beginFill(0x000000); // ← This would render black
+bg.drawRect(0, 0, width, height);
+bg.endFill();
+app.stage.addChild(bg);
 
 
 
@@ -122,6 +121,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
