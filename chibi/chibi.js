@@ -6,13 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   app.renderer.clearBeforeRender = false;
   document.getElementById('chibiCanvas').appendChild(app.view);
-});
-
-const clearLayer = new PIXI.Graphics();
+  const clearLayer = new PIXI.Graphics();
 clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 app.stage.addChild(clearLayer);
+});
+
+
 
 
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
@@ -121,6 +122,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
