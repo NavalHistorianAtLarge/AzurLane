@@ -1,9 +1,12 @@
-const app = new PIXI.Application({
-  width: 600,
-  height: 600,
-  backgroundAlpha: 0
+document.addEventListener('DOMContentLoaded', () => {
+  const app = new PIXI.Application({
+    width: 600,
+    height: 600,
+    backgroundAlpha: 0
+  });
+  app.renderer.clearBeforeRender = false;
+  document.getElementById('chibiCanvas').appendChild(app.view);
 });
-app.renderer.clearBeforeRender = false;
 
 document.getElementById('chibiCanvas').appendChild(app.view);
 
@@ -120,6 +123,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
