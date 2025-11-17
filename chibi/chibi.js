@@ -5,6 +5,13 @@ const app = new PIXI.Application({
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
 
+// Draw a test graphic to confirm transparency
+const graphics = new PIXI.Graphics();
+graphics.beginFill(0xff0000);
+graphics.drawCircle(300, 300, 50);
+graphics.endFill();
+app.stage.addChild(graphics);
+
 
 
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
@@ -113,6 +120,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
