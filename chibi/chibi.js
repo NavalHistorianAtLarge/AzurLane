@@ -53,9 +53,9 @@ function loadChibi(filename) {
         animationSelector.appendChild(option);
       });
 
-      spineChar.x = 300;
-      spineChar.y = 600;
-      spineChar.scale.set(0.5);
+      spineChar.x = app.renderer.width / 2;
+      spineChar.y = app.renderer.height / 2;
+      spineChar.scale.set(1.0);
       spineChar.state.setAnimation(0, 'normal', true);
       app.stage.addChild(spineChar);
     });
@@ -84,6 +84,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
