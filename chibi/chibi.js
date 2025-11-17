@@ -6,6 +6,7 @@ const app = new PIXI.Application({
 document.getElementById('chibiCanvas').appendChild(app.view);
 
 
+
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
 const skinSelector = document.getElementById('skinSelector');
@@ -82,6 +83,9 @@ function loadChibi(filename) {
             spineChar.state.setAnimation(0, 'normal', true);
       fitAndCenter(spineChar);
 
+      spineChar.skeleton.setSlotsToSetupPose(); // Resets slots
+      spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
+
     });
 }
 
@@ -109,6 +113,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
