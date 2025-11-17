@@ -42,6 +42,7 @@ function loadChibi(filename) {
     .add(filename, `/chibi/assets/spine/${filename}/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
     .load((loader, resources) => {
       const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
+      
       const animationNames = Object.keys(spineChar.spineData.animations);
 
       animationSelector.innerHTML = '';
@@ -58,6 +59,13 @@ function loadChibi(filename) {
       spineChar.state.setAnimation(0, 'normal', true);
       app.stage.addChild(spineChar);
     });
+}
+function playSelectedAnimation() {
+  const anim = animationSelector.value;
+  const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
+  if (spineChar && anim) {
+    spineChar.state.setAnimation(0, anim, false);
+  }
 }
 
 
