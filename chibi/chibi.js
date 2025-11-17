@@ -34,27 +34,6 @@ function populateSkins(chibi) {
   });
 }
 
-function loadChibi(filename) {
-  app.stage.removeChildren();
-  PIXI.loader.reset();
-
-  PIXI.loader
-    .add(filename, `/chibi/assets/spine/${filename}/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
-    .load((loader, resources) => {
-      const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
-      
-      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
-
-      animationSelector.innerHTML = '';
-      animationNames.forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        animationSelector.appendChild(option);
-      });
-    });
-}
-
 function fitAndCenter(spineChar) {
   // Ensure it's on stage so bounds can be measured
   if (!app.stage.children.includes(spineChar)) {
@@ -82,6 +61,29 @@ function fitAndCenter(spineChar) {
   spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
 }
 
+function loadChibi(filename) {
+  app.stage.removeChildren();
+  PIXI.loader.reset();
+
+  PIXI.loader
+    .add(filename, `/chibi/assets/spine/${filename}/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
+    .load((loader, resources) => {
+      const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
+      
+      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
+
+      animationSelector.innerHTML = '';
+      animationNames.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        animationSelector.appendChild(option);
+      });
+            spineChar.state.setAnimation(0, 'normal', true);
+      fitAndCenter(spineChar);
+
+    });
+}
 
 function playSelectedAnimation() {
   const anim = animationSelector.value;
@@ -107,6 +109,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
