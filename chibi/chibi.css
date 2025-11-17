@@ -1,33 +1,15 @@
-.chibi {
-  position: relative;
-  width: 300px;
-  height: 300px;
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
 }
 
-.layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-}
 
-.hidden {
-  display: none;
-}
-
-@keyframes idleBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
-
-.chibi.idle {
-  animation: idleBounce 2s infinite ease-in-out;
-
-}
 
 #chibiCanvas {
   background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 #chibiCanvas canvas {
@@ -35,4 +17,5 @@
   display: block;
   margin: 0 auto;
 }
+
 
