@@ -53,11 +53,28 @@ function loadChibi(filename) {
         animationSelector.appendChild(option);
       });
 
-      spineChar.x = app.renderer.width / 2;
-      spineChar.y = app.renderer.height / 2;
-      spineChar.scale.set(1.0);
-      spineChar.state.setAnimation(0, 'normal', true);
-      app.stage.addChild(spineChar);
+    // Step 1: Add spineChar to stage temporarily to compute bounds
+    app.stage.addChild(spineChar);
+
+// Step 2: Get unscaled bounds
+    const rawBounds = spineChar.getBounds();
+
+// Step 3: Compute scale to fit within canvas
+const maxWidth = app.renderer.width * 0.8;
+const maxHeight = app.renderer.height * 0.8;
+const scaleX = maxWidth / rawBounds.width;
+const scaleY = maxHeight / rawBounds.height;
+const scale = Math.min(scaleX, scaleY, 1); // Prevent upscaling
+
+// Step 4: Apply scale
+spineChar.scale.set(scale);
+
+// Step 5: Get scaled bounds
+const scaledBounds = spineChar.getBounds();
+
+// Step 6: Center the character
+spineChar.x = app.renderer.width / 2 - scaledBounds.x - scaledBounds.width / 2;
+spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
     });
 }
 function playSelectedAnimation() {
@@ -84,6 +101,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
