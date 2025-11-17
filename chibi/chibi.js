@@ -69,6 +69,21 @@ function playSelectedAnimation() {
 }
 document.querySelector('button').addEventListener('click', playSelectedAnimation);
 
+function showAnimationDuration() {
+  const animName = animationSelector.value;
+  const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
+  if (!spineChar || !animName) return;
+
+  const animation = spineChar.spineData.findAnimation(animName);
+  if (!animation) {
+    console.warn(`Animation "${animName}" not found`);
+    return;
+  }
+
+  const duration = animation.duration.toFixed(2); // seconds
+  const output = document.getElementById('animationDuration');
+  output.textContent = `⏱ Duration: ${duration} seconds`;
+}
 
 
 
