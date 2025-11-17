@@ -1,7 +1,7 @@
 const app = new PIXI.Application({
   width: 600,
   height: 600,
-  backgroundAlpha: 0;
+  backgroundAlpha: 0
 });
 app.renderer.clearBeforeRender = false;
 
@@ -122,6 +122,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
