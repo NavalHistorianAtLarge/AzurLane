@@ -67,6 +67,8 @@ function playSelectedAnimation() {
     spineChar.state.setAnimation(0, anim, false);
   }
 }
+document.querySelector('button').addEventListener('click', playSelectedAnimation);
+
 
 
 
