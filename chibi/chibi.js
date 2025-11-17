@@ -8,8 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('chibiCanvas').appendChild(app.view);
 });
 
-document.getElementById('chibiCanvas').appendChild(app.view);
-
 const clearLayer = new PIXI.Graphics();
 clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
@@ -123,6 +121,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
