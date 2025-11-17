@@ -55,10 +55,11 @@ function loadChibi(filename) {
       spineChar.x = 300;
       spineChar.y = 600;
       spineChar.scale.set(0.5);
-      spineChar.state.setAnimation(0, 'idle', true);
+      spineChar.state.setAnimation(0, 'normal', true);
       app.stage.addChild(spineChar);
     });
 }
+
 
 
 
