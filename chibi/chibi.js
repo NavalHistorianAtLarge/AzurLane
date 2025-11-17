@@ -3,6 +3,8 @@ const app = new PIXI.Application({
   height: 600,
   backgroundAlpha: 0;
 });
+app.renderer.clearBeforeRender = false;
+
 document.getElementById('chibiCanvas').appendChild(app.view);
 
 // Draw a test graphic to confirm transparency
@@ -120,6 +122,7 @@ function showAnimationDuration() {
   const output = document.getElementById('animationDuration');
   output.textContent = `⏱ Duration: ${duration} seconds`;
 }
+
 
 
 
