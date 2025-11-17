@@ -1,3 +1,5 @@
+let app;
+
 document.addEventListener('DOMContentLoaded', () => {
   const app = new PIXI.Application({
     width: 600,
@@ -10,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
-app.stage.addChild(clearLayer);
+app.stage.addChild(clearLayer); 
+});
 
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
@@ -120,7 +123,7 @@ function showAnimationDuration() {
 }
 
 
-});
+
 
 
 
