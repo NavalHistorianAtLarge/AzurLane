@@ -6,10 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
     height: 600,
     backgroundAlpha: 0,
     forceCanvas: false, // explicitly prefer WebGL
-    preserveDrawingBuffer: true
+    preserveDrawingBuffer: true,
+    antialias: true,
+  clearBeforeRender: false // ✅ set via constructor
+
   });
   app.view.style.backgroundColor = 'transparent';
-  app.renderer.clearBeforeRender = false;
   document.getElementById('chibiCanvas').appendChild(app.view);
   const clearLayer = new PIXI.Graphics();
 clearLayer.beginFill(0x000000, 0); // Transparent fill
@@ -129,6 +131,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
