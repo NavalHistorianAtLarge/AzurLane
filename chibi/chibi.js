@@ -19,10 +19,6 @@ clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 console.log('Renderer type:', app.renderer.type); // 1 = WebGL, 2 = Canvas
   
-  const sprite = PIXI.Sprite.from('https://upload.wikimedia.org/wikipedia/commons/7/75/Transparent.png');
-app.stage.addChild(sprite);
-
-
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
 const skinSelector = document.getElementById('skinSelector');
@@ -131,6 +127,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
