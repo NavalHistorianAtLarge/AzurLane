@@ -74,31 +74,43 @@ function fitAndCenter(spineChar) {
   spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
 }
 
-function loadChibi(filename) {
+async function loadChibi(filename) {
   app.stage.removeChildren();
-  PIXI.loader.reset();
 
-  PIXI.loader
-    .add(filename, `/chibi/assets/spine/${filename}/${filename}.skel`, { metadata: { spineSkeletonScale: 1 } })
-    .load((loader, resources) => {
-      const spineChar = new PIXI.spine.Spine(resources[filename].spineData);
-      
-      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
+  const spinePath = `/chibi/assets/spine/${filename}/${filename}.skel`;
 
-      animationSelector.innerHTML = '';
-      animationNames.forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        animationSelector.appendChild(option);
-      });
-            spineChar.state.setAnimation(0, 'normal', true);
-      fitAndCenter(spineChar);
-
-      spineChar.skeleton.setSlotsToSetupPose(); // Resets slots
-      spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
-
+  try {
+    // Load Spine skeleton using PIXI.Assets
+    await PIXI.Assets.load({
+      alias: filename,
+      src: spinePath,
+      metadata: { spineSkeletonScale: 1 }
     });
+
+    const spineData = PIXI.Assets.get(filename);
+    const spineChar = new PIXI.spine.Spine(spineData);
+
+    // Populate animation selector
+    const animationNames = spineChar.spineData.animations.map(anim => anim.name);
+    animationSelector.innerHTML = '';
+    animationNames.forEach(name => {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      animationSelector.appendChild(option);
+    });
+
+    // Set default animation and stage setup
+    spineChar.state.setAnimation(0, 'normal', true);
+    fitAndCenter(spineChar);
+    spineChar.skeleton.setSlotsToSetupPose();
+    spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
+
+    app.stage.addChild(spineChar);
+
+  } catch (err) {
+    console.error(`Failed to load Spine asset for "${filename}":`, err);
+  }
 }
 
 function playSelectedAnimation() {
@@ -127,6 +139,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
