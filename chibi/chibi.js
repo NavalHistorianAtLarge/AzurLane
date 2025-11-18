@@ -19,6 +19,23 @@ clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 console.log('Renderer type:', app.renderer.type); // 1 = WebGL, 2 = Canvas
+
+  PIXI.Assets.registerLoader({
+  test: (url) => url.endsWith('.skel'),
+  load: async (url, options) => {
+    return new Promise((resolve, reject) => {
+      const loader = new PIXI.Loader();
+      loader.add('spineData', url, options?.metadata || {});
+      loader.load((_, resources) => {
+        if (resources.spineData?.spineData) {
+          resolve(resources.spineData.spineData);
+        } else {
+          reject(new Error('Failed to parse Spine data'));
+        }
+      });
+    });
+  }
+});
   
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
@@ -145,6 +162,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
