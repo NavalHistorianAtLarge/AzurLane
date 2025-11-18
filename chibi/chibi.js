@@ -19,23 +19,6 @@ clearLayer.beginFill(0x000000, 0); // Transparent fill
 clearLayer.drawRect(0, 0, app.renderer.width, app.renderer.height);
 clearLayer.endFill();
 console.log('Renderer type:', app.renderer.type); // 1 = WebGL, 2 = Canvas
-
-  PIXI.Assets.registerLoader({
-  test: (url) => url.endsWith('.skel'),
-  load: async (url, options) => {
-    return new Promise((resolve, reject) => {
-      const loader = new PIXI.Loader();
-      loader.add('spineData', url, options?.metadata || {});
-      loader.load((_, resources) => {
-        if (resources.spineData?.spineData) {
-          resolve(resources.spineData.spineData);
-        } else {
-          reject(new Error('Failed to parse Spine data'));
-        }
-      });
-    });
-  }
-});
   
 const chibiData = JSON.parse(document.getElementById('chibiData').textContent);
 const chibiInput = document.getElementById('chibiSelectorInput');
@@ -92,48 +75,40 @@ function fitAndCenter(spineChar) {
   spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
 }
 
-async function loadChibi(filename) {
+function loadChibi(filename) {
   app.stage.removeChildren();
 
+  const loader = new PIXI.Loader();
   const spinePath = `/chibi/assets/spine/${filename}/${filename}.skel`;
 
-  try {
-    // Load Spine skeleton using PIXI.Assets
-    await PIXI.Assets.load({
-      alias: filename,
-      src: spinePath,
-      metadata: { spineSkeletonScale: 1 }
+  loader
+    .add(filename, spinePath, { metadata: { spineSkeletonScale: 1 } })
+    .load((loader, resources) => {
+      const spineData = resources[filename]?.spineData;
+
+      if (!spineData) {
+        console.error(`Spine data for "${filename}" is null — failed to parse.`);
+        return;
+      }
+
+      const spineChar = new PIXI.spine.Spine(spineData);
+
+      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
+      animationSelector.innerHTML = '';
+      animationNames.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        animationSelector.appendChild(option);
+      });
+
+      spineChar.state.setAnimation(0, 'normal', true);
+      fitAndCenter(spineChar);
+      spineChar.skeleton.setSlotsToSetupPose();
+      spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
+
+      app.stage.addChild(spineChar);
     });
-    
-    const spineData = PIXI.Assets.get(filename);
-if (!spineData) {
-  console.error(`Spine data for "${filename}" is null — likely failed to load or parse.`);
-  return;
-}
-
-    const spineChar = new PIXI.spine.Spine(spineData);
-
-    // Populate animation selector
-    const animationNames = spineChar.spineData.animations.map(anim => anim.name);
-    animationSelector.innerHTML = '';
-    animationNames.forEach(name => {
-      const option = document.createElement('option');
-      option.value = name;
-      option.textContent = name;
-      animationSelector.appendChild(option);
-    });
-
-    // Set default animation and stage setup
-    spineChar.state.setAnimation(0, 'normal', true);
-    fitAndCenter(spineChar);
-    spineChar.skeleton.setSlotsToSetupPose();
-    spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
-
-    app.stage.addChild(spineChar);
-
-  } catch (err) {
-    console.error(`Failed to load Spine asset for "${filename}":`, err);
-  }
 }
 
 function playSelectedAnimation() {
@@ -162,6 +137,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
