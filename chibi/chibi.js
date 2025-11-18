@@ -74,40 +74,41 @@ function fitAndCenter(spineChar) {
   spineChar.y = app.renderer.height / 2 - scaledBounds.y - scaledBounds.height / 2;
 }
 
-function loadChibi(filename) {
+async function loadChibi(filename) {
   app.stage.removeChildren();
 
-  const loader = new PIXI.loaders.Loader();
-  const spinePath = `/chibi/assets/spine/${filename}/${filename}.skel`;
+  const spinePath = `/chibi/assets/spine/${filename}/${filename}.json`;
 
-  loader
-    .add(filename, spinePath, { metadata: { spineSkeletonScale: 1 } })
-    .load((loader, resources) => {
-      const spineData = resources[filename]?.spineData;
+  try {
+    const spineData = await PIXI.Assets.load(spinePath);
 
-      if (!spineData) {
-        console.error(`Spine data for "${filename}" is null — failed to parse.`);
-        return;
-      }
+    if (!spineData) {
+      console.error(`Spine data for "${filename}" is null — failed to parse.`);
+      return;
+    }
 
-      const spineChar = new PIXI.spine.Spine(spineData);
+    const spineChar = new PIXI.spine.Spine(spineData);
 
-      const animationNames = spineChar.spineData.animations.map(anim => anim.name);
-      animationSelector.innerHTML = '';
-      animationNames.forEach(name => {
-        const option = document.createElement('option');
-        option.value = name;
-        option.textContent = name;
-        animationSelector.appendChild(option);
-      });
-
-      spineChar.state.setAnimation(0, 'normal', true);
-      fitAndCenter(spineChar);
-      spineChar.skeleton.setSlotsToSetupPose();
-      spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
-
-      app.stage.addChild(spineChar);
+    // Populate animation selector
+    const animationNames = spineChar.spineData.animations.map(anim => anim.name);
+    animationSelector.innerHTML = '';
+    animationNames.forEach(name => {
+      const option = document.createElement('option');
+      option.value = name;
+      option.textContent = name;
+      animationSelector.appendChild(option);
     });
+
+    spineChar.state.setAnimation(0, 'normal', true);
+    fitAndCenter(spineChar);
+    spineChar.skeleton.setSlotsToSetupPose();
+    spineChar.blendMode = PIXI.BLEND_MODES.NORMAL;
+
+    app.stage.addChild(spineChar);
+    console.log(`✅ Loaded chibi: ${filename}`);
+  } catch (err) {
+    console.error(`❌ Failed to load chibi "${filename}":`, err);
+  }
 }
 
 function playSelectedAnimation() {
@@ -136,6 +137,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
