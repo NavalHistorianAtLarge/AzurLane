@@ -94,7 +94,6 @@ if (!spineData) {
   return;
 }
 
-    const spineData = PIXI.Assets.get(filename);
     const spineChar = new PIXI.spine.Spine(spineData);
 
     // Populate animation selector
@@ -146,6 +145,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
