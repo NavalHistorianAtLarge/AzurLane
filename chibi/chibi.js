@@ -78,7 +78,7 @@ function fitAndCenter(spineChar) {
 function loadChibi(filename) {
   app.stage.removeChildren();
 
-  const loader = new PIXI.Loader();
+  const loader = new PIXI.loaders.Loader();
   const spinePath = `/chibi/assets/spine/${filename}/${filename}.skel`;
 
   loader
@@ -137,6 +137,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
