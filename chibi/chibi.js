@@ -1,7 +1,8 @@
 let app;
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(PIXI.spine.Loader);
+ console.log(typeof PIXI.loaders?.Loader); // "function"
+console.log(typeof PIXI.spine?.Spine);    // "function"
   const app = new PIXI.Application({
     width: 600,
     height: 600,
@@ -137,6 +138,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
