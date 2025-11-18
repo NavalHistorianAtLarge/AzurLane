@@ -87,6 +87,12 @@ async function loadChibi(filename) {
       src: spinePath,
       metadata: { spineSkeletonScale: 1 }
     });
+    
+    const spineData = PIXI.Assets.get(filename);
+if (!spineData) {
+  console.error(`Spine data for "${filename}" is null — likely failed to load or parse.`);
+  return;
+}
 
     const spineData = PIXI.Assets.get(filename);
     const spineChar = new PIXI.spine.Spine(spineData);
@@ -140,6 +146,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
