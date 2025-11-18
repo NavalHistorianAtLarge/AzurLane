@@ -1,6 +1,7 @@
 let app;
 
 document.addEventListener('DOMContentLoaded', () => {
+  console.log(Object.keys(PIXI.spine));
   const app = new PIXI.Application({
     width: 600,
     height: 600,
@@ -137,6 +138,7 @@ function showAnimationDuration() {
 }
 
 });
+
 
 
 
