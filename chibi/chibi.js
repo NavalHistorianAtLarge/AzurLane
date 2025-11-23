@@ -125,6 +125,57 @@ animSelect.addEventListener('change', e => {
 });
 
 
+// Requires JSZip (include via CDN)
+async function captureAnimationFrames(spineChar, animationName, fps = 30) {
+  return new Promise((resolve) => {
+    const zip = new JSZip();
+    const folder = zip.folder(animationName);
+
+    // Find animation duration
+    const anim = spineChar.spineData.animations.find(a => a.name === animationName);
+    if (!anim) {
+      console.error(`Animation "${animationName}" not found.`);
+      return;
+    }
+    const duration = anim.duration; // seconds
+    const frameCount = Math.ceil(duration * fps);
+
+    // Set animation
+    spineChar.state.setAnimation(0, animationName, false);
+
+    let frame = 0;
+    const ticker = new PIXI.Ticker();
+    ticker.add(() => {
+      // Advance animation
+      spineChar.update(1 / fps);
+
+      // Render current frame
+      app.renderer.render(app.stage);
+      const canvas = app.renderer.extract.canvas(spineChar);
+
+      // Convert to data URL
+      const dataURL = canvas.toDataURL("image/png");
+
+      // Add to zip
+      folder.file(`frame_${String(frame).padStart(3, '0')}.png`, dataURL.split(',')[1], { base64: true });
+
+      frame++;
+      if (frame >= frameCount) {
+        ticker.stop();
+
+        // Generate zip and trigger download
+        zip.generateAsync({ type: "blob" }).then(content => {
+          const a = document.createElement("a");
+          a.href = URL.createObjectURL(content);
+          a.download = `${animationName}_frames.zip`;
+          a.click();
+          resolve();
+        });
+      }
+    });
+    ticker.start();
+  });
+}
 
 
 
