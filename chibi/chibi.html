@@ -41,7 +41,7 @@
 
     // Queue all chibis before load
     chibiFiles.forEach(name => {
-      PIXI.loader.add(name, `chibi/assets/spine/${name}/${name}.json`);
+      PIXI.loader.add(name, `assets/spine/${name}/${name}.json`);
     });
 
     PIXI.loader.load((loader, resources) => {
@@ -74,6 +74,7 @@
   </script>
 </body>
 </html>
+
 
 
 
