@@ -1,7 +1,7 @@
 {
   "chibis": [
     {
-      "name": "zuikaku",
+      "name": "Zuikaku",
       "skins": [
         {
           "id": "default",
@@ -11,26 +11,35 @@
         {
           "id": "ceremonial",
           "label": "Ceremonial Crane",
-          "path": "/assets/spine/zuikaku/zuikaku1.json"
+          "path": "/chibi/assets/spine/zuikaku/zuikaku1.json"
         },
         {
           "id": "wind",
           "label": "The Wind's True Name",
-          "path": "/assets/spine/zuikaku/zuikaku2.json"
+          "path": "/chibi/assets/spine/zuikaku/zuikaku2.json"
         }
       ]
     },
     {
-      "name": "shoukaku",
+      "name": "Shoukaku",
       "skins": [
         {
           "id": "default",
           "label": "Default",
-          "path": "/assets/spine/shoukaku/shoukaku.json"
+          "path": "/chibi/assets/spine/shoukaku/shoukaku.json"
+        }
+      ]
+    },
+    {
+      "name": "Regensburg",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/chibi/assets/spine/regensburg/regensburg.json"
         }
       ]
     }
   ]
-
 }
 
