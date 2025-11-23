@@ -1,26 +1,41 @@
-.chibi {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-.layer {
-  position: absolute;
-  top: 0;
+.sidebar {
+  position: fixed;
   left: 0;
-  width: 100%;
-  pointer-events: none;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: #333;
+  color: #fff;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 10px;
 }
-
-.hidden {
+.sidebar.open {
+  transform: translateX(0);
+}
+.view.hidden {
   display: none;
 }
-
-@keyframes idleBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+#chibiList img {
+  width: 100%;
+  margin: 5px 0;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
-
-.chibi.idle {
-  animation: idleBounce 2s infinite ease-in-out;
+#chibiList img:hover {
+  border-color: #ffcc00;
+}
+#animList button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+  padding: 8px;
+  background: #444;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#animList button:hover {
+  background: #555;
 }
