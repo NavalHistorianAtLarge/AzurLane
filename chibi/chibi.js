@@ -3,7 +3,8 @@ const app = new PIXI.Application({
   height: 600,
   transparent: true
 });
-document.body.appendChild(app.view);
+document.getElementById('chibiCanvas').appendChild(app.view);
+
 
 let currentChibi = null;
 let currentSkin = null;
@@ -102,4 +103,5 @@ animSelect.addEventListener('change', e => {
     currentChibi.state.setAnimation(0, e.target.value, false);
   }
 });
+
 
