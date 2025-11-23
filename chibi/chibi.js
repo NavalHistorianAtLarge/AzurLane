@@ -125,19 +125,16 @@ animSelect.addEventListener('change', e => {
 });
 
 
-// Requires JSZip (include via CDN)
-async function captureAnimationFrames(spineChar, animationName, fps = 30) {
+async function captureAnimationFrames(spineChar, animationName, fps = 30, zipFolder) {
   return new Promise((resolve) => {
-    const zip = new JSZip();
-    const folder = zip.folder(animationName);
-
     // Find animation duration
     const anim = spineChar.spineData.animations.find(a => a.name === animationName);
     if (!anim) {
       console.error(`Animation "${animationName}" not found.`);
+      resolve();
       return;
     }
-    const duration = anim.duration; // seconds
+    const duration = anim.duration;
     const frameCount = Math.ceil(duration * fps);
 
     // Set animation
@@ -146,36 +143,53 @@ async function captureAnimationFrames(spineChar, animationName, fps = 30) {
     let frame = 0;
     const ticker = new PIXI.Ticker();
     ticker.add(() => {
-      // Advance animation
       spineChar.update(1 / fps);
-
-      // Render current frame
       app.renderer.render(app.stage);
-      const canvas = app.renderer.extract.canvas(spineChar);
 
-      // Convert to data URL
+      const canvas = app.renderer.extract.canvas(spineChar);
       const dataURL = canvas.toDataURL("image/png");
 
-      // Add to zip
-      folder.file(`frame_${String(frame).padStart(3, '0')}.png`, dataURL.split(',')[1], { base64: true });
+      zipFolder.file(
+        `${animationName}_frame_${String(frame).padStart(3, '0')}.png`,
+        dataURL.split(',')[1],
+        { base64: true }
+      );
 
       frame++;
       if (frame >= frameCount) {
         ticker.stop();
-
-        // Generate zip and trigger download
-        zip.generateAsync({ type: "blob" }).then(content => {
-          const a = document.createElement("a");
-          a.href = URL.createObjectURL(content);
-          a.download = `${animationName}_frames.zip`;
-          a.click();
-          resolve();
-        });
+        resolve();
       }
     });
     ticker.start();
   });
 }
+document.getElementById('saveZipBtn').addEventListener('click', async () => {
+  if (!currentChibi) return;
+
+  const selected = Array.from(animSelect.selectedOptions).map(opt => opt.value);
+  if (selected.length === 0) {
+    alert("Please select at least one animation.");
+    return;
+  }
+
+  const zip = new JSZip();
+  const folder = zip.folder(currentSkin.id || currentSkin.label || "skin");
+
+  // Capture each selected animation sequentially
+  for (const animName of selected) {
+    await captureAnimationFrames(currentChibi, animName, 30, folder);
+  }
+
+  // Generate zip and download
+  zip.generateAsync({ type: "blob" }).then(content => {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(content);
+    a.download = `${chibiSelect.value}_${currentSkin.id}_animations.zip`;
+    a.click();
+  });
+});
+
 
 
 
