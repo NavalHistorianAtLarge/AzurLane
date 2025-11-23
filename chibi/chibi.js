@@ -61,8 +61,8 @@ function loadSkin(skin) {
     }
 
     const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = 400;
-    spineChar.y = 500;
+    spineChar.x = 300;
+    spineChar.y = 300;
     spineChar.scale.set(0.5);
     spineChar.state.setAnimation(0, 'normal', true);
 
@@ -103,5 +103,6 @@ animSelect.addEventListener('change', e => {
     currentChibi.state.setAnimation(0, e.target.value, false);
   }
 });
+
 
 
