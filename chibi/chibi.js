@@ -1,50 +1,104 @@
-// Create PixiJS app with transparency enabled
 const app = new PIXI.Application({
   width: 800,
   height: 600,
-  transparent: true   // background transparency
+  transparent: true
 });
 document.body.appendChild(app.view);
 
-// Registry for all loaded chibis
-const chibis = {};
+let currentChibi = null;
+let currentSkin = null;
 
-// Loader function for any chibi
-function loadChibi(name, path, options = {}) {
-  PIXI.loader
-    .add(name, path)
-    .load((loader, resources) => {
-      const spineChar = new PIXI.spine.Spine(resources[name].spineData);
+const chibiSelect = document.getElementById('chibiSelect');
+const skinSelect = document.getElementById('skinSelect');
+const animSelect = document.getElementById('animSelect');
 
-      // Positioning defaults with optional overrides
-      spineChar.x = options.x || 300;
-      spineChar.y = options.y || 600;
-      spineChar.scale.set(options.scale || 0.5);
+let chibiData = null;
 
-      // Default idle animation
-      spineChar.state.setAnimation(0, options.defaultAnim || 'normal', true);
+// Load chibiFiles.json
+fetch('chibiFiles.json')
+  .then(res => res.json())
+  .then(data => {
+    chibiData = data.chibis;
 
-      // Add to stage and registry
-      app.stage.addChild(spineChar);
-      chibis[name] = spineChar;
+    // Populate chibi dropdown
+    chibiData.forEach(chibi => {
+      const opt = document.createElement('option');
+      opt.value = chibi.name;
+      opt.textContent = chibi.name;
+      chibiSelect.appendChild(opt);
     });
+
+    // Auto-load first chibi + first skin
+    if (chibiData.length > 0) {
+      const first = chibiData[0];
+      chibiSelect.value = first.name;
+      populateSkins(first);
+      loadSkin(first.skins[0]);
+    }
+  });
+
+// Populate skins dropdown for a given chibi
+function populateSkins(chibi) {
+  skinSelect.innerHTML = '';
+  chibi.skins.forEach(skin => {
+    const opt = document.createElement('option');
+    opt.value = skin.id;
+    opt.textContent = skin.label;
+    opt.dataset.path = skin.path;
+    skinSelect.appendChild(opt);
+  });
+  skinSelect.value = chibi.skins[0].id;
 }
 
-// Animate any chibi by name
-function animateChibi(name, action, loop = false) {
-  const spineChar = chibis[name];
-  if (spineChar) {
-    spineChar.state.setAnimation(0, action, loop);
-  } else {
-    console.warn(`Chibi "${name}" not found.`);
+// Load a specific skin
+function loadSkin(skin) {
+  const loader = new PIXI.loaders.Loader();
+  loader.add(skin.id, skin.path).load((l, resources) => {
+    // Remove previous
+    if (currentChibi) {
+      app.stage.removeChild(currentChibi);
+    }
+
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    spineChar.x = 400;
+    spineChar.y = 500;
+    spineChar.scale.set(0.5);
+    spineChar.state.setAnimation(0, 'idle', true);
+
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
+    currentSkin = skin;
+
+    // Populate animation dropdown
+    animSelect.innerHTML = '';
+    const anims = spineChar.spineData.animations.map(a => a.name);
+    anims.forEach(anim => {
+      const opt = document.createElement('option');
+      opt.value = anim;
+      opt.textContent = anim;
+      animSelect.appendChild(opt);
+    });
+    animSelect.value = anims[0];
+  });
+}
+
+// Event: change chibi
+chibiSelect.addEventListener('change', e => {
+  const chibi = chibiData.find(c => c.name === e.target.value);
+  populateSkins(chibi);
+  loadSkin(chibi.skins[0]);
+});
+
+// Event: change skin
+skinSelect.addEventListener('change', e => {
+  const chibi = chibiData.find(c => c.name === chibiSelect.value);
+  const skin = chibi.skins.find(s => s.id === e.target.value);
+  loadSkin(skin);
+});
+
+// Event: change animation
+animSelect.addEventListener('change', e => {
+  if (currentChibi) {
+    currentChibi.state.setAnimation(0, e.target.value, false);
   }
-}
-
-// Example usage
-loadChibi('zuikaku', '/assets/spine/zuikaku/zuikaku.json', { x: 300, y: 600, scale: 0.5 });
-loadChibi('shoukaku', '/assets/spine/shoukaku.json', { x: 500, y: 600, scale: 0.5 });
-
-// Later, trigger animations dynamically
-// animateChibi('zuikaku', 'attack');
-// animateChibi('shoukaku', 'victory', true);
-
+});
