@@ -9,6 +9,26 @@ document.getElementById('chibiCanvas').appendChild(app.view);
 let currentChibi = null;
 let currentSkin = null;
 
+// Resize handler
+function resizeCanvas() {
+  const container = document.getElementById('chibiCanvas');
+  const width = container.clientWidth;
+  const height = container.clientHeight;
+  app.renderer.resize(width, height);
+
+  // Reposition current chibi if loaded
+  if (currentChibi) {
+    currentChibi.x = width / 2;
+    currentChibi.y = height * 0.75;
+  }
+}
+
+// Listen for window resize
+window.addEventListener('resize', resizeCanvas);
+
+// Call once at startup
+resizeCanvas();
+
 const chibiSelect = document.getElementById('chibiSelect');
 const skinSelect = document.getElementById('skinSelect');
 const animSelect = document.getElementById('animSelect');
@@ -103,6 +123,7 @@ animSelect.addEventListener('change', e => {
     currentChibi.state.setAnimation(0, e.target.value, false);
   }
 });
+
 
 
 
