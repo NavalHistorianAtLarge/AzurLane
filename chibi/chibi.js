@@ -41,9 +41,10 @@ function animateChibi(name, action, loop = false) {
 }
 
 // Example usage
-loadChibi('zuikaku', '/assets/spine/zuikaku.json', { x: 300, y: 600, scale: 0.5 });
+loadChibi('zuikaku', '/assets/spine/zuikaku/zuikaku.json', { x: 300, y: 600, scale: 0.5 });
 loadChibi('shoukaku', '/assets/spine/shoukaku.json', { x: 500, y: 600, scale: 0.5 });
 
 // Later, trigger animations dynamically
 // animateChibi('zuikaku', 'attack');
 // animateChibi('shoukaku', 'victory', true);
+
