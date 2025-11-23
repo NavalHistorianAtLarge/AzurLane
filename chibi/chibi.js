@@ -63,7 +63,7 @@ function loadSkin(skin) {
     spineChar.x = 400;
     spineChar.y = 500;
     spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'idle', true);
+    spineChar.state.setAnimation(0, 'normal', true);
 
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
@@ -102,3 +102,4 @@ animSelect.addEventListener('change', e => {
     currentChibi.state.setAnimation(0, e.target.value, false);
   }
 });
+
