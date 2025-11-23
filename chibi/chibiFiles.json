@@ -1,0 +1,34 @@
+{
+  "chibis": [
+    {
+      "name": "zuikaku",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/assets/spine/zuikaku/zuikaku.json"
+        },
+        {
+          "id": "ceremonial",
+          "label": "Ceremonial Crane",
+          "path": "/assets/spine/zuikaku/zuikaku1.json"
+        },
+        {
+          "id": "wind",
+          "label": "The Wind's True Name",
+          "path": "/assets/spine/zuikaku/zuikaku2.json"
+        }
+      ]
+    },
+    {
+      "name": "shoukaku",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/assets/spine/shoukaku/shoukaku.json"
+        }
+      ]
+    }
+  ]
+}
