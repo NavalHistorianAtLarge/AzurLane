@@ -12,65 +12,14 @@
 <body>
   <div id="controls">
     <select id="chibiSelect"></select>
-    <button onclick="animateSelected('normal', true)">Normal</button>
-    <button onclick="animateSelected('attack')">Attack</button>
-    <button onclick="animateSelected('victory', true)">Victory</button>
-  </div>
+    </div>
 
   <script src="libs/pixi.min.js"></script>
   <script src="libs/pixi-spine.umd.js"></script>
-  <script>
-    const app = new PIXI.Application({
-      width: 800,
-      height: 600,
-      transparent: true
-    });
-    document.body.appendChild(app.view);
-
-    const chibis = {}; // registry
-    const chibiSelect = document.getElementById('chibiSelect');
-
-    // Example: hundreds of filenames in an array
-    const chibiFiles = [
-      'zuikaku'
-      // ... add hundreds more here
-    ];
-
-    // Queue all chibis before load
-    chibiFiles.forEach(name => {
-      PIXI.loader.add(name, `assets/spine/${name}/${name}.json`);
-    });
-
-    PIXI.loader.load((loader, resources) => {
-      chibiFiles.forEach((name, i) => {
-        const spineChar = new PIXI.spine.Spine(resources[name].spineData);
-        spineChar.x = 200 + (i * 150); // stagger positions
-        spineChar.y = 500;
-        spineChar.scale.set(0.5);
-        spineChar.state.setAnimation(0, 'normal', true);
-
-        app.stage.addChild(spineChar);
-        chibis[name] = spineChar;
-
-        // Populate dropdown
-        const opt = document.createElement('option');
-        opt.value = name;
-        opt.textContent = name;
-        chibiSelect.appendChild(opt);
-      });
-    });
-
-    // Animate by dropdown selection
-    function animateSelected(action, loop = false) {
-      const name = chibiSelect.value;
-      const spineChar = chibis[name];
-      if (spineChar) {
-        spineChar.state.setAnimation(0, action, loop);
-      }
-    }
-  </script>
+  <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
