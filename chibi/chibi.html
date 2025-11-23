@@ -10,13 +10,26 @@
   </style>
 </head>
 <body>
+    <div id="sidebar" class="sidebar">
+      <div id="chibiView" class="view">
+        <h3>Select a Chibi</h3>
+        <div id="chibiList"></div>
+      </div>
+      <div id="animView" class="view hidden">
+        <h3>Select an Animation</h3>
+        <select id="animSelect" multiple size="6"></select>
+        <button id="saveZipBtn">Save Selected Animations</button>   
+        <button id="backBtn">← Back to Chibis</button>
+      </div>
+    </div>
 
+<div id="chibiCanvas" style="width: 800px; height: 600px;"></div>
+
+  
   <div id="controls">
   <select id="chibiSelect"></select>
   <select id="skinSelect"></select>
-   <select id="animSelect" multiple size="6"></select>
-  <button id="saveZipBtn">Save Selected Animations</button>
-
+   
   
 </div>
   <div id="chibiCanvas" style="style="width: 100%; height: 400px; position: relative;"></div>
@@ -27,6 +40,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
