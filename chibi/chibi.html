@@ -1,28 +1,80 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="chibi.css">
-    
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chibi Selector</title>
+  <style>
+    body { margin: 0; background: #222; color: #fff; }
+    #controls { padding: 10px; }
+    select, button { margin: 5px; }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <select id="chibiSelect"></select>
+    <button onclick="animateSelected('normal', true)">Normal</button>
+    <button onclick="animateSelected('attack')">Attack</button>
+    <button onclick="animateSelected('victory', true)">Victory</button>
+  </div>
 
-          <div id="chibiCanvas"></div>
+  <script src="https://pixijs.download/release/pixi.min.js"></script>
+  <script src="https://pixijs.download/spine/pixi-spine.js"></script>
+  <script>
+    const app = new PIXI.Application({
+      width: 800,
+      height: 600,
+      transparent: true
+    });
+    document.body.appendChild(app.view);
 
-        <script type="application/json" id="chibiData">
-                    {
-                    "zuikaku": ["zuikaku", "zuikaku1", "zuikaku2"],
-                    "akagi": ["default", "dark_fox"],
-                    "kaga": ["default", "white_wolf"],
-                      "shoukaku": ["default", "phoenix_feathers"],
-                    "taihou": ["default", "midnight_empress"]
-                    }
-            </script>
-        <script src="libs/pixi.min.js"></script> <!-- ✅ PixiJS v7 -->
-        <script src="libs/pixi-spine.umd.js"></script>
-        <script type="module" src="chibi.js"></script>
-    </body>
+    const chibis = {}; // registry
+    const chibiSelect = document.getElementById('chibiSelect');
 
+    // Example: hundreds of filenames in an array
+    const chibiFiles = [
+      'zuikaku',
+      'shoukaku',
+      'akagi',
+      'kaga'
+      // ... add hundreds more here
+    ];
+
+    // Queue all chibis before load
+    chibiFiles.forEach(name => {
+      PIXI.loader.add(name, `chibi/assets/spine/${name}/${name}.json`);
+    });
+
+    PIXI.loader.load((loader, resources) => {
+      chibiFiles.forEach((name, i) => {
+        const spineChar = new PIXI.spine.Spine(resources[name].spineData);
+        spineChar.x = 200 + (i * 150); // stagger positions
+        spineChar.y = 500;
+        spineChar.scale.set(0.5);
+        spineChar.state.setAnimation(0, 'normal', true);
+
+        app.stage.addChild(spineChar);
+        chibis[name] = spineChar;
+
+        // Populate dropdown
+        const opt = document.createElement('option');
+        opt.value = name;
+        opt.textContent = name;
+        chibiSelect.appendChild(opt);
+      });
+    });
+
+    // Animate by dropdown selection
+    function animateSelected(action, loop = false) {
+      const name = chibiSelect.value;
+      const spineChar = chibis[name];
+      if (spineChar) {
+        spineChar.state.setAnimation(0, action, loop);
+      }
+    }
+  </script>
+</body>
 </html>
+
 
 
 
