@@ -6,7 +6,7 @@
         {
           "id": "default",
           "label": "Default",
-          "path": "chibi/assets/spine/zuikaku/zuikaku.json"
+          "path": "/chibi/assets/spine/zuikaku/zuikaku.json"
         },
         {
           "id": "ceremonial",
@@ -33,3 +33,4 @@
   ]
 
 }
+
