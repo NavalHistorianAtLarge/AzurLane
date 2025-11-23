@@ -120,7 +120,7 @@ skinSelect.addEventListener('change', e => {
 // Event: change animation
 animSelect.addEventListener('change', e => {
   if (currentChibi) {
-    currentChibi.state.setAnimation(0, e.target.value, false);
+    currentChibi.state.setAnimation(0, e.target.value, true);
   }
 });
 
@@ -189,6 +189,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
