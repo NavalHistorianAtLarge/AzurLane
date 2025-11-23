@@ -1,31 +1,49 @@
+// Create PixiJS app with transparency enabled
 const app = new PIXI.Application({
-  width: 600,
+  width: 800,
   height: 600,
-  backgroundAlpha: 0, // transparent background
+  transparent: true   // background transparency
 });
 document.body.appendChild(app.view);
 
-let spineChar;
+// Registry for all loaded chibis
+const chibis = {};
 
-PIXI.loader
-  .add('zuikaku', '/assets/spine/zuikaku.json')
-  .load((loader, resources) => {
-    spineChar = new PIXI.spine.Spine(resources.zuikaku.spineData);
-    spineChar.x = 300;
-    spineChar.y = 600;
-    spineChar.scale.set(0.5);
+// Loader function for any chibi
+function loadChibi(name, path, options = {}) {
+  PIXI.loader
+    .add(name, path)
+    .load((loader, resources) => {
+      const spineChar = new PIXI.spine.Spine(resources[name].spineData);
 
-    spineChar.state.setAnimation(0, 'idle', true);
-    app.stage.addChild(spineChar);
-  });
+      // Positioning defaults with optional overrides
+      spineChar.x = options.x || 300;
+      spineChar.y = options.y || 600;
+      spineChar.scale.set(options.scale || 0.5);
 
-function animateZuikaku(action) {
+      // Default idle animation
+      spineChar.state.setAnimation(0, options.defaultAnim || 'normal', true);
+
+      // Add to stage and registry
+      app.stage.addChild(spineChar);
+      chibis[name] = spineChar;
+    });
+}
+
+// Animate any chibi by name
+function animateChibi(name, action, loop = false) {
+  const spineChar = chibis[name];
   if (spineChar) {
-    spineChar.state.setAnimation(0, action, false);
+    spineChar.state.setAnimation(0, action, loop);
+  } else {
+    console.warn(`Chibi "${name}" not found.`);
   }
 }
-document.body.appendChild(app.view);
-function animateZuikaku(action) {
-  const spineChar = app.stage.children.find(c => c instanceof PIXI.spine.Spine);
-  spineChar.state.setAnimation(0, action, false);
-}
+
+// Example usage
+loadChibi('zuikaku', '/assets/spine/zuikaku.json', { x: 300, y: 600, scale: 0.5 });
+loadChibi('shoukaku', '/assets/spine/shoukaku.json', { x: 500, y: 600, scale: 0.5 });
+
+// Later, trigger animations dynamically
+// animateChibi('zuikaku', 'attack');
+// animateChibi('shoukaku', 'victory', true);
