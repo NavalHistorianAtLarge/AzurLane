@@ -13,12 +13,22 @@
             }
             };
 
-        let songsData = null
+        let songsData = null;
+            let preloadedAudios = {}; // cache of Audio objects
 
           // Load JSON once at startup
                 async function loadSongs() {
                 const response = await fetch('https://wisdomcubenetwork.xyz/eventsTop/audioLinks.json'); // or the raw GitHub URL
                 songsData = await response.json();
+            }
+
+            songsData.music.forEach(song => {
+                const audio = new Audio(song.link);
+                audio.preload = "auto";
+                preloadedAudios[song.id] = audio; // store for later use
+              });
+
+              console.log("✅ All songs preloaded");
             }
 
             // Play a song by its JSON id
@@ -60,5 +70,6 @@
         clone.play();
     }
 }
+
 
 
