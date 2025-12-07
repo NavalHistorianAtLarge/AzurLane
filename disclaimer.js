@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Fetch the disclaimer text file
-  fetch("wisdomcubenetwork.xyz/disclaimer.txt")
+  fetch("https://wisdomcubenetwork.xyz/disclaimer.txt")
     .catch(error => {
         console.error("disclaimer.txt could not be fetched:", error)
     })
@@ -27,3 +27,4 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error("Could not load disclaimer:", error);
     });
 });
+
