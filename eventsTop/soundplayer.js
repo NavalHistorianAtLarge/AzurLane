@@ -17,7 +17,7 @@
 
           // Load JSON once at startup
                 async function loadSongs() {
-                const response = await fetch('audioLinks.json'); // or the raw GitHub URL
+                const response = await fetch('wisdomcubenetwork.xyz/eventsTop/audioLinks.json'); // or the raw GitHub URL
                 songsData = await response.json();
             }
 
@@ -60,3 +60,4 @@
         clone.play();
     }
 }
+
