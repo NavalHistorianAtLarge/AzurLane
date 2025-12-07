@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Events in Lore Order</title>
+        <link rel="stylesheet" type="text/css" href="loreFlow.css">
+        <link rel="script" href="sidebar.js">
+        </head>
+    <body class="memory">
+        <audio id="thoughts" src="https://cdn.nagami.moe/bgm/bgm-story-2.ogg" loop="loop"></audio>
+        <div id="trackTitle" class="trackLabel">Now Playing: <span id="trackName">Thoughts</span></div> 
+        <div id="topBox" onclick="hideTop()">
+            <h2 class="topTitle">Events in Release Order</h2>
+            <div class="bonnyInset">
+                <img src="https://i.ibb.co/v81MftX/1181px-Bon-Homme-Richard-META.png" alt="1181px-Bon-Homme-Richard-META" class="bonny">
+            <p class="bonnyTip">BonnyTip<sup>TM</sup></p>
+        </div>
+        <p>Click the image to hear OST and see lore summary. Click the event name to read my retranslations or essays.</p>
+        <p>Click anywhere on this box to hide it.</p>
+        <p>18 Sep 2025: Only the link to Visitors Dyed in Red is up, and it doesn't go anywhere yet.</p>
+      
+        </div>
+        <div class="gallery">
+            <div class="one">
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_508.png" onclick="togglePanel('wm'), playSong('peacefulJourney')">
+                    <div class="eventName">Waxing Moonlight, Part 1</div>
+                </div>
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yunxian_5.png" onclick="togglePanel('ebe'), playSong('xApproach')">
+                    <div class="eventName">Effulgence Before Eclipse, Part 1</div>
+                </div>
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_tiancheng5.png" onclick="togglePanel('ce'), playSong('crimsbgchoes')">
+                    <div class="eventName">Crimson Echoes</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_iris_night.png" onclick="togglePanel('aoi'), playSong('irisAngel')">
+                    <div class="eventName">Angel of the Iris</div>
+                </div>
+                   <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_deepecho_11.png" onclick="togglePanel('ar'), playSong('absoluteZero')">
+                <div class="eventName">Abyssal Refrain, Part 1</div>
+                </div>
+            </div>
+            <div class="one">
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yuanhuidian.png" onclick="togglePanel('oc'), playSong('athensRuin')">
+                <div class="eventName">Operation Convergence, Part 1</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_renaya.png" onclick="togglePanel('ftd'), playSong('sacredLily')">
+                <div class="eventName">The Flame-Touched Dagger</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_faxi1.png" onclick="togglePanel('ild'), playSong('royalNavy')">
+                <div class="eventName">Iris of Light and Dark, Part 1</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_italy_cg1.png" onclick="togglePanel('et'), playSong('vanityGlory')">
+                <div class="eventName">Empyreal Tragicomedy</div>
+                </div>
+            </div>
+            <div class="two">
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_bsm_4.png" onclick="togglePanel('sib'), playSong('Zarathusa')">
+                <div class="eventName">Scherzo of Iron and Blood, Ch. 1</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yuanhuidian.png" onclick="togglePanel('oc'), playSong('athensRuin')">
+                <div class="eventName">Operation Convergence</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_3.png" onclick="togglePanel('sib'), playSong('crisis')">
+                <div class="eventName">Denmark Strait</div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_bsm_3.png" onclick="togglePanel('sib'), playSong('lastStand')">
+                <div class="eventName">Scherzo of Iron and Blood</div>
+                </div>
+                <div class="bg">
+                <img src="https://i.ibb.co/chRg9Dyz/bg-bsm-6overlays.png" onclick="togglePanel('osp'), playSong('crisis')">
+                <div class="eventName">"One Small Promise"</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yuanhuidian.png" onclick="togglePanel('oc'), playSong('athensRuin')">
+                <div class="eventName">Operation Convergence, Part 3</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_4.png" onclick="togglePanel('campaign'), playSong('crisis')">
+                <div class="eventName">Pearl Harbor</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_6.png" onclick="togglePanel('campaign'), playSong('crisis')">
+                <div class="eventName">Coral Sea</div>
+                </div>
+            </div>
+            <div class="three">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_9.png" onclick="togglePanel('campaign'), playSong('AFBattle')">
+                <div class="eventName">Midway</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_luoxuan_6.png">
+                <div class="eventName">Silver Archives</div>
+                </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_tiancheng7.png" onclick="togglePanel('ce'), playSong('crimsonEchoes')">
+                <div class="eventName">Crimson Echoes</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_tiancheng7.png" onclick="togglePanel('vdir'), playSong('redDyedVisitor')">
+                <div class="eventName"><a href="VDiRmenu.html">Visitors Dyed in Red</a></div>
+                </div>
+                <div class="bg">
+                <img src="https://i.ibb.co/kgBxbsGK/bg-story-mikasa.png" onclick="togglePanel('vdir'), playSong('redDyedVisitor')">
+                <div class="eventName">Return of the War God</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_faxi1.png" onclick="togglePanel('ild'), playSong('royalNavy')">
+                <div class="eventName">Iris of Light and Dark, Part 2</div>
+                </div>
+                <div class="bg">
+                <img src="" onclick="togglePanel('ild'), playSong('royalNavy')">
+                <div class="eventName">The Way Home in the Night</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://i.ibb.co/dwGPTbsk/450px-Memory-Fallen-Wings-Background-1.png" onclick="togglePanel('fw'), playSong('eagleUnionDiscovery')">
+                <div class="eventName">Fallen Wings</div>
+                </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_hms_0.png" onclick="togglePanel('wc'), playSong('enterpriseMETA')">
+                <div class="eventName">Winter's Crown</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_nagato3.png" onclick="togglePanel('isss'), playSong('inkDyedSteelFlower')">
+                <div class="eventName">Ink-Stained Steel Sakura</div>
+                </div>
+            </div>
+            <div class="two">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_newyork.png" onclick="togglePanel('ap'), playSong('weighAnchor')">
+                <div class="eventName">Approaching Storm</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_xiangting_cg1.png" onclick="togglePanel('as'), playSong('disposePawns')">
+                <div class="eventName">Ashen Simulacrum</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_xinnong_cg6.png" onclick="togglePanel('scb'), playSong('steelJudgement')">
+                <div class="eventName">Swirling Cherry Blossoms</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_battle_night.png" onclick="togglePanel('um'), playSong('crossWave')">
+                <div class="eventName">Under the Mist</div>
+            </div>
+            </div>
+            <div class="two">
+                <div class="bg">
+                <img src="https://i.ibb.co/zhmr6Pwg/bg-banama-5fixed.png" onclick="togglePanel('mm'), playSong('fogBridge')">
+                <div class="eventName">Microlayer Medley</div>
+                </div>  
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_cccp_4.png" onclick="togglePanel('no'), playSong('cccp')">
+                <div class="eventName">Northern Overature</div>
+                </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_qiongding_6.png" onclick="togglePanel('so'), playSong('brokenLight')">
+                <div class="eventName">Skybound Oratorio</div>
+                </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_hms_2.png" onclick="togglePanel('an'), playSong('royalNavyNoctis')">
+                <div class="eventName">Aurora Noctis</div>
+                </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_xinnong2_5.png" onclick="togglePanel('db'), playSong('butterflyDream')">
+                <div class="eventName">Dreamwaker's Butterfly</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_cccpv2_6.png" onclick="togglePanel('kdr'), playSong('cccp3')">
+                <div class="eventName">Khorovod of Dawn's Rime</div>
+                </div>
+                </div>
+                <div class="two">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_newyork.png" onclick="togglePanel('taw'), playSong('richang')">
+                <div class="eventName">Trails of Ashen Wings</div>
+                </div>
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_fuxiangxian_3.png" onclick="togglePanel('io'), playSong('sirenTheme')">
+                <div class="eventName">Inverted Orthant</div>
+                </div>
+                </div>
+                <div class="two">
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_port_liwupu.png" onclick="togglePanel('qo'), playSong('sacredLily')">
+                    <div class="eventName">Queen's Orders</div>
+                </div>
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_port_chuanwu1.png" onclick="togglePanel('ls'), playSong('stirringMalice')">
+                    <div class="eventName">Labyrinthine Sea</div>
+                </div>
+                </div>
+                <div class="two">
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_port_dakaer.png" onclick="togglePanel('ucw'), playSong('twilightPrayer')">
+                    <div class="eventName">Upon Crimson Wings</div>
+                </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_italyv2_3.png" onclick="togglePanel('dh'), playSong('twilightPrayer')">
+                <div class="eventName">Daedalian Hymn</div>
+                </div>
+                </div>
+                <div class="one">
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_burningsea_1.png" onclick="togglePanel('gr'), playSong('arbiterApproach')">
+                    <div class="eventName">Glimmers of Rekindling</div>
+                    </div> 
+                </div>
+                <div class="two">
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_luoxuan_6.png" onclick="togglePanel('mi'), playSong('stirringMalice')">
+                    <div class="eventName">Mirror Involution</div>
+                    </div>
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_daofeng_4.png" onclick="togglePanel('usb'), playSong('windThunderShadow')">
+                    <div class="eventName">Upon the Shimmering Blue</div>
+                    </div>
+                </div>
+                <div class="one">
+                    <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_midgard_1.png" onclick="togglePanel('tot'), playSong('rainbowTowerLastBattle')">
+                    <div class="eventName">Tower of Transcendance</div>
+                    </div>
+                     <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_deepecho_12.png">
+                <div class="eventName">Darkness Within Dawn</div> 
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_deepecho_11.png" onclick="togglePanel('ar'), playSong('absoluteZero')">
+                <div class="eventName">Abyssal Refrain, End</div>
+            </div>
+                <div class="bg">
+                <img src="https://i.ibb.co/Qv0PkKfs/bg-endingsong-13.png" onclick="togglePanel('rare'), playSong('RainbowFinale')">
+                <div class="eventName">Rondo at Rainbow's End</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_zhedie_14.png" onclick="togglePanel('lat'), playSong('royalDinner')">
+                <div class="eventName">Letters and Travels</div>
+            </div>
+              <div class="bg">
+                <img src="https://i.ibb.co/vvfyfsBH/bg-camelot-5.png" onclick="togglePanel('prc'), playSong('camelotTheme')">
+                <div class="eventName">Pledge of the Radiant Court</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_116.png" onclick="togglePanel('warl')">
+                <div class="eventName">Where All Roads Lead</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_roma_11.png" onclick="togglePanel('ab'), playSong('grandOpening')">
+                <div class="eventName">Aquilifer's Ballade</div>
+            </div>
+                </div>
+            <div class="three">
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_port_chuanwu2.png" onclick="togglePanel('tsdt'), playSong('cwLevel')">
+                    <div class="eventName">Tranquil Sea, Distant Thunder</div>
+                </div>
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_starsea_core_1.png" onclick="togglePanel('ct'), playSong('exploFuture')">
+                    <div class="eventName">Causality Transposition</div>
+                </div>
+                <div class="bg">
+                    <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_115.png" onclick="togglePanel('qod'), playSong('richang8')">
+                    <div class="eventName">The Queen's Ordinary Day</div>
+                </div>
+            </div>
+            <div class="three">
+                  <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_wuzang_bg16.png" onclick="togglePanel('vtbl'), playSong('musashiMarching')">
+                <div class="eventName">Violet Tempest, Blooming Lycoris</div>
+            </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_zhedie_8.png" onclick="togglePanel('ps'), playSong('aosteTheme')">
+                <div class="eventName">Parallel Superimposition</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_firedust_7.png" onclick="togglePanel('rd'), playSong('vichyChurch')">
+                <div class="eventName">Revelations of Dust</div>
+            </div>
+            </div>
+            <div class="one">
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_guild_red_n.png" onclick="togglePanel('wo'), playSong('observersPast')">
+                <div class="eventName">The Weaver's Omen</div>
+            </div>
+            </div>
+            <div class="two">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_bsmre_cg11.png" onclick="togglePanel('con'), playSong('walkFire')">
+                <div class="eventName">Confluence of Nothingness</div>
+            </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_jidifengbao_map.png" onclick="togglePanel('ff'), playSong('cccp3')">
+                <div class="eventName">Frostfall</div>
+                </div>
+            </div>
+            <div class="two">
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_alexandria_2.png" onclick="togglePanel('ro'), playSong('twilightPrayer')">
+                <div class="eventName">Reflections of the Oasis</div>
+            </div>
+               <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_sainthelena2.png" onclick="togglePanel('athr'), playSong('richelieuTheme')">
+                <div class="eventName">Anthem of Remembrance</div>
+            </div>
+            </div>
+            <div class="two">
+                  <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_roma_8.png" onclick="togglePanel('ee'), playSong('expoWelcome')">
+                <div class="eventName">Eventide's Eve</div>
+            </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_508.png" onclick="togglePanel('wm'), playSong('peacefulJourney')">
+                <div class="eventName">Waxing Moonlight</div>
+            </div>
+            </div>
+            <div class="two">
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_underheaven_cg2.png" onclick="togglePanel('fs'), playSong('arbiterHeirophant')">
+                <div class="eventName">Fool's Scales</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yunxian_5.png" onclick="togglePanel('ebe'), playSong('xApproach')">
+                <div class="eventName">Effulgence Before Eclipse</div>
+            </div>
+            </div>
+            <div class="one">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_zhuguang_cg5.png" onclick="togglePanel('bcss'), playSong('projectAntiX')">
+                <div class="eventName">Beneath Clear, Starry Skies</div>
+            </div>
+                 <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_zhuguang_4.png" onclick="togglePanel('lcsos'), playSong('starrySea')">
+                <div class="eventName">Light-Chasing Sea of Stars</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_xuejing_3.png" onclick="togglePanel('muss'), playSong('Conspiracy')">
+                <div class="eventName">Mist Upon Silver Summits</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_xuejing_cg10.png" onclick="togglePanel('sp'), playSong('merkuria')">
+                <div class="eventName">Snowrealm Perigrination</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_157.png" onclick="togglePanel('slr'), playSong('chinaParty')">
+                <div class="eventName">Spider Lily's Redolence</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_camelot_4.png" onclick="togglePanel('efa'), playSong('shallowOfTheWorld')">
+                <div class="eventName">Echoes From Afar</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_huiguangzhicheng_cg12.png" onclick="togglePanel('lotm'), playSong('speedingBetweenStars')">
+                <div class="eventName">Light of the Martyrium</div>
+            </div>
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_shengmixieer_1.png" onclick="togglePanel('ii'), playSong('richangLight')">
+                <div class="eventName">Interlude of Illusions</div>
+            </div>
+            </div>
+            <div class="three">
+                <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_600.png" onclick="togglePanel('cp'), playSong('musicAnniversery')">
+                <div class="eventName">Crimson Prelusion</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_tieyiqingfeng_5.png" onclick="togglePanel('wsw'), playSong('eagleUnionTheme')">
+                <div class="eventName">Windborne Steel Wings</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_bianzhihua_cg5.png" onclick="togglePanel('wfbnf'), playSong('memoryGreif')">
+                <div class="eventName">Whence Flowers Bear No Fruit</div>
+            </div>
+            </div>
+            <div class="one">
+             <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_177.png" onclick="togglePanel('wds'), playSong('sorrowSacredTree')">
+                <div class="eventName">Whence the Dust Settles</div>
+            </div>
+            <div class="bg">
+                <img src="https://i.ibb.co/ycjX5qbN/bg-canghongzhiyan-cg6.png" onclick="togglePanel('oec'), playSong('awakeningCrimsonFlame')">
+                <div class="eventName">Ode of Everblooming Crimson</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_canghongzhiyan_1.png" onclick="togglePanel('rftb'), playSong('Anti-XPast')">
+                <div class="eventName">Return from the Beyond</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yuhui_3.png" onclick="togglePanel('sc'), playSong('starBeast')">
+                <div class="eventName">Substellar Crepuscle</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_305.png" onclick="togglePanel('potc'), playSong('sardiniaDivineLight')">
+                <div class="eventName">Path of the Chosen</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_shenguang_cg_10.png" onclick="togglePanel('psl'), playSong('reshapingCanon')">
+                <div class="eventName">Paradiso of Shackled Light</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_yujin_2.png" onclick="togglePanel('tts'), playSong('newSprouts')">
+                <div class="eventName">Towards Tulipa's Seas</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_306.png" onclick="togglePanel('mns'), playSong('rosePrisoner')">
+                <div class="eventName">March of the Neversetting Sun</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_gaotaqiangwei_3.png" onclick="togglePanel('arht'), playSong('shiningWingsAweWorld')">
+                <div class="eventName">A Rose on the High Tower</div>
+            </div>
+            <div class="bg">
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/star_level_bg_514.png" onclick="togglePanel('sse'), playSong('windNewLife')">
+                <div class="eventName">Summons from the Sakura Empire</div>
+            </div>
+            <div class="bg">
+                <img src="https://i.ibb.co/p67R5KVW/bg-amahara-cg11.png" onclick="togglePanel('adfaa'), playSong('alphaBrokenLight')">
+                <div class="eventName">A Dance for Amahara Above</div>
+            </div>
+        </div>
+        </div>
+        <div class="panelsforall"> 
+            <div id="vdir" class="panel" onclick="togglePanel('vdir')">
+                <h2>Visitors Dyed in Red</h2>
+                <img src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_story_tiancheng7.png">
+                <p>In an infinite cycle of rebirth, time itself loses significance.<br> 
+                    Where certainty approaches probability,<br>
+                    The intangible inherits the tangible.<br>
+                    <br>
+                    If not for that first choice<br>
+                    Might there be another conclusion?<br>
+                    Once reflected in your eyes,<br>
+                    What kind of scenery is it, again?<br>
+                    O, Creator?</p>           
+                    <hr>
+                    <p>For some time now, Akagi and Kaga have been acting suspiciosly,
+                        but Zuikaku and Shoukaku have been unable to pinpoint what exactly they are doing.
+                        Now, a shinobi in their service, Akatsuki, has discovered
+                        vital intel -- a key -- to the "Sanctuary", a place never seen by 
+                        outsiders, the root of myths and legends. They quickly head for their 
+                        target.</p>
+                        <p>As they approach the Mirror Sea, they become engulfed in a storm
+                        and separated. After nearly drowning, Zuikaku finds herself within the 
+                        "Sanctuary", though albg and unable to contact Shoukaku.</p>
+                        <p>What began as an investigation becomes a search-and-rescue mission as Zuikaku looks
+                        for her sister Shoukaku, opposed along the way by counterfeit copies of
+                        her friends, begining with Akatsuki. </p>
+                        
+                        <p>In the darkness of the Shrine, 
+                        Akagi and Kaga resent what they percieve as Zuikaku's attempt to hinder
+                        their reuninon with "That Person", Amagi. They are not very surprised 
+                        to see her here, though, noting that "the bait [the key] really attracked that pest". 
+                        To stall her they send out Ise and Hyuuga with several MPS. </p>
+                        
+                        <p>After defeating the forces sent against her, Zuikaku recalls
+                        how she broke the news of finding the "Sanctuary" key and figures that 
+                        the key was just a trap. </p>
+                        
+                        <p>She next meets with the shrine maiden Yamashiro,
+                        who does her duty of gaurding the shrine with cheerful clumsiness. Zuikaku
+                        asks her where Shoukaku is; Yamashiro replies that she will tell Zuikaku if the 
+                        latter can defeat her in combat. Zuikaku easily does so. Yamashiro tells her, 
+                        and Zuikaku heads into the Shrine.</p>
+
+                    </p>
+                </div>
+                
+            <div id="fw" class="panel" onclick="togglePanel('fw')">
+                <h2>Side Panel 2</h2>
+                <p>Wings fall off.</p>
+                </div>
+        </div>
+        <script src="disclaimer.js"></script>
+        <script src="soundplayer.js">
+        </script>
+        <script>
+
+            function togglePanel(panelId) {
+            const targetPanel = document.getElementById(panelId);
+            const allPanels = Array.from(document.getElementsByClassName("panel"))
+           
+            if (targetPanel) {
+                allPanels.forEach(panel => {
+                    if (panel !== targetPanel) {
+                        panel.style.width = "0";
+                        panel.classList.remove("open")
+                    }
+                });
+
+            const isOpen = targetPanel.classList.contains("open");
+            targetPanel.style.width = isOpen ? "0" : "450px";
+            targetPanel.classList.toggle("open");
+                 }
+                }
+
+        </script>
+        <script>
+            document.getElementById('topBox').addEventListener('click', function() {
+                this.style.display = 'none';
+            });
+            
+        </script>

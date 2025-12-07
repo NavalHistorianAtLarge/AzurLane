@@ -1,0 +1,1805 @@
+{
+  "music" : [ 
+    { 
+      "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-airraidalarm.ogg",
+      "name": "Air Raid Alarm"
+    },
+  {
+    "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-backyard.ogg",
+    "name": "Leisurely Moment",
+    "id" : "dorm",
+    "album": "Setting Sail"
+  },
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-1.ogg",
+    "name": "Azure Wind",
+    "id" : "azurWind",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-2.ogg",
+    "name": "Solomons Night",
+    "id" : "solomons",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-af.ogg",
+    "name": "AF Battle",
+    "id": "AFBattle",
+    "album": "Sakura Wind",
+    "debut": "MI"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-againstfate.ogg",
+    "name": "Struggle Against Fate",
+    "id" : "againstFate",
+    "album": "Embers of Fire",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-arbitrator-type1.ogg",
+    "name": "",
+    "id" : "arbiterFight",
+    "debut": "GoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-arcticocean.ogg",
+    "name": "Battle in the Arctic Ocean",
+    "id" : "arcticOceanBattle",
+    "album": "inferred",
+    "debut": "Frostfall"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-ash-strong.ogg",
+    "name": "Will of Embers",
+    "id" : "embersWill",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-ashes-theme.ogg",
+    "name": "Unburnt Ambition",
+    "id" : "ashesTheme",
+    "album": "Embers of Fire",
+    "debut": "GoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-1.ogg",
+    "name": "Fierce Battle",
+    "id" : "fierceBattle",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-2.ogg",
+    "name": "Five Minutes of Fate",
+    "id" : "fiveMinFAte",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-3.ogg",
+    "name": "Crisis Looms",
+    "id" : "crisisLooms",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-4.ogg",
+    "name": "DISPOSE THE PAWNS",
+    "id": "disposePawns",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-5.ogg",
+    "name": "Royal Navy Maid Corps, on the Move",
+    "id" : "maidsMoving",
+    "album": "inferred",
+    "debut" : "WC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-6.ogg",
+    "name": "Formidable Enemy",
+    "id" : "formidableEnemy",
+    "album": "inferred",
+    "debut": "WC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-camelot.ogg",
+    "name": "Walking in the Woods",
+    "id" : "camelotBoss",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-deepecho.ogg",
+    "name": "Absolute Zero",
+    "id" : "absoluteZero",
+    "album": "Deep Echo",
+    "debut": "AR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-italy.ogg",
+    "name": "Twilight Prayer",
+    "id" : "twilightPrayer",
+    "album": "Divine Tragicomedy",
+    "debut": "ETC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-longgong.ogg",
+    "name": "Heavenly Dragon Destroying Sin",
+    "id" : "dragonSin",
+    "album": "Blue Sea Sparkles",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-temepest-1.ogg",
+  "name" : "Black Water Deathmatch",
+  "id": "blackWater",
+  "album": "Tempesta and the Fountain of Youth",
+  "debut": "Tempesta"
+    
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-tiancheng.ogg",
+    "name": "Entering the Game",
+    "id" : "enterGame",
+    "album": "Sakura Wind",
+    "debut": "CE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-boss-ucnf.ogg",
+    "name": "Council Fleet",
+    "id" : "councilFleet",
+    "album":"Light-Chasing Sea of Stars",
+    "debut":"LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-camelot.ogg",
+    "name": "Ancient Knight's Oath",
+    "id" : "camelotOath",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-deepecho.ogg",
+    "name": "Deep Echo",
+    "id" : "deepEcho",
+    "album": "Deep Echo",
+    "debut": "AR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-deepecho2.ogg",
+    "name": "",
+    "id" : "deepecho2",
+    "album": "",
+    "debut": "CT"
+
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-donghuang-static.ogg",
+    "name": "Dragon of the Four Seas",
+    "id" : "fourSeasDragon",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-eagleunion.ogg",
+    "name": "Eagle Soars in the Sky",
+    "id" : "eagleUnionTheme",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-executor-type1.ogg",
+    "name": "The Arbiter Approaches",
+    "id" : "arbiterApproach",
+    "album": "Embers of Fire",
+    "debut": "OS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-heroines-image.ogg",
+    "name": "Super Dreadnought Heroines",
+    "id" : "heroines",
+    "album": "inferred",
+    "debut": "IO"
+
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-highseasfleet-reborn.ogg",
+    "name": "Rainbow Finale",
+    "id" : "rainbowFinale",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-hightech.ogg",
+    "name": "High-Tech Fleet",
+    "id" : "highTech",
+    "album": "Deep Echo",
+    "debut": "AR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-inthememory.ogg",
+    "name": "Battle in the Memory",
+    "id" : "memoryBattle",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-ironblood-brisk.ogg",
+  "id": "ironbloodBrisk",
+  "debut": "SC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-ironblood-defence.ogg",
+   "name": "Assemble the Resistance Fleet",
+    "id" : "assembleIronBloodFleet",
+    "album": "Twilight Beneath the Stars",
+    "debut": "SC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-italy.ogg",
+    "name": "Vanity and Glory",
+    "id": "vanityGlory",
+    "album": "Divine Tragicomedy",
+    "debut": "ETC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-longgong.ogg",
+     "name": "Wind and Thunder Shadow",
+    "id" : "windThunderShadow",
+    "album": "Blue Sea Sparkles",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-maid.ogg",
+    "name": "Elegant Maid Team",
+    "id" : "maidTeam",
+    "album": "Royal Style",
+    "debut": "AN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-midgard-hunting.ogg",
+    "name": "Hunting in the Rainbow Tower",
+    "id" : "migdgardHunting",
+       "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-midgard-up.ogg",
+    "name": "Shooting Star from the East",
+    "id" : "eastStar",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-midgard.ogg",
+    "name": "Fenrir's Chains (Gneisenau META theme)",
+    "id" : "gneisMETA",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-newwind.ogg",
+    "name": "Embrace the New Wind",
+    "id" : "newWind",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-nightmare-theme.ogg",
+    "name": "The Place Where All Souls Gather",
+    "id" : "soulsGather",
+    "album": "Tempesta and the Sleeping Sea",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-pacific.ogg",
+    "name": "Peaceful Journey",
+    "id" : "peacefulJourney",
+    "album": "Deep Echo",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-roma-image.ogg",
+  "name": "Relatively Accurate Attack",
+  "id": "relevAccAttack",
+  "album": "Aquilifer's Ballade",
+  "debut": "AB"
+    
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-roma-sky.ogg",
+    "name": "Captain, Please Give Me Your Orders!",
+    "id" : "leonardo",
+    "album": "Aquilifer's Ballade",
+    "debut": "AB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-seiren-theme.ogg",
+    "name": "After the Bloodstained Cycle",
+    "id" : "sirenTheme",
+    "album": "Crosswave",
+    "debut": "IO"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-seirenbasicsystam-theme.ogg",
+    "name": "Executor Series",
+    "id" : "executorTheme",
+    "album": "Embers of Fire",
+    "debut": "OS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-seirencleaner-theme.ogg",
+    "name": "Omitter Theme",
+    "id" : "omitterTheme",
+    "album": "inferred",
+    "debut": "WDS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-shenguang-freely.ogg",
+    "name": "Freedom to Roam",
+    "id" : "roamFreedom"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-shenguang-holy.ogg",
+    "name": "Reshaping the Canon",
+    "id" : "reshapingCanon",
+    "album": "Divine Light in Chains",
+    "debut": "PSL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-siren-centraltower.ogg",
+    "name": "Autonomous Combat System",
+    "id" : "autoCombat",
+    "album": "Confluence of Nothingness",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-starsea-elec.ogg",
+    "name": "Battle in the Sea of Stars",
+    "id" : "starSeaBattle",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-temepest-1.ogg",
+    "name": "Aquatic Structure",
+    "id" : "battleTempest1",
+    "album": "Tempesta and the Fountain of Youth",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-temepest-2.ogg",
+    "name": "The Moment the Meteorite Fell",
+    "id" : "battleTempest2",
+    "album": "Tempesta and the Fountain of Youth",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-thechariotvii.ogg",
+    "name": "Arbiter Machine Approaches",
+    "id" : "chariotMechTheme",
+    "album": "Divine Light in Chains",
+    "debut": "PSL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-thedevilxv-control.ogg",
+    "name": "The Devil's Judgement",
+    "id" : "devilJudgement",
+    "album" : "Confluence of Nothingness",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-thehierophantv.ogg",
+    "name": "Call Me Hierophant",
+    "id" : "callHierophant",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-torch-theme.ogg",
+    "name": "Torch of the Beginning",
+    "id" : "torchTheme",
+    "album": "Embers of Fire",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-tulipa.ogg",
+    "name": "Song of Flowers and Vines",
+    "id" : "flowersVines",
+    "album": "Raise the Tulip Flag",
+    "debut": "Towards Tulipa's Seas"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-ucnf.ogg",
+    "name": "Flying Battleship",
+    "id" : "flyingBB",
+    "album": "Light-Chasing Sea of Stars",
+    "debut": "LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-underholyflag.ogg",
+    "name": "Under the Banner of the Iris",
+    "id" : "underHolyFlag",
+    "album": "Play the Iris Song",
+    "debut": "AoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-undermoon.ogg",
+    "name": "Sleeping Under the Moon",
+    "id" : "undermoon",
+    "album": "inferred",
+    "debut": "KDR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-unknown-approaching.ogg",
+    "name": "SOMETHING IS APPROACHING",
+    "id" : "xApproach",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-unzen-1.ogg",
+    "name": "One Leaf Floating the the Other Side",
+    "id" : "unzenDeath",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-unzen-2.ogg",
+    "name": "Butterfly's Shadow Passes",
+    "id" : "butterflyShadow",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-warprotocol.ogg",
+    "name": "The War Protocol Fortress Has Been Connected",
+    "id" : "warProtocolFortress",
+    "album": "Light-Chasing Sea of Stars",
+    "debut": "LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-whaling-normal.ogg",
+    "name": "Inaccurate Hunting",
+    "id" : "whalingNormal",
+    "album": "Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-battle-xinnong-image.ogg",
+    "name": "Butterfly Sea Dream Flower",
+    "id" : "butterflyDream",
+    "album": "Sakura Wind",
+    "debut": "DB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-beverly_short_eng.ogg",
+    "id" : "beverlyEng"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-beverly_short_inst.ogg",
+    "id" : "beverlyInst"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-beverly_short_jp.ogg",
+    "id" : "beverlyJP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bgm-cccp.ogg",
+    "name": "",
+    "id" : "cccp"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bgm-cccp2.ogg",
+    "name": "",
+    "id" : "cccp2"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bgm-cccp3.ogg",
+    "name": "",
+    "id" : "cccp3"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bgm-royalnavy.ogg",
+    "name": "Gather in Our Glory",
+    "id" : "royalNavyNoctis",
+    "album": "inferred",
+    "debut": "AN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bgm-waterwave.ogg",
+    "name": "",
+    "id" : "waterwave"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-blueocean-image.ogg",
+    "name": "Impression of the Ocean",
+    "id" : "blueOcean",
+    "album": "Embers of Fire",
+    "debut": "OS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-1.ogg",
+    "name": "Beginning of Disaster",
+    "id" : "disasterBegin",
+    "album": "Iron Blood, Notes, and Oath",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-10.ogg",
+    "name": "",
+    "id" : "bismarckHype"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-2.ogg",
+    "name": "Observers of the Past",
+    "id" : "observersPast",
+    "album": "Iron Blood, Notes, and Oath",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-3.ogg",
+    "name": "Last Stand",
+    "id": "lastStand",
+    "album": "Iron Blood, Notes, and Oath",
+    "debut": "SIB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-4.ogg",
+    "name": "Thus Spoke Zarathusa",
+    "id": "Zarathusa"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-5.ogg",
+    "name": "",
+    "id" : "bismarckCheerful"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-6.ogg",
+    "name": "",
+    "id" : "bismarckPiano"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-7.ogg",
+    "name": "Ruin of Athens",
+    "id" : "athensRuin"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-8.ogg",
+    "name": "",
+    "id" : "bismarckDefiance"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-bsm-9.ogg",
+    "name": "",
+    "id" : "hoodDeath"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-china-party.ogg",
+    "name": "",
+    "id" : "chinaParty"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-cw-battle-boss.ogg",
+    "name": "Resounding Attack, Roaring Lightning",
+    "id" : "cwBoss",
+    "album": "Crosswave",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-cw-level.ogg",
+    "name": "Carry Out the Operation",
+    "id" : "cwLevel",
+    "album": "Crosswave",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-cw-story.ogg",
+    "name": "With a Lovely Smile",
+    "id" : "cwStory",
+    "album": "Crosswave",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-deepblue-image.ogg",
+    "name": "Secrets Beneath the Ice",
+    "id" : "iceSecrets",
+    "album": "Deep Echo",
+    "debut": "KDR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-echo-loop.ogg",
+    "name": "",
+    "id" : "echoLoop"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-hunhe-battle.ogg",
+    "name": "Fearless Wings",
+    "id" : "hunheBatttle",
+    "album": "Microlayer Mixing",
+    "debut": "MM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-hunhe-boss.ogg",
+    "name": "Hybrid Build and Assimilation",
+    "id" : "hunheBoss",
+    "album": "Microlayer Mixing",
+    "debut": "MM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-hunhe-eagle.ogg",
+    "name": "",
+    "id" : "hunheEagle"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-hunhe-level.ogg",
+    "name": "Fog Bridge",
+    "id" : "fogBridge",
+    "album": "Microlayer Mixing",
+    "debut": "MM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-hunhe-story.ogg",
+    "name": "Setting Off For New Places",
+    "id" : "crossWave",
+    "album": "Microlayer Mixing",
+    "debut": "MM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-level-french1.ogg",
+    "name": "Like the Sacred White Lily",
+    "id" : "sacredLily",
+    "album": "Play the Iris Song",
+    "debut": "SO"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-level-french2.ogg",
+    "name": "Broken Light",
+    "id" : "brokenLight",
+    "album": "Play the Iris Song",
+    "debut": "ILD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-level.ogg",
+    "name": "Journey",
+    "id" : "journey",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-level02.ogg",
+    "name": "Weigh Anchor",
+    "id": "weighAnchor",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-level03.ogg",
+    "name": "Royal Navy",
+    "id": "royalNavy",
+    "album": "Royal Style",
+    "debut": "ILD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-logo-amagi.ogg",
+    "name": "",
+    "id" : "logoAmagi"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main-arbitrationsystem-theme.ogg",
+    "name": "Project Anti-X",
+    "id" : "projectAntiX",
+    "album": "Embers of Fire",
+    "debut": "GoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main-ashes-theme.ogg",
+    "name": "Ashes of the End (BHR Despair Theme)",
+    "id" : "ashesEnd",
+    "album": "Embers of Fire",
+    "debut": "AR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main-christmas.ogg",
+    "name": "Jingle Bells",
+    "id" : "jingleBells",
+    "album": "inferred",
+    "debut": "MO"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main-newyear.ogg",
+    "name": "Crimson Echoes",
+    "id": "crimsonEchoes",
+    "album": "Sakura Wind",
+    "debut": "CE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main-seaandsun.ogg",
+    "name": "Sea Breeze and Deserted Island in Summer",
+    "id" : "desertedIsland",
+    "album": "Sea Breeze and Deserted Island",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-main.ogg",
+    "name": "Port Area",
+    "id" : "port",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-map-longgong.ogg",
+   "name": "Dragon Palace",
+   "id": "dragonPalace",
+   "album": "Blue Sea Sparkles",
+   "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-musashi-1.ogg",
+    "name": "Yata, Dance of Amahara",
+    "id" : "yata",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-musashi-2.ogg",
+    "name": "Yata, Eater of Day",
+    "id" : "dayEater",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-nagato-boss.ogg",
+    "name": "The Fox's Power",
+    "id" : "nagatoBoss",
+    "album": "Sakura Wind",
+    "debut": "ISSS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-nagato-map.ogg",
+    "name": "Ink-Stained Steel Sakura",
+    "id": "inkDyedSteelFlower",
+    "album": "Sakura Wind",
+    "debut": "CE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-newyear.ogg",
+    "name": "New Year's Greetings",
+    "id" : "newYear",
+    "album": "Sakura Wind",
+    "debut": ""
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-qe-ova-15.ogg",
+    "name": "",
+    "id" : "pieceOfCake"
+},
+
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-1.ogg",
+    "name": "Daily",
+    "id" : "daily",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-2.ogg",
+    "name": "Thoughts",
+    "id" : "thoughts",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-3.ogg",
+    "name": "Weigh Anchor",
+    "id" : "weighAnchor",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-4.ogg",
+     "name": "Visitors Dyed in Red",
+      "id": "redDyedVisitor",
+      "album": "Sakura Wind",
+      "debut": "Midway Showdown"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-5.ogg",
+    "name": "Crisis",
+    "id": "crisis"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-6.ogg",
+  "name": "",
+  "id" : "eagleUnionDiscovery"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-7.ogg",
+    "name": "Determination",
+    "id" : "determination",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-8.ogg",
+    "name": "",
+    "id" : "enterpriseMETA"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-afterrain-soft.ogg",
+    "name": "Sunny Sky with Drizzle",
+    "id" : "afterRain",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-amagi-up.ogg",
+    "name": "Awakening Crimson Flame",
+    "id" : "awakeningCrimsonFlame",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-amahara-stage1.ogg",
+  "name": "The Guidance of the Celestial Realm",
+  "id": "guidanceCelestialRealm",
+  "album": "Dancing on the Heavenly Plain",
+  "debut": "DFAA"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-amahara-stage2.ogg",
+  "name": "Amahara", 
+  "id": "amaharaTheme",
+  "album": "Dancing on the Heavenly Plain",
+  "debut": "DFAA"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-amahara-stage3.ogg",
+  "name": "Amahara Banquet",
+  "id": "amaharaBanquet",
+  "album": "Dancing on the Heavenly Plain",
+  "debut": "DFAA"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-antarctica-serious.ogg",
+    "name": "Obscure Stars",
+    "id" : "antarcticaSerious",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-antix-past.ogg",
+    "name": "Forgotten Heroes",
+    "id" : "Anti-XPast",
+    "album": "A Rose on the High Tower",
+    "debut": "RFB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-bismark-determination.ogg",
+    "name": "Road of Iron and Blood",
+    "id" : "ironBloodRoad",
+    "album": "Confluence of Nothingness",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-cccp-soft.ogg",
+    "name": "Marching in the Morning Mist",
+    "id" : "morningMist",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-clemenceau-judgement.ogg",
+    "name": "Day of Judgement",
+    "id" : "judgementDay",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-commander-up.ogg",
+    "name": "Independent Variable",
+    "id" : "commander",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-dailyfuture-upspeed.ogg",
+    "name": "",
+    "id" : "aosteFolly",
+    "debut": "PC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-darkplan.ogg",
+    "name": "Conspiracy",
+    "id" : "Conspiracy",
+    "album": "Snowrealm Perigrination",
+    "debut": "MUSS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-egypt-mystic.ogg",
+    "name": "Feast on the Nile",
+    "id" : "nileFeast",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-expo-lastday.ogg",
+    "name": "Grand Closing Day",
+    "id" : "expoLastDay",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-finalbattle-unity.ogg",
+    "name": "Great Deeds of Ordinary People",
+    "id" : "finalBattleUnity",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-flowerdust-soft.ogg",
+    "name": "Dust Gathering on This Shore",
+    "id" : "shoreDust",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-french.ogg",
+    "name": "Free Will",
+    "id" : "freeWill",
+    "album" : "Play the Iris Song",
+    "debut": "ILD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-french1.ogg",
+    "name": "Broken Light",
+    "id" : "french1"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-french2.ogg",
+    "name": "Free Will",
+    "id" : "french2"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-ironblood-light.ogg",
+    "name": "A Nation of Reason and Order",
+    "id" : "rumeyReason",
+     "album": "Twilight Beneath the Stars",
+    "debut": "SC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-ironblood-strong.ogg",
+    "name": "Duchy of Iron and Blood",
+    "id" : "duchyIronBlood",
+     "album": "Twilight Beneath the Stars",
+    "debut": "SC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-island-soft.ogg",
+    "name": "Pacific Ocean Island Scenery",
+    "id" : "deceptiveCalm",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+  },
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-italy.ogg",
+    "name": "Divine Comedy and Tragedy",
+    "id" : "divineTragiComedy",
+    "album": "Divine Tragicomedy",
+    "debut": "ETC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-lightheven-up.ogg",
+    "name": "Stairway to Heaven",
+    "id" : "lighthevenUp",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-lion-up.ogg",
+    "name": "Shining Wings Soaring to the Sky",
+    "id" : "shiningWingsSky",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-marcopolo-dream.ogg",
+    "name": "The False Holy Sea",
+    "id" : "falseHolySea",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-masazhusai.ogg",
+    "name": "",
+    "id" : "massachusettsTheme",
+    "debut": "ILD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-mayrain.ogg",
+    "name": "A Light Rain Falls in May",
+    "id" : "mayLight",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-maystorm.ogg",
+    "name": "Fine Rain in May Resembles Tears",
+    "id" : "mayStorm",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-memory-grief.ogg",
+    "name": "Faded Glass",
+    "id" : "memoryGreif",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-midgard.ogg",
+    "name": "Breath of Helheim",
+    "id" : "midgardStory",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-mirrorheart-mystic.ogg",
+    "name": "Heart in the Mirror",
+    "id" : "mirrorHeart",
+    "album": "Tempesta and the Sleeping Sea",
+    "debut": "Tempesta"
+
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-musicanniversary-gorgeous.ogg",
+    "name": "Celebration and Golden Movement",
+    "id" : "musicAnniversery",
+    "album": "Play the Iris Song",
+    "debut": "Orthodoxy's Banquet"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-nailuo-theme.ogg",
+    "name": "Abyss of Naraka",
+    "id" : "naraka",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-newsakura.ogg",
+    "name": "Wind of New Life",
+    "id" : "windNewLife",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-8.ogg",
+  "id": "richang8",
+  "debut": ""
+},
+
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-flexible.ogg",
+    "name": "",
+    "id" : "richangFlexible",
+    "album": "",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-light.ogg",
+    "name": "",
+    "id" : "richangLight",
+    "debut": "II"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-partynight.ogg",
+    "name": "Game Night",
+    "id" : "gameNight",
+    "album": "Twilight Beneath the Stars",
+    "debut": "SC"
+
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-relax.ogg",
+    "name": "",
+    "id" : "richangRelax",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang-sooth.ogg",
+    "name": "",
+    "id" : "richangSooth",
+    "debut": "EFA"
+},
+
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-richang.ogg",
+    "name": "Setting Sail",
+    "id" : "settingSail",
+    "album": "Setting Sail"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-roma-inside.ogg",
+    "name": "Eagle and Renaissance Day",
+    "id" : "romaEagle",
+    "album": "Aquilifer's Ballade",
+    "debut": "AB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-roma-outside.ogg",
+    "name": "Welcome to the Expo",
+    "id" : "expoWelcome",
+    "album": "Aquilifer's Ballade",
+    "debut": "AB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-royalnavy-serious.ogg",
+    "name": "The Expedition On Which the Sun Never Sets",
+    "id" : "neverSettingSun",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-shenguang-holy.ogg",
+    "name": "Divine Light in the Cage",
+    "id" : "cagedLight",
+    "album": "Divine Light in Chains",
+    "debut": "PSL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-startravel.ogg",
+    "name": "Speeding Between Stars",
+    "id" : "starTravel",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-temepest-1.ogg",
+    "name": "Beneath the Cloud Wall",
+    "id" : "cloudWall",
+    "album": "Tempesta and the Fountain of Youth",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-temepest-2.ogg",
+    "name": "Shadows of the Past",
+    "id" : "pastShadows",
+    "album": "Tempesta and the Fountain of Youth",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-tempest-light.ogg",
+    "name": "The One Who Has Weathered the Storm",
+    "id" : "stormWeather",
+    "album": "Tempesta and the Sleeping Sea",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-tempest-marching.ogg",
+    "name": "The One Who Pierces the Storm",
+    "id" : "stormPierce",
+    "album": "Tempesta and the Sleeping Sea",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-thehierophantv.ogg",
+    "name": "Listen to My Voice",
+    "id" : "listenVoice",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-theme-sardinia.ogg",
+    "name": "Sardinia Under the Divine Light",
+    "id" : "sardiniaDivineLight",
+    "album": "Divine Light in Chains",
+    "debut": "PSL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-tiancheng.ogg",
+    "name": "Daily Life with My Older Sister",
+    "id" : "sisterLife",
+    "album": "Sakura Wind",
+    "debut": "CE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-tulipa-pv.ogg",
+    "name": "Raise the Tulip Flag",
+    "id" : "raiseTulip",
+    "album": "Raise the Tulip Flag",
+    "debut": "Towards Tulipa's Seas"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-tulipa.ogg",
+    "name": "New Sprouts Breaking Ground Day",
+    "id" : "newSprouts",
+    "album": "Raise the Tulip Flag",
+    "debut": "Towards Tulipa's Seas"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-unzen-heart.ogg",
+    "name": "Clear and Lucid Heart",
+    "id" : "unzenHeart",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-unzen.ogg",
+    "name": "For a Moment",
+    "id" : "storyUnzen",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-worldα-brokenlight.ogg",
+  "name": "Glimmers Within Parabola",
+  "id": "alphaBrokenLight",
+  "album": "Dancing on the Heavenly Plain",
+  "debut": "DFAA"
+  
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-worldα-grief.ogg",
+    "name": "Faint Light Beneath the Clouds (Anzeel Lament)",
+    "id" : "anzeelLament",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-akagi-inside.ogg",
+    "name": "Night of Crimson Rain (Amagus Theme)",
+    "id" : "susMagi",
+    "album": "Sakura Wind",
+    "debut": "SLR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-akagi-meta.ogg",
+    "name": "Burning Lycoris of the Other Shore (Akagi META theme)",
+    "id" : "akagiMETAtheme",
+     "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-amagi-cv.ogg",
+    "name": "Crimson Rebirth",
+    "id" : "amagiRebirth",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-antarctica.ogg",
+    "name": "Lost in the Snow",
+    "id" : "antarcticaTheme",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-aostelab.ogg",
+    "name": "Stars and Sea Beyond (Aoste Lab Theme)",
+    "id" : "aosteTheme",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-arbitrator-tower.ogg",
+    "name": "546865746F776572",
+    "id" : "towerCleanse",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-bismark-reborn.ogg",
+    "name": "Walking Through Fire (Bismarck Zwei Theme)",
+    "id" : "walkFire",
+    "album": "Confluence of Nothingness",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-brokenworld-sad.ogg",
+    "name": "A World in Decay",
+    "id" : "worldDecay",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-camelot-up.ogg",
+    "name": "Light of Camelot",
+    "id" : "camelotLight",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-camelot.ogg",
+    "name": "Solemn Pledge, Radiant Court",
+    "id" : "camelotTheme",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-clemenceau.ogg",
+    "name": "Attendre et Esperer",
+    "id" : "waitHope",
+    "album": "Play the Iris Song",
+    "debut": "AoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-dailyfuture.ogg",
+    "name": "Ordinary Daily Life",
+    "id" : "dailyFuture",
+    "album": "Deep Echo",
+    "debut": "AR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-designfleet-vii.ogg",
+  "name": "Joint Pacific Operation Plan",
+  "id": "falseResurrection",
+   "album": "Windborne Steel Wings",
+    "debut": "WSW"
+   
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-designfleet.ogg",
+    "name": "Iron Blood Project Ship",
+    "id" : "designFleet",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-designshipvi.ogg",
+    "name": "Plans for the Future",
+    "id" : "futurePlans",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-donghuang.ogg",
+    "name": "Beautiful Mountains and Rivers",
+    "id" : "donghuang",
+    "album": "Windborne Steel Wings",
+    "debut": "WSW"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-elizabeth-andmeta.ogg",
+    "name": "Your Majesty's Glory",
+    "id" : "elizabethMETA",
+    "album": "Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-frederick.ogg",
+    "name": "Witch of the Deep Sea (Compiler Theme)",
+    "id" : "compiler",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-glorious-meta.ogg",
+    "name": "Prisoner of the Rose",
+    "id" : "rosePrisoner",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/cdnNagamiMusic/bgm-theme-helena.ogg",
+  "name": "Sea Blue Light",
+  "id": "helenaTheme",
+  "album": "Dancing on the Heavenly Plain",
+  "debut": "DFAA"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-highseasfleet-reborn.ogg",
+    "name": "Rainbow Finale",
+    "id" : "rainbowFinaleTheme",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-highseasfleet.ogg",
+    "name": "High Seas Fleet",
+    "id" : "hsf",
+    "album": "Rainbow Finale",
+    "debut": "RaRE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-ijndailymeeting.ogg",
+    "name": "",
+    "id" : "ijnDaily",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-irisangel.ogg",
+    "name": "",
+    "id" : "irisAngel",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-kerguelen.ogg",
+    "name": "Kerguelen's Wind",
+    "id" : "kerguelenWind",
+    "album":"Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-lightheven.ogg",
+    "name": "Glowing City",
+    "id" : "martyrium",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-lion.ogg",
+    "name": "Shining Wings Awe the World",
+    "id" : "shiningWingsAweWorld",
+    "album": "A Rose on the High Tower",
+    "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-longgong-loop.ogg",
+    "name": "Sparkling Blue Sea",
+    "id" : "sparklingSea",
+    "album": "Blue Sea Sparkles",
+    "debut": "USB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-longgong.ogg",
+    "id": "longgong",
+    "debut": "USB"
+},
+  {
+    "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-longgong-another.ogg",
+    "name": "Azure Sea Radiant Scales ~ Illusory Dance ~",
+    "id" : "longgongAnother",
+    "album": "Dancing on the Heavenly Plain",
+    "debut": "DFAA"
+  },
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-marcopolo.ogg",
+    "name": "Outstanding, Extraordinary, and Great",
+    "id" : "marcoPolo",
+    "album": "The Fool's Scales",
+    "debut": "AoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-merkuriameta.ogg",
+    "name": "A Tribute to the Past (Pamiat Merkuria META theme)",
+    "id" : "merkuria",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-midgard-hunting.ogg",
+    "name": "Final Battle at the Rainbow Tower",
+    "id" : "rainbowTowerLastBattle",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-misaka.ogg",
+    "name": "The War God's Determination",
+    "id" : "mikasaTheme",
+    "album": "Sakura Wind",
+    "debut": "WFBNF"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-musashi-inside.ogg",
+    "name": "A Tree That Can Be Embraced Grows From a Tiny Sprout",
+    "id" : "musashiInside",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-musashi-marching.ogg",
+    "name": "The Shogun's Blade, Thunder on the Still Sea",
+    "id" : "musashiMarching",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-musashi-outside.ogg",
+    "name": "The Tree Standing Alone in the Forest will be Felled by the Wind",
+    "id" : "musashiOutside",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-nagato-meta.ogg",
+    "name": "The Fox's Army",
+    "id" : "nagatoMETA",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-objectx-spread.ogg",
+    "name": "ÄâĚŹÎď",
+    "id" : "objectXspread",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-partydress.ogg",
+    "name": "Royal Banquet",
+    "id" : "royalBanquet",
+    "album": "Royal Style",
+    "debut": "GoR"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-richard.ogg",
+    "name": "Crazy 'META' (Bon Homme Richard Theme)",
+    "id" : "richardTheme",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-richelieu.ogg",
+    "name": "Lady of the Iris (Richelieu Theme)",
+    "id" : "richelieuTheme",
+    "album": "Play the Iris Song",
+    "debut": "AotI"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-roma-image.ogg",
+    "name": "Grand Opening Day",
+    "id" : "grandOpening",
+    "album": "Aquilifer's Ballade",
+    "debut": "AB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-royalknights-battle.ogg",
+    "name": "Attack of the Knights",
+    "id" : "knightsAttack",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-sakuraholyplace.ogg",
+    "name": "Sorrow of the Sacred Tree",
+    "id" : "sorrowSacredTree",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-schoolfuture.ogg",
+    "name": "SF Academy",
+    "id" : "sfAcademy",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-seaandsun-image.ogg",
+    "name": "Adventurers Setting Sail",
+    "id" : "adventurers",
+    "album": "Sea Breeze and Deserted Island",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-seaandsun-soft.ogg",
+    "name": "Calm Sea",
+    "id" : "calmSea",
+    "album": "Sea Breeze and Deserted Island",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-shallowoftheworld.ogg",
+    "name": "",
+    "id" : "shallowOfTheWorld",
+    "debut": "BCSS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-shinanometa.ogg",
+    "name": "Butterfly's Dance",
+    "id" : "shinanoMETA",
+    "album": "Violet Tempest, Blooming Lycoris",
+    "debut": "VTBL"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-sovietunion.ogg",
+    "name": "Unto Dawn",
+    "id" : "sovietUnion",
+    "album": "Snowrealm Perigrination",
+    "debut": "SP"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-starbeast.ogg",
+    "name": "Star Beast",
+    "id": "starBeast",
+     "album": "Twilight Beneath the Stars",
+    "debut": "SC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-starsea-core.ogg",
+    "name": "Heart of the Galaxy",
+    "id" : "starSeaCore",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-starsea-explo.ogg",
+    "name": "Exploring the Future",
+    "id" : "exploFuture",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-tempest-up.ogg",
+    "name": "Galloping Across the Seven Seas",
+    "id" : "seaGallop",
+    "album": "Tempesta and the Fountain of Youth",
+    "debut": "Tempesta"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-tempest.ogg",
+    "name": "Golden Deer and Silver Octopus",
+    "id" : "goldDeer",
+    "album": "Sea Breeze and Deserted Island",
+    "debut": "Tempesta"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thechariotvii.ogg",
+  "name": "Arbiter Chariot",
+  "id" : "chariotTheme",
+  "album": "A Rose on the High Tower",
+  "debut": "RHT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thedeathxiii.ogg",
+    "name": "Waltz of Death (Arbiter Death Theme)",
+    "id" : "deathTheme",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thedevilxv.ogg",
+    "name": "Arbiter Devil (Devil Theme)",
+    "id" : "devilTheme",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+{
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-theempressiii.ogg",
+  "name": "Arbiter Empress",
+  "id": "empressTheme",
+  "album": "A Rose on the High Tower",
+  "debut": "MNS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thehermitix.ogg",
+    "name": "Arbiter Hermit (Hermit Theme)",
+    "id" : "hermitTheme",
+    "album":"Confluence of Nothingness",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thehierophantv.ogg",
+    "name": "Arbiter Hierophant (Hierophant Theme)",
+    "id" : "arbiterHierophant",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-theloversvi.ogg",
+    "name": "Arbiter Lovers (Lovers Theme)",
+    "id" : "loversTheme",
+    "album": "Reverse Rainbow Tower",
+    "debut": "ToT"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-themagiciani.ogg",
+    "name": "Arbiter Magician (Magician Theme)",
+    "id" : "magicianTheme",
+    "album": "Awakening Crimson Flame",
+    "debut": "OEC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-thetowerxvi.ogg",
+    "name": "Arbiter Tower (Tower Theme)",
+    "id" : "towerTheme",
+    "album":"Confluence of Nothingness",
+    "debut": "CoN"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-threat-typev.ogg",
+    "name": "Category 5 Threat",
+    "id" : "threatTypeFive",
+    "album": "Directional Folding",
+    "debut": "PS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-ucnf-beacon.ogg",
+    "name": "Submersible Beacon",
+    "id" : "subBeacon",
+    "album": "Light-Chasing Sea of Stars",
+    "debut": "LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-ucnf-flagship.ogg",
+    "name": "Pride of the United Council",
+    "id" : "ucnfFlagship",
+    "album": "Light-Chasing Sea of Stars",
+    "debut": "LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-ucnf-image.ogg",
+    "name": "Starry Sea",
+    "id" : "starrySea",
+    "album": "Light-Chasing Sea of Stars",
+    "debut": "LCSoS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-undead.ogg",
+    "name": "Terror of the Undead",
+    "id" : "Xtheme",
+    "album": "Blooming in the City of Radiance",
+    "debut": "LoTM"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-underheaven.ogg",
+    "name": "Paradise on Earth",
+    "id" : "underHeaven",
+    "album": "The Fool's Scales",
+    "debut": "FS"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-unzen.ogg",
+    "name": "Immortal in the Clouds (Unzen Theme)",
+    "id" : "unzenTheme",
+    "album": "Effulgence Before Eclipse",
+    "debut": "EbE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-vanguard.ogg",
+    "name": "The Discerning Royal Knight (Vangaurd Theme)",
+    "id" : "vangaurdTheme",
+    "album": "Solemn Pledge, Radiant Court",
+    "debut": "PRC"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-vichy-church.ogg",
+    "name": "Church",
+    "id" : "vichyChurch",
+    "album": "Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-vichy-revelation.ogg",
+    "name": "Sign of Judgement",
+    "id" : "vichyRev",
+    "album": "Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme-vichy-slaughter.ogg",
+    "name": "Judgement Mecha Armor",
+    "id" : "vichySlaughter",
+    "album": "Annihilation and Ruins",
+    "debut": "RD"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-theme.ogg",
+    "name": "",
+    "id" : "kagaPassion",
+    "debut": "CE"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-xinnong-1.ogg",
+    "name": "Cherry Blossoms Dancing on the Water",
+    "id" : "xinnong1",
+    "album": "Crosswave",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-xinnong-2.ogg",
+    "name": "Steel Judgement",
+    "id" : "steelJudgement",
+    "album": "Crosswave",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-xinnong-3.ogg",
+    "name": "Stirring Malice",
+    "id" : "stirringMalice",
+    "album": "Crosswave",
+    "debut": "SCB"
+},
+  {
+  "link": "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-xinnong-4.ogg",
+  "name": "Blow Risking Everything",
+  "id" : "xinnong4",
+  "album": "Crosswave",
+  "debut": "SCB"
+  }
+  ]
+}
