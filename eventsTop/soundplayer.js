@@ -28,9 +28,6 @@
                 preloadedAudios[song.id] = audio; // store for later use
               });
 
-              console.log("✅ All songs preloaded");
-            }
-
             // Play a song by its JSON id
             async function playSong(songID) {
              if (!songsData) {
@@ -70,6 +67,7 @@
         clone.play();
     }
 }
+
 
 
 
