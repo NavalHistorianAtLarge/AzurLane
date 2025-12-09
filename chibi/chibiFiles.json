@@ -1,0 +1,54 @@
+{
+  "chibis": [
+    {
+      "name": "Zuikaku",
+      "chibiPNG": "/chibi/assets/chibi/zuikaku.png",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/chibi/assets/spine/zuikaku/zuikaku.json",
+          "chibiPNG": "/chibi/assets/chibi/zuikaku.png"
+        },
+        {
+          "id": "ceremonial",
+          "label": "Ceremonial Crane",
+          "path": "/chibi/assets/spine/zuikaku/zuikaku1.json",
+          "chibiPNG": "/chibi/assets/chibi/zuikaku1.png"
+        },
+        {
+          "id": "wind",
+          "label": "The Wind's True Name",
+          "path": "/chibi/assets/spine/zuikaku/zuikaku2.json",
+          "chibiPNG": "/chibi/assets/chibi/zuikaku2.png"
+        },
+        {
+          "id": "race",
+          "label": "Zoom Like the Wind",
+          "path": "/chibi/assets/spine/zuikaku3.json",
+          "chibiPNG": "/chibi/assets/chibi/zuikaku3.png"
+        }
+      ]
+    },
+    {
+      "name": "Shoukaku",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/chibi/assets/spine/shoukaku/shoukaku.json"
+        }
+      ]
+    },
+    {
+      "name": "Regensburg",
+      "skins": [
+        {
+          "id": "default",
+          "label": "Default",
+          "path": "/chibi/assets/spine/regensburg/regensburg.json"
+        }
+      ]
+    }
+  ]
+}
