@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
       // Create a container for the disclaimer
       const disclaimer = document.createElement("div");
       disclaimer.innerText = text;
-      // Style it as subtle footer text
+      // Style it as subtle footer text"
+      disclaimer.style.width = "50%;
+      disclaimer.
       disclaimer.style.fontSize = "0.5em";
       disclaimer.style.textAlign = "left";
-      disclaimer.style.marginLeft = "-90px";
       // Attach to the bottom of the page
       document.body.appendChild(disclaimer);
     })
@@ -20,5 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error("Could not load disclaimer:", error);
     });
 });
+
 
 
