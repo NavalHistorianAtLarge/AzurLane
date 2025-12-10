@@ -220,51 +220,38 @@ fetch('chibiFiles.json')
     sidebar.classList.add('open');
   });
 
-// Load a specific skin (same as before)
-function loadSkin(skin) {
-  const loader = new PIXI.loaders.Loader();
-  loader.add(skin.id, skin.path).load((l, resources) => {
-    if (currentChibi) app.stage.removeChild(currentChibi);
-
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'normal', true);
-
-    app.stage.addChild(spineChar);
-    currentChibi = spineChar;
-  });
-}
-
 // Populate animation buttons
 function showAnimations(chibi) {
   chibiView.classList.add('hidden');
   animView.classList.remove('hidden');
-  animSelect.innerHTML = '';
 
-  // Use first skin’s animations
+  const animList = document.getElementById('animList');
+let selectedAnimations = [];
+  
+  // Clear both views
+  animList.innerHTML = '';
+  animSelect.innerHTML = '';
+  selectedAnimations = [];
+
   const anims = currentChibi.spineData.animations.map(a => a.name);
   anims.forEach(anim => {
+    // Button view
     const btn = document.createElement('button');
     btn.textContent = anim;
+    btn.classList.add('anim-btn');
     btn.addEventListener('click', () => {
       currentChibi.state.setAnimation(0, anim, true);
-      sidebar.classList.remove('open'); // close sidebar after pick
+      sidebar.classList.remove('open');
     });
-    animSelect.appendChild(btn);
+    animList.appendChild(btn);
+
+    // Dropdown view
+    const opt = document.createElement('option');
+    opt.value = anim;
+    opt.textContent = anim;
+    animSelect.appendChild(opt);
   });
 }
-
-// Back button
-backBtn.addEventListener('click', () => {
-  animView.classList.add('hidden');
-  chibiView.classList.remove('hidden');
-});
-
-
-const animList = document.getElementById('animList');
-let selectedAnimations = [];
 
 function populateAnimationButtons(spineChar) {
   animList.innerHTML = '';
@@ -287,6 +274,7 @@ function populateAnimationButtons(spineChar) {
     animList.appendChild(btn);
   });
 }
+
 
 
 
