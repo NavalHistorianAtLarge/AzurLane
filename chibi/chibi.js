@@ -194,7 +194,7 @@ const sidebar = document.getElementById('sidebar');
 const chibiView = document.getElementById('chibiView');
 const animView = document.getElementById('animView');
 const chibiList = document.getElementById('chibiList');
-const animList = document.getElementById('animList');
+const animSelect = document.getElementById('animSelect');
 const backBtn = document.getElementById('backBtn');
 
 // Load chibiFiles.json
@@ -242,7 +242,7 @@ function loadSkin(skin) {
 function showAnimations(chibi) {
   chibiView.classList.add('hidden');
   animView.classList.remove('hidden');
-  animList.innerHTML = '';
+  animSelect.innerHTML = '';
 
   // Use first skin’s animations
   const anims = currentChibi.spineData.animations.map(a => a.name);
@@ -253,7 +253,7 @@ function showAnimations(chibi) {
       currentChibi.state.setAnimation(0, anim, true);
       sidebar.classList.remove('open'); // close sidebar after pick
     });
-    animList.appendChild(btn);
+    animSelect.appendChild(btn);
   });
 }
 
@@ -262,6 +262,7 @@ backBtn.addEventListener('click', () => {
   animView.classList.add('hidden');
   chibiView.classList.remove('hidden');
 });
+
 
 
 
