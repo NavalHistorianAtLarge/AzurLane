@@ -200,10 +200,6 @@ const animView = document.getElementById('animView');
 const backToChibis = document.getElementById('backToChibis');
 const backToSkins = document.getElementById('backToSkins');
 
-let currentChibi = null;
-let currentSkin = null;
-let chibiData = null;
-
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
@@ -288,6 +284,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
