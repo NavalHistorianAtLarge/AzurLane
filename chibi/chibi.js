@@ -19,17 +19,6 @@ const animView = document.getElementById('animView');
 const backToChibis = document.getElementById('backToChibis');
 const backToSkins = document.getElementById('backToSkins');
 
-chibiData.forEach(chibi => {
-  const img = document.createElement('img');
-  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
-  img.alt = chibi.name;
-  img.title = chibi.name;
-  img.addEventListener('click', () => {
-    showSkins(chibi); // move to skin selection step
-  });
-  chibiList.appendChild(img);
-});
-
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
@@ -114,6 +103,20 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
+
+chibiData.forEach(chibi => {
+  const img = document.createElement('img');
+  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
+  img.alt = chibi.name;
+  img.title = chibi.name;
+  img.addEventListener('click', () => {
+    showSkins(chibi); // move to skin selection step
+  });
+  chibiList.appendChild(img);
+});
+
+
 // Resize handler
 function resizeCanvas() {
   const container = document.getElementById('chibiCanvas');
@@ -256,6 +259,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
