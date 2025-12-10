@@ -18,7 +18,7 @@
 }
 
 .chibi-item {
-  flex: 0 0 48%;   /* two per row */
+  flex: 0 0 45%;   /* two per row */
   text-align: center;
     border: 1px solid white;
   border-radius: 30px; 
@@ -50,6 +50,7 @@
 #animList button:hover {
   background: #555;
 }
+
 
 
 
