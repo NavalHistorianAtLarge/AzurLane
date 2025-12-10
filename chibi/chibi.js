@@ -25,6 +25,8 @@ fetch('chibiFiles.json')
   .then(data => {
     chibiData = data.chibis;
 
+    let chibiData = null;
+    
     // Populate chibi thumbnails
     chibiData.forEach(chibi => {
       const img = document.createElement('img');
@@ -136,8 +138,6 @@ window.addEventListener('resize', resizeCanvas);
 
 // Call once at startup
 resizeCanvas();
-
-let chibiData = null;
 
 // Populate skins dropdown for a given chibi
 function populateSkins(chibi) {
@@ -259,6 +259,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
