@@ -1,14 +1,6 @@
-.sidebar {
+#sidebar {
   position: fixed;
-  left: 0;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  background: #333;
-  color: #fff;
-  overflow-y: auto;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease;
+  width: 300px;
   padding: 10px;
 }
 .sidebar.open {
@@ -18,10 +10,10 @@
   display: none;
 }
 #chibiList img {
-  width: 100%;
+  width: 50%;
   margin: 5px 0;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 2px solid white;
 }
 #chibiList img:hover {
   border-color: #ffcc00;
@@ -39,3 +31,4 @@
 #animList button:hover {
   background: #555;
 }
+
