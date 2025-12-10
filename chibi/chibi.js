@@ -29,10 +29,6 @@ window.addEventListener('resize', resizeCanvas);
 // Call once at startup
 resizeCanvas();
 
-const chibiSelect = document.getElementById('chibiSelect');
-const skinSelect = document.getElementById('skinSelect');
-const animSelect = document.getElementById('animSelect');
-
 let chibiData = null;
 
 // Load chibiFiles.json
@@ -89,6 +85,9 @@ function loadSkin(skin) {
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
     currentSkin = skin;
+
+    const animSelect = document.getElementById('animSelect');
+
 
     // Populate animation dropdown
     animSelect.innerHTML = '';
@@ -284,6 +283,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
