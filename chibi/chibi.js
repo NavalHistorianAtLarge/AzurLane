@@ -263,6 +263,30 @@ backBtn.addEventListener('click', () => {
 });
 
 
+const animList = document.getElementById('animList');
+let selectedAnimations = [];
+
+function populateAnimationButtons(spineChar) {
+  animList.innerHTML = '';
+  selectedAnimations = [];
+
+  const anims = spineChar.spineData.animations.map(a => a.name);
+  anims.forEach(anim => {
+    const btn = document.createElement('button');
+    btn.textContent = anim;
+    btn.classList.add('anim-btn');
+    btn.addEventListener('click', () => {
+      if (selectedAnimations.includes(anim)) {
+        selectedAnimations = selectedAnimations.filter(a => a !== anim);
+        btn.classList.remove('selected');
+      } else {
+        selectedAnimations.push(anim);
+        btn.classList.add('selected');
+      }
+    });
+    animList.appendChild(btn);
+  });
+}
 
 
 
