@@ -45,7 +45,6 @@ caption.textContent = chibi.name;
 wrapper.appendChild(img);
 wrapper.appendChild(caption);
 chibiList.appendChild(wrapper);
-    );
   });
 
 // Step 2: show skins for chosen chibi
@@ -256,6 +255,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
