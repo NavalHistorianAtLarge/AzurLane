@@ -148,26 +148,26 @@ function populateSkins(chibi) {
 }
 
 // Load a specific skin
-function loadSkin(skin) {
+function loadSkin(skin, onComplete) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-    // Remove previous
-    if (currentChibi) {
-      app.stage.removeChild(currentChibi);
-    }
+    if (currentChibi) app.stage.removeChild(currentChibi);
 
     const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
     spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;   
-    spineChar.scale.set(1.0);
+    spineChar.y = app.renderer.height * 0.75;
+    spineChar.scale.set(0.5);
     spineChar.state.setAnimation(0, 'normal', true);
 
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
     currentSkin = skin;
 
-    const animSelect = document.getElementById('animSelect');
-
+    if (typeof onComplete === 'function') {
+      onComplete();
+    }
+  });
+}
 
     // Populate animation dropdown
     animSelect.innerHTML = '';
@@ -254,6 +254,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
