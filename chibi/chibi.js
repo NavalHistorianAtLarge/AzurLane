@@ -11,7 +11,7 @@ let currentSkin = null;
 
 // Resize handler
 function resizeCanvas() {
-  const container = document.getElementById('chibiCanvas');
+  const container = document.getElementById('chibiCanvasidle
   const width = container.clientWidth;
   const height = container.clientHeight;
   app.renderer.resize(width, height);
@@ -278,12 +278,13 @@ function loadSkin(skin) {
     spineChar.x = app.renderer.width / 2;
     spineChar.y = app.renderer.height * 0.75;
     spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'idle', true);
+    spineChar.state.setAnimation(0, 'normal', true);
 
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
   });
 }
+
 
 
 
