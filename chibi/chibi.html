@@ -11,12 +11,17 @@
         <h3>Select a Chibi</h3>
         <div id="chibiList"></div>
       </div>
-      <div id="animView" class="view hidden">
-        <h3>Select an Animation</h3>
-        <select id="animList"></select>
-        <button id="saveZipBtn">Save Selected Animations</button>   
-        <button id="backBtn">← Back to Chibis</button>
-      </div>
+<div id="animView" class="view hidden">
+  <h3>Select an Animation</h3>
+  <div id="animList"></div> <!-- for buttons -->
+  <select id="animSelect" multiple size="6"></select> <!-- for zip export -->
+  <button id="saveZipBtn">Save Selected Animations</button>
+  <button id="backBtn">← Back to Chibis</button>
+</div>
+
+
+
+      
     </div>
 
 <div id="chibiCanvas" style="width: 800px; height: 600px;"></div>
@@ -33,6 +38,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
