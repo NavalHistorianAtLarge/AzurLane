@@ -48,15 +48,15 @@ fetch('chibiFiles.json')
 
 // Populate skins dropdown for a given chibi
 function populateSkins(chibi) {
-  skinSelect.innerHTML = '';
+  skinList.innerHTML = '';
   chibi.skins.forEach(skin => {
-    const opt = document.createElement('option');
-    opt.value = skin.id;
-    opt.textContent = skin.label;
-    opt.dataset.path = skin.path;
-    skinSelect.appendChild(opt);
+    const img = document.createElement('image');
+    img.value = skin.id;
+    img.textContent = skin.label;
+    img.dataset.path = skin.path;
+    skinList.appendChild(img);
   });
-  skinSelect.value = chibi.skins[0].id;
+  skinList.value = chibi.skins[0].id;
 }
 
 // Load a specific skin
@@ -93,13 +93,6 @@ function loadSkin(skin) {
     animSelect.value = anims[0];
   });
 }
-
-// Event: change skin
-skinSelect.addEventListener('change', e => {
-  const chibi = chibiData.find(c => c.name === chibiSelect.value);
-  const skin = chibi.skins.find(s => s.id === e.target.value);
-  loadSkin(skin);
-});
 
 // Event: change animation
 animSelect.addEventListener('change', e => {
@@ -279,6 +272,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
