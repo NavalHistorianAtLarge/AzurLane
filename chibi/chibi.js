@@ -197,9 +197,6 @@ const chibiList = document.getElementById('chibiList');
 const animList = document.getElementById('animList');
 const backBtn = document.getElementById('backBtn');
 
-let currentChibi = null;
-let currentSkin = null;
-
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
@@ -265,6 +262,7 @@ backBtn.addEventListener('click', () => {
   animView.classList.add('hidden');
   chibiView.classList.remove('hidden');
 });
+
 
 
 
