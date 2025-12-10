@@ -190,6 +190,82 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   });
 });
 
+const sidebar = document.getElementById('sidebar');
+const chibiView = document.getElementById('chibiView');
+const animView = document.getElementById('animView');
+const chibiList = document.getElementById('chibiList');
+const animList = document.getElementById('animList');
+const backBtn = document.getElementById('backBtn');
+
+let currentChibi = null;
+let currentSkin = null;
+
+// Load chibiFiles.json
+fetch('chibiFiles.json')
+  .then(res => res.json())
+  .then(data => {
+    data.chibis.forEach(chibi => {
+      // Use PNG thumbnail for each chibi
+      const img = document.createElement('img');
+      img.src = `/assets/thumbnails/${chibi.name}.png`; // adjust path
+      img.alt = chibi.name;
+      img.addEventListener('click', () => {
+        // Load first skin of chosen chibi
+        currentSkin = chibi.skins[0];
+        loadSkin(currentSkin);
+
+        // Switch to animation view
+        showAnimations(chibi);
+      });
+      chibiList.appendChild(img);
+    });
+
+    // Open sidebar initially
+    sidebar.classList.add('open');
+  });
+
+// Load a specific skin (same as before)
+function loadSkin(skin) {
+  const loader = new PIXI.loaders.Loader();
+  loader.add(skin.id, skin.path).load((l, resources) => {
+    if (currentChibi) app.stage.removeChild(currentChibi);
+
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    spineChar.x = app.renderer.width / 2;
+    spineChar.y = app.renderer.height * 0.75;
+    spineChar.scale.set(0.5);
+    spineChar.state.setAnimation(0, 'idle', true);
+
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
+  });
+}
+
+// Populate animation buttons
+function showAnimations(chibi) {
+  chibiView.classList.add('hidden');
+  animView.classList.remove('hidden');
+  animList.innerHTML = '';
+
+  // Use first skin’s animations
+  const anims = currentChibi.spineData.animations.map(a => a.name);
+  anims.forEach(anim => {
+    const btn = document.createElement('button');
+    btn.textContent = anim;
+    btn.addEventListener('click', () => {
+      currentChibi.state.setAnimation(0, anim, true);
+      sidebar.classList.remove('open'); // close sidebar after pick
+    });
+    animList.appendChild(btn);
+  });
+}
+
+// Back button
+backBtn.addEventListener('click', () => {
+  animView.classList.add('hidden');
+  chibiView.classList.remove('hidden');
+});
+
 
 
 
