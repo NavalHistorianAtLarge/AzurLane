@@ -3,20 +3,33 @@
   width: 300px;
   padding: 10px;
 }
-.sidebar.open {
-  transform: translateX(0);
-}
 .view.hidden {
   display: none;
 }
-#chibiList img {
-  width: 50%;
-  margin: 5px 0;
-  cursor: pointer;
-  border: 2px solid white;
+#chibiList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-#chibiList img:hover {
+
+.chibi-item {
+  flex: 0 0 48%;   /* two per row */
+  text-align: center;
+}
+
+.chibi-item img {
+  width: 100%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.chibi-item img:hover {
   border-color: #ffcc00;
+}
+
+.chibi-caption {
+  margin-top: 5px;
+  color: #fff;
 }
 #animList button {
   display: block;
@@ -31,4 +44,5 @@
 #animList button:hover {
   background: #555;
 }
+
 
