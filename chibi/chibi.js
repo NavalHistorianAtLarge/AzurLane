@@ -31,21 +31,6 @@ resizeCanvas();
 
 let chibiData = null;
 
-// Load chibiFiles.json
-fetch('chibiFiles.json')
-  .then(res => res.json())
-  .then(data => {
-    chibiData = data.chibis;
-
-    // Auto-load first chibi + first skin
-    if (chibiData.length > 0) {
-      const first = chibiData[0];
-      chibiList.value = first.name;
-      populateSkins(first);
-      loadSkin(first.skins[0]);
-    }
-  });
-
 // Populate skins dropdown for a given chibi
 function populateSkins(chibi) {
   skinList.innerHTML = '';
@@ -179,7 +164,7 @@ const backToSkins = document.getElementById('backToSkins');
 
 chibiData.forEach(chibi => {
   const img = document.createElement('img');
-  img.src = `/assets/thumbnails/${chibi.name}.png`; // adjust path
+  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
   img.alt = chibi.name;
   img.title = chibi.name;
   img.addEventListener('click', () => {
@@ -272,6 +257,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
