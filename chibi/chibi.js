@@ -40,7 +40,7 @@ fetch('chibiFiles.json')
     // Auto-load first chibi + first skin
     if (chibiData.length > 0) {
       const first = chibiData[0];
-      chibiSelect.value = first.name;
+      chibiList.value = first.name;
       populateSkins(first);
       loadSkin(first.skins[0]);
     }
@@ -93,13 +93,6 @@ function loadSkin(skin) {
     animSelect.value = anims[0];
   });
 }
-
-// Event: change chibi
-chibiSelect.addEventListener('change', e => {
-  const chibi = chibiData.find(c => c.name === e.target.value);
-  populateSkins(chibi);
-  loadSkin(chibi.skins[0]);
-});
 
 // Event: change skin
 skinSelect.addEventListener('change', e => {
@@ -176,7 +169,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   zip.generateAsync({ type: "blob" }).then(content => {
     const a = document.createElement("a");
     a.href = URL.createObjectURL(content);
-    a.download = `${chibiSelect.value}_${currentSkin.id}_animations.zip`;
+    a.download = `${chibiList.value}_${currentSkin.id}_animations.zip`;
     a.click();
   });
 });
@@ -286,6 +279,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
