@@ -158,7 +158,6 @@ function populateSkins(chibi) {
       opt.textContent = anim;
       animSelect.appendChild(opt);
     animSelect.value = anims[0];
-  });
 }
 
 // Event: change animation
@@ -233,6 +232,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
