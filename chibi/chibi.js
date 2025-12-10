@@ -225,55 +225,25 @@ function showAnimations(chibi) {
   chibiView.classList.add('hidden');
   animView.classList.remove('hidden');
 
-  const animList = document.getElementById('animList');
-let selectedAnimations = [];
-  
-  // Clear both views
-  animList.innerHTML = '';
+  // Clear dropdown
   animSelect.innerHTML = '';
-  selectedAnimations = [];
 
+  // Populate with options
   const anims = currentChibi.spineData.animations.map(a => a.name);
   anims.forEach(anim => {
-    // Button view
-    const btn = document.createElement('button');
-    btn.textContent = anim;
-    btn.classList.add('anim-btn');
-    btn.addEventListener('click', () => {
-      currentChibi.state.setAnimation(0, anim, true);
-      sidebar.classList.remove('open');
-    });
-    animList.appendChild(btn);
-
-    // Dropdown view
     const opt = document.createElement('option');
     opt.value = anim;
     opt.textContent = anim;
     animSelect.appendChild(opt);
   });
+
+  // Default to first animation
+  if (anims.length > 0) {
+    animSelect.value = anims[0];
+    currentChibi.state.setAnimation(0, anims[0], true);
+  }
 }
 
-function populateAnimationButtons(spineChar) {
-  animList.innerHTML = '';
-  selectedAnimations = [];
-
-  const anims = spineChar.spineData.animations.map(a => a.name);
-  anims.forEach(anim => {
-    const btn = document.createElement('button');
-    btn.textContent = anim;
-    btn.classList.add('anim-btn');
-    btn.addEventListener('click', () => {
-      if (selectedAnimations.includes(anim)) {
-        selectedAnimations = selectedAnimations.filter(a => a !== anim);
-        btn.classList.remove('selected');
-      } else {
-        selectedAnimations.push(anim);
-        btn.classList.add('selected');
-      }
-    });
-    animList.appendChild(btn);
-  });
-}
 
 
 
