@@ -192,7 +192,6 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
 
 const chibiList = document.getElementById('chibiList');
 const skinList = document.getElementById('skinList');
-const animSelect = document.getElementById('animSelect');
 
 const chibiView = document.getElementById('chibiView');
 const skinView = document.getElementById('skinView');
@@ -289,6 +288,7 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
+
 
 
 
