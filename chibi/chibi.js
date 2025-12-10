@@ -27,21 +27,24 @@ fetch('chibiFiles.json')
   .then(data => {
     chibiData = data.chibis;
 
-    // Populate chibi thumbnails
-    chibiData.forEach(chibi => {
-      const img = document.createElement('img');
-      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
-      img.alt = chibi.name;
-      img.addEventListener('click', () => {
-        showSkins(chibi);
-      });
+    
+const wrapper = document.createElement('div');
+wrapper.classList.add('chibi-item');
 
-      const chibiName = document.createElement('div');
-      chibiName.textContent = chibi.name;
-                                   
-      
-      chibiList.appendChild(img);
-      chibiList.appendChild(chibiName);
+const img = document.createElement('img');
+img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
+img.alt = chibi.name;
+img.addEventListener('click', () => {
+  showSkins(chibi);
+});
+
+const caption = document.createElement('div');
+caption.classList.add('chibi-caption');
+caption.textContent = chibi.name;
+
+wrapper.appendChild(img);
+wrapper.appendChild(caption);
+chibiList.appendChild(wrapper);
     });
   });
 
@@ -253,6 +256,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
