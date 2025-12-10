@@ -11,26 +11,20 @@
         <h3>Select a Chibi</h3>
         <div id="chibiList"></div>
       </div>
-<div id="animView" class="view hidden">
-  <h3>Select an Animation</h3>
-  <div id="animList"></div> <!-- for buttons -->
-  <select id="animSelect" multiple size="6"></select> <!-- for zip export -->
-  <button id="saveZipBtn">Save Selected Animations</button>
-  <button id="backBtn">← Back to Chibis</button>
-</div>
-
-
-
-      
-    </div>
+      <div>
+        <h3>Select a Skin</h3>
+        <select id="skinSelect"></select>
+      </div>
+      <div id="animView" class="view hidden">
+        <h3>Select an Animation</h3>
+        <div id="animList"></div> <!-- for buttons -->
+        <select id="animSelect" multiple size="6"></select> <!-- for zip export -->
+        <button id="saveZipBtn">Save Selected Animations</button>
+        <button id="backBtn">← Back to Chibis</button>
+      </div> 
+      </div>
 
 <div id="chibiCanvas" style="width: 800px; height: 600px;"></div>
-
-  
-  <div id="controls">
-  <select id="chibiSelect"></select>
-  <select id="skinSelect"></select>
-</div>
 
   <script src="libs/pixi.min.js"></script>
   <script src="libs/pixi-spine.umd.js"></script>
@@ -38,6 +32,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
