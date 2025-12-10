@@ -157,7 +157,6 @@ function populateSkins(chibi) {
       opt.value = anim;
       opt.textContent = anim;
       animSelect.appendChild(opt);
-    });
     animSelect.value = anims[0];
   });
 }
@@ -234,6 +233,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
