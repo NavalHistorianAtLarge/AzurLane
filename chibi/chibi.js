@@ -196,6 +196,11 @@ const animView = document.getElementById('animView');
 const chibiList = document.getElementById('chibiList');
 const backBtn = document.getElementById('backBtn');
 
+backBtn.addEventListener('click', () => {
+  animView.classList.add('hidden');
+  chibiView.classList.remove('hidden');
+});
+
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
@@ -243,6 +248,7 @@ function showAnimations(chibi) {
     currentChibi.state.setAnimation(0, anims[0], true);
   }
 }
+
 
 
 
