@@ -19,8 +19,7 @@ const animView = document.getElementById('animView');
 const backToChibis = document.getElementById('backToChibis');
 const backToSkins = document.getElementById('backToSkins');
 
-
-    let chibiData = null;
+let chibiData = null;
 
 // Load chibiFiles.json
 fetch('chibiFiles.json')
@@ -28,7 +27,6 @@ fetch('chibiFiles.json')
   .then(data => {
     chibiData = data.chibis;
 
-    
     // Populate chibi thumbnails
     chibiData.forEach(chibi => {
       const img = document.createElement('img');
@@ -107,18 +105,6 @@ function loadSkin(skin) {
     currentChibi = spineChar;
   });
 }
-
-
-chibiData.forEach(chibi => {
-  const img = document.createElement('img');
-  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
-  img.alt = chibi.name;
-  img.title = chibi.name;
-  img.addEventListener('click', () => {
-    showSkins(chibi); // move to skin selection step
-  });
-  chibiList.appendChild(img);
-});
 
 
 // Resize handler
@@ -261,6 +247,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
