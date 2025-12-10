@@ -46,6 +46,23 @@ fetch('chibiFiles.json')
       chibiList.appendChild(wrapper);
     });
   })
+
+// Load skin into PixiJS
+function loadSkin(skin) {
+  const loader = new PIXI.loaders.Loader();
+  loader.add(skin.id, skin.path).load((l, resources) => {
+    if (currentChibi) app.stage.removeChild(currentChibi);
+
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    spineChar.x = app.renderer.width / 2;
+    spineChar.y = app.renderer.height * 0.75;
+    spineChar.scale.set(0.5);
+    spineChar.state.setAnimation(0, 'normal', true);
+
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
+  });
+}
 // Step 2: show skins for chosen chibi
 function showSkins(chibi) {
   chibiView.classList.add('hidden');
@@ -96,22 +113,7 @@ backToSkins.addEventListener('click', () => {
   skinView.classList.remove('hidden');
 });
 
-// Load skin into PixiJS
-function loadSkin(skin) {
-  const loader = new PIXI.loaders.Loader();
-  loader.add(skin.id, skin.path).load((l, resources) => {
-    if (currentChibi) app.stage.removeChild(currentChibi);
 
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'normal', true);
-
-    app.stage.addChild(spineChar);
-    currentChibi = spineChar;
-  });
-}
 
 
 // Resize handler
@@ -145,28 +147,6 @@ function populateSkins(chibi) {
     skinList.appendChild(img);
   });
   skinList.value = chibi.skins[0].id;
-}
-
-// Load a specific skin
-function loadSkin(skin, onComplete) {
-  const loader = new PIXI.loaders.Loader();
-  loader.add(skin.id, skin.path).load((l, resources) => {
-    if (currentChibi) app.stage.removeChild(currentChibi);
-
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'normal', true);
-
-    app.stage.addChild(spineChar);
-    currentChibi = spineChar;
-    currentSkin = skin;
-
-    if (typeof onComplete === 'function') {
-      onComplete();
-    }
-  });
 }
 
     // Populate animation dropdown
@@ -254,6 +234,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
