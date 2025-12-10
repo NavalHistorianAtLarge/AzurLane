@@ -9,6 +9,111 @@ document.getElementById('chibiCanvas').appendChild(app.view);
 let currentChibi = null;
 let currentSkin = null;
 
+const chibiList = document.getElementById('chibiList');
+const skinList = document.getElementById('skinList');
+
+const chibiView = document.getElementById('chibiView');
+const skinView = document.getElementById('skinView');
+const animView = document.getElementById('animView');
+
+const backToChibis = document.getElementById('backToChibis');
+const backToSkins = document.getElementById('backToSkins');
+
+chibiData.forEach(chibi => {
+  const img = document.createElement('img');
+  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
+  img.alt = chibi.name;
+  img.title = chibi.name;
+  img.addEventListener('click', () => {
+    showSkins(chibi); // move to skin selection step
+  });
+  chibiList.appendChild(img);
+});
+
+// Load chibiFiles.json
+fetch('chibiFiles.json')
+  .then(res => res.json())
+  .then(data => {
+    chibiData = data.chibis;
+
+    // Populate chibi thumbnails
+    chibiData.forEach(chibi => {
+      const img = document.createElement('img');
+      img.src = `/assets/thumbnails/${chibi.name}.png`;
+      img.alt = chibi.name;
+      img.addEventListener('click', () => {
+        showSkins(chibi);
+      });
+      chibiList.appendChild(img);
+    });
+  });
+
+// Step 2: show skins for chosen chibi
+function showSkins(chibi) {
+  chibiView.classList.add('hidden');
+  skinView.classList.remove('hidden');
+  skinList.innerHTML = '';
+
+  chibi.skins.forEach(skin => {
+    const img = document.createElement('img');
+    img.src = `/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
+    img.alt = skin.label;
+    img.title = skin.label;
+    img.addEventListener('click', () => {
+      currentSkin = skin;
+      loadSkin(skin);
+      showAnimations();
+    });
+    skinList.appendChild(img);
+  });
+}
+
+// Step 3: show animations for chosen skin
+function showAnimations() {
+  skinView.classList.add('hidden');
+  animView.classList.remove('hidden');
+  animSelect.innerHTML = '';
+
+  const anims = currentChibi.spineData.animations.map(a => a.name);
+  anims.forEach(anim => {
+    const opt = document.createElement('option');
+    opt.value = anim;
+    opt.textContent = anim;
+    animSelect.appendChild(opt);
+  });
+
+  if (anims.length > 0) {
+    animSelect.value = anims[0];
+    currentChibi.state.setAnimation(0, anims[0], true);
+  }
+}
+
+// Back buttons
+backToChibis.addEventListener('click', () => {
+  skinView.classList.add('hidden');
+  chibiView.classList.remove('hidden');
+});
+backToSkins.addEventListener('click', () => {
+  animView.classList.add('hidden');
+  skinView.classList.remove('hidden');
+});
+
+// Load skin into PixiJS
+function loadSkin(skin) {
+  const loader = new PIXI.loaders.Loader();
+  loader.add(skin.id, skin.path).load((l, resources) => {
+    if (currentChibi) app.stage.removeChild(currentChibi);
+
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    spineChar.x = app.renderer.width / 2;
+    spineChar.y = app.renderer.height * 0.75;
+    spineChar.scale.set(0.5);
+    spineChar.state.setAnimation(0, 'normal', true);
+
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
+  });
+}
 // Resize handler
 function resizeCanvas() {
   const container = document.getElementById('chibiCanvas');
@@ -152,111 +257,6 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   });
 });
 
-const chibiList = document.getElementById('chibiList');
-const skinList = document.getElementById('skinList');
-
-const chibiView = document.getElementById('chibiView');
-const skinView = document.getElementById('skinView');
-const animView = document.getElementById('animView');
-
-const backToChibis = document.getElementById('backToChibis');
-const backToSkins = document.getElementById('backToSkins');
-
-chibiData.forEach(chibi => {
-  const img = document.createElement('img');
-  img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
-  img.alt = chibi.name;
-  img.title = chibi.name;
-  img.addEventListener('click', () => {
-    showSkins(chibi); // move to skin selection step
-  });
-  chibiList.appendChild(img);
-});
-
-// Load chibiFiles.json
-fetch('chibiFiles.json')
-  .then(res => res.json())
-  .then(data => {
-    chibiData = data.chibis;
-
-    // Populate chibi thumbnails
-    chibiData.forEach(chibi => {
-      const img = document.createElement('img');
-      img.src = `/assets/thumbnails/${chibi.name}.png`;
-      img.alt = chibi.name;
-      img.addEventListener('click', () => {
-        showSkins(chibi);
-      });
-      chibiList.appendChild(img);
-    });
-  });
-
-// Step 2: show skins for chosen chibi
-function showSkins(chibi) {
-  chibiView.classList.add('hidden');
-  skinView.classList.remove('hidden');
-  skinList.innerHTML = '';
-
-  chibi.skins.forEach(skin => {
-    const img = document.createElement('img');
-    img.src = `/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
-    img.alt = skin.label;
-    img.title = skin.label;
-    img.addEventListener('click', () => {
-      currentSkin = skin;
-      loadSkin(skin);
-      showAnimations();
-    });
-    skinList.appendChild(img);
-  });
-}
-
-// Step 3: show animations for chosen skin
-function showAnimations() {
-  skinView.classList.add('hidden');
-  animView.classList.remove('hidden');
-  animSelect.innerHTML = '';
-
-  const anims = currentChibi.spineData.animations.map(a => a.name);
-  anims.forEach(anim => {
-    const opt = document.createElement('option');
-    opt.value = anim;
-    opt.textContent = anim;
-    animSelect.appendChild(opt);
-  });
-
-  if (anims.length > 0) {
-    animSelect.value = anims[0];
-    currentChibi.state.setAnimation(0, anims[0], true);
-  }
-}
-
-// Back buttons
-backToChibis.addEventListener('click', () => {
-  skinView.classList.add('hidden');
-  chibiView.classList.remove('hidden');
-});
-backToSkins.addEventListener('click', () => {
-  animView.classList.add('hidden');
-  skinView.classList.remove('hidden');
-});
-
-// Load skin into PixiJS
-function loadSkin(skin) {
-  const loader = new PIXI.loaders.Loader();
-  loader.add(skin.id, skin.path).load((l, resources) => {
-    if (currentChibi) app.stage.removeChild(currentChibi);
-
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(0.5);
-    spineChar.state.setAnimation(0, 'normal', true);
-
-    app.stage.addChild(spineChar);
-    currentChibi = spineChar;
-  });
-}
 
 
 
