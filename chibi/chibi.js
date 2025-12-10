@@ -204,7 +204,7 @@ fetch('chibiFiles.json')
     data.chibis.forEach(chibi => {
       // Use PNG thumbnail for each chibi
       const img = document.createElement('img');
-      img.src = `/assets/thumbnails/${chibi.name}.png`; // adjust path
+      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
       img.alt = chibi.name;
       img.addEventListener('click', () => {
         // Load first skin of chosen chibi
@@ -262,6 +262,7 @@ backBtn.addEventListener('click', () => {
   animView.classList.add('hidden');
   chibiView.classList.remove('hidden');
 });
+
 
 
 
