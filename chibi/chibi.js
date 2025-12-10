@@ -21,32 +21,31 @@ const backToSkins = document.getElementById('backToSkins');
 
 let chibiData = null;
 
-// Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
 
-    
-const wrapper = document.createElement('div');
-wrapper.classList.add('chibi-item');
+    chibiData.forEach(chibi => {
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('chibi-item');
 
-const img = document.createElement('img');
-img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
-img.alt = chibi.name;
-img.addEventListener('click', () => {
-  showSkins(chibi);
-});
+      const img = document.createElement('img');
+      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
+      img.alt = chibi.name;
+      img.addEventListener('click', () => {
+        showSkins(chibi);
+      });
 
-const caption = document.createElement('div');
-caption.classList.add('chibi-caption');
-caption.textContent = chibi.name;
+      const caption = document.createElement('div');
+      caption.classList.add('chibi-caption');
+      caption.textContent = chibi.name;
 
-wrapper.appendChild(img);
-wrapper.appendChild(caption);
-chibiList.appendChild(wrapper);
-  });
-
+      wrapper.appendChild(img);
+      wrapper.appendChild(caption);
+      chibiList.appendChild(wrapper);
+    });
+  })
 // Step 2: show skins for chosen chibi
 function showSkins(chibi) {
   chibiView.classList.add('hidden');
@@ -255,6 +254,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
