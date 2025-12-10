@@ -32,7 +32,7 @@ fetch('chibiFiles.json')
     // Populate chibi thumbnails
     chibiData.forEach(chibi => {
       const img = document.createElement('img');
-      img.src = `/assets/thumbnails/${chibi.name}.png`;
+      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
       img.alt = chibi.name;
       img.addEventListener('click', () => {
         showSkins(chibi);
@@ -261,6 +261,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
