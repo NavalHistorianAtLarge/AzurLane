@@ -190,50 +190,65 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   });
 });
 
-const sidebar = document.getElementById('sidebar');
-const chibiView = document.getElementById('chibiView');
-const animView = document.getElementById('animView');
 const chibiList = document.getElementById('chibiList');
-const backBtn = document.getElementById('backBtn');
+const skinList = document.getElementById('skinList');
+const animSelect = document.getElementById('animSelect');
 
-backBtn.addEventListener('click', () => {
-  animView.classList.add('hidden');
-  chibiView.classList.remove('hidden');
-});
+const chibiView = document.getElementById('chibiView');
+const skinView = document.getElementById('skinView');
+const animView = document.getElementById('animView');
+
+const backToChibis = document.getElementById('backToChibis');
+const backToSkins = document.getElementById('backToSkins');
+
+let currentChibi = null;
+let currentSkin = null;
+let chibiData = null;
 
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
   .then(data => {
-    data.chibis.forEach(chibi => {
-      // Use PNG thumbnail for each chibi
+    chibiData = data.chibis;
+
+    // Populate chibi thumbnails
+    chibiData.forEach(chibi => {
       const img = document.createElement('img');
-      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`; // adjust path
+      img.src = `/assets/thumbnails/${chibi.name}.png`;
       img.alt = chibi.name;
       img.addEventListener('click', () => {
-        // Load first skin of chosen chibi
-        currentSkin = chibi.skins[0];
-        loadSkin(currentSkin);
-
-        // Switch to animation view
-        showAnimations(chibi);
+        showSkins(chibi);
       });
       chibiList.appendChild(img);
     });
-
-    // Open sidebar initially
-    sidebar.classList.add('open');
   });
 
-// Populate animation buttons
-function showAnimations(chibi) {
+// Step 2: show skins for chosen chibi
+function showSkins(chibi) {
   chibiView.classList.add('hidden');
-  animView.classList.remove('hidden');
+  skinView.classList.remove('hidden');
+  skinList.innerHTML = '';
 
-  // Clear dropdown
+  chibi.skins.forEach(skin => {
+    const img = document.createElement('img');
+    img.src = `/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
+    img.alt = skin.label;
+    img.title = skin.label;
+    img.addEventListener('click', () => {
+      currentSkin = skin;
+      loadSkin(skin);
+      showAnimations();
+    });
+    skinList.appendChild(img);
+  });
+}
+
+// Step 3: show animations for chosen skin
+function showAnimations() {
+  skinView.classList.add('hidden');
+  animView.classList.remove('hidden');
   animSelect.innerHTML = '';
 
-  // Populate with options
   const anims = currentChibi.spineData.animations.map(a => a.name);
   anims.forEach(anim => {
     const opt = document.createElement('option');
@@ -242,17 +257,38 @@ function showAnimations(chibi) {
     animSelect.appendChild(opt);
   });
 
-  // Default to first animation
   if (anims.length > 0) {
     animSelect.value = anims[0];
     currentChibi.state.setAnimation(0, anims[0], true);
   }
 }
 
+// Back buttons
+backToChibis.addEventListener('click', () => {
+  skinView.classList.add('hidden');
+  chibiView.classList.remove('hidden');
+});
+backToSkins.addEventListener('click', () => {
+  animView.classList.add('hidden');
+  skinView.classList.remove('hidden');
+});
 
+// Load skin into PixiJS
+function loadSkin(skin) {
+  const loader = new PIXI.loaders.Loader();
+  loader.add(skin.id, skin.path).load((l, resources) => {
+    if (currentChibi) app.stage.removeChild(currentChibi);
 
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    spineChar.x = app.renderer.width / 2;
+    spineChar.y = app.renderer.height * 0.75;
+    spineChar.scale.set(0.5);
+    spineChar.state.setAnimation(0, 'idle', true);
 
-
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
+  });
+}
 
 
 
