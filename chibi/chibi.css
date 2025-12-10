@@ -3,6 +3,8 @@
   width: 300px;
   padding: 10px;
   background-color: darkgrey;
+  top: 0;
+  left: 0;
 }
 .view.hidden {
   display: none;
@@ -45,6 +47,7 @@
 #animList button:hover {
   background: #555;
 }
+
 
 
 
