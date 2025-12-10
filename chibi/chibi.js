@@ -35,7 +35,13 @@ fetch('chibiFiles.json')
       img.addEventListener('click', () => {
         showSkins(chibi);
       });
+
+      const chibiName = document.createElement('div');
+      chibiName.textContent = chibi.name;
+                                   
+      
       chibiList.appendChild(img);
+      chibiList.appendChild(chibiName);
     });
   });
 
@@ -247,6 +253,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
