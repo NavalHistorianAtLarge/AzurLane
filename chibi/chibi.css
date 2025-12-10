@@ -18,12 +18,15 @@
 .chibi-item {
   flex: 0 0 48%;   /* two per row */
   text-align: center;
+    border: 1px solid white;
 }
 
 .chibi-item img {
-  width: 100%;
-  border: 2px solid white;
+  width: 70%;
   cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px; 
 }
 
 .chibi-item img:hover {
@@ -47,6 +50,7 @@
 #animList button:hover {
   background: #555;
 }
+
 
 
 
