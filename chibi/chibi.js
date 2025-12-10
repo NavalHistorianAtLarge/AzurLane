@@ -19,13 +19,15 @@ const animView = document.getElementById('animView');
 const backToChibis = document.getElementById('backToChibis');
 const backToSkins = document.getElementById('backToSkins');
 
+
+    let chibiData = null;
+
 // Load chibiFiles.json
 fetch('chibiFiles.json')
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
 
-    let chibiData = null;
     
     // Populate chibi thumbnails
     chibiData.forEach(chibi => {
@@ -259,6 +261,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
