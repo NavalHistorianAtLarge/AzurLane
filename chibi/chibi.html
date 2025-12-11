@@ -9,6 +9,53 @@
   <div id="sidebar">
   <div id="chibiView" class="view">
     <h3>Select a Chibi</h3>
+
+    <input 
+      type="text" 
+      id="chibiSearch" 
+      placeholder= "Search chibis..." 
+      style="width: 100%; padding: 6px; margin-bottom: 10px;"
+    />
+    <div id="chibiFaction" style="margin-bottom: 10px;">
+      <button data-filter="all">All</button>
+      <button data-filter="IronBlood">Ironblood</button>
+      <button data-filter="Vichya">Vichya Dominion</button>
+      <button data-filter="IrisLibre">Iris Libre</button>
+      <button data-filter="IrisOrth">Iris Orthodoxy</button>
+      <button data-filter="Eagle">Eagle Union</button>
+      <button data-filter="Sardegna">Sardegna Empire</button>
+      <button data-filter="Sakura">Sakura Empire</button>
+      <button data-filter="Tulipa">Tulipa</button>
+      <button data-filter="Soviet">Northern Parliament</button>
+      <button data-filter="RoyalNavy">Royal Navy</button>
+      <button data-filter="China">Dragon Empiry</button>
+      <button data-filter="META">META</button>
+      <button data-filter="Tempesta">Tempesta</button>
+      <button data-filter="collab">Collabs</button>
+      <button data-filter="Siren">Siren</button>
+      <button data-filter="X">X</button>
+    </div>
+    
+    <div id="chibiHull" style="margin-bottom: 10px;">
+      <button data-filter="CV">Aircraft Carrier</button>
+      <button data-filter="CVL">Light Aircraft Carrier</button>
+      <button data-filter="BBV">Aviation Battleship</button>
+      <button data-filter="BB">Battleship</button>
+      <button data-filter="BM">Moniter</button>
+      <button data-filter="BC">Battlecruiser</button>
+      <button data-filter="CB">Large Cruiser</button>
+      <button data-filter="CA">Heavy Cruiser</button>
+      <button data-filter="CL">Light Cruiser</button>
+      <button data-filter="DD">Destroyer</button>
+      <button data-filter="SS">Submarine</button>
+      <button data-filter="SSV">Submarine Carrier</button>
+    </div>
+    
+    <div id="chibiGroup" style="margin-bottom: 10px;">
+    <button data-filter="ArbiterGroup">Arbiter Group</button>
+  </div>
+
+    
     <div id="chibiList"></div>
   </div>
 
@@ -36,6 +83,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
