@@ -48,7 +48,7 @@ function renderChibiList(list) {
     wrapper.appendChild(caption);
     chibiList.appendChild(wrapper);
   });
-
+}
   const searchInput = document.getElementById('chibiSearch');
 
   searchInput.addEventListener('input', () => {
@@ -263,6 +263,7 @@ document.querySelectorAll('.collapsible-header').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
 
 
 
