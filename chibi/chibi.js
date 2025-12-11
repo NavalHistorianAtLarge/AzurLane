@@ -224,6 +224,11 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   });
 });
 
+document.querySelectorAll('.collapsible-header').forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('open');
+  });
+});
 
 
 
