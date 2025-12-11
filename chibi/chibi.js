@@ -38,7 +38,10 @@ const rarityBackgrounds = {
   SR: "url('/chibi/assets/bg/sr.png')",
   UR: "url('/chibi/assets/bg/ur.png')",
   DR: "url('/chibi/assets/bg/decisive.png')",
-  PR: "url('/chibi/assets/bg/priority.png')"
+  PR: "url('/chibi/assets/bg/priority.png')",
+  MSR: "url('/chibi/assets/bg/msr.png')",
+  MELITE: "url('/chibi/assets/bg/melite.png')",
+  MUR: "url('/chibi/assets/bg/mur.png')"
 };
 function renderChibiList(list) {
   chibiList.innerHTML = '';
@@ -46,6 +49,13 @@ function renderChibiList(list) {
   list.forEach(chibi => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('chibi-item');
+
+    // ✅ Apply rarity background
+    if (chibi.rarity && rarityBackgrounds[chibi.rarity]) {
+      wrapper.style.backgroundImage = rarityBackgrounds[chibi.rarity];
+      wrapper.style.backgroundSize = "cover";
+      wrapper.style.backgroundRepeat = "no-repeat";
+
 
     const img = document.createElement('img');
     img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
@@ -275,6 +285,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
 
 
 
