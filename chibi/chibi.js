@@ -61,6 +61,9 @@ function loadSkin(skin) {
 
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
+    currentSkin = skin;
+    
+    showAnimations();
   });
 }
 // Step 2: show skins for chosen chibi
@@ -77,7 +80,6 @@ function showSkins(chibi) {
     img.addEventListener('click', () => {
       currentSkin = skin;
       loadSkin(skin);
-      showAnimations();
     });
     skinList.appendChild(img);
   });
@@ -221,6 +223,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
