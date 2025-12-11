@@ -165,7 +165,7 @@ animSelect.addEventListener('change', e => {
   if (currentChibi) {
     currentChibi.state.setAnimation(0, e.target.value, true)
   }
-)};
+});
 
 
 async function captureAnimationFrames(spineChar, animationName, fps = 30, zipFolder) {
@@ -232,6 +232,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
