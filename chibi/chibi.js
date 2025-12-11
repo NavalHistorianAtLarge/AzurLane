@@ -280,11 +280,18 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   });
 });
 
-document.querySelectorAll('.collapsibleHeader').forEach(header => {
+// Inner collapsibles
+document.querySelectorAll('.collapsibleHeader:not(.outerHeader)').forEach(header => {
   header.addEventListener('click', () => {
     header.parentElement.classList.toggle('open');
   });
 });
+
+// Outer collapsible
+document.querySelector('.outerHeader').addEventListener('click', () => {
+  document.querySelector('.outerCollapsible').classList.toggle('open');
+});
+
 
 
 
