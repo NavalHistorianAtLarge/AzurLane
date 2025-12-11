@@ -16,7 +16,9 @@
       placeholder= "Search chibis..." 
       style="width: 100%; padding: 6px; margin-bottom: 10px;"
     />
-    <div id="chibiFaction" style="margin-bottom: 10px;">
+    <div class="collapsible">
+      <div class="collapsibleHeader">Faction</div>
+      <div id="chibiFaction" class="collapsibleContent" style="margin-bottom: 10px;">
       <button data-filter="all">All</button>
       <button data-filter="IronBlood">Ironblood</button>
       <button data-filter="Vichya">Vichya Dominion</button>
@@ -35,25 +37,31 @@
       <button data-filter="Siren">Siren</button>
       <button data-filter="X">X</button>
     </div>
+    </div>
     
-    <div id="chibiHull" style="margin-bottom: 10px;">
-      <button data-filter="CV">Aircraft Carrier</button>
-      <button data-filter="CVL">Light Aircraft Carrier</button>
-      <button data-filter="BBV">Aviation Battleship</button>
-      <button data-filter="BB">Battleship</button>
-      <button data-filter="BM">Moniter</button>
-      <button data-filter="BC">Battlecruiser</button>
-      <button data-filter="CB">Large Cruiser</button>
-      <button data-filter="CA">Heavy Cruiser</button>
-      <button data-filter="CL">Light Cruiser</button>
-      <button data-filter="DD">Destroyer</button>
-      <button data-filter="SS">Submarine</button>
-      <button data-filter="SSV">Submarine Carrier</button>
-      <button data-filter="SF">Sailing Frigate</button>
-      <button data-filter="AR">Repair Ship</button>
-      <button data-filter="Misc">Misc</button>
+    <div class="collapsible">
+      <div class="collapsibleHeader">Type</div>
+      <div id="chibiHull" style="margin-bottom: 10px;">
+        <button data-filter="CV">Aircraft Carrier</button>
+        <button data-filter="CVL">Light Aircraft Carrier</button>
+        <button data-filter="BBV">Aviation Battleship</button>
+        <button data-filter="BB">Battleship</button>
+        <button data-filter="BM">Moniter</button>
+        <button data-filter="BC">Battlecruiser</button>
+        <button data-filter="CB">Large Cruiser</button>
+        <button data-filter="CA">Heavy Cruiser</button>
+        <button data-filter="CL">Light Cruiser</button>
+        <button data-filter="DD">Destroyer</button>
+        <button data-filter="SS">Submarine</button>
+        <button data-filter="SSV">Submarine Carrier</button>
+        <button data-filter="SF">Sailing Frigate</button>
+        <button data-filter="AR">Repair Ship</button>
+        <button data-filter="Misc">Misc</button>
+      </div>
     </div>
 
+    <div class="collapsible">
+      <div class="collapsibleHeader">Rarity</div>
     <div id="chibiRarity">
       <button data-filter="N">Normal</button>
       <button data-filter="R">Rare</button>
@@ -63,7 +71,10 @@
       <button data-filter="UR">Ultra Rare</button>
       <button data-filter="DR">Decisive</button>
     </div>
-    
+    </div>
+
+    <div class="collapsible">
+      <div class="collapsibleHeader">Group</div>
     <div id="chibiGroup" style="margin-bottom: 10px;">
     <button data-filter="devil">Devil's Group</button>
     <button data-filter="mps">Mass-produced Ships</button>
@@ -73,8 +84,14 @@
     <button data-filter="RCF">Reborn Combined Fleet</button>
     <button data-filter="musashi">Musashi's Retinue</button>
     <button data-filter="akagi">Akagi's Retinue</button>
+    <button data-filter="shinano">Shinano's Retinue</button>
+    <button data-filter="qeta">QETA Followers</button>
   </div>
+    </div>
 
+    <div class="collapsible">
+    <div class="collapsibleHeader">Event</div>
+    <div id="chibiEvent"></div>
     
     <div id="chibiList"></div>
   </div>
@@ -103,6 +120,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
