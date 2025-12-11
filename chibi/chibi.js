@@ -149,17 +149,6 @@ function populateSkins(chibi) {
   skinList.value = chibi.skins[0].id;
 }
 
-    // Populate animation dropdown
-    animSelect.innerHTML = '';
-    const anims = spineChar.spineData.animations.map(a => a.name);
-    anims.forEach(anim => {
-      const opt = document.createElement('option');
-      opt.value = anim;
-      opt.textContent = anim;
-      animSelect.appendChild(opt);
-    animSelect.value = anims[0];
-}
-
 // Event: change animation
 animSelect.addEventListener('change', e => {
   if (currentChibi) {
@@ -232,6 +221,7 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
+
 
 
 
