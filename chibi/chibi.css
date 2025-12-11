@@ -89,6 +89,21 @@
   float: right;
 }
 
+button {
+  border: none;
+  border-radius: 30px;
+}
+
+buttton img {
+  max-height: 10px;
+  padding-right: 4px;
+}
+.crimson {
+  background-color: ;
+}
+.allied {
+  background-color: ;
+}
 
 
 
