@@ -25,9 +25,21 @@ let chibiData = null;
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
+
+    chibiData.sort((a, b) => a.name.localeCompare(b.name));
+
     renderChibiList(chibiData);
   });
 
+const rarityBackgrounds = {
+  N: "url('/chibi/assets/bg/normal.png')",
+  R: "url('/chibi/assets/bg/rare.png')",
+  E: "url('/chibi/assets/bg/elite.png')",
+  SR: "url('/chibi/assets/bg/sr.png')",
+  UR: "url('/chibi/assets/bg/ur.png')",
+  DR: "url('/chibi/assets/bg/decisive.png')",
+  PR: "url('/chibi/assets/bg/priority.png')"
+};
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
@@ -263,6 +275,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
 
 
 
