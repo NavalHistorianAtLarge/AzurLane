@@ -21,32 +21,66 @@ const backToSkins = document.getElementById('backToSkins');
 
 let chibiData = null;
 
-fetch('chibiFiles.json')
+    fetch('chibiFiles.json')
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
+    renderChibiList(chibiData);
+  });
 
-    chibiData.forEach(chibi => {
-      const wrapper = document.createElement('div');
-      wrapper.classList.add('chibi-item');
+function renderChibiList(list) {
+  chibiList.innerHTML = '';
 
-      const img = document.createElement('img');
-      img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
-      img.alt = chibi.name;
-      img.addEventListener('click', () => {
-        showSkins(chibi);
-      });
+  list.forEach(chibi => {
+    const wrapper = document.createElement('div');
+    wrapper.classList.add('chibi-item');
 
-      const caption = document.createElement('div');
-      caption.classList.add('chibi-caption');
-      caption.textContent = chibi.name;
+    const img = document.createElement('img');
+    img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
+    img.alt = chibi.name;
+    img.addEventListener('click', () => showSkins(chibi));
 
-      wrapper.appendChild(img);
-      wrapper.appendChild(caption);
-      chibiList.appendChild(wrapper);
-    });
-  })
+    const caption = document.createElement('div');
+    caption.classList.add('chibi-caption');
+    caption.textContent = chibi.name;
 
+    wrapper.appendChild(img);
+    wrapper.appendChild(caption);
+    chibiList.appendChild(wrapper);
+  });
+
+  const searchInput = document.getElementById('chibiSearch');
+
+  searchInput.addEventListener('input', () => {
+  const term = searchInput.value.toLowerCase();
+
+  const filtered = chibiData.filter(chibi =>
+  chibi.name.toLowerCase().includes(term)
+  );
+
+  renderChibiList(filtered);
+});
+
+  const filterButtons = document.querySelectorAll('#chibiFilters button');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.dataset.filter;
+
+    let filtered = chibiData;
+
+    if (filter !== 'all') {
+      filtered = chibiData.filter(chibi =>
+        chibi.faction === filter ||
+        chibi.type === filter ||
+        (chibi.groups && chibi.groups.includes(filter))
+      );
+    }
+
+    renderChibiList(filtered);
+  });
+});
+  
 // Load skin into PixiJS
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
@@ -229,6 +263,7 @@ document.querySelectorAll('.collapsible-header').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
 
 
 
