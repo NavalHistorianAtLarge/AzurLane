@@ -59,7 +59,7 @@
   overflow: hidden;
 }
 
-.collapsible-header {
+.collapsibleHeader {
   background: #333;
   padding: 8px;
   cursor: pointer;
@@ -68,25 +68,26 @@
   user-select: none;
 }
 
-.collapsible-content {
+.collapsibleContent {
   padding: 8px;
   display: none; /* collapsed by default */
   background: #222;
 }
 
-.collapsible.open .collapsible-content {
+.collapsible.open .collapsibleContent {
   display: block;
 }
 
-.collapsible.open .collapsible-header::after {
+.collapsible.open .collapsibleHeader::after {
   content: "▲";
   float: right;
 }
 
-.collapsible-header::after {
+.collapsibleHeader::after {
   content: "▼";
   float: right;
 }
+
 
 
 
