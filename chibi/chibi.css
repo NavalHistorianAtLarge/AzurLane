@@ -22,7 +22,7 @@
 .chibi-item {
   flex: 0 0 45%;   /* two per row */
   text-align: center;
-    border: 1px solid white;
+  border: 1px solid gold;
   border-radius: 30px; 
 }
 
@@ -37,7 +37,8 @@
 
 .chibi-caption {
   margin-top: 5px;
-  color: #fff;
+  color: black;
+  font-weight: bold
 }
 #animList button {
   display: block;
@@ -87,6 +88,7 @@
   content: "▼";
   float: right;
 }
+
 
 
 
