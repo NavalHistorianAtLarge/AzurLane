@@ -55,7 +55,7 @@ function renderChibiList(list) {
       wrapper.style.backgroundImage = rarityBackgrounds[chibi.rarity];
       wrapper.style.backgroundSize = "cover";
       wrapper.style.backgroundRepeat = "no-repeat";
-
+    }
 
     const img = document.createElement('img');
     img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
@@ -285,6 +285,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
 
 
 
