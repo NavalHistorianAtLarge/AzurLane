@@ -59,7 +59,7 @@
   display: none;
 }
 .outerHeader {
-  background-color: red;
+  background-color: #992929;
     padding: 8px;
   cursor: pointer;
   color: #fff;
@@ -118,6 +118,11 @@
   float: right;
 }
 
+.outerHeader::after {
+  content: "▼";
+  float: right;
+}
+
 button {
   border: none;
   border-radius: 30px;
@@ -133,6 +138,7 @@ button img {
 .allied {
   background-color: ;
 }
+
 
 
 
