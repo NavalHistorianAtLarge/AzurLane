@@ -290,3 +290,31 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
     header.parentElement.classList.toggle('open');
   });
 });
+
+let factionData = null;
+
+fetch('factions.json')
+  .then(res => res.json())
+  .then(data => {
+    factionData = data.factions;
+    applyFactionLogos();
+  });
+
+function applyFactionLogos() {
+  const buttons = document.querySelectorAll('#chibiFaction button');
+
+  buttons.forEach(btn => {
+    const id = btn.dataset.filter;
+    const faction = factionData.find(f => f.id === id);
+
+    if (faction) {
+      const img = document.createElement('img');
+      img.src = faction.logo;
+      img.alt = faction.name + " logo";
+      img.classList.add('faction-logo');
+
+      // Insert logo before the text
+      btn.prepend(img);
+    }
+  });
+}
