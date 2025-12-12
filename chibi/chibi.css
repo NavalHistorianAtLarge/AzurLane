@@ -125,8 +125,14 @@
 }
 
 button {
-  border: none;
-  border-radius: 30px;
+  border-radius: 40px;
+  border: 1px solid #467;
+  padding: 3px 6px;
+}
+
+.allied {
+   background-color: #1a2a3a;
+  color: #cef;
 }
 
 button img {
@@ -139,6 +145,7 @@ button img {
 .allied {
   background-color: ;
 }
+
 
 
 
