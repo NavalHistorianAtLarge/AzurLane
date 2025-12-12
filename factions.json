@@ -1,0 +1,69 @@
+{
+  "factions": [
+    {
+      "id": "IronBlood",
+      "name": "Ironblood",
+      "logo": "/assets/logos/ironblood.png"
+    },
+    {
+      "id": "Vichya",
+      "name": "Vichya Dominion",
+      "logo": "/assets/logos/vichya.png"
+    },
+    {
+      "id": "IrisLibre",
+      "name": "Iris Libre",
+      "logo": "/assets/logos/irisLibre.png"
+    },
+    {
+      "id": "IrisOrth",
+      "name": "Iris Orthodoxy",
+      "logo": "/assets/logos/irisOrth.png"
+    },
+    {
+      "id": "Eagle",
+      "name": "Eagle Union",
+      "logo": "/assets/logos/eagleUnion.png"
+    },
+    {
+      "id": "Sardegna",
+      "name": "Sardegna Empire",
+      "logo": "/assets/logos/sardegna.png"
+    },
+    {
+        "id": "NorthernParliament",
+        "name": "Northern Parliament",
+        "logo": "assets/logos/northParliament.png"
+    },
+    {
+        "id": "Siren",
+        "name": "Anti-X",
+        "logo": "assets/logos/siren.png"
+    },
+    {
+        "id": "meta",
+        "name": "META",
+        "logo": "/assets/logos/Meta.png"
+    },
+    {
+        "id": "tulipa",
+        "name": "Tulipa",
+        "logo": "assets/logos/tulipa.png"
+    },
+    {
+        "id": "sakura",
+        "name": "Sakura Empire",
+        "logo": "assets/logos/sakura.png"
+    },
+    {
+        "id": "royalNavy",
+        "name": "royalNavy",
+        "logo": "/assets/logos/royalNavy.png"
+    },
+    {
+      "id": "tempesta",
+      "name": "Tempesta",
+      "logo": "assets/logos/tempesta.png"
+    }
+  ]
+}
