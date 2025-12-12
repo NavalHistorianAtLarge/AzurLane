@@ -64,7 +64,18 @@
       "id": "tempesta",
       "name": "Tempesta",
       "logo": "assets/logos/tempesta.png"
+    },
+    {
+      "id": "china",
+      "name": "Dragon Empery"
+      "logo": "/assets/logos/dragonEmpiry.png"
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "logo": "X.png"
     }
   ]
 
 }
+
