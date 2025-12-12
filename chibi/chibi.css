@@ -58,9 +58,13 @@
 .outerContent {
   display: none;
 }
-.outerHeader 
+.outerHeader {
   background-color: red;
-  
+    padding: 8px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  user-select: none;
 }
 .outerCollapsible.open > .outerContent {
   display: block;
@@ -87,7 +91,7 @@
 }
 
 .collapsibleHeader {
-  background: ##456ead;
+  background: #456ead;
   padding: 8px;
   cursor: pointer;
   color: #fff;
@@ -129,6 +133,7 @@ button img {
 .allied {
   background-color: ;
 }
+
 
 
 
