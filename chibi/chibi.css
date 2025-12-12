@@ -70,12 +70,11 @@
 }
 
 .collapsibleContent {
-  padding: 8px;
   display: none; /* collapsed by default */
   background: #222;
 }
 
-.collapsible.open .collapsibleContent {
+.collapsible.open > .collapsibleContent {
   display: block;
 }
 
@@ -104,6 +103,7 @@ button img {
 .allied {
   background-color: ;
 }
+
 
 
 
