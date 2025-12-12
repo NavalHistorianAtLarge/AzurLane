@@ -293,7 +293,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
 
 let factionData = null;
 
-fetch('factions.json')
+fetch('/factions.json')
   .then(res => res.json())
   .then(data => {
     factionData = data.factions;
@@ -318,3 +318,4 @@ function applyFactionLogos() {
     }
   });
 }
+
