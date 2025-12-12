@@ -53,6 +53,23 @@
 #animList button:hover {
   background: #555;
 }
+
+/* Outer collapsible */
+.outerContent {
+  display: none;
+}
+.outerCollapsible.open > .outerContent {
+  display: block;
+}
+
+/* Inner collapsibles */
+.collapsibleContent {
+  display: none;
+}
+.collapsible.open > .collapsibleContent {
+  display: block;
+}
+
 .collapsible {
   margin-bottom: 10px;
   border: 1px solid #444;
@@ -103,6 +120,7 @@ button img {
 .allied {
   background-color: ;
 }
+
 
 
 
