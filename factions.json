@@ -63,7 +63,7 @@
     {
       "id": "tempesta",
       "name": "Tempesta",
-      "logo": "assets/logos/tempesta.png"
+      "logo": "/assets/logos/tempesta.png"
     },
     {
       "id": "china",
@@ -73,10 +73,11 @@
     {
       "id": "x",
       "name": "X",
-      "logo": "X.png"
+      "logo": "/assets/logos/x.png"
     }
   ]
 
 }
+
 
 
