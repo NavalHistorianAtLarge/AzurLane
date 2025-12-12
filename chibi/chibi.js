@@ -279,58 +279,14 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
     a.click();
   });
 });
-
-// Inner collapsibles
-document.querySelectorAll('.collapsibleHeader:not(.outerHeader)').forEach(header => {
-  header.addEventListener('click', () => {
-    header.parentElement.classList.toggle('open');
-  });
-});
-
-// Outer collapsible
+// Outer
 document.querySelector('.outerHeader').addEventListener('click', () => {
   document.querySelector('.outerCollapsible').classList.toggle('open');
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Inner
+document.querySelectorAll('.collapsibleHeader').forEach(header => {
+  header.addEventListener('click', () => {
+    header.parentElement.classList.toggle('open');
+  });
+});
