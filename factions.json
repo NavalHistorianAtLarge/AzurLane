@@ -67,7 +67,7 @@
     },
     {
       "id": "china",
-      "name": "Dragon Empery"
+      "name": "Dragon Empery",
       "logo": "/assets/logos/dragonEmpiry.png"
     },
     {
@@ -78,4 +78,5 @@
   ]
 
 }
+
 
