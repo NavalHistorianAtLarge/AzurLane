@@ -33,12 +33,12 @@
     {
         "id": "NorthernParliament",
         "name": "Northern Parliament",
-        "logo": "assets/logos/northParliament.png"
+        "logo": "/assets/logos/northParliament.png"
     },
     {
         "id": "Siren",
         "name": "Anti-X",
-        "logo": "assets/logos/siren.png"
+        "logo": "/assets/logos/siren.png"
     },
     {
         "id": "meta",
@@ -48,12 +48,12 @@
     {
         "id": "tulipa",
         "name": "Tulipa",
-        "logo": "assets/logos/tulipa.png"
+        "logo": "/assets/logos/tulipa.png"
     },
     {
         "id": "sakura",
         "name": "Sakura Empire",
-        "logo": "assets/logos/sakura.png"
+        "logo": "/assets/logos/sakura.png"
     },
     {
         "id": "royalNavy",
@@ -66,4 +66,5 @@
       "logo": "assets/logos/tempesta.png"
     }
   ]
+
 }
