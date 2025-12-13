@@ -21,7 +21,7 @@ const backToSkins = document.getElementById('backToSkins');
 
 let chibiData = null;
 
-    fetch('chibiFiles.json')
+    fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/chibiFiles.json')
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
@@ -293,7 +293,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
 
 let factionData = null;
 
-fetch('/factions.json')
+fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/factions.json')
   .then(res => res.json())
   .then(data => {
     factionData = data.factions;
@@ -318,4 +318,5 @@ function applyFactionLogos() {
     }
   });
 }
+
 
