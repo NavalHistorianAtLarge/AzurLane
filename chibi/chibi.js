@@ -83,7 +83,7 @@ function renderChibiList(list) {
   renderChibiList(filtered);
 });
 
-  const filterButtons = document.querySelectorAll('#chibiFilters button');
+  const filterButtons = document.querySelectorAll('#options button');
 
 filterButtons.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -318,6 +318,7 @@ function applyFactionLogos() {
     }
   });
 }
+
 
 
 
