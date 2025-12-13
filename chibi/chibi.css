@@ -140,11 +140,16 @@ button img {
   padding-right: 4px;
 }
 .crimson {
-  background-color: ;
+  background-color: #3a1a32;
+  color: #ffbcbc;
 }
-.allied {
-  background-color: ;
+.meta {
+  border-radius: 40px;
+  border: 1px solid #467;
+  padding: 3px 6px;
 }
+
+
 
 
 
