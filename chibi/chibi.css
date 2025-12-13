@@ -144,10 +144,10 @@ button img {
   color: #ffbcbc;
 }
 .meta {
-  border-radius: 40px;
-  border: 1px solid #467;
-  padding: 3px 6px;
+  background: linear-gradient(0.75turn, #6d1212, #d95c11);
+  color: #fff1a7;
 }
+
 
 
 
