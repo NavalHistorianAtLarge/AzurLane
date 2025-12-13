@@ -147,7 +147,18 @@ button img {
   background: linear-gradient(0.75turn, #6d1212, #d95c11);
   color: #fff1a7;
 }
-
+.x {
+  background: linear-gradient(0.75turn, #91bbd4,#072d4e);
+  color: #ff1e1e;
+}
+.siren {
+  background: linear-gradient(#efed56, black, #2c2152);
+  color: #cef;
+}
+.pirate {
+  background: linear-gradient(0.75turn,#237d98, blue,#237d98);
+  color: wheat;
+}
 
 
 
