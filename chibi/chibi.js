@@ -319,6 +319,12 @@ function applyFactionLogos() {
   });
 }
 
+document.querySelectorAll('.main-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const submenu = document.getElementById(btn.dataset.filter + 'Submenu');
+    submenu.classList.toggle('open');
+  });
+});
 
 
 
