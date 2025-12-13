@@ -21,7 +21,7 @@ const backToSkins = document.getElementById('backToSkins');
 
 let chibiData = null;
 
-    fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/chibiFiles.json')
+    fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/chibiFiles.json')
   .then(res => res.json())
   .then(data => {
     chibiData = data.chibis;
@@ -32,16 +32,16 @@ let chibiData = null;
   });
 
 const rarityBackgrounds = {
-  N: "url('/chibi/assets/bg/normal.png')",
-  R: "url('/chibi/assets/bg/rare.png')",
-  E: "url('/chibi/assets/bg/elite.png')",
-  SR: "url('/chibi/assets/bg/sr.png')",
-  UR: "url('/chibi/assets/bg/ur.png')",
-  DR: "url('/chibi/assets/bg/decisive.png')",
-  PR: "url('/chibi/assets/bg/priority.png')",
-  MSR: "url('/chibi/assets/bg/msr.png')",
-  MELITE: "url('/chibi/assets/bg/melite.png')",
-  MUR: "url('/chibi/assets/bg/mur.png')"
+  N: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/normal.png')",
+  R: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/rare.png')",
+  E: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/elite.png')",
+  SR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/sr.png')",
+  UR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/ur.png')",
+  DR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/decisive.png')",
+  PR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/priority.png')",
+  MSR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/msr.png')",
+  MELITE: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/melite.png')",
+  MUR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png')"
 };
 function renderChibiList(list) {
   chibiList.innerHTML = '';
@@ -58,7 +58,7 @@ function renderChibiList(list) {
     }
 
     const img = document.createElement('img');
-    img.src = `/chibi/assets/thumbnails/${chibi.name}.png`;
+    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${chibi.name}.png`;
     img.alt = chibi.name;
     img.addEventListener('click', () => showSkins(chibi));
 
@@ -318,5 +318,6 @@ function applyFactionLogos() {
     }
   });
 }
+
 
 
