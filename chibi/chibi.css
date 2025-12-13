@@ -159,6 +159,14 @@ button img {
   background: linear-gradient(0.75turn,#237d98, blue,#237d98);
   color: wheat;
 }
+.submenu {
+  display: none;
+  margin-left: 20px;
+}
+
+.submenu.open {
+  display: block;
+}
 
 
 
