@@ -1,6 +1,7 @@
 const app = new PIXI.Application({
   width: 800,
   height: 600,
+  marginLeft: 400,
   transparent: true
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
@@ -325,6 +326,7 @@ document.querySelectorAll('.main-filter').forEach(btn => {
     submenu.classList.toggle('open');
   });
 });
+
 
 
 
