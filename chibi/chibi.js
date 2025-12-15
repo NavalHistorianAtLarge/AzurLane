@@ -113,7 +113,7 @@ function loadSkin(skin) {
     const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
     spineChar.x = app.renderer.width / 2;
     spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(0.5);
+    spineChar.scale.set(1.0);
     spineChar.state.setAnimation(0, 'normal', true);
 
     app.stage.addChild(spineChar);
@@ -326,6 +326,7 @@ document.querySelectorAll('.main-filter').forEach(btn => {
     submenu.classList.toggle('open');
   });
 });
+
 
 
 
