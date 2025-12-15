@@ -302,7 +302,7 @@ fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs
   });
 
 function applyFactionLogos() {
-  const buttons = document.querySelectorAll('#chibiFaction button');
+  const buttons = document.querySelectorAll('button[data-filter]');
 
   buttons.forEach(btn => {
     const id = btn.dataset.filter;
@@ -313,8 +313,6 @@ function applyFactionLogos() {
       img.src = faction.logo;
       img.alt = faction.name + " logo";
       img.classList.add('faction-logo');
-
-      // Insert logo before the text
       btn.prepend(img);
     }
   });
@@ -326,6 +324,7 @@ document.querySelectorAll('.main-filter').forEach(btn => {
     submenu.classList.toggle('open');
   });
 });
+
 
 
 
