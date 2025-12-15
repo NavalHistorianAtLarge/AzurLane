@@ -168,6 +168,16 @@ button img {
   display: block;
 }
 
+.submenu-group {
+  margin-bottom: 10px;
+  background-color: blue;
+}
+
+.submenu-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ccc;
+}
 
 
 
