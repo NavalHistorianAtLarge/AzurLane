@@ -325,7 +325,68 @@ document.querySelectorAll('.main-filter').forEach(btn => {
   });
 });
 
+const activeFilters = {
+  faction: new Set(),
+  type: new Set(),
+  rarity: new Set(),
+  metaClass: new Set(),
+  metaOrigin: new Set(),
+  group: new Set(),
+  event: new Set()
+};
 
+document.querySelectorAll('[data-filter]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const category = btn.dataset.category;   // e.g. "faction"
+    const value = btn.dataset.filter;        // e.g. "IronBlood"
+
+    if (activeFilters[category].has(value)) {
+      activeFilters[category].delete(value);
+      btn.classList.remove('active');
+    } else {
+      activeFilters[category].add(value);
+      btn.classList.add('active');
+    }
+
+    applyFilters();
+  });
+});
+function applyFilters() {
+  const results = chibiData.filter(chibi => {
+
+    // Faction
+    if (activeFilters.faction.size > 0 &&
+        !activeFilters.faction.has(chibi.faction)) return false;
+
+    // Type
+    if (activeFilters.type.size > 0 &&
+        !activeFilters.type.has(chibi.type)) return false;
+
+    // Rarity
+    if (activeFilters.rarity.size > 0 &&
+        !activeFilters.rarity.has(chibi.rarity)) return false;
+
+    // META Classification
+    if (activeFilters.metaClass.size > 0 &&
+        !activeFilters.metaClass.has(chibi.metaClass)) return false;
+
+    // META Origin
+    if (activeFilters.metaOrigin.size > 0 &&
+        !activeFilters.metaOrigin.has(chibi.metaOrigin)) return false;
+
+    // Group
+    if (activeFilters.group.size > 0 &&
+        !activeFilters.group.has(chibi.group)) return false;
+
+    // Event
+    if (activeFilters.event.size > 0 &&
+        !activeFilters.event.has(chibi.event)) return false;
+
+    return true;
+  });
+
+  renderChibiList(results);
+}
 
 
 
