@@ -191,7 +191,12 @@ button.active {
   color: white;
   border: 1px solid gold;
 }
-
+h3 {
+  background-color: #4e4ad0;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 30px;
+}
 
 
 
