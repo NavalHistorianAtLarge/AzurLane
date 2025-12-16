@@ -178,6 +178,11 @@ button img {
   margin-bottom: 5px;
   color: #ccc;
 }
+button.active {
+  background-color: #666;
+  color: white;
+  border: 1px solid gold;
+}
 
 
 
