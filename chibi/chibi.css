@@ -1,3 +1,6 @@
+body {
+  background-image: url(https://cdn.nagami.moe/bg/star_level_bg_1102.png);
+}
 #sidebar {
   position: fixed;
   width: 300px;
@@ -183,6 +186,7 @@ button.active {
   color: white;
   border: 1px solid gold;
 }
+
 
 
 
