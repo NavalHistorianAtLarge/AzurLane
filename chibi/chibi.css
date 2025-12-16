@@ -32,6 +32,7 @@ body {
 .chibi-item img {
   width: 70%;
   cursor: pointer;
+  padding: 10px;
 }
 
 .chibi-item img:hover {
@@ -41,7 +42,11 @@ body {
 .chibi-caption {
   margin-top: 5px;
   color: black;
-  font-weight: bold
+  font-weight: bold;
+  background-color: #ffd70021;
+  display: inline-block;
+  border-radius: 30px;
+  padding: 2px;
 }
 #animList button {
   display: block;
@@ -186,6 +191,7 @@ button.active {
   color: white;
   border: 1px solid gold;
 }
+
 
 
 
