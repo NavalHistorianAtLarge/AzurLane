@@ -131,7 +131,7 @@ function showSkins(chibi) {
 
   chibi.skins.forEach(skin => {
     const img = document.createElement('img');
-    img.src = `/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
+    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
     img.alt = skin.label;
     img.title = skin.label;
     img.addEventListener('click', () => {
@@ -387,6 +387,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
