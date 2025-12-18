@@ -197,7 +197,17 @@ h3 {
   padding: 10px;
   border-radius: 30px;
 }
-
+select {
+  width: 80%;
+  display: block;
+  background: #353582;
+}
+option {
+  display: inline;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 5px:
+}
 
 
 
