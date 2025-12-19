@@ -129,17 +129,27 @@ function showSkins(chibi) {
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
 
-  chibi.skins.forEach(skin => {
-    const img = document.createElement('img');
+  list.forEach(skin => {
+    const skinWrap = document.createElement('div');
+    skinWrap.classList.add('skin-item');
+
+    const img = document.createElement('div');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
     img.alt = skin.label;
     img.title = skin.label;
     img.addEventListener('click', () => {
       currentSkin = skin;
-      loadSkin(skin);
-    });
-    skinList.appendChild(img);
-  });
+      loadSkin(skin)
+
+    const caption = document.createElement('div');
+    caption.classList.add('skin-caption');
+    caption.textContent = skin.label;
+
+    wrapper.appendChild(img);
+    wrapper.appendChild(caption);
+    skinList.appendChild(wrapper);
+})
+})
 }
 
 // Step 3: show animations for chosen skin
@@ -387,6 +397,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
