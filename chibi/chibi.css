@@ -136,6 +136,8 @@ button {
   border-radius: 40px;
   border: 1px solid #467;
   padding: 3px 6px;
+  display: block;
+  margin: 40px
 }
 
 .allied {
@@ -211,6 +213,7 @@ option {
 #skinList img {
   max-width: 50%
 }
+
 
 
 
