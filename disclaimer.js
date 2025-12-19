@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const disclaimer = document.createElement("div");
       disclaimer.innerText = text;
       // Style it as subtle footer text"
-      disclaimer.style.width = "50%;
+      disclaimer.style.width = "50%";
       disclaimer.
       disclaimer.style.fontSize = "0.5em";
       disclaimer.style.textAlign = "left";
@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.error("Could not load disclaimer:", error);
     });
 });
+
 
 
 
