@@ -124,7 +124,7 @@ function loadSkin(skin) {
   });
 }
 // Step 2: show skins for chosen chibi
-function showSkins(chibi) {
+function showSkins(list) {
   chibiView.classList.add('hidden');
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
@@ -397,6 +397,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
