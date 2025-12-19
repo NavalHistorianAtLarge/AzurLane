@@ -208,6 +208,9 @@ option {
   padding: 5px;
   margin: 5px:
 }
+#skinList img {
+  max-width: 50%
+}
 
 
 
