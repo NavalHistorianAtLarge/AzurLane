@@ -150,7 +150,6 @@ function showSkins(list) {
     sinkWrap.appendChild(caption);
     skinList.appendChild(wrapper);
 })
-})
 }
 
 // Step 3: show animations for chosen skin
@@ -398,6 +397,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
