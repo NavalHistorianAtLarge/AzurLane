@@ -232,6 +232,13 @@ option {
 #backToChibis {
   margin: 30px;
 }
+input {
+  width: 90%;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-family: "Comic Relief", cursive;
+}
+
 
 
 
