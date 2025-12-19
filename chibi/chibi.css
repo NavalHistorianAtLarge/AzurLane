@@ -210,10 +210,21 @@ option {
   padding: 5px;
   margin: 5px:
 }
-#skinList img {
-  max-width: 50%
+#skinList {
+  display: flex;
+  flex-wrap: wrap;
 }
-
+.skin-item {
+  max-width: 50%;
+  height: 200px;
+  display: inline-block;
+  text-align: center;
+}
+.skin-caption {
+  display: inline-block;
+  padding: 10px;
+  font-weight: bold;
+}
 
 
 
