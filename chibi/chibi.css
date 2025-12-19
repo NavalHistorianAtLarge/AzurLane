@@ -1,6 +1,9 @@
 body {
   background-image: url(https://cdn.nagami.moe/bg/star_level_bg_1102.png);
+  font-family: "Comic Relief", cursive;
+  text-align: center
 }
+
 #sidebar {
   position: fixed;
   width: 300px;
@@ -228,6 +231,7 @@ option {
 #backToChibis {
   margin: 30px;
 }
+
 
 
 
