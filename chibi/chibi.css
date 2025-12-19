@@ -203,11 +203,12 @@ select {
   background: #353582;
 }
 option {
-  display: inline;
+  display: flex;
   border-radius: 30px;
   padding: 5px;
   margin: 5px:
 }
+
 
 
 
