@@ -133,20 +133,21 @@ function showSkins(list) {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
 
-    const img = document.createElement('div');
+    const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
     img.alt = skin.label;
     img.title = skin.label;
     img.addEventListener('click', () => {
       currentSkin = skin;
       loadSkin(skin)
+    })
 
     const caption = document.createElement('div');
     caption.classList.add('skin-caption');
     caption.textContent = skin.label;
 
-    wrapper.appendChild(img);
-    wrapper.appendChild(caption);
+    skinWrap.appendChild(img);
+    sinkWrap.appendChild(caption);
     skinList.appendChild(wrapper);
 })
 })
@@ -397,6 +398,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
