@@ -137,7 +137,7 @@ button {
   border: 1px solid #467;
   padding: 3px 6px;
   display: block;
-  margin: 40px
+  margin: 10px;
 }
 
 .allied {
@@ -225,6 +225,10 @@ option {
   padding: 10px;
   font-weight: bold;
 }
+#backToChibis {
+  margin: 30px;
+}
+
 
 
 
