@@ -147,7 +147,7 @@ function showSkins(list) {
     caption.textContent = skin.label;
 
     skinWrap.appendChild(img);
-    sinkWrap.appendChild(caption);
+    skinWrap.appendChild(caption);
     skinList.appendChild(wrapper);
 })
 }
@@ -397,6 +397,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
