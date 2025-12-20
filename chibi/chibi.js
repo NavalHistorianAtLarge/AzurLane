@@ -304,7 +304,7 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
 
 let factionData = null;
 
-fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/factions.json')
+fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/logos.json')
   .then(res => res.json())
   .then(data => {
     factionData = data.factions;
@@ -402,6 +402,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
