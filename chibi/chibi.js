@@ -311,20 +311,25 @@ fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs
     applyFactionLogos();
   });
 
-function applyFactionLogos() {
+function applyLogos() {
   const buttons = document.querySelectorAll('button[data-filter]');
 
   buttons.forEach(btn => {
+    const category = btn.dataset.category;
     const id = btn.dataset.filter;
-    const faction = factionData.find(f => f.id === id);
 
-    if (faction) {
-      const img = document.createElement('img');
-      img.src = faction.logo;
-      img.alt = faction.name + " logo";
-      img.classList.add('faction-logo');
-      btn.prepend(img);
-    }
+    const dataset = logoSources[category];
+    if (!dataset) return;
+
+    const entry = dataset.find(e => e.id === id);
+    if (!entry) return;
+
+    const img = document.createElement('img');
+    img.src = entry.logo;
+    img.alt = entry.name + " logo";
+    img.classList.add('logo');
+
+    btn.prepend(img);
   });
 }
 
@@ -397,6 +402,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
