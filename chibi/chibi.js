@@ -312,6 +312,9 @@ let logoSources = {
 fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/logos.json')
   .then(res => res.json())
   .then(data => {
+    factionData = data.factions;
+    typeData = data.types;
+    rarityData = data.rarity;
     logoSources.faction = factionData;
     logoSources.type = typeData;
     logoSources.rarity = rarityData;
@@ -409,6 +412,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
