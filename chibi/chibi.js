@@ -308,7 +308,7 @@ fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs
   .then(res => res.json())
   .then(data => {
     factionData = data.factions;
-    applyFactionLogos();
+    applyLogos();
   });
 
 function applyLogos() {
@@ -402,6 +402,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
