@@ -33,7 +33,7 @@ body {
 }
 
 .chibi-item img {
-  width: 70%;
+  width: 85%;
   cursor: pointer;
   padding: 10px;
 }
@@ -43,7 +43,6 @@ body {
 }
 
 .chibi-caption {
-  margin-top: 5px;
   color: black;
   font-weight: bold;
   background-color: #ffd70021;
@@ -238,6 +237,7 @@ input {
   margin-bottom: 10px;
   font-family: "Comic Relief", cursive;
 }
+
 
 
 
