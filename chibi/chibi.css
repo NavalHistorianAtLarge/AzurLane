@@ -84,13 +84,6 @@ body {
   float: right;
 }
 
-/*#chibiFaction button, #chibiHull button, #chibiRarity button, #chibiGroup button, #chibiEvent button {
-  border-radius: 40px;
-  padding: 3px 6px;
-  display: inline;
-  text-align: left;
-}*/
-
 .collapsible button {
    border-radius: 40px;
   padding: 3px 6px;
@@ -245,6 +238,7 @@ input {
   margin-bottom: 10px;
   font-family: "Comic Relief", cursive;
 }
+
 
 
 
