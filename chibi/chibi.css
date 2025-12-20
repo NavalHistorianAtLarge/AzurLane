@@ -206,12 +206,13 @@ select {
   display: block;
   background: #353582;
 }
-option {
-  display: flex;
-  border-radius: 30px;
-  padding: 5px;
-  margin: 5px:
+#option button {
+   border-radius: 40px;
+  border: 1px solid #467;
+  padding: 3px 6px;
+  
 }
+
 #skinList {
   display: flex;
   flex-wrap: wrap;
@@ -236,6 +237,9 @@ input {
   padding: 6px;
   margin-bottom: 10px;
   font-family: "Comic Relief", cursive;
+}
+.collapsibleContent {
+  text-align: left
 }
 
 
