@@ -302,12 +302,19 @@ document.querySelectorAll('.collapsibleHeader').forEach(header => {
   });
 });
 
-let factionData = null;
+let logoSources = {
+  faction: null,
+  type: null,
+  rarity: null,
+  metaOrigin: null
+};
 
 fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/logos.json')
   .then(res => res.json())
   .then(data => {
-    factionData = data.factions;
+    logoSources.faction = factionData;
+    logoSources.type = typeData;
+    logoSources.rarity = rarityData;
     applyLogos();
   });
 
@@ -402,6 +409,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
