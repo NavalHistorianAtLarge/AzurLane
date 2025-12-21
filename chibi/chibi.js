@@ -52,7 +52,7 @@ const rarityBorders = {
   UR: pink,
   DR: pink,
   PR: gold
-}
+};
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
@@ -70,7 +70,6 @@ function renderChibiList(list) {
     if (rarityBorders[chibi.rarity]) {
         wrapper.style.border = `1px solid ${rarityBorders[chibi.rarity]}`;
       }
-    }
 
     const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${chibi.name}.png`;
@@ -426,6 +425,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
