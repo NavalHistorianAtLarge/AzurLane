@@ -254,7 +254,7 @@ button[data-filter="E"] {
 button[data-filter="SR"], button[data-filter="PR"] {
   background: linear-gradient(90deg, #ffdf00, #fcc, #ffdf00);
   opacity: .9;
-  animation: colorFlow;
+  animation: colorFlow 6s linear infinite;
 }
 button[data-filter="UR"] {
   background: linear-gradient(
@@ -289,6 +289,7 @@ button[data-filter="DR"] {
   animation: rainbowFlow 6s linear infinite;
   color: white;
 }
+
 
 
 
