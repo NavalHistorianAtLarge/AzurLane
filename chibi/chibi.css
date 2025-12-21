@@ -290,7 +290,7 @@ button[data-filter="DR"] {
   color: white;
 }
 button[data-filter="CV"], button[data-filter="CVL"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
     90deg, 
     #3a0057, 
     #a64dff,
@@ -313,7 +313,7 @@ button[data-filter="SS"], button[data-filter="SSV"] {
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
 button[data-filter="BB"], button[data-filter="BBV"], button[data-filter="BC"], button[data-filter="CB"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
     90deg,
     #660033,
     #ff66b3,
@@ -325,7 +325,7 @@ button[data-filter="BB"], button[data-filter="BBV"], button[data-filter="BC"], b
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
 button[data-filter="DDG"], button[data-filter="DD"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
     90deg,
     #002b66,
     #66a3ff,
@@ -337,7 +337,7 @@ button[data-filter="DDG"], button[data-filter="DD"] {
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
 button[data-filter="CA"], button[data-filter="CL"], button[data-filter="BM"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
     90deg,
     #665500,
     #ffeb66,
@@ -349,7 +349,7 @@ button[data-filter="CA"], button[data-filter="CL"], button[data-filter="BM"] {
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
 button[data-filter="AR"], button[data-filter="AE"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
      90deg,
     #005f66,
     #66f2ff,
@@ -361,7 +361,7 @@ button[data-filter="AR"], button[data-filter="AE"] {
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
 button[data-filter="SF"] {
-  background-color: linear-gradient(
+  background: linear-gradient(
     90deg,
     #4d2e00,
     #d9a066,
@@ -373,6 +373,7 @@ button[data-filter="SF"] {
   ),
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
+
 
 
 
