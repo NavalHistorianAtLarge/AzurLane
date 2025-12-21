@@ -289,6 +289,91 @@ button[data-filter="DR"] {
   animation: rainbowFlow 6s linear infinite;
   color: white;
 }
+button[data-filter="CV"], button[data-filter="CVL"] {
+  background-color: linear-gradient(
+    90deg, 
+    #3a0057, 
+    #a64dff,
+    #5e0080, 
+    #d9b3ff, 
+    #4b0066 
+  ), 
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="SS"], button[data-filter="SSV"] {
+  background: 
+    linear-gradient( 
+      90deg, 
+      #003d1f, 
+      #3c8,
+      #00663a, 
+      #99e6c2, 
+      #00522e,
+      #3c8);
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="BB"], button[data-filter="BBV"], button[data-filter="BC"], button[data-filter="CB"] {
+  background-color: linear-gradient(
+    90deg,
+    #660033,
+    #ff66b3,
+    #99004d,
+    #ffb3d9,
+    #800040,
+    #ff66b3
+  ),
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="DDG"], button[data-filter="DD"] {
+  background-color: linear-gradient(
+    90deg,
+    #002b66,
+    #66a3ff,
+    #004c99,
+    #b3d1ff,
+    #003d80,
+    #66a3ff
+  ),
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="CA"], button[data-filter="CL"], button[data-filter="BM"] {
+  background-color: linear-gradient(
+    90deg,
+    #665500,
+    #ffeb66,
+    #b39b00,
+    #fff4b3,
+    #8c7700,
+    #ffeb66
+  ),
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="AR"], button[data-filter="AE"] {
+  background-color: linear-gradient(
+     90deg,
+    #005f66,
+    #66f2ff,
+    #008a94,
+    #b3faff,
+    #00727a,
+    #66f2ff
+  ),
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+button[data-filter="SF"] {
+  background-color: linear-gradient(
+    90deg,
+    #4d2e00,
+    #d9a066,
+    #7a4f00,
+    #f2d2a6,
+    #664000,
+    #d9a066
+
+  ),
+  url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
 
 
 
