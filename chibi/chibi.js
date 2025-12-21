@@ -68,7 +68,7 @@ function renderChibiList(list) {
     }
 
     if (rarityBorders[chibi.rarity]) {
-        wrapper.style.border = `2px solid ${rarityBorders[chibi.rarity]}`;
+        wrapper.style.border = `1px solid ${rarityBorders[chibi.rarity]}`;
       }
     }
 
@@ -426,6 +426,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
