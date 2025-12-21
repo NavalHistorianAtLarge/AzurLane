@@ -99,7 +99,7 @@ body {
 button img {
   max-height: 10px;
   padding-right: 4px;
-  filter: brightness(1.0) contrast(1.4);
+  filter: brightness(0.8) contrast(1.6);
 }
 .crimson {
   background-color: #3a1a32;
@@ -284,5 +284,6 @@ button[data-filter="DR"] {
   animation: rainbowFlow 6s linear infinite;
   color: white;
 }
+
 
 
