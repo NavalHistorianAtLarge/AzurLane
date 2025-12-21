@@ -45,14 +45,15 @@ const rarityBackgrounds = {
   MUR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png')"
 };
 const rarityBorders = {
-  N: grey,
-  R: blue,
-  E: purple,
-  SR: gold,
-  UR: pink,
-  DR: pink,
-  PR: gold
+  N: "grey",
+  R: "blue",
+  E: "purple",
+  SR: "gold",
+  UR: "pink",
+  DR: "pink",
+  PR: "gold"
 };
+
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
@@ -85,6 +86,7 @@ function renderChibiList(list) {
     chibiList.appendChild(wrapper);
   });
 }
+
   const searchInput = document.getElementById('chibiSearch');
 
   searchInput.addEventListener('input', () => {
@@ -425,6 +427,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
