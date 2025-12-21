@@ -89,7 +89,6 @@ body {
   padding: 3px 6px;
   display: inline;
   text-align: left;
-  font-weight: bold;
   font-family: "Comic Sans", cursive
 }
 
@@ -375,6 +374,7 @@ button[data-filter="SF"] {
   ),
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
+
 
 
 
