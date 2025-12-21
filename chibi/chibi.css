@@ -238,3 +238,41 @@ input {
   margin-bottom: 10px;
   font-family: "Comic Relief", cursive;
 }
+button[data-filter="N"] {
+  background-color: gray;
+  opacity: .9;
+}
+button[data-filter="R"] {
+  background-color: lightblue;
+  opacity: .9;
+}
+button[data-filter="E"] {
+  background-color: violet;
+  opacity: .9;
+}
+button[data-filter="SR"], button[data-filter="PR"] {
+  background-color: gold;
+  opacity: .9;
+}
+button[data-filter="UR"], button[data-filter="DR"] {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400% 100%;
+  animation: rainbowFlow 6s linear infinite;
+  color: white;
+}
+
+@keyframes rainbowFlow {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
+
