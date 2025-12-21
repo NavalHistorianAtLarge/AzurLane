@@ -252,8 +252,9 @@ button[data-filter="E"] {
   opacity: .9;
 }
 button[data-filter="SR"], button[data-filter="PR"] {
-  background-color: gold;
+  background: linear-gradient(90deg, #ffdf00, #fcc, #ffdf00);
   opacity: .9;
+  animation: colorFlow;
 }
 button[data-filter="UR"] {
   background: linear-gradient(
@@ -272,6 +273,10 @@ button[data-filter="UR"] {
   0% { background-position: 0% 0%; }
   100% { background-position: 100% 0%; }
 }
+@keyframes colorFlow {
+   0% { background-position: 0% 0%; }
+  100% { background-position: 100% 0%; }
+}
 button[data-filter="DR"] {
    background: linear-gradient(
     90deg,
@@ -284,6 +289,7 @@ button[data-filter="DR"] {
   animation: rainbowFlow 6s linear infinite;
   color: white;
 }
+
 
 
 
