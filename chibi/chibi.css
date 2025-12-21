@@ -374,6 +374,12 @@ button[data-filter="SF"] {
   ),
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
+#saveZipBtn, #backToChibis, #backToSkins {
+  background-color: #4e4ad0;
+  padding: 10px;
+  border: 5px solid #413f7e;
+  margin: 40px;
+}
 
 
 
