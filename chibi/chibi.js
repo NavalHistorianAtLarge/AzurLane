@@ -44,6 +44,15 @@ const rarityBackgrounds = {
   MELITE: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/melite.png')",
   MUR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png')"
 };
+const rarityBorders = {
+  N: grey,
+  R: blue,
+  E: purple,
+  SR: gold,
+  UR: pink,
+  DR: pink,
+  PR: gold
+}
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
@@ -56,6 +65,11 @@ function renderChibiList(list) {
       wrapper.style.backgroundImage = rarityBackgrounds[chibi.rarity];
       wrapper.style.backgroundSize = "cover";
       wrapper.style.backgroundRepeat = "no-repeat";
+    }
+
+    if (rarityBorders[chibi.rarity]) {
+        wrapper.style.border = `2px solid ${rarityBorders[chibi.rarity]}`;
+      }
     }
 
     const img = document.createElement('img');
@@ -412,6 +426,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
