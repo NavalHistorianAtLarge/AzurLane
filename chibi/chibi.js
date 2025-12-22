@@ -1,6 +1,6 @@
 const app = new PIXI.Application({
   width: 800,
-  height: 600,
+  height: 800,
   resolution: window.devicePixelRatio,
   autoDensity: true,
   transparent: true
@@ -486,6 +486,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
