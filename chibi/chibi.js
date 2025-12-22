@@ -142,6 +142,21 @@ function onDragMove() {
   this.y = newPos.y;
 }
 
+function flipChibiX() {
+  if (currentChibi) {
+    currentChibi.scale.x *= -1;
+  }
+}
+
+function flipChibiY() {
+  if (currentChibi) {
+    currentChibi.scale.y *= -1;
+  }
+}
+
+document.getElementById('flipX').addEventListener('click', flipChibiX);
+document.getElementById('flipY').addEventListener('click', flipChibiY);
+
 // Load skin into PixiJS
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
@@ -470,6 +485,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
