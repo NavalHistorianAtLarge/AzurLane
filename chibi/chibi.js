@@ -1,7 +1,8 @@
 const app = new PIXI.Application({
   width: 800,
   height: 600,
-  marginLeft: 400,
+  resolution: window.devicePixelRatio,
+  autoDensity: true,
   transparent: true
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
@@ -485,6 +486,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
