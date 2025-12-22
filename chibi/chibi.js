@@ -118,7 +118,30 @@ filterButtons.forEach(btn => {
     renderChibiList(filtered);
   });
 });
-  
+
+let dragTarget = null;
+
+function onDragStart(event) {
+  dragTarget = this;
+  this.data = event.data;
+  this.dragOffset = this.data.getLocalPosition(this.parent);
+  this.dragging = true;
+}
+
+function onDragEnd() {
+  this.dragging = false;
+  this.data = null;
+  dragTarget = null;
+}
+
+function onDragMove() {
+  if (!this.dragging) return;
+
+  const newPos = this.data.getLocalPosition(this.parent);
+  this.x = newPos.x;
+  this.y = newPos.y;
+}
+
 // Load skin into PixiJS
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
@@ -134,7 +157,17 @@ function loadSkin(skin) {
     app.stage.addChild(spineChar);
     currentChibi = spineChar;
     currentSkin = skin;
-    
+
+    // Enable dragging
+    spineChar.interactive = true;
+    spineChar.buttonMode = true; // cursor: pointer
+
+    spineChar
+  .on('pointerdown', onDragStart)
+  .on('pointerup', onDragEnd)
+  .on('pointerupoutside', onDragEnd)
+  .on('pointermove', onDragMove);
+
     showAnimations();
   });
 }
@@ -437,6 +470,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
