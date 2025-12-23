@@ -185,7 +185,7 @@ h3 {
 .chibi-caption {
   color: black;
   font-weight: bold;
-  background-color: #ffd70021;
+  max-width: 90%;
   display: inline-block;
   border-radius: 30px;
   padding: 2px;
@@ -383,6 +383,7 @@ button[data-filter="SF"] {
   border: 5px solid #413f7e;
   margin: 40px;
 }
+
 
 
 
