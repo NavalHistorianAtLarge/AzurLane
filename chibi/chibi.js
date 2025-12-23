@@ -74,7 +74,7 @@ function renderChibiList(list) {
       }
 
     const img = document.createElement('img');
-    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${chibi.name}.png`;
+    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${chibi.id}.png`;
     img.alt = chibi.name;
     img.addEventListener('click', () => showSkins(chibi.skins));
 
@@ -486,6 +486,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
