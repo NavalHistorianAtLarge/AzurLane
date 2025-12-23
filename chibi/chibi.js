@@ -48,7 +48,7 @@ const rarityBackgrounds = {
 const rarityBorders = {
   N: "grey",
   R: "blue",
-  E: "purple",
+  E: "#963eb6",
   SR: "gold",
   UR: "pink",
   DR: "pink",
@@ -486,6 +486,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
