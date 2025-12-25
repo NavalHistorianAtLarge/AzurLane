@@ -457,7 +457,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       btn.classList.add('active');
     }
     applyFilters();
-  });
+  }});
 });
 
   const rarityAliases = {
@@ -536,6 +536,7 @@ if (isMetaFactionSelected()) {
 }
   renderChibiList(results);
 }
+
 
 
 
