@@ -461,6 +461,8 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 });
 
   const rarityAliases = {
+  E: ["E", "MELITE"],
+  SR: ["SR", "MSR"],  
   UR: ["UR", "MUR"],
 };
 
@@ -504,14 +506,22 @@ function applyFilters() {
   if (!passesRarity) return false;
 }
 
-    // META Classification
-    // META Classification
-    if (isMetaFactionSelected()) {
-    if (activeFilters.metaClass.size > 0 &&
+// META Classification
+if (isMetaFactionSelected()) {
+
+  // Only META ships should be considered
+  if (chibi.faction !== "META") return false;
+
+  if (activeFilters.metaClass.size > 0 &&
       !activeFilters.metaClass.has(chibi.metaClass)) return false;
 }
-    // META Origin
+
+// META Origin
 if (isMetaFactionSelected()) {
+
+  // Only META ships should be considered
+  if (chibi.faction !== "META") return false;
+
   if (activeFilters.metaOrigin.size > 0 &&
       !activeFilters.metaOrigin.has(chibi.metaOrigin)) return false;
 }
@@ -528,6 +538,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
