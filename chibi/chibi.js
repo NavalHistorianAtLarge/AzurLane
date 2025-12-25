@@ -447,10 +447,17 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       btn.classList.add('active');
     }
 
+    
     applyFilters();
   });
 });
+
+  const rarityAliases = {
+  UR: ["UR", "MUR"],
+};
 function applyFilters() {
+
+
   const results = chibiData.filter(chibi => {
 
     // Faction
@@ -461,13 +468,32 @@ function applyFilters() {
     if (activeFilters.type.size > 0 &&
         !activeFilters.type.has(chibi.type)) return false;
 
-    // Rarity
-    if (activeFilters.rarity.size > 0 &&
-        !activeFilters.rarity.has(chibi.rarity)) return false;
+    // Rarity (with alias support)
+    if (activeFilters.rarity.size > 0) {
+      let passesRarity = false;
+
+      for (const selected of activeFilters.rarity) {
+      // If selected rarity has aliases (e.g., UR → ["UR","mur"])
+      if (rarityAliases[selected]) {
+      if (rarityAliases[selected].includes(chibi.rarity)) {
+        passesRarity = true;
+        break;
+      }
+    } else {
+      // Normal direct match
+      if (chibi.rarity === selected) {
+        passesRarity = true;
+        break;
+      }
+    }
+  }
+
+  if (!passesRarity) return false;
+}
 
     // META Classification
-    if (activeFilters.metaClass.size > 0 &&
-        !activeFilters.metaClass.has(chibi.metaClass)) return false;
+    if (activeFilters.metaGroup.size > 0 &&
+        !activeFilters.metaGroup.has(chibi.metaGroup)) return false;
 
     // META Origin
     if (activeFilters.metaOrigin.size > 0 &&
@@ -486,6 +512,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
