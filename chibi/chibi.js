@@ -458,7 +458,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 };
 
 function isMetaFactionSelected() {
-  return activeFilters.faction.has("META");
+  return activeFilters.faction.has("meta");
 }
 
 function applyFilters() {
@@ -529,6 +529,7 @@ if (isMetaFactionSelected()) {
 }
   renderChibiList(results);
 }
+
 
 
 
