@@ -492,8 +492,8 @@ function applyFilters() {
 }
 
     // META Classification
-    if (activeFilters.metaGroup.size > 0 &&
-        !activeFilters.metaGroup.has(chibi.metaGroup)) return false;
+    if (activeFilters.metaClass.size > 0 &&
+        !activeFilters.metaClass.has(chibi.metaClass)) return false;
 
     // META Origin
     if (activeFilters.metaOrigin.size > 0 &&
@@ -512,6 +512,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
