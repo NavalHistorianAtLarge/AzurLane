@@ -176,9 +176,8 @@ h3 {
 }
 
 .chibi-item img {
-  width: 85%;
   cursor: pointer;
-  padding: 10px;
+  height: 119px;
 }
 
 
@@ -383,6 +382,7 @@ button[data-filter="SF"] {
   border: 5px solid #413f7e;
   margin: 40px;
 }
+
 
 
 
