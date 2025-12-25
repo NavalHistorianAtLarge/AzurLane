@@ -448,6 +448,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
     }
 
     
+    
     applyFilters();
   });
 });
@@ -519,8 +520,16 @@ if (isMetaFactionSelected()) {
     return true;
   });
 
+
+  if (value === "all" && category === "faction") {
+  activeFilters.faction.clear();
+  document.querySelectorAll('[data-category="faction"]').forEach(b => b.classList.remove('active'));
+  applyFilters();
+  return;
+}
   renderChibiList(results);
 }
+
 
 
 
