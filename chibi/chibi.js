@@ -526,9 +526,10 @@ if (isMetaFactionSelected()) {
 
     return true;
   });
-}
   renderChibiList(results);
 }
+
+
 
 
 
