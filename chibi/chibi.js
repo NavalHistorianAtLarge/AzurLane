@@ -439,6 +439,16 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
     const category = btn.dataset.category;   // e.g. "faction"
     const value = btn.dataset.filter;        // e.g. "IronBlood"
 
+     // --- HANDLE "ALL" BUTTON HERE ---
+    if (value === "all" && category === "faction") {
+      activeFilters.faction.clear();
+      document
+        .querySelectorAll('[data-category="faction"]')
+        .forEach(b => b.classList.remove('active'));
+
+      applyFilters();
+      return;
+
     if (activeFilters[category].has(value)) {
       activeFilters[category].delete(value);
       btn.classList.remove('active');
@@ -446,9 +456,6 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       activeFilters[category].add(value);
       btn.classList.add('active');
     }
-
-    
-    
     applyFilters();
   });
 });
@@ -529,6 +536,7 @@ if (isMetaFactionSelected()) {
 }
   renderChibiList(results);
 }
+
 
 
 
