@@ -455,6 +455,11 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
   const rarityAliases = {
   UR: ["UR", "MUR"],
 };
+
+function isMetaFactionSelected() {
+  return activeFilters.faction.has("META");
+}
+
 function applyFilters() {
 
 
@@ -492,12 +497,16 @@ function applyFilters() {
 }
 
     // META Classification
+    // META Classification
+    if (isMetaFactionSelected()) {
     if (activeFilters.metaClass.size > 0 &&
-        !activeFilters.metaClass.has(chibi.metaClass)) return false;
-
+      !activeFilters.metaClass.has(chibi.metaClass)) return false;
+}
     // META Origin
-    if (activeFilters.metaOrigin.size > 0 &&
-        !activeFilters.metaOrigin.has(chibi.metaOrigin)) return false;
+if (isMetaFactionSelected()) {
+  if (activeFilters.metaOrigin.size > 0 &&
+      !activeFilters.metaOrigin.has(chibi.metaOrigin)) return false;
+}
 
     // Group
     if (activeFilters.group.size > 0 &&
@@ -512,6 +521,7 @@ function applyFilters() {
 
   renderChibiList(results);
 }
+
 
 
 
