@@ -281,7 +281,7 @@ animSelect.addEventListener('change', e => {
 });
 
 
-async function captureAnimationFrames(spineChar, animationName, fps = 30, zipFolder) {
+async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFolder) {
   return new Promise((resolve) => {
     // Find animation duration
     const anim = spineChar.spineData.animations.find(a => a.name === animationName);
@@ -519,6 +519,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
