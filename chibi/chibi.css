@@ -386,6 +386,52 @@ button[data-filter="SF"] {
   border: 5px solid #413f7e;
   margin: 40px;
 }
+.chibi-item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 1px solid;
+}
+.rarity-N {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/normal.png");
+    border: grey
+}
+.rarity-R {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/rare.png");
+    border: blue
+}
+.rarity-E {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/elite.png");
+}
+.rarity-MELITE {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/melite.png");
+}
+.rarity-E, .rarity-MELITE {
+    border: #963eb6;
+}
+.rarity-SR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/sr.png");
+}
+.rarity-PR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/priority.png");
+}
+.rarity-MSR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/msr.png");
+}
+.rarity-SR, .rarity-PR, .rarity-MSR {
+    border: gold;
+}
+.rarity-UR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/ur.png");
+}
+.rarity-DR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/decisive.png");
+}
+.rarity-MUR {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png");
+}
+.rarity-DR, .rarity-UR, .rarity-MUR {
+    border: "pink"
+}
 .rarity-MELITE .chibi-caption,
 .rarity-MSR .chibi-caption {
   color: white;
@@ -395,7 +441,6 @@ button[data-filter="SF"] {
 .rarity-MUR {
   background-position: center center;
 }
-
 
 
 
