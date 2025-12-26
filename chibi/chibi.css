@@ -160,6 +160,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 40px;
 }
 
 #chibiList button, #skinList button {
@@ -438,6 +439,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
