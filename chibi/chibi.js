@@ -33,28 +33,6 @@ let chibiData = null;
     renderChibiList(chibiData);
   });
 
-const rarityBackgrounds = {
-  N: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/normal.png')",
-  R: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/rare.png')",
-  E: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/elite.png')",
-  SR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/sr.png')",
-  UR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/ur.png')",
-  DR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/decisive.png')",
-  PR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/priority.png')",
-  MSR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/msr.png')",
-  MELITE: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/melite.png')",
-  MUR: "url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png')"
-};
-const rarityBorders = {
-  N: "grey",
-  R: "blue",
-  E: "#963eb6",
-  SR: "gold",
-  UR: "pink",
-  DR: "pink",
-  PR: "gold"
-};
-
 function getChibiThumbnail(chibi) {
   const firstSkin = chibi.skins[0];
   return `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${firstSkin.id}.png`;
@@ -69,10 +47,8 @@ function renderChibiList(list) {
 
     // ✅ Apply rarity background
     if (chibi.rarity && rarityBackgrounds[chibi.rarity]) {
-      wrapper.style.backgroundImage = rarityBackgrounds[chibi.rarity];
       wrapper.classList.add(`rarity-${chibi.rarity}`);
-      wrapper.style.backgroundSize = "cover";
-      wrapper.style.backgroundRepeat = "no-repeat";
+   
     }
 
     if (rarityBorders[chibi.rarity]) {
@@ -553,6 +529,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
