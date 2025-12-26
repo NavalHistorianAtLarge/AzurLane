@@ -44,16 +44,7 @@ function renderChibiList(list) {
   list.forEach(chibi => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('chibi-item');
-
-    // ✅ Apply rarity background
-    if (chibi.rarity && rarityBackgrounds[chibi.rarity]) {
-      wrapper.classList.add(`rarity-${chibi.rarity}`);
-   
-    }
-
-    if (rarityBorders[chibi.rarity]) {
-        wrapper.style.border = `1px solid ${rarityBorders[chibi.rarity]}`;
-      }
+    wrapper.classList.add(`rarity-${chibi.rarity}`);
 
     const img = document.createElement('img');
     img.src = getChibiThumbnail(chibi);
@@ -528,6 +519,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
