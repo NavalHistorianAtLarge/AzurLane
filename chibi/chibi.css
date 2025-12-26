@@ -189,6 +189,10 @@ h3 {
   border-radius: 30px;
   padding: 2px;
 }
+.skin-item img {
+  height: 152px;
+  cursor: pointer;
+}
 #animList button {
   display: block;
   width: 100%;
@@ -382,6 +386,7 @@ button[data-filter="SF"] {
   border: 5px solid #413f7e;
   margin: 40px;
 }
+
 
 
 
