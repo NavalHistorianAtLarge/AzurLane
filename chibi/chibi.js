@@ -157,7 +157,7 @@ function loadSkin(skin) {
   // Place bottom of skeleton at 90% of screen height
   spineChar.y = app.renderer.height * 0.9 - bounds.height * spineChar.scale.y;
 
-  spineChar.scale.set(2.0);
+  spineChar.scale.set(1.0);
   spineChar.state.setAnimation(0, 'normal', true);
 
   app.stage.addChild(spineChar);
@@ -528,6 +528,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
