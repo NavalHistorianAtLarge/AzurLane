@@ -390,6 +390,11 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption {
   color: white;
 }
+.rarity-MELITE,
+.rarity-MSR {
+  background-position: center center;
+}
+
 
 
 
