@@ -386,10 +386,11 @@ button[data-filter="SF"] {
   border: 5px solid #413f7e;
   margin: 40px;
 }
-.rarity-MELITE,
-.rarity-MSR {
+.rarity-MELITE .chibi-caption,
+.rarity-MSR .chibi-caption {
   color: white;
 }
+
 
 
 
