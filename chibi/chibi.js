@@ -167,18 +167,26 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-    if (currentChibi) app.stage.removeChild(currentChibi);
+  if (currentChibi) app.stage.removeChild(currentChibi);
 
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
-    spineChar.x = app.renderer.width / 2;
-    spineChar.y = app.renderer.height * 0.75;
-    spineChar.scale.set(1.0);
-    spineChar.state.setAnimation(0, 'normal', true);
+  const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
-    app.stage.addChild(spineChar);
-    currentChibi = spineChar;
-    currentSkin = skin;
+  // Compute bounds
+  const bounds = spineChar.getLocalBounds();
 
+  // Center horizontally
+  spineChar.x = app.renderer.width / 2;
+
+  // Place bottom of skeleton at 90% of screen height
+  spineChar.y = app.renderer.height * 0.9 - bounds.height * spineChar.scale.y;
+
+  spineChar.scale.set(2.0);
+  spineChar.state.setAnimation(0, 'normal', true);
+
+  app.stage.addChild(spineChar);
+  currentChibi = spineChar;
+  currentSkin = skin;
+    
     // Enable dragging
     spineChar.interactive = true;
     spineChar.buttonMode = true; // cursor: pointer
@@ -543,6 +551,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
