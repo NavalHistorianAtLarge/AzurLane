@@ -70,6 +70,7 @@ function renderChibiList(list) {
     // ✅ Apply rarity background
     if (chibi.rarity && rarityBackgrounds[chibi.rarity]) {
       wrapper.style.backgroundImage = rarityBackgrounds[chibi.rarity];
+      wrapper.classList.add(`rarity-${chibi.rarity}`);
       wrapper.style.backgroundSize = "cover";
       wrapper.style.backgroundRepeat = "no-repeat";
     }
@@ -552,6 +553,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
