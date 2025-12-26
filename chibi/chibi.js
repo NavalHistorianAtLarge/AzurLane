@@ -53,7 +53,6 @@ function renderChibiList(list) {
 
     if (rarityBorders[chibi.rarity]) {
         wrapper.style.border = `1px solid ${rarityBorders[chibi.rarity]}`;
-        wrapper.classList.add(`rarity-${chibi.rarity}`);
       }
 
     const img = document.createElement('img');
@@ -529,6 +528,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
