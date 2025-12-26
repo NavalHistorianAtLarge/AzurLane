@@ -391,9 +391,11 @@ button[data-filter="SF"] {
   color: white;
 }
 .rarity-MELITE,
-.rarity-MSR {
+.rarity-MSR,
+.rarity-MUR {
   background-position: center center;
 }
+
 
 
 
