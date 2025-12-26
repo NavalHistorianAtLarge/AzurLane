@@ -55,6 +55,11 @@ const rarityBorders = {
   PR: "gold"
 };
 
+function getChibiThumbnail(chibi) {
+  const firstSkin = chibi.skins[0];
+  return `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${firstSkin.id}.png`;
+}
+
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
@@ -74,7 +79,7 @@ function renderChibiList(list) {
       }
 
     const img = document.createElement('img');
-    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${chibi.name}.png`;
+    img.src = getChibiThumbnail(chibi);
     img.alt = chibi.name;
     img.addEventListener('click', () => showSkins(chibi.skins));
 
@@ -538,6 +543,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
