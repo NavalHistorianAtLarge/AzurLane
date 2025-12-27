@@ -298,9 +298,12 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
 
     let frame = 0;
     const ticker = new PIXI.Ticker();
-    ticker.add(() => {
-      spineChar.update(1 / fps);
-      app.renderer.render(app.stage);
+    let elapsed = 0;
+    ticker.add((delta) => {
+    elapsed += ticker.deltaMS / 1000;
+
+    const targetTime = frame * (1 / fps);
+    if (elapsed < targetTime) return;
 
       const canvas = app.renderer.extract.canvas(spineChar);
       const dataURL = canvas.toDataURL("image/png");
@@ -519,6 +522,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
