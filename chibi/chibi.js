@@ -290,37 +290,52 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       resolve();
       return;
     }
-    const duration = anim.duration;
+
+    const duration = anim.duration; // in seconds
     const frameCount = Math.ceil(duration * fps);
 
     // Set animation
     spineChar.state.setAnimation(0, animationName, false);
 
     let frame = 0;
-    const ticker = new PIXI.Ticker();
     let elapsed = 0;
-    ticker.add((delta) => {
-    elapsed += ticker.deltaMS / 1000;
+    let lastTime = performance.now();
 
-    const targetTime = frame * (1 / fps);
-    if (elapsed < targetTime) return;
+    function step() {
+      const now = performance.now();
+      const delta = (now - lastTime) / 1000; // seconds
+      lastTime = now;
 
-      const canvas = app.renderer.extract.canvas(spineChar);
-      const dataURL = canvas.toDataURL("image/png");
+      // Advance animation by real time
+      spineChar.update(delta);
 
-      zipFolder.file(
-        `${animationName}_frame_${String(frame).padStart(3, '0')}.png`,
-        dataURL.split(',')[1],
-        { base64: true }
-      );
+      // Capture frames at fixed intervals
+      const targetTime = frame * (1 / fps);
+      if (elapsed + delta >= targetTime) {
+        // Render and save frame
+        app.renderer.render(app.stage);
+        const canvas = app.renderer.extract.canvas(spineChar);
+        const dataURL = canvas.toDataURL("image/png");
 
-      frame++;
-      if (frame >= frameCount) {
-        ticker.stop();
+        zipFolder.file(
+          `${animationName}_frame_${String(frame).padStart(3, '0')}.png`,
+          dataURL.split(',')[1],
+          { base64: true }
+        );
+
+        frame++;
+      }
+
+      elapsed += delta;
+
+      if (frame < frameCount) {
+        requestAnimationFrame(step);
+      } else {
         resolve();
       }
-    });
-    ticker.start();
+    }
+
+    requestAnimationFrame(step);
   });
 }
 document.getElementById('saveZipBtn').addEventListener('click', async () => {
@@ -522,6 +537,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
