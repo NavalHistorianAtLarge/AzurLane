@@ -314,7 +314,7 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       if (elapsed + delta >= targetTime) {
         // Render and save frame
         app.renderer.render(app.stage);
-        const canvas = app.renderer.extract.canvas(spineChar);
+        const canvas = app.renderer.extract.canvas(app.stage);
         const dataURL = canvas.toDataURL("image/png");
 
         zipFolder.file(
@@ -538,6 +538,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
