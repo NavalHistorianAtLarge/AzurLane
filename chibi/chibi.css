@@ -238,9 +238,6 @@ select {
   padding: 10px;
   font-weight: bold;
 }
-#backToChibis {
-  margin: 30px;
-}
 input {
   width: 90%;
   padding: 6px;
@@ -381,7 +378,7 @@ button[data-filter="SF"] {
   ),
   url('https://www.transparenttextures.com/patterns/brushed-alum.png');
 }
-#saveZipBtn, #backToChibis, #backToSkins {
+#saveZipBtn, #backToChibis, #backToSkins, #fitToCanvasBtn {
   background-color: #4e4ad0;
   padding: 10px;
   border: 5px solid #413f7e;
@@ -439,6 +436,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
