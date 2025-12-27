@@ -182,6 +182,9 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
     showAnimations();
   });
 }
+
+let baseScale = 1;
+
 function setChibiScale(userScale) {
     if (currentChibi) {
         currentChibi.scale.set(baseScale * userScale);
@@ -208,7 +211,7 @@ document.getElementById("fitToCanvasBtn").addEventListener("click", () => {
     // 4. Compute scale needed to fit inside canvas
     const scaleX = canvasWidth / w;
     const scaleY = canvasHeight / h;
-    const baseScale = Math.min(scaleX, scaleY) * 0.9; 
+    baseScale = Math.min(scaleX, scaleY) * 0.9; 
     // 0.9 gives a little padding so it doesn't touch edges
 
     // 5. Apply base scale to skeleton
@@ -589,6 +592,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
