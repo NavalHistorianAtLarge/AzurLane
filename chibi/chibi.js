@@ -139,9 +139,23 @@ function loadSkin(skin) {
 
   const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
-  // Compute bounds
-  const bounds = spineChar.getLocalBounds();
+const bounds = spineChar.getBounds();
+const w = bounds.width;
+const h = bounds.height;
 
+const MAX_SIZE = 600; // or 700, or whatever fits your canvas
+
+let baseScale = 1;
+
+if (w > MAX_SIZE || h > MAX_SIZE) {
+    // shrink proportionally so the largest dimension fits MAX_SIZE
+    baseScale = MAX_SIZE / Math.max(w, h);
+
+    spineChar.skeleton.scaleX = baseScale;
+    spineChar.skeleton.scaleY = baseScale;
+    spineChar.skeleton.updateWorldTransform();
+}
+    
   // Center horizontally
   spineChar.x = app.renderer.width / 2;
 
@@ -168,12 +182,49 @@ function loadSkin(skin) {
     showAnimations();
   });
 }
-function setChibiScale(value) {
-  if (currentChibi) {
-    currentChibi.scale.set(value);
-  }
+function setChibiScale(userScale) {
+    if (currentChibi) {
+        currentChibi.scale.set(baseScale * userScale);
+    }
 }
+document.getElementById("fitToCanvasBtn").addEventListener("click", () => {
+    if (!currentChibi) return;
 
+    // 1. Get canvas size
+    const canvasWidth = app.renderer.width;
+    const canvasHeight = app.renderer.height;
+
+    // 2. Reset scale temporarily so we measure true bounds
+    currentChibi.scale.set(1);
+    currentChibi.skeleton.scaleX = 1;
+    currentChibi.skeleton.scaleY = 1;
+    currentChibi.skeleton.updateWorldTransform();
+
+    // 3. Measure natural bounds
+    const sbounds = currentChibi.getBounds();
+    const w = sbounds.width;
+    const h = sbounds.height;
+
+    // 4. Compute scale needed to fit inside canvas
+    const scaleX = canvasWidth / w;
+    const scaleY = canvasHeight / h;
+    const baseScale = Math.min(scaleX, scaleY) * 0.9; 
+    // 0.9 gives a little padding so it doesn't touch edges
+
+    // 5. Apply base scale to skeleton
+    currentChibi.skeleton.scaleX = baseScale;
+    currentChibi.skeleton.scaleY = baseScale;
+    currentChibi.skeleton.updateWorldTransform();
+
+    // 6. Apply user scale on top (if you have a slider)
+    if (typeof userScale !== "undefined") {
+        currentChibi.scale.set(baseScale * userScale);
+    } else {
+        currentChibi.scale.set(baseScale);
+    }
+
+    console.log("Fit-to-canvas applied:", baseScale);
+});
 document.getElementById('scaleSlider').addEventListener('input', e => {
   setChibiScale(parseFloat(e.target.value));
 });
@@ -538,6 +589,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
