@@ -352,8 +352,10 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
 
   // Capture each selected animation sequentially
   const fps = parseInt(document.getElementById("fpsInput").value) || 60;
+  for (const animName of selected) {
 await captureAnimationFrames(currentChibi, animName, fps, folder);
-
+  }
+  
   // Generate zip and download
   zip.generateAsync({ type: "blob" }).then(content => {
     const a = document.createElement("a");
@@ -536,6 +538,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
