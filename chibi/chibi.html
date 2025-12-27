@@ -137,6 +137,15 @@
     <h3>Select an Animation</h3>
     <select id="animSelect" multiple size="6"></select>
     <input type="range" min="0.5" max="4" step="0.1" id="scaleSlider">
+    <label for="fpsInput">FPS:</label>
+    <input
+        type="number"
+        id="fpsInput"
+        min="1"
+        max="240"
+        value="60"
+        step="1"
+    />
     <button id="flipX">Flip X</button>
     <button id="flipY">Flip Y</button>
     <button id="saveZipBtn">Save Selected Animations</button>
@@ -152,6 +161,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
