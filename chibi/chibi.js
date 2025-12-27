@@ -351,9 +351,8 @@ document.getElementById('saveZipBtn').addEventListener('click', async () => {
   const folder = zip.folder(currentSkin.id || currentSkin.label || "skin");
 
   // Capture each selected animation sequentially
-  for (const animName of selected) {
-    await captureAnimationFrames(currentChibi, animName, 60, folder);
-  }
+  const fps = parseInt(document.getElementById("fpsInput").value) || 60;
+await captureAnimationFrames(currentChibi, animName, fps, folder);
 
   // Generate zip and download
   zip.generateAsync({ type: "blob" }).then(content => {
@@ -537,6 +536,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
