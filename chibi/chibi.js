@@ -58,6 +58,11 @@ function renderChibiList(list) {
     wrapper.appendChild(img);
     wrapper.appendChild(caption);
     chibiList.appendChild(wrapper);
+
+    if (chibi.id === "Tester") {
+    img.style.width = "150px";
+}
+
   });
 }
 
@@ -594,9 +599,7 @@ if (isMetaFactionSelected()) {
   renderChibiList(results);
 }
 
-if (chibi.id === "Tester") {
-    img.style.width = "150px";
-}
+
 
 
 
