@@ -233,14 +233,15 @@ document.getElementById('scaleSlider').addEventListener('input', e => {
 });
 
 // Step 2: show skins for chosen chibi
-function showSkins(list) {
+function showSkins(chibi) {
   chibiView.classList.add('hidden');
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
 
-  list.forEach(skin => {
+  chibi.forEach(skin => {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
+    skinWrap.classList.add(`rarity-${chibi.rarity}`);
 
     const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
@@ -592,6 +593,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
