@@ -243,7 +243,7 @@ function showSkins(chibi) {
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
 
-  chibi.forEach(skin => {
+  chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
     skinWrap.classList.add(`rarity-${chibi.rarity}`);
@@ -598,6 +598,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
