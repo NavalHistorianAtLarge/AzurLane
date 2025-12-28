@@ -594,6 +594,9 @@ if (isMetaFactionSelected()) {
   renderChibiList(results);
 }
 
+if (chibi.id === "Tester") {
+    img.style.width = "150px";
+}
 
 
 
