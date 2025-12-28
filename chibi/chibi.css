@@ -156,7 +156,7 @@ h3 {
   padding: 10px;
   border-radius: 30px;
 }
-#chibiList {
+#chibiList, #skinList {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -170,29 +170,25 @@ h3 {
   display: block;
   margin: 10px;
 }
-.chibi-item {
+.chibi-item, .skin-item{
   flex: 0 0 45%;   /* two per row */
   text-align: center;
   border-radius: 30px; 
 }
 
-.chibi-item img {
+.chibi-item img, .skin-item img {
   cursor: pointer;
   height: 119px;
 }
 
 
-.chibi-caption {
+.chibi-caption, .skin-caption {
   color: black;
   font-weight: bold;
   max-width: 90%;
   display: inline-block;
   border-radius: 30px;
   padding: 2px;
-}
-.skin-item img {
-  height: 152px;
-  cursor: pointer;
 }
 #animList button {
   display: block;
@@ -222,24 +218,6 @@ select {
   display: flex;
 }
 
-#skinList {
-  display: flex;
-  flex-wrap: wrap;
-}
-.skin-item {
-  max-width: 50%;
-  height: 200px;
-  display: inline-block;
-  text-align: center;
-  margin-bottom: 10px;
-  background-size: cover;
-  border-radius: 40px;
-}
-.skin-caption {
-  display: inline-block;
-  padding: 10px;
-  font-weight: bold;
-}
 input {
   width: 90%;
   padding: 6px;
@@ -438,6 +416,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
