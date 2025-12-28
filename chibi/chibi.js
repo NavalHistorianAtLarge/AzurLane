@@ -49,7 +49,7 @@ function renderChibiList(list) {
     const img = document.createElement('img');
     img.src = getChibiThumbnail(chibi);
     img.alt = chibi.name;
-    img.addEventListener('click', () => showSkins(chibi.skins));
+    img.addEventListener('click', () => showSkins(chibi));
 
     const caption = document.createElement('div');
     caption.classList.add('chibi-caption');
@@ -598,6 +598,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
