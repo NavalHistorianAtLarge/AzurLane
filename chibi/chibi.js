@@ -61,6 +61,7 @@ function renderChibiList(list) {
 
     if (chibi.name === "Tester") {
     img.style.width = "150px";
+    img.style.height = "98px";
 }
 
   });
@@ -598,6 +599,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
