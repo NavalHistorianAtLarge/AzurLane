@@ -59,7 +59,7 @@ function renderChibiList(list) {
     wrapper.appendChild(caption);
     chibiList.appendChild(wrapper);
 
-    if (chibi.id === "Tester") {
+    if (chibi.name === "Tester") {
     img.style.width = "150px";
 }
 
@@ -598,6 +598,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
