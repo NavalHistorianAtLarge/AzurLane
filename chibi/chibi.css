@@ -185,7 +185,7 @@ h3 {
 }
 .chibi-img-box {
   height: 119px;
-  width: 144px;
+  width: 135px;
 }
 
 .chibi-caption, .skin-caption {
@@ -418,6 +418,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
