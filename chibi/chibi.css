@@ -404,6 +404,9 @@ button[data-filter="SF"] {
 .rarity-MUR {
     background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/mur.png");
 }
+.rarity-undefined, .rarity-siren {
+    background-image: url("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/bg/siren.png");
+}
 .rarity-DR, .rarity-UR, .rarity-MUR {
     border: 1px solid "pink"
 }
@@ -414,6 +417,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
