@@ -255,6 +255,9 @@ function showSkins(chibi) {
     skinWrap.classList.add('skin-item');
     skinWrap.classList.add(`rarity-${chibi.rarity}`);
 
+    const skinBox = document.createElement('div');
+    skinBox.classList.add('chibi-img-box');
+
     const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
     img.alt = skin.label;
@@ -263,12 +266,14 @@ function showSkins(chibi) {
       currentSkin = skin;
       loadSkin(skin)
     })
-
+    
+    skinBox.appendChild(img);
+    
     const caption = document.createElement('div');
     caption.classList.add('skin-caption');
     caption.textContent = skin.label;
 
-    skinWrap.appendChild(img);
+    skinWrap.appendChild(skinBox);
     skinWrap.appendChild(caption);
     skinList.appendChild(skinWrap);
 })
@@ -605,6 +610,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
