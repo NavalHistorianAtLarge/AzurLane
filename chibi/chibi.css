@@ -180,7 +180,7 @@ h3 {
 
 .chibi-item img, .skin-item img {
   cursor: pointer;
-  height: 119px;
+  max-height: 119px;
 }
 
 
@@ -414,6 +414,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
