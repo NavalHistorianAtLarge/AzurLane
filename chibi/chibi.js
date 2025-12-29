@@ -46,22 +46,16 @@ function renderChibiList(list) {
     wrapper.classList.add('chibi-item');
     wrapper.classList.add(`rarity-${chibi.rarity}`);
 
-    // --- NEW: image box wrapper ---
-    const imgBox = document.createElement('div');
-    imgBox.classList.add('chibi-img-box');
-
     const img = document.createElement('img');
     img.src = getChibiThumbnail(chibi);
     img.alt = chibi.name;
     img.addEventListener('click', () => showSkins(chibi));
 
-    imgBox.appendChild(img);   // put image inside the box
-
     const caption = document.createElement('div');
     caption.classList.add('chibi-caption');
     caption.textContent = chibi.name;
 
-    wrapper.appendChild(imgBox);   // add box instead of raw img
+    wrapper.appendChild(img);  
     wrapper.appendChild(caption);
     chibiList.appendChild(wrapper);
 
@@ -255,9 +249,6 @@ function showSkins(chibi) {
     skinWrap.classList.add('skin-item');
     skinWrap.classList.add(`rarity-${chibi.rarity}`);
 
-    const skinBox = document.createElement('div');
-    skinBox.classList.add('chibi-img-box');
-
     const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
     img.alt = skin.label;
@@ -267,13 +258,11 @@ function showSkins(chibi) {
       loadSkin(skin)
     })
     
-    skinBox.appendChild(img);
-    
     const caption = document.createElement('div');
     caption.classList.add('skin-caption');
     caption.textContent = skin.label;
 
-    skinWrap.appendChild(skinBox);
+    skinWrap.appendChild(img);
     skinWrap.appendChild(caption);
     skinList.appendChild(skinWrap);
 })
@@ -610,6 +599,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
