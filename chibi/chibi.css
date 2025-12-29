@@ -178,13 +178,13 @@ h3 {
   background-repeat: no-repeat;
 }
 
-.chibi-item-box img, .skin-item-box img {
+.chibi-img-box img, .skin-img-box img {
   cursor: pointer;
   object-fit: contain;
   height: 119px
 }
 .chibi-img-box {
-  height: 147px;
+  height: 119px;
   width: 145px;
 }
 
@@ -418,6 +418,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
