@@ -41,30 +41,36 @@ function getChibiThumbnail(chibi) {
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
-  list.forEach(chibi => {
+ list.forEach(chibi => {
     const wrapper = document.createElement('div');
     wrapper.classList.add('chibi-item');
     wrapper.classList.add(`rarity-${chibi.rarity}`);
+
+    // --- NEW: image box wrapper ---
+    const imgBox = document.createElement('div');
+    imgBox.classList.add('chibi-img-box');
 
     const img = document.createElement('img');
     img.src = getChibiThumbnail(chibi);
     img.alt = chibi.name;
     img.addEventListener('click', () => showSkins(chibi));
 
+    imgBox.appendChild(img);   // put image inside the box
+
     const caption = document.createElement('div');
     caption.classList.add('chibi-caption');
     caption.textContent = chibi.name;
 
-    wrapper.appendChild(img);
+    wrapper.appendChild(imgBox);   // add box instead of raw img
     wrapper.appendChild(caption);
     chibiList.appendChild(wrapper);
 
+    // Special-case Tester sizing
     if (chibi.name === "Tester") {
-    img.style.width = "150px";
-    img.style.height = "98px";
-}
-
-  });
+        img.style.width = "150px";
+        img.style.height = "98px";
+    }
+});
 }
 
   const searchInput = document.getElementById('chibiSearch');
@@ -599,6 +605,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
