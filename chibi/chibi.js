@@ -64,6 +64,9 @@ function renderChibiList(list) {
         img.style.width = "150px";
         img.style.height = "98px";
     }
+   if (chibi.name === "Downes") {
+       img.style.width = "93px";
+   }
 });
 }
 
@@ -599,6 +602,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
