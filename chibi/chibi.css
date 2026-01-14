@@ -176,12 +176,14 @@ h3 {
   border-radius: 30px; 
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 136px;
 }
 
 .chibi-item img, .skin-item img {
   cursor: pointer;
   object-fit: contain;
-  max-height: 119px
+  max-height: 119px;
+  min-width: 118px;
 }
 
 .chibi-caption, .skin-caption {
@@ -418,6 +420,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
