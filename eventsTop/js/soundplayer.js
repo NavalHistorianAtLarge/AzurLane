@@ -18,7 +18,7 @@
 
           // Load JSON once at startup
                 async function loadSongs() {
-                const response = await fetch('https://wisdomcubenetwork.xyz/eventsTop/audioLinks.json'); // or the raw GitHub URL
+                const response = await fetch('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/audioLinks.json'); // or the raw GitHub URL
                 songsData = await response.json();
             }
 
@@ -67,6 +67,7 @@
         clone.play();
     }
 }
+
 
 
 
