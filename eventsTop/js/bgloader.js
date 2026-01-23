@@ -1,7 +1,7 @@
 async function applyBackgroundFromClass() {
   try {
     // Load your JSON file
-    const response = await fetch("/json/backgrounds.json");
+    const response = await fetch("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/backgrounds.json");
     const bgData = await response.json();
 
     // Get the class on the <body>
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", applyBackgroundFromClass);
 
 async function applyEventImages() {
   try {
-    const response = await fetch("retranslate/json/backgrounds.json");
+    const response = await fetch("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/backgrounds.json");
     const bgData = await response.json();
 
     // Select ONLY images that should get backgrounds
@@ -61,5 +61,6 @@ async function applyEventImages() {
 }
 
 document.addEventListener("DOMContentLoaded", applyEventImages);
+
 
 
