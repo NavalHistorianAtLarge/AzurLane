@@ -3,7 +3,7 @@ html {
     width: auto;
 }
 .memory {
-    background-image: url(https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_memory_.png);
+    background-image: url(https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/refs/heads/main/BG/bg_memory.png);
     background-attachment: fixed;
     background-size: cover;
 }
@@ -191,3 +191,4 @@ sup {
     vertical-align: text-top;
 
 }
+
