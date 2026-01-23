@@ -32,7 +32,7 @@ async function applyBackgroundFromClass() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", applyEventImages);
+document.addEventListener("DOMContentLoaded", applyBackgroundFromClass);
 
 async function applyEventImages() {
   try {
@@ -62,3 +62,4 @@ async function applyEventImages() {
 }
 
 document.addEventListener("DOMContentLoaded", applyEventImages);
+
