@@ -24,8 +24,7 @@ async function applyBackgroundFromClass() {
     // Apply the background
     body.style.backgroundImage = `url(${match.link})`;
     body.style.backgroundSize = "cover";
-    body.style.backgroundRepeat = "no-repeat";
-    body.style.backgroundPosition = "center";
+    body.style.backgroundAttachment = "fixed";
 
   } catch (err) {
     console.error("Error loading background:", err);
@@ -62,4 +61,5 @@ async function applyEventImages() {
 }
 
 document.addEventListener("DOMContentLoaded", applyEventImages);
+
 
