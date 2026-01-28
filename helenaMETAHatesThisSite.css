@@ -7,3 +7,8 @@ html, body {
 .bruh {
     height: 400px;
 }
+.bruh a {
+    display: inline-block;
+    height: 400px;
+    width: 400px
+}
