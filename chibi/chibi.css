@@ -7,7 +7,7 @@ body {
 
 #sidebar {
   position: fixed;
-  width: 300px;
+  width: 350px;
   padding: 10px;
   top: 0;
   left: 0;
@@ -159,7 +159,7 @@ h3 {
 #chibiList, #skinList {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 40px;
 }
 
@@ -171,19 +171,18 @@ h3 {
   margin: 10px;
 }
 .chibi-item, .skin-item{
-  flex: 0 0 45%;   /* two per row */
   text-align: center;
   border-radius: 30px; 
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 136px;
+  width: 158px;
 }
 
 .chibi-item img, .skin-item img {
   cursor: pointer;
   object-fit: contain;
-  max-height: 119px;
-  min-width: 118px;
+  max-height: 129px;
+  min-width: 120px;
 }
 
 .chibi-caption, .skin-caption {
@@ -420,6 +419,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
