@@ -644,15 +644,18 @@ if (isMetaFactionSelected()) {
     if (activeFilters.event.size > 0 &&
         !activeFilters.event.has(chibi.event)) return false;
 
-    return true;
-  });
-  // Soft exclusions (default hidden)
+    // Soft exclusions (default hidden)
 if (softExclude.faction.has(chibi.faction)) return false;
 if (softExclude.type.has(chibi.type)) return false;
 if (softExclude.rarity.has(chibi.rarity)) return false;
+    
+    return true;
+  });
+  
   
   renderChibiList(results);
 }})
+
 
 
 
