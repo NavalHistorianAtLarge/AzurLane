@@ -37,6 +37,9 @@ body {
 .outerCollapsible.open > .outerContent {
   display: block;
 }
+.settingsPanel {
+  margin-bottom: 10px;
+}
 .settingsPanel p {
   padding: 0px;
   margin: 0;
@@ -429,6 +432,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
