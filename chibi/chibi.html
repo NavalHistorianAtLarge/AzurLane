@@ -23,6 +23,22 @@
       <div class="collapsible">
       <div class="collapsibleHeader">Faction</div>
       <div id="chibiFaction" class="collapsibleContent">
+        <div class="settingsPanel">
+        <h3>Default Hidden Factions</h3>
+          <label>
+        <input type="checkbox" data-softexclude="faction" value="siren">
+        Hide Sirens by default
+        </label>
+        <label>
+        <input type="checkbox" data-softexclude="faction" value="x">
+        Hide X by default
+        </label>
+
+        <label>
+        <input type="checkbox" data-softexclude="faction" value="collab">
+        Hide Collabs by default
+        </label>
+        </div>
       <button data-category="faction" data-filter="all">All</button>
       <button data-category="faction" data-filter="IronBlood" class="crimson">Ironblood</button>
       <button data-category="faction" data-filter="Vichya" class="crimson">Vichya Dominion</button>
@@ -162,6 +178,7 @@
   <script src="chibi.js"></script>
 </body>
 </html>
+
 
 
 
