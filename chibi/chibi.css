@@ -37,7 +37,10 @@ body {
 .outerCollapsible.open > .outerContent {
   display: block;
 }
-
+.settingsPanel p {
+  padding: 0px;
+  margin: 0;
+}
 /* Inner collapsibles */
 .collapsibleContent {
   display: none;
@@ -232,7 +235,7 @@ select {
 }
 label {
   display: inline;
-  font: 10px;
+  font-size: 10px;
 }
 button[data-filter="N"] {
   background-color: gray;
@@ -426,6 +429,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
