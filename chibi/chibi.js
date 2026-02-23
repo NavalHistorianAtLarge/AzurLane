@@ -512,7 +512,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
 
       applyFilters();
       return;
-
+    }
     if (activeFilters[category].has(value)) {
       activeFilters[category].delete(value);
       btn.classList.remove('active');
@@ -602,6 +602,7 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }
+
 
 
 
