@@ -521,8 +521,7 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       btn.classList.add('active');
     }
     applyFilters();
-  }});
-});
+  });
 
   const rarityAliases = {
   E: ["E", "MELITE"],
@@ -601,7 +600,8 @@ if (isMetaFactionSelected()) {
     return true;
   });
   renderChibiList(results);
-}
+}})
+
 
 
 
