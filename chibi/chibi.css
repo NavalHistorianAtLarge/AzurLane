@@ -221,11 +221,18 @@ select {
   display: flex;
 }
 
-input {
+#chibiSearch {
   width: 90%;
   padding: 6px;
   margin-bottom: 10px;
   font-family: "Comic Relief", cursive;
+}
+.chkbx {
+  display: inline;
+}
+label {
+  display: inline;
+  font: 10px;
 }
 button[data-filter="N"] {
   background-color: gray;
@@ -419,6 +426,7 @@ button[data-filter="SF"] {
 .rarity-MSR .chibi-caption{
   color: #fff;
 }
+
 
 
 
