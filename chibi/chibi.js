@@ -250,7 +250,8 @@ function showSkins(chibi) {
   chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
-    skinWrap.classList.add(`rarity-${chibi.rarity}`);
+    const rarity = skin.rarity || chibi.rarity;
+    skinWrap.classList.add(`rarity-${rarity}`);
 
     const img = document.createElement('img');
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
@@ -655,6 +656,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
