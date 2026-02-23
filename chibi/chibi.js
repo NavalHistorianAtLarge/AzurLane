@@ -601,6 +601,55 @@ if (isMetaFactionSelected()) {
   });
   renderChibiList(results);
 }})
+const softExclude = {
+  faction: new Set(),
+  type: new Set(),
+  rarity: new Set()
+};
+document.querySelectorAll('[data-softexclude]').forEach(box => {
+  box.addEventListener('change', () => {
+    const category = box.dataset.softexclude;
+    const value = box.value;
+
+    if (box.checked) {
+      softExclude[category].add(value);
+    } else {
+      softExclude[category].delete(value);
+    }
+
+    saveSoftExclusions();
+    applyFilters();
+  });
+});
+// Soft exclusions (default hidden)
+if (softExclude.faction.has(chibi.faction)) return false;
+if (softExclude.type.has(chibi.type)) return false;
+if (softExclude.rarity.has(chibi.rarity)) return false;
+
+function saveSoftExclusions() {
+  localStorage.setItem("softExclude", JSON.stringify(
+    Object.fromEntries(
+      Object.entries(softExclude).map(([k, v]) => [k, [...v]])
+    )
+  ));
+}
+function loadSoftExclusions() {
+  const saved = JSON.parse(localStorage.getItem("softExclude"));
+  if (!saved) return;
+
+  for (const [category, values] of Object.entries(saved)) {
+    values.forEach(v => softExclude[category].add(v));
+  }
+
+  // Restore checkbox states
+  document.querySelectorAll('[data-softexclude]').forEach(box => {
+    if (softExclude[box.dataset.softexclude].has(box.value)) {
+      box.checked = true;
+    }
+  });
+}
+
+loadSoftExclusions();
 
 
 
