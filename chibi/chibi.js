@@ -263,31 +263,28 @@ function showSkins(chibi, isRetrofit = false) {
   chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
+
+    const isRetrofitSkin =
+    skin.label.toLowerCase().includes("retrofit") ||
+    skin.id.toLowerCase().endsWith("g");
+    
     const rarity = skin.rarity ||
     (isRetrofitSkin && chibi.retrofit?.rarity) ||
     chibi.rarity;
-
-    const isRetrofitSkin =
-  skin.label.toLowerCase().includes("retrofit") ||
-  skin.id.toLowerCase().endsWith("g");
     
     skinWrap.classList.add(`rarity-${rarity}`);
+    if (isRetrofitSkin) skinWrap.classList.add("retrofit-skin");
 
+    // --- THUMBNAIL ---
+    const thumbId = skin.id;
     const img = document.createElement('img');
-    let thumbId = skin.id;
-
-    // If this is a retrofit skin, use the retrofit thumbnail
-    if (isRetrofitSkin) {
-    thumbId = skin.id; // CassinG, DownesG, etc.
-    }
-
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${thumbId}.png`;
-    
     img.alt = skin.label;
     img.title = skin.label;
+
     img.addEventListener('click', () => {
       currentSkin = skin;
-      loadSkin(skin)
+      loadSkin(skin);
     })
     
     const caption = document.createElement('div');
@@ -689,6 +686,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
