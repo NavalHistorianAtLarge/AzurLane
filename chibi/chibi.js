@@ -38,14 +38,18 @@ function getChibiThumbnail(chibi) {
   return `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${firstSkin.id}.png`;
 }
 
-function renderSingleChibi(chibi, rarity, isRetrofit) {
+function renderSingleChibi(chibi, rarity, isRetrofit = false) {
   const wrapper = document.createElement('div');
   wrapper.classList.add('chibi-item');
   wrapper.classList.add(`rarity-${rarity}`);
   if (isRetrofit) wrapper.classList.add('retrofit-entry');
 
   const img = document.createElement('img');
-  img.src = getChibiThumbnail(chibi);
+
+  // --- THIS IS THE IMPORTANT PART ---
+  const thumbId = isRetrofit ? `${chibi.skins[0].id}G` : chibi.skins[0].id;
+  img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${thumbId}.png`;
+
   img.alt = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
 
   img.addEventListener('click', () => showSkins(chibi, isRetrofit));
@@ -670,6 +674,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
