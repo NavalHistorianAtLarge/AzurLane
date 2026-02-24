@@ -255,13 +255,10 @@ document.getElementById('scaleSlider').addEventListener('input', e => {
 });
 
 // Step 2: show skins for chosen chibi
-function showSkins(chibi) {
+function showSkins(chibi, isRetrofit = false) {
   chibiView.classList.add('hidden');
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
-  const isRetrofitSkin =
-  skin.label.toLowerCase().includes("retrofit") ||
-  skin.id.toLowerCase().endsWith("g");
 
   chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
@@ -269,6 +266,10 @@ function showSkins(chibi) {
     const rarity = skin.rarity ||
     (isRetrofitSkin && chibi.retrofit?.rarity) ||
     chibi.rarity;
+
+    const isRetrofitSkin =
+  skin.label.toLowerCase().includes("retrofit") ||
+  skin.id.toLowerCase().endsWith("g");
     
     skinWrap.classList.add(`rarity-${rarity}`);
 
@@ -688,6 +689,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
