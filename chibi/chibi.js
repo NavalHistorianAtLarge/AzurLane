@@ -47,7 +47,19 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
   const img = document.createElement('img');
 
   // --- THIS IS THE IMPORTANT PART ---
-  const thumbId = isRetrofit ? `${chibi.skins[0].id}G` : chibi.skins[0].id;
+   let thumbId;
+
+  if (isRetrofit) {
+    const retroSkin = chibi.skins.find(s =>
+      s.label.toLowerCase().includes("retrofit") ||
+      s.id.toLowerCase().endsWith("g")
+    );
+
+    thumbId = retroSkin ? retroSkin.id : chibi.skins[0].id;
+  } else {
+    thumbId = chibi.skins[0].id;
+  }
+
   img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${thumbId}.png`;
 
   img.alt = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
@@ -686,6 +698,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
