@@ -505,7 +505,8 @@ const activeFilters = {
   metaClass: new Set(),
   metaOrigin: new Set(),
   group: new Set(),
-  event: new Set()
+  event: new Set(),
+  special: new Set(),
 };
 
 document.querySelectorAll('[data-filter]').forEach(btn => {
@@ -669,6 +670,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
