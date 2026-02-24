@@ -266,7 +266,10 @@ function showSkins(chibi) {
   chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
     skinWrap.classList.add('skin-item');
-    const rarity = skin.rarity || chibi.rarity;
+    const rarity = skin.rarity ||
+    (isRetrofitSkin && chibi.retrofit?.rarity) ||
+    chibi.rarity;
+    
     skinWrap.classList.add(`rarity-${rarity}`);
 
     const img = document.createElement('img');
@@ -685,6 +688,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
