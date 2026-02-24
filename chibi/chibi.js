@@ -38,36 +38,45 @@ function getChibiThumbnail(chibi) {
   return `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${firstSkin.id}.png`;
 }
 
+function renderSingleChibi(chibi, rarity, isRetrofit) {
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('chibi-item');
+  wrapper.classList.add(`rarity-${rarity}`);
+  if (isRetrofit) wrapper.classList.add('retrofit-entry');
+
+  const img = document.createElement('img');
+  img.src = getChibiThumbnail(chibi);
+  img.alt = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
+
+  img.addEventListener('click', () => showSkins(chibi, isRetrofit));
+
+  const caption = document.createElement('div');
+  caption.classList.add('chibi-caption');
+  caption.textContent = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
+
+  wrapper.appendChild(img);
+  wrapper.appendChild(caption);
+  chibiList.appendChild(wrapper);
+}
+
 function renderChibiList(list) {
   chibiList.innerHTML = '';
-
  list.forEach(chibi => {
-    const wrapper = document.createElement('div');
-    wrapper.classList.add('chibi-item');
-    wrapper.classList.add(`rarity-${chibi.rarity}`);
+       // --- RETROFIT-ONLY MODE ---
+    if (activeFilters.special?.has("hasRetrofit")) {
 
-    const img = document.createElement('img');
-    img.src = getChibiThumbnail(chibi);
-    img.alt = chibi.name;
-    img.addEventListener('click', () => showSkins(chibi));
+      // Skip ships with no retrofit data
+      if (!chibi.retrofit) return;
 
-    const caption = document.createElement('div');
-    caption.classList.add('chibi-caption');
-    caption.textContent = chibi.name;
-
-    wrapper.appendChild(img);  
-    wrapper.appendChild(caption);
-    chibiList.appendChild(wrapper);
-
-    // Special-case Tester sizing
-    if (chibi.name === "Tester") {
-        img.style.width = "150px";
-        img.style.height = "98px";
+      // Render ONLY the retrofit version
+      renderSingleChibi(chibi, chibi.retrofit.rarity, true);
+      return;
     }
-   if (chibi.name === "Downes") {
-       img.style.width = "93px";
-   }
-});
+
+    // --- NORMAL MODE (base chibi) ---
+    renderSingleChibi(chibi, chibi.rarity, false);
+  });
+
 }
 
   const searchInput = document.getElementById('chibiSearch');
@@ -586,6 +595,10 @@ function applyFilters() {
 
   const results = chibiData.filter(chibi => {
 
+    // If "Has Retrofit" is selected, only show ships WITH retrofits
+if (activeFilters.special.has("hasRetrofit")) {
+  if (!chibi.retrofit) return false; // hide ships without retrofit
+}
     // Faction
     if (activeFilters.faction.size > 0 &&
         !activeFilters.faction.has(chibi.faction)) return false;
@@ -656,6 +669,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
