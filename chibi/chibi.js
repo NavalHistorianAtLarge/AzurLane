@@ -259,6 +259,9 @@ function showSkins(chibi) {
   chibiView.classList.add('hidden');
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
+  const isRetrofitSkin =
+  skin.label.toLowerCase().includes("retrofit") ||
+  skin.id.toLowerCase().endsWith("g");
 
   chibi.skins.forEach(skin => {
     const skinWrap = document.createElement('div');
@@ -267,7 +270,15 @@ function showSkins(chibi) {
     skinWrap.classList.add(`rarity-${rarity}`);
 
     const img = document.createElement('img');
-    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${skin.id}.png`; // e.g. zuikaku1.png
+    let thumbId = skin.id;
+
+    // If this is a retrofit skin, use the retrofit thumbnail
+    if (isRetrofitSkin) {
+    thumbId = skin.id; // CassinG, DownesG, etc.
+    }
+
+    img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${thumbId}.png`;
+    
     img.alt = skin.label;
     img.title = skin.label;
     img.addEventListener('click', () => {
@@ -674,6 +685,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
