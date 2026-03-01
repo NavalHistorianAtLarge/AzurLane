@@ -311,8 +311,8 @@ function showSkins(chibi, isRetrofit = false) {
       const maxWidth =  150;
 
     if (SMALL_CHIBIS.has(chibi.name) ||
-          naturalW > maxHeight ||
-          naturalH > maxWidth) {
+          naturalW > maxWidth ||
+          naturalH > maxHeight) {
       img.classList.add("chibi-smaller");
   }
 };
@@ -721,6 +721,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
