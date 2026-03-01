@@ -70,14 +70,9 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
   caption.classList.add('chibi-caption');
   caption.textContent = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
 
-  const oversize = new Set([
-    "Yorktown II",
-    "Laffey II"
-  ])
-  if (oversize.has(chibi.name)) {
+ if (chibi.oversize) {
   img.classList.add("chibi-smaller");
 }
-
   wrapper.appendChild(img);
   wrapper.appendChild(caption);
   chibiList.appendChild(wrapper);
@@ -301,11 +296,9 @@ function showSkins(chibi, isRetrofit = false) {
     img.src = `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/assets/thumbnails/${thumbId}.png`;
     img.alt = skin.label;
     img.title = skin.label;
-
-    const oversizeSkins = new Set(["YorktownII", "LaffeyII", "ColoradoG"]);
-
-    if (oversizeSkins.has(skin.id)) {
-      img.classList.add("chibi-smaller");
+    
+    if (skin.oversize) {
+    img.classList.add("chibi-smaller");
   }
 
 
@@ -713,6 +706,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
