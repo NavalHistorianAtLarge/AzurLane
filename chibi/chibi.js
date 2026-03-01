@@ -302,6 +302,21 @@ function showSkins(chibi, isRetrofit = false) {
     img.alt = skin.label;
     img.title = skin.label;
 
+    const oversize = new Set(["Yorktown II", "Tester"]);
+
+    img.onload = () => {
+      const naturalW = img.naturalWidth;
+      const naturalH = img.naturalHeight;
+      const maxHeight = 170;
+      const maxWidth =  150;
+
+    if (SMALL_CHIBIS.has(chibi.name) ||
+          naturalW > maxHeight ||
+          naturalH > maxWidth) {
+      img.classList.add("chibi-smaller");
+  }
+};
+
     img.addEventListener('click', () => {
       currentSkin = skin;
       loadSkin(skin);
@@ -706,6 +721,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
