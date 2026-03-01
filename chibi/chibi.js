@@ -70,9 +70,13 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
   caption.classList.add('chibi-caption');
   caption.textContent = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
 
-  if (chibi.name === "Yorktown II") {
-  img.classList.add("chibi-yorktown2");
-  }
+  const oversize = new Set([
+    "Yorktown II",
+    "Laffey II"
+  ])
+  if (oversize.has(chibi.name)) {
+  img.classList.add("chibi-smaller");
+}
 
   wrapper.appendChild(img);
   wrapper.appendChild(caption);
@@ -702,6 +706,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
