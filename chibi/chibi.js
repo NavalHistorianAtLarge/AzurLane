@@ -11,6 +11,7 @@ app.renderer.resize(1024, 1024); // or whatever fixed size you want
 
 let currentChibi = null;
 let currentSkin = null;
+let currentCaptureContainer = null;
 
 const chibiList = document.getElementById('chibiList');
 const skinList = document.getElementById('skinList');
@@ -715,6 +716,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
