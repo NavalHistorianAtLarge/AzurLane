@@ -200,9 +200,20 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
   spineChar.scale.set(1.0);
   spineChar.state.setAnimation(0, 'normal', true);
 
-  app.stage.addChild(spineChar);
-  currentChibi = spineChar;
-  currentSkin = skin;
+ // Create capture container ONCE per skin load
+const captureContainer = new PIXI.Container();
+captureContainer.x = 0;
+captureContainer.y = 0;
+captureContainer.hitArea = new PIXI.Rectangle(-400, -800, 800, 1200);
+// Add container to stage
+app.stage.addChild(captureContainer);
+
+// Add chibi into the container
+captureContainer.addChild(spineChar);
+
+// Save references
+currentChibi = spineChar;
+currentCaptureContainer = captureContainer;
     
     // Enable dragging
     spineChar.interactive = true;
@@ -399,6 +410,7 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       return;
     }
 
+captureContainer.addChild(spineChar);
     const duration = anim.duration; // in seconds
     const frameCount = Math.ceil(duration * fps);
 
@@ -422,7 +434,7 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       if (elapsed + delta >= targetTime) {
         // Render and save frame
         app.renderer.render(app.stage);
-        const canvas = app.renderer.extract.canvas(app.stage);
+        const canvas = app.renderer.extract.canvas(currentCaptureContainer);
         const dataURL = canvas.toDataURL("image/png");
 
         zipFolder.file(
@@ -704,6 +716,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
