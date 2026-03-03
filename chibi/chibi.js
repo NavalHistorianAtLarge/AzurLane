@@ -173,7 +173,7 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-  if (currentChibi) app.stage.removeChild(currentChibi);
+  if (currentCaptureContainer) app.stage.removeChild(currentCaptureContainer);
 
   const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
@@ -715,6 +715,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
