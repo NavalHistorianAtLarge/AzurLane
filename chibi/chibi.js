@@ -198,7 +198,7 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
   spineChar.y = 900; // whatever looks right
     
   spineChar.scale.set(1.0);
-  spineChar.state.setAnimation(0, 'stand', true);
+  spineChar.state.setAnimation(0, 'normal', true);
 
   app.stage.addChild(spineChar);
   currentChibi = spineChar;
@@ -704,6 +704,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
