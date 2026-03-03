@@ -195,7 +195,7 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
 }
     
   spineChar.x = 512;
-  spineChar.y = 900; // whatever looks right
+  spineChar.y = 500; // whatever looks right
     
   spineChar.scale.set(1.0);
   spineChar.state.setAnimation(0, 'normal', true);
@@ -410,6 +410,9 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       return;
     }
 
+    const duration = anim.duration; // in seconds
+    const frameCount = Math.ceil(duration * fps);
+    
     // Set animation
     spineChar.state.setAnimation(0, animationName, true);
 
@@ -712,6 +715,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
