@@ -2,10 +2,11 @@ const app = new PIXI.Application({
   width: 800,
   height: 800,
   resolution: window.devicePixelRatio,
-  autoDensity: true,
   transparent: true
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
+app.renderer.autoResize = false;
+app.renderer.resize(1024, 1024); // or whatever fixed size you want
 
 
 let currentChibi = null;
@@ -193,12 +194,9 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
     spineChar.skeleton.updateWorldTransform();
 }
     
-  // Center horizontally
-  spineChar.x = app.renderer.width / 2;
-
-  // Place bottom of skeleton at 90% of screen height
-  spineChar.y = app.renderer.height * 0.9 - bounds.height * spineChar.scale.y;
-
+  spineChar.x = 512;
+  spineChar.y = 900; // whatever looks right
+    
   spineChar.scale.set(1.0);
   spineChar.state.setAnimation(0, 'stand', true);
 
@@ -706,6 +704,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
