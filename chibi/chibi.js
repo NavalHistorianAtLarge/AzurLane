@@ -174,7 +174,7 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-  if (currentCaptureContainer) app.stage.removeChild(currentCaptureContainer);
+  if (current) app.stage.removeChild(current);
 
   const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
@@ -206,7 +206,37 @@ const captureContainer = new PIXI.Container();
 captureContainer.x = 0;
 captureContainer.y = 0;
 captureContainer.hitArea = new PIXI.Rectangle(-400, -800, 800, 1200);
-// Add container to stage
+captureContainer.interactive = true;
+captureContainer.cursor = 'grab';
+
+let dragging = false;
+let dragOffset = { x: 0, y: 0 };
+
+captureContainer.on('pointerdown', (e) => {
+  dragging = true;
+  captureContainer.cursor = 'grabbing';
+  const pos = e.data.getLocalPosition(captureContainer.parent);
+  dragOffset.x = pos.x - captureContainer.x;
+  dragOffset.y = pos.y - captureContainer.y;
+});
+
+captureContainer.on('pointerup', () => {
+  dragging = false;
+  captureContainer.cursor = 'grab';
+});
+
+captureContainer.on('pointerupoutside', () => {
+  dragging = false;
+  captureContainer.cursor = 'grab';
+});
+
+captureContainer.on('pointermove', (e) => {
+  if (!dragging) return;
+  const pos = e.data.getLocalPosition(captureContainer.parent);
+  captureContainer.x = pos.x - dragOffset.x;
+  captureContainer.y = pos.y - dragOffset.y;
+});
+    // Add container to stage
 app.stage.addChild(captureContainer);
 
 // Add chibi into the container
@@ -716,6 +746,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
