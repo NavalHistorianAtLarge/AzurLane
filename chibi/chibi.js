@@ -410,10 +410,6 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       return;
     }
 
-captureContainer.addChild(spineChar);
-    const duration = anim.duration; // in seconds
-    const frameCount = Math.ceil(duration * fps);
-
     // Set animation
     spineChar.state.setAnimation(0, animationName, true);
 
@@ -716,6 +712,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
