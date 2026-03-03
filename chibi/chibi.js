@@ -6,7 +6,7 @@ const app = new PIXI.Application({
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
 app.renderer.autoResize = false;
-app.renderer.resize(1024, 1024); // or whatever fixed size you want
+app.renderer.resize(2048, 2048); // or whatever fixed size you want
 
 
 let currentChibi = null;
@@ -716,6 +716,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
