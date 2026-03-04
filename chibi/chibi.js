@@ -11,7 +11,6 @@ app.renderer.resize(2048, 2048); // or whatever fixed size you want
 
 let currentChibi = null;
 let currentSkin = null;
-let currentCaptureContainer = null;
 
 const chibiList = document.getElementById('chibiList');
 const skinList = document.getElementById('skinList');
@@ -174,11 +173,14 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-  if (currentCaptureContainer) app.stage.removeChild(currentCaptureContainer);
+  if (currentChibi) app.stage.removeChild(currentChibi);
 
   const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    
+  spineChar.scale.set(1.0);
+  spineChar.state.setAnimation(0, 'normal', true);
 
-const bounds = spineChar.getBounds();
+    const bounds = spineChar.getBounds();
 const w = bounds.width;
 const h = bounds.height;
 
@@ -194,57 +196,13 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
     spineChar.skeleton.scaleY = baseScale;
     spineChar.skeleton.updateWorldTransform();
 }
-    
-  spineChar.x = 512;
+
+    spineChar.x = 512;
   spineChar.y = 500; // whatever looks right
     
-  spineChar.scale.set(1.0);
-  spineChar.state.setAnimation(0, 'normal', true);
-
- // Create capture container ONCE per skin load
-const captureContainer = new PIXI.Container();
-captureContainer.x = 0;
-captureContainer.y = 0;
-captureContainer.hitArea = new PIXI.Rectangle(-400, -800, 800, 1200);
-captureContainer.interactive = true;
-captureContainer.cursor = 'grab';
-
-let dragging = false;
-let dragOffset = { x: 0, y: 0 };
-
-captureContainer.on('pointerdown', (e) => {
-  dragging = true;
-  captureContainer.cursor = 'grabbing';
-  const pos = e.data.getLocalPosition(captureContainer.parent);
-  dragOffset.x = pos.x - captureContainer.x;
-  dragOffset.y = pos.y - captureContainer.y;
-});
-
-captureContainer.on('pointerup', () => {
-  dragging = false;
-  captureContainer.cursor = 'grab';
-});
-
-captureContainer.on('pointerupoutside', () => {
-  dragging = false;
-  captureContainer.cursor = 'grab';
-});
-
-captureContainer.on('pointermove', (e) => {
-  if (!dragging) return;
-  const pos = e.data.getLocalPosition(captureContainer.parent);
-  captureContainer.x = pos.x - dragOffset.x;
-  captureContainer.y = pos.y - dragOffset.y;
-});
-    // Add container to stage
-app.stage.addChild(captureContainer);
-
-// Add chibi into the container
-captureContainer.addChild(spineChar);
-
 // Save references
-currentChibi = spineChar;
-currentCaptureContainer = captureContainer;
+    app.stage.addChild(spineChar);
+    currentChibi = spineChar;
     
     // Enable dragging
     spineChar.interactive = true;
@@ -464,7 +422,7 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       if (elapsed + delta >= targetTime) {
         // Render and save frame
         app.renderer.render(app.stage);
-        const canvas = app.renderer.extract.canvas(currentCaptureContainer);
+        const canvas = app.renderer.extract.canvas(app.stage);
         const dataURL = canvas.toDataURL("image/png");
 
         zipFolder.file(
@@ -746,6 +704,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
