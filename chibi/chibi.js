@@ -413,16 +413,19 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
 
     // Identify the root bone
     
-    function step() {
-      // Advance animation by fixed delta
-      spineChar.update(delta);
+    const root = spineChar.skeleton.findBone("root");
+const motionBones = spineChar.skeleton.bones.filter(b => b.parent === root);
 
-     for (const b of spineChar.skeleton.bones) {
-    if (!b.parent) {  // bones with no parent = top-level motion bones
+function step() {
+    spineChar.update(delta);
+
+    // Freeze root and all direct children of root
+    root.x = 0;
+    root.y = 0;
+    for (const b of motionBones) {
         b.x = 0;
         b.y = 0;
     }
-}
 spineChar.skeleton.updateWorldTransform();
       
 
@@ -707,6 +710,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
