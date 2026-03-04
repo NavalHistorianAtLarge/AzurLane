@@ -173,56 +173,49 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
+  if (currentChibi) app.stage.removeChild(currentChibi);
 
-    // Remove previous chibi
-    if (currentChibi) app.stage.removeChild(currentChibi);
+  const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
-    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+const bounds = spineChar.getBounds();
+const w = bounds.width;
+const h = bounds.height;
 
-    // Add to stage FIRST so bounds are in correct world space
-    app.stage.addChild(spineChar);
+const MAX_SIZE = 600; // or 700, or whatever fits your canvas
 
-    // Pose the skeleton
-    spineChar.state.setAnimation(0, 'normal', true);
-    spineChar.update(0);
+let baseScale = 1;
+
+if (w > MAX_SIZE || h > MAX_SIZE) {
+    // shrink proportionally so the largest dimension fits MAX_SIZE
+    baseScale = MAX_SIZE / Math.max(w, h);
+
+    spineChar.skeleton.scaleX = baseScale;
+    spineChar.skeleton.scaleY = baseScale;
     spineChar.skeleton.updateWorldTransform();
+}
+    
+  // Center horizontally
+  spineChar.x = app.renderer.width / 2;
 
-    // First bounds
-    let bounds = spineChar.getBounds();
+  // Place bottom of skeleton at 90% of screen height
+  spineChar.y = app.renderer.height * 0.9 - bounds.height * spineChar.scale.y;
 
-    // Optional scaling
-    const MAX_SIZE = 600;
-    let baseScale = 1;
+  spineChar.scale.set(1.0);
+  spineChar.state.setAnimation(0, 'normal', true);
 
-    if (bounds.width > MAX_SIZE || bounds.height > MAX_SIZE) {
-      baseScale = MAX_SIZE / Math.max(bounds.width, bounds.height);
-      spineChar.scaleX = baseScale;
-      spineChar.scaleY = baseScale;
-      spineChar.updateWorldTransform();
-    }
-
-    // Recompute bounds after scaling
-    bounds = spineChar.getBounds();
-
-    // Center the chibi visually
-    const centerX = app.renderer.width / 2;
-    const centerY = app.renderer.height / 2;
-
-    spineChar.x = centerX - (bounds.x + bounds.width / 2);
-    spineChar.y = centerY - (bounds.y + bounds.height / 2);
-
-    // Save reference
-    currentChibi = spineChar;
-
-    // Dragging
+  app.stage.addChild(spineChar);
+  currentChibi = spineChar;
+  currentSkin = skin;
+    
+    // Enable dragging
     spineChar.interactive = true;
-    spineChar.buttonMode = true;
+    spineChar.buttonMode = true; // cursor: pointer
 
     spineChar
-      .on('pointerdown', onDragStart)
-      .on('pointerup', onDragEnd)
-      .on('pointerupoutside', onDragEnd)
-      .on('pointermove', onDragMove);
+  .on('pointerdown', onDragStart)
+  .on('pointerup', onDragEnd)
+  .on('pointerupoutside', onDragEnd)
+  .on('pointermove', onDragMove);
 
     showAnimations();
   });
@@ -714,6 +707,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
