@@ -196,9 +196,9 @@ function loadSkin(skin) {
 
     if (bounds.width > MAX_SIZE || bounds.height > MAX_SIZE) {
       baseScale = MAX_SIZE / Math.max(bounds.width, bounds.height);
-      spineChar.skeleton.scaleX = baseScale;
-      spineChar.skeleton.scaleY = baseScale;
-      spineChar.skeleton.updateWorldTransform();
+      spineChar.scaleX = baseScale;
+      spineChar.scaleY = baseScale;
+      spineChar.updateWorldTransform();
     }
 
     // Recompute bounds after scaling
@@ -714,6 +714,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
