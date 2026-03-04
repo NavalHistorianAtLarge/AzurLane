@@ -176,29 +176,25 @@ function loadSkin(skin) {
   if (currentChibi) app.stage.removeChild(currentChibi);
 
   const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+
     
   spineChar.scale.set(1.0);
   spineChar.state.setAnimation(0, 'normal', true);
-
+  spineChar.update(0);
+  spineChar.skeleton.updateWorldTransform();
+    
+   // Get bounds
     const bounds = spineChar.getBounds();
-const w = bounds.width;
-const h = bounds.height;
 
-const MAX_SIZE = 600; // or 700, or whatever fits your canvas
+    // Canvas center
+    const centerX = app.renderer.width / 2;
+const centerY = app.renderer.height / 2;
 
-let baseScale = 1;
+// Move chibi so its visual center sits at canvas center
+spineChar.x = centerX - (bounds.x + bounds.width / 2);
+spineChar.y = centerY - (bounds.y + bounds.height / 2);
 
-if (w > MAX_SIZE || h > MAX_SIZE) {
-    // shrink proportionally so the largest dimension fits MAX_SIZE
-    baseScale = MAX_SIZE / Math.max(w, h);
 
-    spineChar.skeleton.scaleX = baseScale;
-    spineChar.skeleton.scaleY = baseScale;
-    spineChar.skeleton.updateWorldTransform();
-}
-
-    spineChar.x = 512;
-  spineChar.y = 500; // whatever looks right
     
 // Save references
     app.stage.addChild(spineChar);
@@ -704,6 +700,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
