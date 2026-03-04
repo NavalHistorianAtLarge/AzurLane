@@ -412,14 +412,14 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
     const delta = 1 / fps;
 
     // Identify the root bone
-    const root = spineChar.skeleton.bones[0];
-
+    const root = spineChar.skeleton.findBone("root");
+    
     function step() {
       // Advance animation by fixed delta
       spineChar.update(delta);
 
-      console.log(root.worldX, root.worldY);
-
+console.log("ROOT:", root.worldX, root.worldY);
+      
       // Freeze root motion
       root.x = 0;
       root.y = 0;
@@ -706,6 +706,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
