@@ -413,21 +413,18 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
 
     // Identify the root bone
     
-    const root = spineChar.skeleton.findBone("root");
-const motionBones = spineChar.skeleton.bones.filter(b => b.parent === root);
-
 function step() {
-    spineChar.update(delta);
+    spineChar.update(delta);      
 
-    // Freeze root and all direct children of root
-    root.x = 0;
-    root.y = 0;
-    for (const b of motionBones) {
-        b.x = 0;
-        b.y = 0;
-    }
-spineChar.skeleton.updateWorldTransform();
-      
+    // Recompute bounds
+    const bounds = spineChar.getBounds();
+
+    // Center on canvas
+    const centerX = app.renderer.width / 2;
+const centerY = app.renderer.height / 2;
+
+spineChar.x = centerX - (bounds.x + bounds.width / 2);
+spineChar.y = centerY - (bounds.y + bounds.height / 2);
 
       // Render and save frame
       app.renderer.render(app.stage);
@@ -710,6 +707,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
