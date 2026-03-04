@@ -184,16 +184,25 @@ function loadSkin(skin) {
   spineChar.skeleton.updateWorldTransform();
     
    // Get bounds
-    const bounds = spineChar.getBounds();
-
+    let bounds = spineChar.getBounds();
     // Canvas center
-    const centerX = app.renderer.width / 2;
+    const MAX_SIZE = 600;
+let baseScale = 1;
+
+if (bounds.width > MAX_SIZE || bounds.height > MAX_SIZE) {
+  baseScale = MAX_SIZE / Math.max(bounds.width, bounds.height);
+  spineChar.skeleton.scaleX = baseScale;
+  spineChar.skeleton.scaleY = baseScale;
+  spineChar.skeleton.updateWorldTransform();
+}
+
+    bounds = spineChar.getBounds();
+    
+const centerX = app.renderer.width / 2;
 const centerY = app.renderer.height / 2;
 
-// Move chibi so its visual center sits at canvas center
 spineChar.x = centerX - (bounds.x + bounds.width / 2);
 spineChar.y = centerY - (bounds.y + bounds.height / 2);
-
 
     
 // Save references
@@ -700,6 +709,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
