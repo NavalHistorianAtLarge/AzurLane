@@ -173,51 +173,56 @@ document.getElementById('flipY').addEventListener('click', flipChibiY);
 function loadSkin(skin) {
   const loader = new PIXI.loaders.Loader();
   loader.add(skin.id, skin.path).load((l, resources) => {
-  if (currentChibi) app.stage.removeChild(currentChibi);
 
-  const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
+    // Remove previous chibi
+    if (currentChibi) app.stage.removeChild(currentChibi);
 
-    
-  spineChar.scale.set(1.0);
-  spineChar.state.setAnimation(0, 'normal', true);
-  spineChar.update(0);
-  spineChar.skeleton.updateWorldTransform();
-    
-   // Get bounds
-    let bounds = spineChar.getBounds();
-    // Canvas center
-    const MAX_SIZE = 600;
-let baseScale = 1;
+    const spineChar = new PIXI.spine.Spine(resources[skin.id].spineData);
 
-if (bounds.width > MAX_SIZE || bounds.height > MAX_SIZE) {
-  baseScale = MAX_SIZE / Math.max(bounds.width, bounds.height);
-  spineChar.skeleton.scaleX = baseScale;
-  spineChar.skeleton.scaleY = baseScale;
-  spineChar.skeleton.updateWorldTransform();
-}
-
-    bounds = spineChar.getBounds();
-    
-const centerX = app.renderer.width / 2;
-const centerY = app.renderer.height / 2;
-
-spineChar.x = centerX - (bounds.x + bounds.width / 2);
-spineChar.y = centerY - (bounds.y + bounds.height / 2);
-
-    
-// Save references
+    // Add to stage FIRST so bounds are in correct world space
     app.stage.addChild(spineChar);
+
+    // Pose the skeleton
+    spineChar.state.setAnimation(0, 'normal', true);
+    spineChar.update(0);
+    spineChar.skeleton.updateWorldTransform();
+
+    // First bounds
+    let bounds = spineChar.getBounds();
+
+    // Optional scaling
+    const MAX_SIZE = 600;
+    let baseScale = 1;
+
+    if (bounds.width > MAX_SIZE || bounds.height > MAX_SIZE) {
+      baseScale = MAX_SIZE / Math.max(bounds.width, bounds.height);
+      spineChar.skeleton.scaleX = baseScale;
+      spineChar.skeleton.scaleY = baseScale;
+      spineChar.skeleton.updateWorldTransform();
+    }
+
+    // Recompute bounds after scaling
+    bounds = spineChar.getBounds();
+
+    // Center the chibi visually
+    const centerX = app.renderer.width / 2;
+    const centerY = app.renderer.height / 2;
+
+    spineChar.x = centerX - (bounds.x + bounds.width / 2);
+    spineChar.y = centerY - (bounds.y + bounds.height / 2);
+
+    // Save reference
     currentChibi = spineChar;
-    
-    // Enable dragging
+
+    // Dragging
     spineChar.interactive = true;
-    spineChar.buttonMode = true; // cursor: pointer
+    spineChar.buttonMode = true;
 
     spineChar
-  .on('pointerdown', onDragStart)
-  .on('pointerup', onDragEnd)
-  .on('pointerupoutside', onDragEnd)
-  .on('pointermove', onDragMove);
+      .on('pointerdown', onDragStart)
+      .on('pointerup', onDragEnd)
+      .on('pointerupoutside', onDragEnd)
+      .on('pointermove', onDragMove);
 
     showAnimations();
   });
@@ -709,6 +714,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
