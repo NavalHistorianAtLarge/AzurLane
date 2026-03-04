@@ -416,6 +416,8 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       // Advance animation by fixed delta
       spineChar.update(delta);
 
+      console.log(root.worldX, root.worldY);
+
       // Freeze root motion
       root.x = 0;
       root.y = 0;
@@ -702,6 +704,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
