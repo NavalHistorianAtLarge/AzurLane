@@ -204,6 +204,8 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
   app.stage.addChild(spineChar);
   currentChibi = spineChar;
   currentSkin = skin;
+
+    console.log(spineChar.skeleton.bones.map(b => b.data.name));
     
     // Enable dragging
     spineChar.interactive = true;
@@ -704,6 +706,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
