@@ -392,7 +392,7 @@ animSelect.addEventListener('change', e => {
 
 async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFolder) {
   return new Promise((resolve) => {
-    // Find animation duration
+
     const anim = spineChar.spineData.animations.find(a => a.name === animationName);
     if (!anim) {
       console.error(`Animation "${animationName}" not found.`);
@@ -400,51 +400,41 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
       return;
     }
 
-    const duration = anim.duration; // in seconds
+    const duration = anim.duration;
     const frameCount = Math.ceil(duration * fps);
-    
+
     // Set animation
-    spineChar.state.setAnimation(0, animationName, true);
+    spineChar.state.setAnimation(0, animationName, false);
 
     let frame = 0;
-    let elapsed = 0;
-    let lastTime = performance.now();
+    const delta = 1 / fps;
 
     function step() {
-      const now = performance.now();
-      const delta = (now - lastTime) / 1000; // seconds
-      lastTime = now;
-
-      // Advance animation by real time
+      // Advance animation by fixed delta
       spineChar.update(delta);
 
-      // Capture frames at fixed intervals
-      const targetTime = frame * (1 / fps);
-      if (elapsed + delta >= targetTime) {
-        // Render and save frame
-        app.renderer.render(app.stage);
-        const canvas = app.renderer.extract.canvas(app.stage);
-        const dataURL = canvas.toDataURL("image/png");
+      // Render and save frame
+      app.renderer.render(app.stage);
+      const canvas = app.renderer.extract.canvas(app.stage);
+      const dataURL = canvas.toDataURL("image/png");
 
-        zipFolder.file(
-          `${animationName}_frame_${String(frame).padStart(3, '0')}.png`,
-          dataURL.split(',')[1],
-          { base64: true }
-        );
+      zipFolder.file(
+        `${animationName}_frame_${String(frame).padStart(3, '0')}.png`,
+        dataURL.split(',')[1],
+        { base64: true }
+      );
 
-        frame++;
-      }
-
-      elapsed += delta;
+      frame++;
 
       if (frame < frameCount) {
-        requestAnimationFrame(step);
+        // Use setTimeout to avoid blocking the UI thread
+        setTimeout(step, 0);
       } else {
         resolve();
       }
     }
 
-    requestAnimationFrame(step);
+    step();
   });
 }
 document.getElementById('saveZipBtn').addEventListener('click', async () => {
@@ -705,6 +695,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
