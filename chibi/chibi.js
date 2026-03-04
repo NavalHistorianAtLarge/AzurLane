@@ -409,9 +409,20 @@ async function captureAnimationFrames(spineChar, animationName, fps = 60, zipFol
     let frame = 0;
     const delta = 1 / fps;
 
+    spineChar.state.apply(spineChar.skeleton);
+    spineChar.skeleton.updateWorldTransform();
+
+    // Freeze root bone translation
+    spineChar.skeleton.rootBone.x = 0;
+    spineChar.skeleton.rootBone.y = 0;
+
     function step() {
       // Advance animation by fixed delta
       spineChar.update(delta);
+
+      spineChar.skeleton.rootBone.x = 0;
+      spineChar.skeleton.rootBone.y = 0;
+      spineChar.skeleton.updateWorldTransform();
 
       // Render and save frame
       app.renderer.render(app.stage);
@@ -695,6 +706,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
