@@ -2,12 +2,10 @@ const app = new PIXI.Application({
   width: 800,
   height: 800,
   resolution: window.devicePixelRatio,
+  autoDensity: true,
   transparent: true
 });
 document.getElementById('chibiCanvas').appendChild(app.view);
-app.renderer.autoResize = false;
-app.renderer.resize(2048, 2048); // or whatever fixed size you want
-
 
 let currentChibi = null;
 let currentSkin = null;
@@ -707,6 +705,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
