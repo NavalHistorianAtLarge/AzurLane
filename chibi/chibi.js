@@ -204,8 +204,6 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
   app.stage.addChild(spineChar);
   currentChibi = spineChar;
   currentSkin = skin;
-
-    console.log(spineChar.skeleton.bones.map(b => b.data.name));
     
     // Enable dragging
     spineChar.interactive = true;
@@ -263,8 +261,6 @@ document.getElementById("fitToCanvasBtn").addEventListener("click", () => {
     } else {
         currentChibi.scale.set(baseScale);
     }
-
-    console.log("Fit-to-canvas applied:", baseScale);
 });
 document.getElementById('scaleSlider').addEventListener('input', e => {
   setChibiScale(parseFloat(e.target.value));
@@ -707,6 +703,7 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   
   renderChibiList(results);
 }})
+
 
 
 
