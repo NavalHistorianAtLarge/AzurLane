@@ -430,10 +430,8 @@ button[data-filter="SF"] {
 }
 .rarity-MELITE .chibi-caption,
 .rarity-MSR .chibi-caption,
-.rarity-MUR .chibi-caption,
 .rarity-MELITE .skin-caption,
-.rarity-MSR .skin-caption,
-.rarity-MUR .skin-caption {
+.rarity-MSR .skin-caption {
   color: #fff;
 }
 .chibi-smaller {
