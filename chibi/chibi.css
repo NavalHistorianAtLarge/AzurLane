@@ -188,7 +188,7 @@ h3 {
   cursor: pointer;
   object-fit: contain;
   max-height: 129px;
-  min-width: 120px;
+  min-width: 124px;
 }
 
 .chibi-caption, .skin-caption {
@@ -430,8 +430,10 @@ button[data-filter="SF"] {
 }
 .rarity-MELITE .chibi-caption,
 .rarity-MSR .chibi-caption,
+.rarity-MUR .chibi-caption,
 .rarity-MELITE .skin-caption,
-.rarity-MSR .skin-caption {
+.rarity-MSR .skin-caption,
+.rarity-MUR .skin-caption {
   color: #fff;
 }
 .chibi-smaller {
