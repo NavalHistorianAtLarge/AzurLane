@@ -97,31 +97,65 @@ function renderChibiList(list) {
 
 }
 
-function normalizeJP(str) {
+function normalizeLongVowels(str) {
   return str
     .toLowerCase()
-    // macrons → plain long vowels
+    // macrons → long-vowel sequences
     .replace(/ō/g, "ou")
     .replace(/ū/g, "uu")
     .replace(/ā/g, "aa")
     .replace(/ī/g, "ii")
     .replace(/ē/g, "ei")
-    // optional: collapse double-o into ou
+    // common user spellings → normalized
     .replace(/oo/g, "ou");
 }
+function normalizeUmlauts(str) {
+  return str
+    .replace(/ä/g, "ae")
+    .replace(/ö/g, "oe")
+    .replace(/ü/g, "ue")
+    .replace(/ß/g, "ss");
+}
+function normalize(str) {
+  return normalizeUmlauts(normalizeLongVowels(str.toLowerCase()));
+}
+function levenshtein(a, b) {
+  const m = [];
+  for (let i = 0; i <= b.length; i++) m[i] = [i];
+  for (let j = 0; j <= a.length; j++) m[0][j] = j;
+
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      m[i][j] = b[i - 1] === a[j - 1]
+        ? m[i - 1][j - 1]
+        : Math.min(
+            m[i - 1][j - 1] + 1,
+            m[i][j - 1] + 1,
+            m[i - 1][j] + 1
+          );
+    }
+  }
+  return m[b.length][a.length];
+}
+
   const searchInput = document.getElementById('chibiSearch');
 
   searchInput.addEventListener('input', () => {
-  const term = normalizeJP(searchInput.value);
+  const term = normalize(searchInput.value);
 
-   const filtered = chibiData.filter(chibi => {
-    const nameNorm = normalizeJP(chibi.name);
-    return nameNorm.includes(term);
+  const filtered = chibiData.filter(chibi => {
+    const nameNorm = normalize(chibi.name);
+
+    // direct substring match
+    if (nameNorm.includes(term)) return true;
+
+    // fuzzy match (allow small typos)
+    const dist = levenshtein(nameNorm, term);
+    return dist <= 2; // tweak threshold as needed
   });
 
   renderChibiList(filtered);
 });
-
   const filterButtons = document.querySelectorAll('#options button');
 
 filterButtons.forEach(btn => {
