@@ -97,14 +97,27 @@ function renderChibiList(list) {
 
 }
 
+function normalizeJP(str) {
+  return str
+    .toLowerCase()
+    // macrons → plain long vowels
+    .replace(/ō/g, "ou")
+    .replace(/ū/g, "uu")
+    .replace(/ā/g, "aa")
+    .replace(/ī/g, "ii")
+    .replace(/ē/g, "ei")
+    // optional: collapse double-o into ou
+    .replace(/oo/g, "ou");
+}
   const searchInput = document.getElementById('chibiSearch');
 
   searchInput.addEventListener('input', () => {
-  const term = searchInput.value.toLowerCase();
+  const term = normalizeJP(searchInput.value);
 
-  const filtered = chibiData.filter(chibi =>
-  chibi.name.toLowerCase().includes(term)
-  );
+   const filtered = chibiData.filter(chibi => {
+    const nameNorm = normalizeJP(chibi.name);
+    return nameNorm.includes(term);
+  });
 
   renderChibiList(filtered);
 });
