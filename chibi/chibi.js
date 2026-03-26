@@ -246,8 +246,16 @@ if (w > MAX_SIZE || h > MAX_SIZE) {
   spineChar.y = app.renderer.height * 0.9 - bounds.height * spineChar.scale.y;
 
   spineChar.scale.set(1.0);
-  spineChar.state.setAnimation(0, 'attack', true);
 
+  const preferredAnims = ['normal', 'attack', 'stand', 'move', 'idle'];
+
+const available = spineChar.spineData.animations.map(a => a.name);
+
+const chosen = preferredAnims.find(name => available.includes(name)) 
+             || available[0]; // fallback to first animation
+
+spineChar.state.setAnimation(0, chosen, true);
+    
   app.stage.addChild(spineChar);
   currentChibi = spineChar;
   currentSkin = skin;
