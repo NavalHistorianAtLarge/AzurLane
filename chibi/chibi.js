@@ -27,6 +27,12 @@ let chibiData = null;
   .then(data => {
     chibiData = data.chibis;
 
+        chibiData.forEach((c, i) => {
+  if (!c.skins || !Array.isArray(c.skins)) {
+    console.warn(`Bad skins at index ${i}:`, c.name, c);
+  }
+  });
+
     chibiData.sort((a, b) => a.name.localeCompare(b.name));
 
     renderChibiList(chibiData);
@@ -44,12 +50,6 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
   if (isRetrofit) wrapper.classList.add('retrofit-entry');
 
   const img = document.createElement('img');
-
-    chibiData.forEach((c, i) => {
-  if (!c.skins || !Array.isArray(c.skins)) {
-    console.warn(`Bad skins at index ${i}:`, c.name, c);
-  }
-  });
 
 
   // --- THIS IS THE IMPORTANT PART ---
