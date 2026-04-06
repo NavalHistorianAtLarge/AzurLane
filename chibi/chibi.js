@@ -45,6 +45,11 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
 
   const img = document.createElement('img');
 
+    chibiData.forEach((c, i) => {
+  if (!c.skins || !Array.isArray(c.skins)) {
+    console.warn(`Bad skins at index ${i}:`, c.name, c);
+  }
+
   // --- THIS IS THE IMPORTANT PART ---
    let thumbId;
 
@@ -53,7 +58,7 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
       s.label.toLowerCase().includes("retrofit") ||
       s.id.toLowerCase().endsWith("g")
     );
-
+});
     thumbId = retroSkin ? retroSkin.id : chibi.skins[0].id;
   } else {
     thumbId = chibi.skins[0].id;
