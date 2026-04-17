@@ -33,7 +33,7 @@ let chibiData = null;
   }
   });
 
-    chibiData.sort((a, b) => a.name.localeCompare(b.name));
+    chibiData.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
     renderChibiList(chibiData);
   });
