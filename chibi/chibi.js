@@ -619,10 +619,6 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       return;
     }
 
-    // --- DEFAULT HIDE GROUP ---
-if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
-  return false;
-}
 
     if (activeFilters[category].has(value)) {
       activeFilters[category].delete(value);
@@ -696,6 +692,10 @@ function applyFilters() {
 
   const results = chibiData.filter(chibi => {
 
+        // --- DEFAULT HIDE GROUP ---
+if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
+  return false;
+}
     // If "Has Retrofit" is selected, only show ships WITH retrofits
 if (activeFilters.special.has("hasRetrofit")) {
   if (!chibi.retrofit) return false; // hide ships without retrofit
