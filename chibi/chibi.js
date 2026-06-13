@@ -618,6 +618,12 @@ document.querySelectorAll('[data-filter]').forEach(btn => {
       applyFilters();
       return;
     }
+
+    // --- DEFAULT HIDE GROUP ---
+if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
+  return false;
+}
+
     if (activeFilters[category].has(value)) {
       activeFilters[category].delete(value);
       btn.classList.remove('active');
