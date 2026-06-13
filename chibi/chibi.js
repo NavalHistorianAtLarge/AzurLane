@@ -85,23 +85,26 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
 
 function renderChibiList(list) {
   chibiList.innerHTML = '';
- list.forEach(chibi => {
-       // --- RETROFIT-ONLY MODE ---
+
+  list.forEach(chibi => {
+
+    // --- DEFAULT HIDE GROUP ---
+    if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
+      return; // skip rendering
+    }
+
+    // --- RETROFIT-ONLY MODE ---
     if (activeFilters.special?.has("hasRetrofit")) {
-
-      // Skip ships with no retrofit data
       if (!chibi.retrofit) return;
-
-      // Render ONLY the retrofit version
       renderSingleChibi(chibi, chibi.retrofit.rarity, true);
       return;
     }
 
-    // --- NORMAL MODE (base chibi) ---
+    // Normal mode
     renderSingleChibi(chibi, chibi.rarity, false);
   });
-
 }
+
 
 function normalizeLongVowels(str) {
   return str
