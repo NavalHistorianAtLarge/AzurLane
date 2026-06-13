@@ -86,14 +86,18 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
 function renderChibiList(list) {
   chibiList.innerHTML = '';
 
+  const isSearching = searchInput.value.trim().length > 0;
+
   list.forEach(chibi => {
 
-    // --- DEFAULT HIDE GROUP ---
-    if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
-      return; // skip rendering
+    // --- DEFAULT HIDE GROUP (but allow search override) ---
+    if (!isSearching) {
+      if (chibi.group === "hide" && !activeFilters.group.has("hide")) {
+        return; // skip this chibi
+      }
     }
 
-    // --- RETROFIT-ONLY MODE ---
+    // Retrofit-only mode
     if (activeFilters.special?.has("hasRetrofit")) {
       if (!chibi.retrofit) return;
       renderSingleChibi(chibi, chibi.retrofit.rarity, true);
@@ -104,6 +108,7 @@ function renderChibiList(list) {
     renderSingleChibi(chibi, chibi.rarity, false);
   });
 }
+
 
 
 function normalizeLongVowels(str) {
