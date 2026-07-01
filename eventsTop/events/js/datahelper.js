@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Determine event name from body class
   const eventName = document.body.classList[0];
 
-  fetch(`/retranslate/json/${eventName}.json`)
+  fetch(`https://wisdomcubenetwork.xyz/eventsTop/events/retranslate/json/${eventName}.json`)
     .then(r => r.json())
     .then(data => {
       humptyData = data;
