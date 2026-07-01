@@ -1,0 +1,738 @@
+{
+  "VDiR1:2t": {
+    "speaker": "Shoukaku",
+    "text": "The storm is too strong! If we keep advancing, we'll probably be wiped out!"
+  },
+  "VDiR1:3t": {
+    "speaker": "Zuikaku",
+    "text": "We've already staked so much on this, we can't back out now! I assure you, we'll break out of this storm very soon!"
+  },
+  "VDiR1:4t": {
+    "speaker": "Shoukaku",
+    "text": "Huge object ahead, course 150! Planning evasive course immediately..."
+  },
+  "VDiR1:5t": {
+    "speaker": "Zuikaku",
+    "text": "An unknown object? In the middle of the storm? Quick, tell me your position."
+  },
+  "VDiR1:6t": {
+    "speaker": "Shoukaku",
+    "text": "....."
+  },
+  "VDiR1:7t": {
+    "speaker": "Zuikaku",
+    "text": "Answer me, Shoukaku, tell me your position!"
+  },
+  "VDiR1:8t": {
+    "speaker": "Shoukaku",
+    "text": "…………"
+  },
+  "VDiR1:9t": {
+    "speaker": "Shoukaku",
+    "text": "…………"
+  },
+  "VDiR1:10t": {
+    "speaker": "Shoukaku",
+    "text": "Quick... run..."
+  },
+  "VDiR1:11t": {
+    "speaker": "Zuikaku",
+    "text": "...In a radio dead zone, huh? Looks like we're in deep trouble now..."
+  },
+  "VDiR1:12t": {
+    "speaker": "Zuikaku",
+    "text": "Rats... And I haven't even settled the score with that person..."
+  },
+  "VDiR1:13t": {
+    "speaker": "Zuikaku",
+    "text": "Hold on, what's this light ahead?"
+  },
+  "VDiR1:14t": {
+    "speaker": "Zuikaku",
+    "text": "!!!"
+  },
+  "VDiR1:15t": {
+    "speaker": "Zuikaku",
+    "text": "....."
+  },
+  "VDiR1:16t": {
+    "speaker": "Zuikaku",
+    "text": "...Where ...am I?"
+  },
+  "VDiR1:17t": {
+    "speaker": "Zuikaku",
+    "text": "Hey!?? I evaded disaster again??"
+  },
+  "VDiR1:18t": {
+    "speaker": "Zuikaku",
+    "text": "But, my head really hurts, and I've completely forgotten everything from that an instant ago..."
+  },
+  "VDiR1:19t": {
+    "speaker": "Zuikaku",
+    "text": "Rats, I can't even get in touch with Shoukaku. The circumstances haven't improved even a bit."
+  },
+  "VDiR1:20t": {
+    "speaker": "Zuikaku",
+    "text": "....."
+  },
+  "VDiR1:21t": {
+    "speaker": "Zuikaku",
+    "text": "No, I take that back... At least, I've finally found you..."
+  },
+  "VDiR1:22t": {
+    "speaker": "Zuikaku",
+    "text": "The fabled \"Sanctuary\""
+  },
+  "VDiR10:1t": {
+    "speaker": "Kaga",
+    "text": "That snot from the Fifth Carrier Division left directly for the engraving room. What a nuisance."
+  },
+  "VDiR10:2t": {
+    "speaker": "Akagi",
+    "text": "Just for how long do they intend to get in my way? Why can't simply they comprehend \"that person's\" will!?"
+  },
+  "VDiR10:3t": {
+    "speaker": "Kaga",
+    "text": "……………"
+  },
+  "VDiR10:4t": {
+    "speaker": "Kaga",
+    "text": "Sister, please control yourself. Since the molds are already in place, the carving process probably won't take long."
+  },
+  "VDiR10:5t": {
+    "speaker": "Kaga",
+    "text": "Next, we only need to watch for the awakening response, per the god's instructions."
+  },
+  "VDiR10:6t": {
+    "speaker": "Akagi",
+    "text": "Let's send out that child. Just buying time will suffice."
+  },
+  "VDiR11:1t": {
+    "speaker": "Nowaki",
+    "text": "This next mission target... it's unexpectedly big and strong... Mmm, I'm not even the type for frontal assaults."
+  },
+  "VDiR11:2t": {
+    "speaker": "Zuikaku",
+    "text": "Sorry, but Shoukaku's in danger, so I can't stay and play. Let's get this over with quickly."
+  },
+  "VDiR11:3t": {
+    "speaker": "Nowaki",
+    "text": "It's a formidable target... but Nowaki is also unexpedly big and strong, too..."
+  },
+  "VDiR11:4t": {
+    "speaker": "Nowaki",
+    "text": "Carriers or whatever, I've sunken quite some numbers of them as well... probably..."
+  },
+  "VDiR12:1t": {
+    "speaker": "Nowaki",
+    "text": "Ow... Lucky ship, yadda yadda... sure enough, it's all a scam."
+  },
+  "VDiR12:2t": {
+    "speaker": "Zuikaku",
+    "text": "Hehe, maybe your opponent just has a higher luck stat, that's all~"
+  },
+  "VDiR12:3t": {
+    "speaker": "Zuikaku",
+    "text": "Now then, tell me everything you know about this conspiracy."
+  },
+  "VDiR12:4t": {
+    "speaker": "Nowaki",
+    "text": "(Whimper)... I was also one who stumbled into this 'Sanctuary'. Then... I saw Lady Akagi and Kaga who had disappeared for some time, here...."
+  },
+  "VDiR12:5t": {
+    "speaker": "Nowaki",
+    "text": "Lady Akagi continuously researches the technology granted by the divine right here, intending to rely on the tech to turn the war around..."
+  },
+  "VDiR12:6t": {
+    "speaker": "Zuikaku",
+    "text": "You were brought here... It's really the same as what the intelligence said about the Sanctuary. Apparently you weren't lying."
+  },
+  "VDiR12:7t": {
+    "speaker": "Zuikaku",
+    "text": "Come with me to help Shoukaku. The more there are of us, the stronger we become."
+  },
+  "VDiR12:8t": {
+    "speaker": "Nowaki",
+    "text": "I don't want to go against Akagi's will."
+  },
+  "VDiR12:9t": {
+    "speaker": "Zuikaku",
+    "text": "Even if the gods she believes in are a complete lie?"
+  },
+  "VDiR12:10t": {
+    "speaker": "Nowaki",
+    "text": "Akagi is the one who gave us hope. Even if this road is perhaps a mistake, we will..."
+  },
+  "VDiR12:11t": {
+    "speaker": "Zuikaku",
+    "text": "I understand... Good luck, then."
+  },
+  "VDiR13:1t": {
+    "speaker": "Zuikaku",
+    "text": "All planes, move out! Target: Lexington!"
+  },
+  "VDiR13:2t": {
+    "speaker": "Shoukaku",
+    "text": "Pay attention; keep back some planes for self defence. You can't be so careless!"
+  },
+  "VDiR13:3t": {
+    "speaker": "Zuikaku",
+    "text": "Those newbies from the Eagle Union are no match for my Zeros! This will be an easy win!"
+  },
+  "VDiR13:4t": {
+    "speaker": "Shoukaku",
+    "text": "More than 80 enemy carrier planes discovered at high altitude! Zeroes, take off immediately and intercept!"
+  },
+  "VDiR13:5t": {
+    "speaker": "Zuikaku",
+    "text": "H-How?!"
+  },
+  "VDiR13:6t": {
+    "speaker": "Shoukaku",
+    "text": "Quick, go hide under that rain cloud! I'll deal with the enemy planes!"
+  },
+  "VDiR13:7t": {
+    "speaker": "Zuikaku",
+    "text": "But sister, you..."
+  },
+  "VDiR13:8t": {
+    "speaker": "Shoukaku",
+    "text": "No time for overthinking! That girl, Shouhou, has run into trouble. We can't afford more losses"
+  },
+  "VDiR13:9t": {
+    "speaker": "Shoukaku",
+    "text": "I'll protect you. Remember, next time, don't be so reck-"
+  },
+  "VDiR13:10t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku... I will definitely not let such a thing happen again..."
+  },
+  "VDiR14:1t": {
+    "speaker": "Shoukaku",
+    "text": "......"
+  },
+  "VDiR14:2t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku! I'm so glad you're safe and..."
+  },
+  "VDiR14:3t": {
+    "speaker": "Shoukaku",
+    "text": "..."
+  },
+  "VDiR14:4t": {
+    "speaker": "Zuikaku",
+    "text": "...a Pawn... oh..."
+  },
+  "VDiR14:5t": {
+    "speaker": "Zuikaku",
+    "text": "Why?! Why do you want to do this?!"
+  },
+  "VDiR14:6t": {
+    "speaker": "Akagi",
+    "text": "If one is to wish for even more bestowments from the divine, then isn't it a given that making premium offerings is the way things go~?"
+  },
+  "VDiR14:7t": {
+    "speaker": "Kaga",
+    "text": "This is all for the sake of Sakura Empire's future."
+  },
+  "VDiR14:8t": {
+    "speaker": "Zuikaku",
+    "text": "..... \"Sakura Empire's future\"... Ha. How many times do you still want to deceive us with such words?"
+  },
+  "VDiR14:9t": {
+    "speaker": "Zuikaku",
+    "text": "You even thought nothing about treating your brethren as test subjects in order to obtain power..."
+  },
+  "VDiR14:10t": {
+    "speaker": "Zuikaku",
+    "text": "This accursed power simply cannot come from the gods! It will not deliver our future!"
+  },
+  "VDiR14:11t": {
+    "speaker": "Zuikaku",
+    "text": "From the first action, I vaguely sensed your intentions."
+  },
+  "VDiR14:12t": {
+    "speaker": "Zuikaku",
+    "text": "And this time, I am furious, because you chose the wrong target to pick on!"
+  },
+  "VDiR14:13t": {
+    "speaker": "Akagi",
+    "text": "Hehehe, before we get to that, how about you think hard as to how to deal with the opponent before you~"
+  },
+  "VDiR14:14t": {
+    "speaker": "Akagi",
+    "text": "Even a soulless husk may likely mark the end of your journey as well."
+  },
+  "VDiR15:1t": {
+    "speaker": "Kaga",
+    "text": "Pawns only have this level of fighting power in end, huh? Then while I'm at it... victory belongs to first move!"
+  },
+  "VDiR15:2t": {
+    "speaker": "Kaga",
+    "text": "Your soul is ours!"
+  },
+  "VDiR15:3t": {
+    "speaker": "Zuikaku",
+    "text": "Rats! There's no time to evade!"
+  },
+  "VDiR15:4t": {
+    "speaker": "Zuikaku",
+    "text": "Sho...Shoukaku?"
+  },
+  "VDiR15:5t": {
+    "speaker": "Shoukaku",
+    "text": "...I promised......I would always............protect you...!"
+  },
+  "VDiR15:6t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku...?"
+  },
+  "VDiR15:7t": {
+    "speaker": "Kaga",
+    "text": "What?! The pawn....?"
+  },
+  "VDiR15:8t": {
+    "speaker": "Akagi",
+    "text": "Hehehe... So the manufactured Pawn actually picked this time to stand up for her 'little sister'."
+  },
+  "VDiR15:9t": {
+    "speaker": "Akagi",
+    "text": "(A mere manufactured Pawn, for the sake of her younger sister...)"
+  },
+  "VDiR15:10t": {
+    "speaker": "Kaga",
+    "text": "I-is this what's called an \"Awakening Reaction\"? So long as the most important experiences deep in the heart are stimulated at a suitable location..."
+  },
+  "VDiR15:11t": {
+    "speaker": "Akagi",
+    "text": "Kaga, fall back first. If there are Pawns that display Awakening Responses, in accordance with our arrangement with the gods, prioritize making daily reports about them."
+  },
+  "VDiR15:12t": {
+    "speaker": "Kaga",
+    "text": "Understood."
+  },
+  "VDiR15:13t": {
+    "speaker": "Zuikaku",
+    "text": "...Wait!"
+  },
+  "VDiR15:14t": {
+    "speaker": "Shoukaku",
+    "text": "Ow..."
+  },
+  "VDiR15:15t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku? I finally found you, are you OK?"
+  },
+  "VDiR15:16t": {
+    "speaker": "Shoukaku",
+    "text": "Zuikaku... You've come... Felt like I've had a very long dream..."
+  },
+  "VDiR15:17t": {
+    "speaker": "Shoukaku",
+    "text": "In the dream... I..."
+  },
+  "VDiR15:18t": {
+    "speaker": "Shoukaku",
+    "text": "That Pawn... Looks like it's all over.... Ugh, my head hurts."
+  },
+  "VDiR15:19t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku, I'm sorry... After so long, I've never been able to grow. I always look ahead of me recklessly like this..."
+  },
+  "VDiR15:20t": {
+    "speaker": "Shoukaku",
+    "text": "So long as you are safe and sound, there's still hope... Only then will you be able to defeat that opponent."
+  },
+  "VDiR15:21t": {
+    "speaker": "Shoukaku",
+    "text": "Before that, I will always be by your side... protecting you..."
+  },
+  "VDiR15:22t": {
+    "speaker": "Shoukaku",
+    "text": "So long as you... confidently look ahead... only looking at that one goal..."
+  },
+  "VDiR15:23t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku..."
+  },
+  "VDiR15:24t": {
+    "speaker": "Shoukaku",
+    "text": "Go... and catch up to them... Get to the bottom of their motives. Do not let Sakura Empire's future... be undone in their hands..."
+  },
+  "VDiR16:1t": {
+    "speaker": "Akagi",
+    "text": "We've already given all our logs to the gods. Now we can recieve even more power, hahaha."
+  },
+  "VDiR16:2t": {
+    "speaker": "Kaga",
+    "text": "However, that child from the 5th Carrier Division is still hot on the heels."
+  },
+  "VDiR16:3t": {
+    "speaker": "Akagi",
+    "text": "The task granted to us by the divine have already been completed anyway. How about we go for a proper round with her?"
+  },
+  "VDiR16:4t": {
+    "speaker": "Kaga",
+    "text": "Your nature still really hasn't changed a bit."
+  },
+  "VDiR17:1t": {
+    "speaker": "Zuikaku",
+    "text": "You who faked your own deaths in the AF operation, what kind of tricks exactly are you playing?!"
+  },
+  "VDiR17:2t": {
+    "speaker": "Akagi",
+    "text": "As you can see, this is the Sanctuary granted to us by the divine. In here, we can obtain unlimited power."
+  },
+  "VDiR17:3t": {
+    "speaker": "Akagi",
+    "text": "So long as we continue to offer even more excellent quality souls... then 'that person'..."
+  },
+  "VDiR17:4t": {
+    "speaker": "Zuikaku",
+    "text": "Those things... are not so-called divinity!"
+  },
+  "VDiR17:5t": {
+    "speaker": "Zuikaku",
+    "text": "The power obtained by trusting in such wickedness at face value and betraying your own compatriots cannot prevail over her, cannot defeat that Ghost."
+  },
+  "VDiR17:6t": {
+    "speaker": "Akagi",
+    "text": "Shut your mouth!!! Do not mention HER before me!!"
+  },
+  "VDiR17:7t": {
+    "speaker": "Zuikaku",
+    "text": "The future will not be found in constantly escaping like this! Trust me, there's still time if you turn back——"
+  },
+  "VDiR17:8t": {
+    "speaker": "Akagi",
+    "text": "All I ever hear from all of you is 'ghost this', 'ghost that'! How can I have been... by that kind of person! AAAAAUGH!"
+  },
+  "VDiR17:9t": {
+    "speaker": "Kaga",
+    "text": "There's no use for more words! Whether it's the strong or the weak, let us decide through what comes next!"
+  },
+  "VDiR18:1t": {
+    "speaker": "Akagi",
+    "text": "Hehe... O divine being, have you seen it...? The gleaming radiance stimulated by clashing souls... Is this also your desired \"Awakening\"?"
+  },
+  "VDiR18:2t": {
+    "speaker": "Akagi",
+    "text": "Beautiful yet frail... It makes one unable to resist crushing it in one's palm... Hehe... HEHEHEHE.."
+  },
+  "VDiR18:3t": {
+    "speaker": "Kaga",
+    "text": "*sigh* ... She slipped back into this state after all... No matter. This time's show is almost nearing its end as well."
+  },
+  "VDiR18:4t": {
+    "speaker": "Akagi",
+    "text": "Is that so? What a pity~ In that case, make preparations~ Hehe... Towards the 'Sanctuary' of the next place..."
+  },
+  "VDiR18:5t": {
+    "speaker": "Zuikaku",
+    "text": "Ugh... Don't, don't think about leaving yet... I still have words——"
+  },
+  "VDiR18:6t": {
+    "speaker": "robot",
+    "text": "WARNING—— RETRIEVAL PROCESS HAS BEEN ACTIVATED. THIS AREA IS ABOUT TO BE JETTISONED"
+  },
+  "VDiR18:7t": {
+    "speaker": "robot",
+    "text": "WARNING—— RETRIEVAL PROCESS HAS BEEN ACTIVATED. THIS AREA IS ABOUT TO BE JETTISONED"
+  },
+  "VDiR18:8t": {
+    "speaker": "robot",
+    "text": "WARNING—— RETRIEVAL PROCESS HAS BEEN ACTIVATED. THIS AREA IS ABOUT TO BE JETTISONED"
+  },
+  "VDiR18:9t": {
+    "speaker": "Kaga",
+    "text": "Oh brethren, all things in the world have their own causalities. But is fate truly so deterministic?"
+  },
+  "VDiR18:10t": {
+    "speaker": "Kaga",
+    "text": "In this endlessly-regenerating \"Sanctuary\", we are always seeking another possibility of fate."
+  },
+  "VDiR18:11t": {
+    "speaker": "Kaga",
+    "text": "One day, you will understand... what we do... and why we do it..."
+  },
+  "VDiR18:12t": {
+    "speaker": "Kaga",
+    "text": "May the protection of the myriad deities always go with you——"
+  },
+  "VDiR18:13t": {
+    "speaker": "Tester",
+    "text": "Experimental Station ɣ... another round of testing has completed."
+  },
+  "VDiR18:14t": {
+    "speaker": "ObserverA",
+    "text": "Oh? Let me see, expiremental Station ɣ... Oh, that's the \"critters\" expirement logs... this is..."
+  },
+  "VDiR18:15t": {
+    "speaker": "ObserverA",
+    "text": "The sculpted 'Pawn' displayed empathetic reactions...?!"
+  },
+  "VDiR18:16t": {
+    "speaker": "Tester",
+    "text": "A burst of power born for the sake of rescuing one's kind, is it? Well, that counts as performance that exceeds projections."
+  },
+  "VDiR18:17t": {
+    "speaker": "ObserverA",
+    "text": "They keep trapping themselves in their own webbing while trying to break free from fate's net. They thought they alone could handle everything, while not knowing that everything was just hypothesis from the very beginning."
+  },
+  "VDiR18:18t": {
+    "speaker": "ObserverA",
+    "text": "But, is this kind of phenomenon really the mental awakening the \"Creator\" is looking for?"
+  },
+  "VDiR18:19t": {
+    "speaker": "Tester",
+    "text": "No idea. The so-called awakening phenomenon might only be faulty observation created by the faulty use of the wrong data at the wrong time."
+  },
+  "VDiR18:20t": {
+    "speaker": "Tester",
+    "text": "There are still too many unknowns awaiting our research on these girls who have the \"Creator's\" unlimited attention."
+  },
+  "VDiR18:21t": {
+    "speaker": "ObserverA",
+    "text": "\"Wisdom Cubes\" ...What kind of possibilities does the Creator want to seek from within them?"
+  },
+  "VDiR18:22t": {
+    "speaker": "",
+    "text": "As for now, even more experiments and tests are needed. Before we reach further conclusions, the variables need to be strictly regulated."
+  },
+  "VDiR18:23t": {
+    "speaker": "ObserverA",
+    "text": "Hehehe, that too. Put all Pawns back in place, reset all machinery, raise index by 5%...... release the \"key\"...... Begin the next round of testing——"
+  },
+  "VDiR2:1t": {
+    "speaker": "Zuikaku",
+    "text": "Wow! They actually used the storm to envelop the waters here. Such a terrifying power..."
+  },
+  "VDiR2:2t": {
+    "speaker": "Zuikaku",
+    "text": "I suppose that those who tried to solve this riddle before already cram the seafloor. If it wasn't for my good luck..."
+  },
+  "VDiR2:3t": {
+    "speaker": "Zuikaku",
+    "text": "Anyway, I need to try to establish radio contact with Shoukaku first. This place is giving me a kind of uneasy feeling."
+  },
+  "VDiR3:1t": {
+    "speaker": "",
+    "text": "You mass-produced imitations are so annoying! How many of you are there? Come at me all at once!"
+  },
+  "VDiR3:2t": {
+    "speaker": "Akatsuki",
+    "text": "..."
+  },
+  "VDiR3:3t": {
+    "speaker": "Zuikaku",
+    "text": "Isn't it Akatsuki? Good timing! We got separeted in the tempest a bit ago, and I've been worrying about you ever since. I'm glad you're OK!"
+  },
+  "VDiR3:4t": {
+    "speaker": "Zuikaku",
+    "text": "Come help me drive away these pests!"
+  },
+  "VDiR3:5t": {
+    "speaker": "Akatsuki",
+    "text": "...MISSION...DESTROY..."
+  },
+  "VDiR3:6t": {
+    "speaker": "Zuikaku",
+    "text": "What in the world! What are you doing?! I was THIS close to being hit! Be careful!"
+  },
+  "VDiR3:7t": {
+    "speaker": "Zuikaku",
+    "text": "Wait, Akatsuki, you're..."
+  },
+  "VDiR3:8t": {
+    "speaker": "Akatsuki",
+    "text": "...MISSION...EXTERMINATE..."
+  },
+  "VDiR3:9t": {
+    "speaker": "Zuikaku",
+    "text": "...a Pawn, huh... Even though it entered the \"Sanctuary\" not long ago. Such great velocity!"
+  },
+  "VDiR3:10t": {
+    "speaker": "Zuikaku",
+    "text": "Pitiful and disgusting puppet... let me free you from this curse."
+  },
+  "VDiR3:11t": {
+    "speaker": "Zuikaku",
+    "text": "All Zeros, take off!"
+  },
+  "VDiR4:1t": {
+    "speaker": "Akagi",
+    "text": "That child from the Fifth Carrier Division again? She's so dedicated and so very stupid."
+  },
+  "VDiR4:2t": {
+    "speaker": "Akagi",
+    "text": "That pest really came for the bait."
+  },
+  "VDiR4:3t": {
+    "speaker": "Akagi",
+    "text": "Routine system inspection in progress... hehehe... all systems apparently running normally."
+  },
+  "VDiR4:4t": {
+    "speaker": "Kaga",
+    "text": "To be able to handle everything within purview as one pleases... As expected of the proving grounds of the divine."
+  },
+  "VDiR4:5t": {
+    "speaker": "Kaga",
+    "text": "The weak who dares to resist the strong will ultimately pay the price of their own arrogance..."
+  },
+  "VDiR4:6t": {
+    "speaker": "Akagi",
+    "text": "Just sending them will do. This is the perfect opportunity to \"inspect\" the new weapons granted to us by the gods."
+  },
+  "VDiR4:7t": {
+    "speaker": "Akagi",
+    "text": "Anyone who wants to hinder my reunion with \"that person\" must be properly punished, hahaha..."
+  },
+  "VDiR5:1t": {
+    "speaker": "Zuikaku",
+    "text": "Ugh! They just keep on sending counterfeits to stall me! If it weren't for the storm that cost me so many planes..."
+  },
+  "VDiR5:2t": {
+    "speaker": "Zuikaku",
+    "text": "Hmm? The distress signal from up ahead... Could that be Shoukaku?"
+  },
+  "VDiR5:3t": {
+    "speaker": "Zuikaku",
+    "text": "Wait for me, I won't lose you again!"
+  },
+  "VDiR6:1t": {
+    "speaker": "Zuikaku",
+    "text": "The source of the signal is actually... Ise and Hyuuga?! You're alright---"
+  },
+  "VDiR6:2t": {
+    "speaker": "Zuikaku",
+    "text": "...Not just Akatsuki's, but even forgeries of you two were ready, huh?"
+  },
+  "VDiR6:3t": {
+    "speaker": "Ise",
+    "text": "......"
+  },
+  "VDiR6:4t": {
+    "speaker": "Hyuuga",
+    "text": "......"
+  },
+  "VDiR6:5t": {
+    "speaker": "Zuikaku",
+    "text": "I thought so... All hands to battlestations!"
+  },
+  "VDiR7:1t": {
+    "speaker": "Zuikaku",
+    "text": "Shoukaku! Look what we found! This is the key to the \"Sanctuary\"!"
+  },
+  "VDiR7:2t": {
+    "speaker": "Shoukaku",
+    "text": "This is... Where did you get it?"
+  },
+  "VDiR7:3t": {
+    "speaker": "Zuikaku",
+    "text": "Heheh, as for that intelligence, it was Akatsuki's contribution! This time, you surely can't refuse me, right?~"
+  },
+  "VDiR7:4t": {
+    "speaker": "Shoukaku",
+    "text": "If the intelligence is correct, we need to get moving. Call everyone together and move out!"
+  },
+  "VDiR7:5t": {
+    "speaker": "Zuikaku",
+    "text": "This time, their plot must be exposed!"
+  },
+  "VDiR7:6t": {
+    "speaker": "Zuikaku",
+    "text": "Come to think of it, maybe this trap was also just part of the plot."
+  },
+  "VDiR7:7t": {
+    "speaker": "Zuikaku",
+    "text": "Bad seniors! They fooled us again!"
+  },
+  "VDiR8:1t": {
+    "speaker": "Yamashiro",
+    "text": "Dear Zuikaku, you can't go any farther!"
+  },
+  "VDiR8:2t": {
+    "speaker": "Zuikaku",
+    "text": "Yamashiro, even you have become a counterfeit?"
+  },
+  "VDiR8:3t": {
+    "speaker": "Yamashiro",
+    "text": "Of course not! Yamashiro is still that same~ high~ spi~ri~ted Yamashiro-chan!"
+  },
+  "VDiR8:4t": {
+    "speaker": "Yamashiro",
+    "text": "It's just~, I have orders to, you know. Naturally about keeping you from continuing to cause trouble in the \"Sanctuary\"."
+  },
+  "VDiR8:5t": {
+    "speaker": "Yamashiro",
+    "text": "So, please be a dear and let me knock you down!"
+  },
+  "VDiR8:6t": {
+    "speaker": "Zuikaku",
+    "text": "Since \"you\" are still \"you\", tell me, where is Shoukaku?"
+  },
+  "VDiR8:7t": {
+    "speaker": "Yamashiro",
+    "text": "If you can defeat me, I'll tell you!"
+  },
+  "VDiR8:8t": {
+    "speaker": "Zuikaku",
+    "text": "Are all the seniors these days so troublesome?!"
+  },
+  "VDiR8:9t": {
+    "speaker": "Zuikaku",
+    "text": "Fine! Let's have a battle!"
+  },
+  "VDiR8:10t": {
+    "speaker": "Yamashiro",
+    "text": "Yamashiro-chan's tip: They transformed me with some strange equipment! These are the designs those wooden-heads couldn't figure out!"
+  },
+  "VDiR8:11t": {
+    "speaker": "Yamashiro",
+    "text": "So~ Now Yamashiro-chan is very strong! I can finally throw aircraft... Waah! Why are they attacking me before I give them orders?!"
+  },
+  "VDiR9:1t": {
+    "speaker": "Yamashiro",
+    "text": "(Whimper) Yamashiro was defeated... even using the power bestowed by the gods didn't save me from being utterly defeated by Zuikaku."
+  },
+  "VDiR9:2t": {
+    "speaker": "Zuikaku",
+    "text": "You just held back at the very last moment, didn't you?"
+  },
+  "VDiR9:3t": {
+    "speaker": "Yamashiro",
+    "text": "D-Definitely not! No one was goint to tell you that Shoukaku was actually locked up by them inside that big house in the center of the Sanctuary!"
+  },
+  "VDiR9:4t": {
+    "speaker": "Zuikaku",
+    "text": "Thanks~ I'll be going now."
+  },
+  "VDiR9:5t": {
+    "speaker": "Yamashiro",
+    "text": "Wait!"
+  },
+  "VDiR9:6t": {
+    "speaker": "Zuikaku",
+    "text": "What, feeling remorse?"
+  },
+  "VDiR9:7t": {
+    "speaker": "Yamashiro",
+    "text": "Please save our future... those girls aren't bad by nature."
+  },
+  "VDiR9:8t": {
+    "speaker": "Zuikaku",
+    "text": "....."
+  },
+  "VDiR9:9t": {
+    "speaker": "Zuikaku",
+    "text": "Ok, I promise!"
+  },
+  "VDiR1:1at": "In an infinite cycle of rebirth, time itself loses significance.",
+  "VDiR1:1bt": "Where certainty approaches probability,",
+  "VDiR1:1ct": "The intangible inherits the tangible.",
+  "VDiR1:1dt": "If not for that first choice",
+  "VDiR1:1et": "Might there be another conclusion?",
+  "VDiR1:1ft": "Once reflected in your eyes,",
+  "VDiR1:1gt": "What kind of scenery is it, again?",
+  "VDiR1:1ht": "O, Creator?"
+}
