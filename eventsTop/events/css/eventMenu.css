@@ -13,7 +13,7 @@ body {
 	text-align: center;
 }
 .temple {
-    background-image: url(https://cdn.nagami.moe/bg/bg_story_tiancheng7.png);
+    background-image: url('https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/BG/bg_hongran_2.png');
 }
 h1 {
     font-size: 80px;
