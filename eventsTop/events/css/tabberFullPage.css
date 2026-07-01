@@ -9,29 +9,10 @@ html, body {
 }
 .tabberhead {
 	position: fixed;
-}
-.storm {
-	background-image: url(https://cdn.nagami.moe/bg/star_level_bg_504.png);
-    background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
-
-.temple {
-	background-image: url(https://cdn.nagami.moe/bg/bg_story_tiancheng7.png);
-    background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-}
-/* Style tab links */
-.midway {
-	background-image: url(https://cdn.nagami.moe/bg/bg_story_8.png);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	z-index: 10;
 }
  .tablink.activeTab {
-	    background: linear-gradient(0.25turn,rgb(199, 0, 0),rgb(225, 223, 184), rgb(199, 0, 0));
+	    background: linear-gradient(0.25turn,rgb(11, 113, 0),rgb(225, 223, 184), rgb(11, 113, 0));
 
 }
 .tablink {
@@ -76,9 +57,9 @@ html, body {
 	display: flex;
 }
 .speaker {
-	width: 200px;
-	height: 54px;
+	width: 250px;
 	border-radius: 100px 0px 0px 100px;
+	overflow: hidden;
 	padding: 0;
 	margin: 0;
 	display: flex;
@@ -90,10 +71,11 @@ html, body {
 	background: linear-gradient(to right, rgb(216, 11, 11),rgb(225, 223, 184));
 }
 .banner {
-	height: 54px;
+	height: 70px;
 	border-radius: 100px;
 	opacity: 0.5;
 	vertical-align: middle;
+	overflow: hide;
 }
 .banner:hover {
 	opacity: 1.0;
@@ -124,6 +106,7 @@ html, body {
 	display: inline;
 	padding-right: 40px;
 	margin-left: 40px;
+	align-content: center;
 }
 .noteshiro {
 	height:30px;
@@ -164,7 +147,7 @@ html, body {
 	background-color: rgba(224, 173, 224, 0.832);
 	height: 20px;
 	border-radius: 50%;
-	margin-top: 15px;
+	margin-top: 20px;
 	margin-right: 20px;
 }
 br:target {
@@ -197,8 +180,10 @@ br:target {
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 3px;
-	margin-left: 20px;
-	border-radius: 10px;
+	margin-left: 30px;
+	margin-top: 20px;
+	border-radius: 30px;
+	padding: 5px;
 }
 .friendly p {
 		background-color: rgba(0, 0, 255, 0.673);
@@ -251,7 +236,7 @@ br:target {
 .citelinks {
 	display: flex;
 	text-decoration: none;
-	padding-top: 10px;
+	padding-top: 15px;
 	margin-right: 10px;
 	
 }
