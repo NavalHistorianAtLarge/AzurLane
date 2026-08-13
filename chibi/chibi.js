@@ -69,7 +69,10 @@ function renderSingleChibi(chibi, rarity, isRetrofit = false) {
 
   img.alt = isRetrofit ? `${chibi.name} (Retrofit)` : chibi.name;
 
-  img.addEventListener('click', () => showSkins(chibi, isRetrofit));
+ img.addEventListener('click', () => {
+  displayFileName(chibi);   // <-- add this
+  showSkins(chibi, isRetrofit);
+});
 
   const caption = document.createElement('div');
   caption.classList.add('chibi-caption');
@@ -337,6 +340,8 @@ document.getElementById('scaleSlider').addEventListener('input', e => {
 
 // Step 2: show skins for chosen chibi
 function showSkins(chibi, isRetrofit = false) {
+  displayFileName(chibi); 
+  
   chibiView.classList.add('hidden');
   skinView.classList.remove('hidden');
   skinList.innerHTML = '';
@@ -779,6 +784,16 @@ if (softExclude.rarity.has(chibi.rarity)) return false;
   renderChibiList(results);
 }})
 
+function displayFileName(chibi) {
+  const box = document.getElementById("fileNameDisplay");
+  if (!box) return;
+
+  if (chibi.fileName) {
+    box.textContent = `File name: ${chibi.fileName}`;
+  } else {
+    box.textContent = "File name: (none)";
+  }
+}
 
 
 
