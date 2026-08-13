@@ -439,6 +439,12 @@ button[data-filter="SF"] {
   height: 170px;
 }
 
+#fileNameDisplay {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #ffd700;
+}
 
 
 
