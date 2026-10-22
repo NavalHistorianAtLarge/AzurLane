@@ -6,45 +6,13 @@ html, body {
 	width: 95%;
 }
 body {
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
 	margin: 50px;
 	text-align: center;
 }
 #nodisplay {
 	display: none;
 }
-.storm {
-	background-image: url(https://cdn.nagami.moe/bg/star_level_bg_504.png);
-}
-.temple {
-	background-image: url(https://cdn.nagami.moe/bg/bg_story_tiancheng7.png);
-}
-.midway {
-	background-image: url(https://cdn.nagami.moe/bg/bg_story_8.png);
-}
-.helenaRuins {
-	background-image: url(https://i.ibb.co/nMpKfrWW/bg-story-wing1.png);
-}
-.washington {
-	background-image: url(https://i.ibb.co/dwGPTbsk/450px-Memory-Fallen-Wings-Background-1.png);
-}
-.AnzeelReach {
-	background-image: url(https://cdn.nagami.moe/bg/bg_xiangting_cg3.png);
-}
-.mainframe{
-	background-image: url(https://cdn.nagami.moe/bg/bg_endingsong_14.png);
-}
-.metaGoldBG {
-	background-image: url(https://cdn.nagami.moe/bg/bg_burningsea_2.png);
-}
-.aostelab {
-	background-image: url(https://cdn.nagami.moe/bg/bg_aostelab_2.png);
-}
-.enterpriseMETA {
-	background-image: url(https://cdn.nagami.moe/bg/bg_story_wing3.png);
-}
+
 *:lang(zh) {
 	font-family: Noto Sans TC;
 
@@ -71,8 +39,9 @@ a {
 .citelinks {
 	display: flex;
 	text-decoration: none;
-	padding-top: 10px;
+	padding-top: 15px;
 	margin-right: 10px;
+	margin-left: 60px;
 }
 h1 {
 	display: inline-block;
@@ -220,7 +189,6 @@ h1 {
 	display: inline-flex;
 	width: 30%;
 	margin-top: 3px;
-	float: left;
 	margin-left: 70px;
 	background: linear-gradient(#95745d, #e46d0d);
 	box-shadow: 0 0 5px 0 lightblue;
@@ -228,14 +196,23 @@ h1 {
 }
 .val {
 	display: inline-flex;
-	width: 30%;
-	margin-top: 3px;
-	margin-left: 430px;
-	margin-right: 0px;
-	margin-bottom: 80px;
 	background: linear-gradient(#e47d0d, #cd1b1b);
 	box-shadow: 0 0 5px 0 lightblue;
+	width: 30%;
   border-radius: 5px;
+  margin-top: 3px;
+  margin-left: 430px;
+  margin-right: 0px;
+  margin-bottom: 80px;
+}
+.mustStare {
+	display: inline-flex;
+	width: 30%;
+  border-radius: 5px;
+  margin-top: 3px;
+  margin-left: 430px;
+  margin-right: 0px;
+  margin-bottom: 80px;
 }
 
 #VD1 .val {
@@ -308,10 +285,11 @@ ul {
 	display: flex;
 	margin-left: -80px;
 	margin-top: -40px;
-	max-height: 100px;
-	width: auto;
+	height: auto;
+	max-width: 130px;
 	float: left;
 	padding-top: 30px;
+	max-height: 160px;
 }
 .chibiSiren {
 	display: flex;
@@ -355,7 +333,7 @@ ul {
 }
 .speaker {
 	display: flex;
-	width: 200px;
+	width: 250px;
 	min-height: 54px;
 	max-height: 70px;
 	border-radius: 100px 0px 0px 100px;
@@ -370,7 +348,7 @@ ul {
 	background: rgba(225, 223, 184);
 }
 .banner {
-	height: 54px;
+	height: 70px;
 	max-height: 70px;
 	border-radius: 100px;
 }
@@ -401,13 +379,21 @@ ul {
 }
 
 .poem {
-	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
-	width: 100%;
+	background: linear-gradient(
+  0.25turn,
+  rgb(0, 0, 199) 0%,
+  rgb(114, 114, 194) 10%,
+  rgb(225, 223, 184) 15%,
+  rgb(225, 223, 184) calc(100% - 15%),
+  rgb(0, 0, 199) 100%
+);
 	border-radius: 100px;;
+	padding-bottom: 10px;
 }
 .humpty {
 	width: 1000px;
 	transition: font-weight 1s ease-out;
+	align-content: center;
 }
 .poem p {
 	margin: 0;
@@ -470,7 +456,7 @@ sup {
 	background-color: rgba(224, 173, 224, 0.832);
 	height: 20px;
 	border-radius: 50%;
-	margin-top: 10px;
+	margin-top: 20px;
 }
 br:target {
 	color: blue;
@@ -480,7 +466,7 @@ br:target {
 	height: 15px;
 }
 
-.friendlyName {
+.friendlyName .nameText {
 	display: flex;
 	margin-left: -70px;
 	margin-top: -40px;
@@ -490,7 +476,7 @@ br:target {
 	padding: 1px;
 	border-radius: 40px;
 }
-.enemyName {
+.enemyName .nameText {
 	display: flex;
 	margin-left: -70px;
 	margin-top: -40px;
@@ -504,6 +490,8 @@ br:target {
 	position:relative;
 	visibility: hidden;
 	height: 3px;
+	align-content: center;
+	padding-top: 5px;
 }
 .banner:hover + .shipName {
 	display: block;
@@ -512,7 +500,8 @@ br:target {
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 3px;
-	padding-left: 20px;
+	padding-left: 50px;
+	align-content: center;
 }
 .robot {
 	display: block;
@@ -537,4 +526,62 @@ br:target {
 }
 .codeG {
 	width: 360px;
+}
+.tip {
+  position: relative;
+  cursor: help;
+}
+
+.tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  top: -0.5rem;
+  transform: translate(-50%, -100%);
+  background: linear-gradient(#32553c, #324855);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  font-size: 0.8rem;
+  z-index: 20;
+  font-family: "Comic Relief", cursive;
+  min-width: 0;
+  max-width: 300px;
+  width: max-content;
+  text-wrap: wrap;
+  text-align: left;
+  padding: 5px;
+}
+
+.tip:hover::after {
+  opacity: 1;
+}
+.tip:hover{
+	background-color: #32553c;
+	border-radius: 30px;
+}
+#smoothtranslation {
+	margin: -50px;
+}
+.tableblock section:only-of-type .TH {
+  margin-bottom: 150px;
+}
+.cropW {
+	object-position: left center;
+}
+.smallcaps {
+	font-variant-caps: small-caps;
+}
+.sfxButton {
+	background-color: rgb(229, 227, 188);
+	border: none;
+	border-radius: 20px;
+}
+.bgmButton {
+	background-color: rgb(207, 207, 179);
+	border: none;
+	border-radius: 20px;
 }
