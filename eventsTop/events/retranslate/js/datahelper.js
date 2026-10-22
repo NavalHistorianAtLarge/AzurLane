@@ -200,7 +200,7 @@ async function loadHumptyData() {
   const eventName = document.body.classList[1];
 
   const res = await fetch(
-    `/retranslate/json/${eventName}.json`
+    `https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLane/gh-pages/eventsTop/events/retranslate/json/${eventName}.json`
   );
 
   if (!res.ok) {
