@@ -1,0 +1,318 @@
+html, body {
+	height:100%;
+    margin: 0;
+	align-items: center;
+}
+
+#nodisplay {
+	display: none;
+}
+.tabberhead {
+	position: fixed;
+	z-index: 10;
+}
+ .tablink.activeTab {
+	    background: linear-gradient(0.25turn,rgb(11, 113, 0),rgb(225, 223, 184), rgb(11, 113, 0));
+
+}
+.tablink {
+    background: linear-gradient(0.25turn,rgb(0, 0, 199),rgb(225, 223, 184), rgb(0, 0, 199));
+    float: left;
+    padding-left: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px 4px;
+    font-size: 17px;
+    border-radius: 30px;
+    margin: 2px;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    height: 100%;
+	min-height: 675px;
+  }
+  /* Center the chapter column (speaker 250px + line 1000px) in the tab */
+  .tabcontent .smoothtranslation {
+	max-width: 1250px;
+	margin: 0 auto;
+  }
+.eventName {
+	font-size: 25pt;
+	background: linear-gradient(0.25turn,rgb(0, 0, 199),rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 100px;
+	margin-left: 80px;
+
+}
+.chapterName {
+	font-size: 25pt;
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 100px;
+	margin: 0 auto;
+}
+.flow {
+	display: flex;
+}
+.speaker {
+	width: 250px;
+	border-radius: 100px 0px 0px 100px;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+.friendly {
+	background: linear-gradient(to right, rgb(0, 0, 199),  rgb(225, 223, 184));
+}
+.enemy {
+	background: linear-gradient(to right, rgb(216, 11, 11),rgb(225, 223, 184));
+}
+.banner {
+	height: 70px;
+	border-radius: 100px;
+	opacity: 0.5;
+	vertical-align: middle;
+	overflow: hide;
+}
+.banner:hover {
+	opacity: 1.0;
+	position: relative;
+}
+.tinybanner {
+	height: 10px;
+	border-radius: 100px;
+}
+.enemyWord {
+	display: flex;
+	max-width: 1000px;
+	background:rgb(225, 223, 184);
+	border-radius: 0px 100px 100px 0px;
+	border-top: 1px solid rgb(238, 230, 132);
+	border-bottom: 1px solid rgb(238, 230, 132);
+}
+.translatedLine {
+	display: flex;
+	max-width: 1000px;
+	background:rgb(225, 223, 184);
+	border-radius: 0px 100px 100px 0px;
+	border-top: 1px solid rgb(238, 230, 132);
+	border-bottom: 1px solid rgb(238, 230, 132);
+}
+.humpty {
+	max-width: 1000px;
+	display: inline;
+	padding-right: 40px;
+	margin-left: 40px;
+	align-content: center;
+}
+.noteshiro {
+	height:30px;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+.moveOn {
+	width: 100%;
+	height: 200px;
+}
+.right {
+	float: right;
+	background: linear-gradient(to right,rgb(225, 223, 184), rgb(0, 0, 199));
+	padding: 20px;
+	border-radius: 100px;
+	margin-top: 100px;
+}
+.left {
+	float: left;
+	background: linear-gradient(to right, rgb(0, 0, 199),  rgb(225, 223, 184));
+	padding: 20px;
+	border-radius: 100px;
+	margin-top: 100px;
+}
+.note {
+	background-color:rgb(225, 223, 184);
+	border-radius: 5px;
+	margin: 30px;
+	font-size: 30px;
+}
+.flow:target .humpty {
+	color: blue;
+	font-weight: bold;
+}
+
+.copyLinkLinkLow {
+	text-decoration: none;
+	background-color: rgba(224, 173, 224, 0.832);
+	height: 20px;
+	border-radius: 50%;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+br:target {
+	color: blue;
+	font-weight: bold;
+}
+.EssexWheeze {
+	height: 15px;
+}
+
+.friendlyName {
+	display: flex;
+	margin-left: -70px;
+	margin-top: -40px;
+	float: left;
+	font-weight: bold;
+	background-color: blue;
+}
+.enemyName {
+	display: flex;
+	margin-left: -70px;
+	margin-top: -40px;
+	float: left;
+	font-weight: bold;
+	background-color: red;
+}
+.shipName {
+	visibility: visible;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-left: 30px;
+	margin-top: 20px;
+	border-radius: 30px;
+	padding: 5px;
+}
+.friendly p {
+		background-color: rgba(0, 0, 255, 0.673);
+}
+.enemy p{
+		background-color: rgba(255, 0, 0, 0.673);
+
+}
+.banner:hover + .shipName {
+	visibility: hidden;
+	position: relative;
+	height: 3px;
+}
+.robot {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: px;
+	padding-left: 20px;
+}
+/* Flashback: faded, sepia "memory" look instead of a box */
+.flashback {
+	margin: 30px 0;
+	padding: 10px 0;
+	border-top: 2px dashed rgba(225, 223, 184, 0.6);
+	border-bottom: 2px dashed rgba(225, 223, 184, 0.6);
+	background: radial-gradient(ellipse at center, rgba(112, 66, 20, 0.35), rgba(0, 0, 0, 0.45));
+}
+.flashback::before,
+.flashback::after {
+	display: block;
+	text-align: center;
+	font-style: italic;
+	letter-spacing: 0.3em;
+	color: rgb(225, 223, 184);
+	padding: 6px 0;
+}
+
+/* Restore full color on hover so the line is easy to read */
+.flashback > .flow:hover,
+.flashback > .poem:hover {
+	filter: none;
+	opacity: 1;
+}
+.ListList {
+	text-indent: 3rem;
+}
+.overflow {
+	font-size: smaller;
+}
+.noshiroSmall {
+	height: 10px;
+	border-radius: 100px
+}
+.poem {
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 20px;
+	margin: 0 auto;
+}
+.poem p {
+	margin: 0;
+}
+.citelinks {
+	display: flex;
+	text-decoration: none;
+	padding-top: 15px;
+	margin-right: 10px;
+	
+}
+#smoothtranslation {
+	padding-left: 80px;
+}
+.endcap {
+	display: flex;
+	border-radius: 0px 100px 100px 0px;
+}
+/* Endcap color by speaker alignment (data-alignment set in storyRenderer.js) */
+.flow[data-alignment="friendly"] .endcap {
+	background:linear-gradient(0.25turn,rgb(225, 223, 184) 10px, rgb(0, 0, 199));
+}
+.flow[data-alignment="enemy"] .endcap {
+	background:linear-gradient(0.25turn,rgb(225, 223, 184) 10px, rgb(216, 11, 11));
+}
+.flow[data-alignment="narr"] .endcap {
+	background: rgb(225, 223, 184);
+}
+.selectable.selected {
+  outline: 2px dashed #00f;
+  background-color: rgba(0, 0, 255, 0.05);
+}
+
+.copySelectedLink {
+	background-color: blue;
+	color: black;
+	padding: 10px;
+	border-radius: 40px;
+	margin-bottom: 10px;
+}
+.bgm {
+	display: block;
+	background:linear-gradient(0.25turn,rgb(0, 0, 199) 20px,rgb(225, 223, 184), rgb(0, 0, 199));
+	border-radius: 40px;
+	margin: 0 auto;
+}
+.robot {
+	display: block;
+	visibility: visible;
+	position: absolute;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: px;
+	padding-left: 20px;
+}
+.narr {
+	background: rgba(225, 223, 184);
+}
+.smallcaps {
+	font-variant-caps: small-caps;
+}
+.sfxButton {
+	background-color: rgb(229, 227, 188);
+	border: none;
+	border-radius: 20px;
+}
+.bgmButton {
+	background-color: rgb(207, 207, 179);
+	border: none;
+	border-radius: 20px;
+}

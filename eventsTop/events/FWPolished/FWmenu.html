@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../css/eventMenu.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Fallen Wings Menu</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+    </head>
+    <body id="helenaRuins">
+        <h1>Fallen Wings</h1>
+        <div>
+        <div class="item" id="aostelab">
+            <img src="">
+            <div class="overlay">
+                <a class="text" href="FWLoreWorkChapter.html">Retranslation Workshop <br>Check my work</a>
+            </div>
+        </div>
+        <div class="item" id="washington">
+            <img src="">
+            <div class="overlay">
+                <a class="text" href="FWTabs.html">Retranslation Standardized <br>  Read it like on the wiki</a>
+            </div>
+        </div>
+        <div class="item" id="enterpriseMETA">
+            <img src="">
+            <div class="overlay">
+                <a class="text" href="">Lore Essay</a>
+            </div>
+        </div>
+        </div>
+        <script>
+            const BACKGROUNDS_URL =
+                "https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/backgrounds.json";
+
+            let backgroundsCache = null;
+
+            // Returns the image URL for a background id (the "class" field), or null if not found.
+            async function getBackground(id) {
+                try {
+                    if (!backgroundsCache) {
+                        const response = await fetch(BACKGROUNDS_URL);
+                        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                        backgroundsCache = await response.json();
+                    }
+                    const match = backgroundsCache.find(entry => entry.class === id);
+                    return match ? match.link : null;
+                } catch (err) {
+                    console.error("Error loading backgrounds:", err);
+                    return null;
+                }
+            }
+
+            // Use the <body>'s id (or its class, if it has no id) to pick the background.
+            (async () => {
+                const body = document.body;
+                const id = body.id || body.classList[0];
+                if (!id) return;
+                const url = await getBackground(id);
+                if (!url) {
+                    console.warn("No background found for:", id);
+                    return;
+                }
+                body.style.backgroundImage = `url(${url})`;
+                body.style.backgroundSize = "cover";
+                body.style.backgroundAttachment = "fixed";
+            })();
+
+            // Each .item div with an id gets its <img> filled from the background with that id.
+            document.querySelectorAll(".item[id]").forEach(async item => {
+                const url = await getBackground(item.id);
+                if (!url) {
+                    console.warn("No background found for:", item.id);
+                    return;
+                }
+                item.querySelector("img").src = url;
+            });
+        </script>
+    </body>
+</html>

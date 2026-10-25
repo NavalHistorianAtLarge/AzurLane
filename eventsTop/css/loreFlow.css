@@ -152,13 +152,42 @@ h2 {
 .topTitle {
     font-size: 32pt;
 }
+/* Intro note: a toast that slides in from the left; .show is toggled by the page script */
 #topBox {
     background: linear-gradient(#5b3fa7, #323455);
-    padding: 10px;
-    border-radius: 1000px;
-    width: 80%;
-    margin:auto;
-    margin-bottom: 25px;;
+    position: fixed;
+    left: 20px;
+    z-index: 3;
+    max-height: 30vh;
+    max-width: 500px;
+    display: flex;
+    overflow-y: auto;
+    align-items: center;
+    gap: 16px;
+    box-sizing: border-box;
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+    transform: translateX(calc(-100% - 40px));
+    transition: transform 0.5s ease;
+}
+#topBox.show {
+    transform: translateX(0);
+}
+#topBox p {
+    margin: 0.5em 0;
+}
+#topBox .topTitle {
+    font-size: 16pt;
+    margin: 0 0 0.3em;
+}
+@media (prefers-reduced-motion: reduce) {
+    #topBox {
+        transition: none;
+    }
 }
 #trackTitle {
     max-width: 500px;
@@ -175,18 +204,18 @@ h2 {
   text-decoration: none;
   color: black;
 }
-.bonnyInset{
+.bonnyInset {
+    display: inline;
+}
+.bonnyText {
     display: inline;
 }
 .bonny {
-    max-width: 100px;
+    max-width: 56px;
     border-radius: 100%;
+    display: inline;
 }
-.bonnyTip {
-   display: table-caption;
-   caption-side: bottom;
-   vertical-align: top;
-}
+
 sup {
     vertical-align: text-top;
 

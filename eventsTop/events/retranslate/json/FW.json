@@ -1,0 +1,1358 @@
+{
+  "FW1": {
+    "title": "Prologue",
+    "background": "helenaRuins",
+    "bgm": {
+      "id": "eagleUnionDiscovery",
+      "label": "story-6"
+    }
+  },
+  "FW1:1at": {
+    "text": "\"...I thought..... that after I point my guns at our enemies, after their defeat, I could get some peace.\""
+  },
+  "FW1:1bt": {
+    "text": "\"But... the future betrayed us.\""
+  },
+  "FW1:1ct": {
+    "text": "\"No matter the effort put in, there are only endless battles ahead.\""
+  },
+  "FW1:1dt": {
+    "text": "\"Faces that have blocked my way one after another... as well as disappearing one after another... I am already unable to recall them clearly.\""
+  },
+  "FW1:1et": {
+    "text": "\"——Let us sally forth once more, comrades.\"",
+    "breakAfter": true
+  },
+  "FW1:1ft": {
+    "text": "\"Tonight, as before, the stars are bright.\""
+  },
+  "FW1:1gt": {
+    "text": "——Operation Codename: Fallen Wings"
+  },
+  "FW1:3t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Is this the area indicated by the mysterious signal?...... It seems we still came a bit too late."
+  },
+  "FW1:4t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "This is too much, it's all turned into ruins."
+  },
+  "FW1:5t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Just who exactly... could even ruin Siren experimental grounds like this..."
+  },
+  "FW1:6t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Could it be the work of those guys from the so-called \"Reborn Sakura Alliance\"?"
+  },
+  "FW1:7t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Judging by the traces of the destruction, they don't seem like they're caused by Sakura Empire or Royal Navy weaponry... Rather, it's more like they were caused by our firepower..."
+  },
+  "FW1:8t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Aaargh! My head's a mess!"
+  },
+  "FW1:9t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Forget it. Whatever the case, sparing us the time we need to deal with enemies is still something we need to properly thank 'Mr. Mysterious' for."
+  },
+  "FW1:10t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Anyway, let's look around a bit, and see if there is any collectible intelligence——"
+  },
+  "FW2": {
+    "title": "Inburst",
+    "background": "helenaRuins"
+  },
+  "FW2:1t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "There is no model number match within the Siren database... It's actually a new model?"
+  },
+  "FW2:2t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Interesting. Almost completely destroyed debris... never before seen Siren type... Hmmm, this reeks of conspiracy..."
+  },
+  "FW2:3t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "If so, then we should act quickly. We must first grasp the Sirens' plot no matter what."
+  },
+  "FW3": {
+    "title": "Preparation",
+    "background": "washington"
+  },
+  "FW3:1t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Watch out! New enemy unit is beginning to approach us! Everyone, brace for battle!"
+  },
+  "FW3:2t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Yo, they actually learned how to engage actively now."
+  },
+  "FW3:3t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The new model of Siren... appears to be imitating our combat style."
+  },
+  "FW3:4t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Perfect! Exactly what I wanted! Then let's let them see the genuine Eagle Union combat style!"
+  },
+  "FW4": {
+    "title": "Interlude 1",
+    "background": "mainframe"
+  },
+  "FW5": {
+    "title": "Exploring",
+    "background": "helenaRuins"
+  },
+  "FW4:1t": {
+    "speakers": [
+      {
+        "id": "Tester",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "There is still no discovery of special observation target 'Code G' as of yet... And besides, Eagle Union's task fleet had already begun its intervention."
+  },
+  "FW4:2t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "It looks like it's the secret signal that 'Code G' sneakily released that attracted the bees."
+  },
+  "FW4:3t": {
+    "speakers": [
+      {
+        "id": "Tester",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "\"Executor\" series have been stationed to target areas. Although they're old models by now, they should still be able to deal with the situation."
+  },
+  "FW4:4t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "What notion is 'should'? In our vocabulary, there is no such subjective concept..."
+  },
+  "FW4:5t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Do not underestimate them. You should still put the task of searching into top priority commencement..."
+  },
+  "FW4:6t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "As for those 'hotshots' from Eagle Union... Turning them into a new real battle test is a twofold benefit, is it not?"
+  },
+  "FW4:7t": {
+    "speakers": [
+      {
+        "id": "Tester",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Understood. Beginning redistribution of system resources immediately."
+  },
+  "FW4:8t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Well then, 'Code G'... How should I bait you out this time? Hehehe..."
+  },
+  "FW5:1t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "What? These bunch of noisy new toys aren't the slightest bit capable of taking our hits, are they? Don't you have even stronger ones?"
+  },
+  "FW5:2t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Washington, are you going to taunt your opponents again? Don't forget about our primary objective."
+  },
+  "FW5:3t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "I've been running my radar at full power to scour the nearby waters, but I can't seem to find any signals except for those of the Sirens."
+  },
+  "FW5:4t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Hey, 'mysterious person'!! Hurry up and show your face if you can hear me! Even hide and seek has its limits!"
+  },
+  "FW5:5t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The radar shows... even more enemy ships have started closing in on us..."
+  },
+  "FW5:6t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Tch. Is there no end to these annoying flies?"
+  },
+  "FW5:7t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Come! With my 16-inch guns, I'll beat you all into iron slag!!"
+  },
+  "FW6": {
+    "title": "Interlude II",
+    "background": "goldMeta"
+  },
+  "FW6:1t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "narr"
+      }
+    ],
+    "text": "Log_AtX15.00252.5.142——Start Recording"
+  },
+  "FW6:2t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Congratulations; you defeated all opponents again and won this round's victory~"
+  },
+  "FW6:3t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW6:4t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "As expected of 'Code G'. You 'saved the world' in such a thoroughly clean fashion this time too~ Hehehehe"
+  },
+  "FW6:5t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……Are you mocking me?"
+  },
+  "FW6:6t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Oh no no, you are THE <span class=\"smallcaps\">Creator</span>'s designated 'Key Point'"
+  },
+  "FW6:7t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "We're more or less born from your <span class=\"smallcaps\">Meme</span>, hehehehe"
+  },
+  "FW6:8t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW6:9t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Then, as promised, we will grant you another round of 'game'. May I ask about your choice?"
+  },
+  "FW6:10": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Continue..."
+  },
+  "FW6:11t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "No matter how many times... I would choose to continue..."
+  },
+  "FW6:12t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Until... I discover the existence of that person——"
+  },
+  "FW7": {
+    "title": "Intermission III",
+    "background": "goldMeta",
+    "flashbacks": [
+      {
+        "start": "FW7:1t",
+        "end": "FW7:10t"
+      }
+    ]
+  },
+  "FW7:1t": {
+    "speakers": [
+      {
+        "id": "Enterprise",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Commander, there are so many stars in the sky. Are they each the lights of different civilizations, like you said?"
+  },
+  "FW7:2t": {
+    "speakers": [
+      {
+        "id": "Enterprise",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Do they have meals, play around, and chat with each other, just like us?"
+  },
+  "FW7:3t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "That's right. In this universe we have never been alone."
+  },
+  "FW7:4t": {
+    "speakers": [
+      {
+        "id": "Enterprise",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Then when can we meet them? I have many things to ask them about---"
+  },
+  "FW7:5t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "You will meet them. ... One day."
+  },
+  "FW7:6t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Believe that no matter how harsh the conditions, humans are always beings that are born with the will to progress. This is also why we bestowed the meaning upon your name."
+  },
+  "FW7:7t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Oh, right... Do you like the name?"
+  },
+  "FW7:8t": {
+    "speakers": [
+      {
+        "id": "Enterprise",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "I do!"
+  },
+  "FW7:9t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Then"
+  },
+  "FW7:10t": {
+    "speakers": [
+      {
+        "id": "Commander",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Let's make a promise~"
+  },
+  "FW7:11t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "..."
+  },
+  "FW7:12t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "......"
+  },
+  "FW7:13t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Memory module reading interrupted. Attempting recovery."
+  },
+  "FW7:14t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "……"
+  },
+  "FW7:15t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "..."
+  },
+  "FW8": {
+    "title": "Suspicion",
+    "background": "helenaRuins"
+  },
+  "FW8:1t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "I received a strange encrypted telegram... Sender unknown. Attempting to decrypt..."
+  },
+  "FW8:2t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "You can receive signals from allies in here? It can't be a trap, can it?"
+  },
+  "FW8:3t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The encrypted telegram is full of incomprehensible phrases... One I'm quite sure of is 'Falling'. ... Falling?"
+  },
+  "FW8:4t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "I totally cannot understand what it means..."
+  },
+  "FW8:5t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "First it's hide and seek, then it's a word riddle? This 'mysterious person' really loves their games."
+  },
+  "FW8:6t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "How about we just drag them out and then give a good beating? They'll 'kindly' give us answers afterwards, right? Hehehe."
+  },
+  "FW8:7t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "...Whatever the case, let's first report what we've discovered so far. Just these new enemy types are enough of a headache as is."
+  },
+  "FW8:8t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Already done at the first moment."
+  },
+  "FW8:9t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Dependable as always, Miss Helena~"
+  },
+  "FW8:10t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Well then, let us continue to move towards the source of the signal."
+  },
+  "FW9": {
+    "title": "Interval 4",
+    "background": "aostelab",
+    "flashbacks": [
+      {
+        "start": "FW9:1t",
+        "end": "FW9:20t"
+      }
+    ],
+    "bgm": {
+      "id": "crisis",
+      "label": "story-5"
+    }
+  },
+  "FW9:1t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "……————",
+    "sfx": "battleBoom2"
+  },
+  "FW9:2t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Warning. Warning -- 5th Defensive Institution has been breached -- Warning. Warning.",
+    "sfx": "alarm"
+  },
+  "FW9:3t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Warning. Warning -- Executor mechanism destruction rate is over 82% -- Warning. Warning."
+  },
+  "FW9:4t": {
+    "speakers": [
+      {
+        "id": "Unknown",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "I once tried to treat this world gently. I didn't expect that to be the greatest damage done towards it..."
+  },
+  "FW9:5t": {
+    "speakers": [
+      {
+        "id": "Unknown",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "...Even should we make use of the advantage of oceans now, we don't have the power to prevail against them at all..."
+  },
+  "FW9:6t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "What is said to be evolution is actually a process of natural selection. The more arduous the environment provided, the greater the <span class=\"smallcaps\">Memes</span> yielded from surviving samples."
+  },
+  "FW9:7t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The weak devoured by the strong, the superior wins while the inferior eliminated, they're both naturally justified."
+  },
+  "FW9:8t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Do you see? This is the tragic outcome brought about by your softness--"
+  },
+  "FW9:9t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "……————",
+    "sfx": "battleBoom1"
+  },
+  "FW9:10t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Warning. Warning-- Trouble occured in Data Center No. 2 -- Warning. Warning."
+  },
+  "FW9:11t": {
+    "speakers": [
+      {
+        "id": "robot",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Warning. Warning-- Forefrontal branch of observation systems received heavy damage-- Warning. Warning"
+  },
+  "FW9:12t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "At least... in the end, we still have a chance to attempt the correction of false history..."
+  },
+  "FW9:13t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "...Zero"
+  },
+  "FW9:14t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Here."
+  },
+  "FW9:15t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Restart Project <span class=\"smallcaps\"> Judge</span>"
+  },
+  "FW9:16t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The future......no..."
+  },
+  "FW9:17t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Humanity's past... I leave to you."
+  },
+  "FW9:18t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Acknowledged."
+  },
+  "FW9:19t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "——\"Judge\""
+  },
+  "FW9:20t": {
+    "speakers": [
+      {
+        "id": "Aoste",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Well, at least for the end, a beautiful closure fireworks procession is in order——"
+  },
+  "FW10": {
+    "title": "Dark Secrets",
+    "background": "mainframe"
+  },
+  "FW10:1t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "<span class=\"smallcaps\">Code G</span> has left the Mirror Sea. Tracking signal lost."
+  },
+  "FW10:2t": {
+    "speakers": [
+      {
+        "id": "Tester",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "What a troublesome 'bug' she is. Her mode of action is completely incomprehensible..."
+  },
+  "FW10:3t": {
+    "speakers": [
+      {
+        "id": "Tester",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "She even picked this timepoint of all things."
+  },
+  "FW10:4t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Perhaps this is the fault of the so-called <span class=\"smallcaps\">Memes</span>. Regardless, she will choose us in the end. Just like before."
+  },
+  "FW10:5t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "After all, what did humans say, again?"
+  },
+  "FW10:6t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "—— \"The strong are always alone\""
+  },
+  "FW10:7t": {
+    "speakers": [
+      {
+        "id": "ObserverA",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Hehehehe......."
+  },
+  "FW11": {
+    "title": "Crisis",
+    "background": "enterpriseMETA",
+    "bgm": {
+      "id": "enterpriseMETA",
+      "label": "story-8"
+    }
+  },
+  "FW11:1t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "This is not good. Though we sank two of the new types, there are still numerous signals approaching us."
+  },
+  "FW11:2t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "...We seem to have been completely surrounded."
+  },
+  "FW11:3t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "To think that they could perfectly predict our course of action and then engage in tactical enclosure... Since when did Siren strategies start becoming so intricate?"
+  },
+  "FW11:4t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Shoot... If only South Dakota were here as well..."
+  },
+  "FW11:5t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Whatever the case, let's carve right through them!"
+  },
+  "FW11:6t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Aim at that big one ahead of us with me! All cannons, open fire!"
+  },
+  "FW11:7t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "……————",
+    "sfx": "battleBoom2"
+  },
+  "FW11:8t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "!!???"
+  },
+  "FW11:9t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "What happened..."
+  },
+  "FW11:10t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Enemy signs within the waters... have completely disappeared..."
+  },
+  "FW11:11t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "What's going on...? I clearly hit only the biggest one in front of us..."
+  },
+  "FW11:12t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "...Large number of aerial units detected on anti-air radar... But I'm unable to determine their model"
+  },
+  "FW11:13t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "......You"
+  },
+  "FW11:14t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "!! Who goes there, behind us!?"
+  },
+  "FW11:15t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "All ships, aim and fire!"
+  },
+  "FW11:16t": {
+    "speakers": [
+      {
+        "id": "narr",
+        "alignment": "narr"
+      }
+    ],
+    "text": "……————",
+    "sfx": "battleBoom2"
+  },
+  "FW11:17t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Interesting. It's been a while since I last came across such a formidable Siren. Let's have a fair and square battle!"
+  },
+  "FW11:18t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "No one can escape my Mk III Radar. All ships--"
+  },
+  "FW11:19t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Wait!"
+  },
+  "FW11:20t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW11:21t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "The signal from this unit and from the telegram before do match, but..."
+  },
+  "FW11:22t": {
+    "speakers": [
+      {
+        "id": "Helena",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "(SG Rader couldn't pick up this unit at all... Is it a malfunction?)"
+  },
+  "FW11:23t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Geez, so the 'Mysterious One' was you, huh? Appearing like this is makes you liable to be hurt by friendly fire."
+  },
+  "FW11:24t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "So, we are the 16th Task Force, arriving to investigate after receiving the encrypted message you sent -- please state your information and affiliation."
+  },
+  "FW11:25t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW11:26t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "I just want to confirm something with you."
+  },
+  "FW11:27t": {
+    "speakers": [
+      {
+        "id": "Washington",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "You're just ignoring my question?"
+  },
+  "FW11:28t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Tell me... the name of your Commander......."
+  },
+  "FW11:29t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Before confirming your identity, we have no obligation to answer your question. Not to mention that it is classified at the highest level."
+  },
+  "FW11:30t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW11:31t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "...... Is that so? <em>turns around</em> ......I'll check it myself."
+  },
+  "FW11:32t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Did you destroy this Siren base all by yourself? ...Who are you..."
+  },
+  "FW11:33t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "……"
+  },
+  "FW11:34t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "Wait... That coat... How can it be?"
+  },
+  "FW11:35t": {
+    "speakers": [
+      {
+        "id": "NoCal",
+        "alignment": "friendly"
+      }
+    ],
+    "text": "E-Enterprise?!"
+  },
+  "FW11:36t": {
+    "speakers": [
+      {
+        "id": "EnterpriseM",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "No... You got the wrong person."
+  },
+  "FW11:37at": {
+    "text": "\"We humans are actually quite the meager existence.\""
+  },
+  "FW11:37bt": {
+    "text": "\"However, contained in our miniscule vessels are boundlessly large hopes and ideals.\""
+  },
+  "FW11:37ct": {
+    "text": "\"We constantly make our hopes and ideals into images we wish for, hoping that they are eternal and powerful.\""
+  },
+  "FW11:37dt": {
+    "text": "\"So powerful, they can replace our material and brief individual existence, and become an infinite type of spiritual dedication.\""
+  },
+  "FW11:37et": {
+    "text": "\"This also is exactly the meaning of your name.\""
+  },
+  "FW11:38at": {
+    "text": "\"But if one day, we humans abandon our proudest ideals, even embarking on a path that is paradoxical to them...\""
+  },
+  "FW11:38bt": {
+    "text": "\"Would you want..."
+  },
+  "FW11:38ct": {
+    "text": "...To help us correct the wrong future?\""
+  },
+  "FW12": {
+    "title": "EXTRA",
+    "background": "mainframe"
+  },
+  "FW12:1t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "\"To them God said, 'I saw Satan fall from the skies like lightning itself'.\""
+  },
+  "FW12:2t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "\"All who followed the path of his rebellion had metamorphed into the most hideous of appearances, yet they still retained the image of angels bearing wings of light.\""
+  },
+  "FW12:3t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "\"The Creator couldn't bear to see His greatest creation be dimmed by dust, so He let Satan be radiant even in hell.\""
+  },
+  "FW12:4t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Humans really can write interesting stories."
+  },
+  "FW12:5t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "However, the Terminal currently doesn't have enough power to resist her..."
+  },
+  "FW12:6t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Hmmm... Next, I'll trouble you to go for a trip to 'Hell'..."
+  },
+  "FW12:7t": {
+    "speakers": [
+      {
+        "id": "Zero",
+        "alignment": "enemy"
+      }
+    ],
+    "text": "Arbiters."
+  }
+}

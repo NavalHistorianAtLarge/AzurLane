@@ -3,32 +3,29 @@
     <head> 
         <title>Events in Release Order</title>
         <link rel="stylesheet" type="text/css" href="css/releaseFlow.css">
-        <link rel="script" href="sidebar.js">
+        <link rel="script" href="js/sidebar.js">
         </head>
     <body class="memory">
         <audio id="thoughts" src="https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/cdnNagamiMusic/bgm-story-2.ogg" loop="loop"></audio>
         <div id="trackTitle" class="trackLabel">Now Playing: <span id="trackName">Thoughts</span></div> 
-        <div id="topBox" onclick="hideTop()">
-            <h2 class="topTitle">Events in Release Order</h2>
+        <div id="topBox" role="status" onclick="hideTop()">
             <div class="bonnyInset">
-                <img src="https://i.ibb.co/v81MftX/1181px-Bon-Homme-Richard-META.png" alt="1181px-Bon-Homme-Richard-META" class="bonny">
-            <p class="bonnyTip">BonnyTip<sup>TM</sup></p>
-        </div>
-        <p>Click the image to hear OST and see lore summary. Click the event name to read my retranslations or essays.</p>
-        <p>Click anywhere on this box to hide it.</p>
-        <p>18 Sep 2025: Only the link to Visitors Dyed in Red is up, and it doesn't go anywhere yet.</p>
-        <p>23 Jan 2026: The image links are fixed, and the page is more modular.</p>
-      
+                <img src="https://i.ibb.co/v81MftX/1181px-Bon-Homme-Richard-META.png" alt="Bonny Tip" class="bonny">
+            </div>
+            <div class="bonnyText">
+                <p>Click the image to hear OST and see lore summary. Click the event name to read my retranslations or essays. Click anywhere on this box to hide it.</p>      
+            </div>  
         </div>
         <div class="gallery"> 
 
             <div class="bg">
                 <img src="" class="temple" onclick="togglePanel('vdir'), playSong('redDyedVisitor')">
-                <div class="eventName"><a href="events/VDiR/VDiRmenu.html">Visitors Dyed in Red</a></div>
+                <div class="eventName"><a href="events/VDiRPolished/VDiRmenu.html">Visitors Dyed in Red</a></div>
             </div>
             <div class="bg">
                 <img src="" class="washington" onclick="togglePanel('fw'), playSong('eagleUnionDiscovery')">
-                <div class="eventName">Fallen Wings</div>
+                <div class="eventName"><a href="events/FWPolished/FWmenu.html">Fallen Wings</a></div>
+
             </div>
             <div class="bg">
                 <img src="" class="crownActivated" onclick="togglePanel('wc'), playSong('enterpriseMETA')">
@@ -352,19 +349,23 @@
                  <img src="" class="temple">
                 </div>
                 
-            <div id="fw" class="panel" onclick="togglePanel('fw')">
-                <h2>Side Panel 2</h2>
-                <p>Wings fall off.</p>
-                </div>
+            <div id="fw" class="panel" data-lore-id="fw" onclick="togglePanel('fw')">
+                <h2></h2>
+                <img src="" class="washington">
+            </div>
         </div>
-        <script src="https://wisdomcubenetwork.xyz/disclaimer.js"></script>        
+        <script src="/disclaimer/disclaimer.js"></script>        
         <script src="js/soundplayer.js"></script>
         <script src="loreData/lorePanels.js"></script>
-        <script src="js/bgloader.js"></script>
+        <script src="../js/bgloader.js"></script>
         <script>
-            document.getElementById('topBox').addEventListener('click', function() {
-                this.style.display = 'none';
-            });
+            const topBox = document.getElementById('topBox');
+
+            // Slide the intro note in shortly after load; click it to slide it back out.
+            function hideTop() {
+                topBox.classList.remove('show');
+            }
+            setTimeout(() => topBox.classList.add('show'), 600);
         </script>
     </body>
 </html>

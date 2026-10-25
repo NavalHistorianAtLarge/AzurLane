@@ -1,15 +1,12 @@
-
 async function applyBackgroundFromClass() {
   try {
     // Load your JSON file
     const response = await fetch("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/backgrounds.json");
     const bgData = await response.json();
-    console.log("Background JSON:", bgData);
-    
+
     // Get the class on the <body>
     const body = document.body;
     const classList = Array.from(body.classList);
-    console.log("Body classes:", classList);
 
     if (classList.length === 0) {
       console.warn("No class found on <body>.");
@@ -20,7 +17,7 @@ async function applyBackgroundFromClass() {
     const match = bgData.find(entry => classList.includes(entry.class));
 
     if (!match) {
-      console.error("No matching background found for body classes:", classList);
+      console.warn("No matching background found for body classes:", classList);
       return;
     }
 
@@ -28,23 +25,21 @@ async function applyBackgroundFromClass() {
     body.style.backgroundImage = `url(${match.link})`;
     body.style.backgroundSize = "cover";
     body.style.backgroundAttachment = "fixed";
-    
-    console.log("Match:", match);
 
   } catch (err) {
-    console.error("Error loading background:", err.message);
+    console.error("Error loading background:", err);
   }
 }
 
-applyBackgroundFromClass();
+document.addEventListener("DOMContentLoaded", applyBackgroundFromClass);
 
 async function applyEventImages() {
   try {
     const response = await fetch("https://raw.githubusercontent.com/NavalHistorianAtLarge/AzurLaneData/main/backgrounds.json");
     const bgData = await response.json();
 
-    // Select ONLY images that should get backgrounds
-    const eventImages = document.querySelectorAll("img[class]");
+    // Select ONLY classed images with no src yet (leaves real images like .bonny alone)
+    const eventImages = document.querySelectorAll('img[class][src=""], img[class]:not([src])');
 
     eventImages.forEach(img => {
       // Get the FIRST class on the <img>
@@ -66,3 +61,6 @@ async function applyEventImages() {
 }
 
 document.addEventListener("DOMContentLoaded", applyEventImages);
+
+
+
